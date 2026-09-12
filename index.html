@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultores NyT | Transformación Estratégica y Tecnológica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#4c1d95', // purple-900
+                            DEFAULT: '#3b0764', // purple-950
+                            dark: '#2e054e',
+                            accent: '#10b981', // emerald-500
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-layer-group text-3xl text-brand"></i>
+                    <span class="font-bold text-2xl tracking-tight text-brand">Consultores <span class="text-brand-accent">NyT</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#metodologia" class="text-gray-600 hover:text-brand font-medium transition-colors">Metodología</a>
+                    <a href="#soluciones" class="text-gray-600 hover:text-brand font-medium transition-colors">Soluciones Digitales</a>
+                    <a href="#diagnostico" class="text-gray-600 hover:text-brand font-medium transition-colors">Test de Fugas</a>
+                    <a href="/portal" class="text-gray-500 hover:text-gray-800 text-sm"><i class="fas fa-sign-in-alt mr-1"></i> Portal Clientes</a>
+                    <a href="/diagnostico" class="bg-brand hover:bg-brand-light text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-brand/30 transition-all hover:-translate-y-0.5">Diagnóstico Gratuito</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-br from-gray-50 to-gray-200 overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand/10 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-brand-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <div class="inline-block bg-white text-brand font-bold px-4 py-1.5 rounded-full text-sm mb-6 shadow-sm border border-brand/10">
+                    <i class="fas fa-bolt text-brand-accent mr-2"></i> Ingeniería de Sistemas y Negocios
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                    No vendemos software.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-accent">Vendemos Evolución.</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Alineamos la tecnología exacta que necesita tu empresa según su <strong>Edad Organizacional</strong>. Eliminamos el caos operativo y construimos la infraestructura para escalar.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/diagnostico" class="bg-brand hover:bg-brand-light text-white text-center px-8 py-4 rounded-full font-bold shadow-xl shadow-brand/20 transition-all hover:-translate-y-1 text-lg">
+                        <i class="fas fa-stethoscope mr-2"></i> Detectar Fugas Operativas
+                    </a>
+                    <a href="#metodologia" class="bg-white hover:bg-gray-50 text-gray-800 text-center border border-gray-200 px-8 py-4 rounded-full font-bold shadow-sm transition-all text-lg">
+                        Conocer Más
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-gray-500"><i class="fas fa-check-circle text-brand-accent mr-1"></i> Toma 5 minutos. Recibe un Roadmap personalizado.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand to-brand-light rounded-2xl transform rotate-3 scale-105 opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoría Estratégica" class="rounded-2xl shadow-2xl relative z-10 border-4 border-white">
+                
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl z-20 flex items-center space-x-4 border border-gray-100">
+                    <div class="bg-red-100 text-red-600 p-3 rounded-full">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Fugas Detectadas</p>
+                        <p class="font-bold text-gray-800">-85% Costos Ocultos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema Agitado -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">¿Estás sobreviviendo al día a día o construyendo para el futuro?</h2>
+            <p class="text-lg text-gray-600 mb-12">Muchas empresas invierten miles de dólares en tecnología que nadie usa, simplemente porque intentan implementar soluciones de "madurez" en empresas que aún están en "infancia". El resultado: <strong>Fugas económicas masivas.</strong></p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-red-50 border border-red-100 p-6 rounded-xl">
+                    <i class="fas fa-fire-extinguisher text-3xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Decisiones Reactivas</h3>
+                    <p class="text-gray-600 text-sm">Tu equipo apaga incendios operacionales a diario. No hay análisis, solo intuición e inestabilidad financiera.</p>
+                </div>
+                <div class="bg-yellow-50 border border-yellow-100 p-6 rounded-xl">
+                    <i class="fas fa-boxes text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Silos Desconectados</h3>
+                    <p class="text-gray-600 text-sm">Ventas no se habla con inventario. La información reside en múltiples hojas de cálculo generando cuellos de botella.</p>
+                </div>
+                <div class="bg-gray-50 border border-gray-200 p-6 rounded-xl">
+                    <i class="fas fa-chart-pie text-3xl text-gray-500 mb-4"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Estancamiento</h3>
+                    <p class="text-gray-600 text-sm">Ejecutas bien, pero tu modelo topó techo. La competencia avanza más rápido y no tienes Inteligencia de Mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Paradigma NyT -->
+    <section id="metodologia" class="py-20 bg-brand text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm">El Paradigma NyT</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Diagnóstico a Dos Niveles</h2>
+                <p class="text-gray-300 text-lg">Nosotros no ofrecemos "remedios genéricos". Identificamos exactamente en qué etapa del ciclo de vida está tu negocio para aplicar la estrategia correcta.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Eficiencia Operacional -->
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all">
+                    <div class="w-14 h-14 bg-brand-accent/20 rounded-lg flex items-center justify-center mb-6 border border-brand-accent/50">
+                        <i class="fas fa-cogs text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">1. Eficiencia Operacional (EO)</h3>
+                    <p class="text-brand-accent font-medium mb-4">"¿Cómo hacemos mejor lo que ya hacemos?"</p>
+                    <p class="text-gray-300 mb-6">Para empresas en etapa de Infancia o Juventud. El modelo de negocio funciona, pero la ejecución tiene fugas (quiebres de inventario, errores, lentitud). La meta es <strong>Controlar y Estandarizar</strong>.</p>
+                    <ul class="space-y-3 text-sm text-gray-200">
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i> Análisis Descriptivo y Diagnóstico</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i> Implementación de ERP y CRM Core</li>
+                        <li><i class="fas fa-check text-brand-accent mr-2"></i> Diseño de Procesos (BPMN) y KPIs</li>
+                    </ul>
+                </div>
+
+                <!-- Dirección Estratégica -->
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 border border-blue-400/50">
+                        <i class="fas fa-chess-knight text-2xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">2. Dirección Transformacional (DET)</h3>
+                    <p class="text-blue-400 font-medium mb-4">"¿En qué empresa debemos convertirnos?"</p>
+                    <p class="text-gray-300 mb-6">Para empresas en Madurez o Plenitud. El problema ya no es ejecutar bien, es anticipar el futuro, rediseñar el modelo y escalar exponencialmente mediante inteligencia.</p>
+                    <ul class="space-y-3 text-sm text-gray-200">
+                        <li><i class="fas fa-check text-blue-400 mr-2"></i> Análisis Predictivo y Prescriptivo</li>
+                        <li><i class="fas fa-check text-blue-400 mr-2"></i> Inteligencia de Negocios (BI) y Big Data</li>
+                        <li><i class="fas fa-check text-blue-400 mr-2"></i> Balanced Scorecard e Inteligencia Artificial</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología de 5 Fases -->
+    <section id="soluciones" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestro Roadmap de Transformación</h2>
+                <p class="text-gray-600 text-lg">A través de 5 fases metódicas, integramos mejores prácticas globales con las plataformas tecnológicas más avanzadas del mercado.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Fase 1 -->
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-6 hover:shadow-md transition-shadow">
+                    <div class="bg-gray-100 text-brand text-2xl font-black w-16 h-16 rounded-full flex items-center justify-center shrink-0">1</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Fundamentos y Mercado</h3>
+                        <p class="text-gray-600 text-sm">Alineación Estratégica (Modelo Delta) y Declaraciones de Visión/Misión.</p>
+                    </div>
+                    <div class="md:w-1/3 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <span class="block text-xs text-purple-600 font-bold uppercase mb-1">Tecnología Aplicada</span>
+                        <span class="text-gray-800 font-medium"><i class="fas fa-users-cog text-brand mr-2"></i> Módulo CRM Corporativo</span>
+                    </div>
+                </div>
+                <!-- Fase 2 -->
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-6 hover:shadow-md transition-shadow">
+                    <div class="bg-gray-100 text-brand text-2xl font-black w-16 h-16 rounded-full flex items-center justify-center shrink-0">2</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Eficiencia Operacional (EO)</h3>
+                        <p class="text-gray-600 text-sm">Control Administrativo (BPMN), Total Quality Management y Estructuras.</p>
+                    </div>
+                    <div class="md:w-1/3 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <span class="block text-xs text-purple-600 font-bold uppercase mb-1">Tecnología Aplicada</span>
+                        <span class="text-gray-800 font-medium"><i class="fas fa-sitemap text-brand mr-2"></i> ERP Central + Gestor BPM</span>
+                    </div>
+                </div>
+                <!-- Fase 3 -->
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-6 hover:shadow-md transition-shadow">
+                    <div class="bg-gray-100 text-brand text-2xl font-black w-16 h-16 rounded-full flex items-center justify-center shrink-0">3</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Optimización de la Cadena de Valor</h3>
+                        <p class="text-gray-600 text-sm">Supply Chain Management, Costeo ABC/ABM y automatización Just-in-Time.</p>
+                    </div>
+                    <div class="md:w-1/3 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <span class="block text-xs text-purple-600 font-bold uppercase mb-1">Tecnología Aplicada</span>
+                        <span class="text-gray-800 font-medium"><i class="fas fa-truck-loading text-brand mr-2"></i> WMS y Logística Avanzada</span>
+                    </div>
+                </div>
+                <!-- Fase 4 -->
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-6 hover:shadow-md transition-shadow">
+                    <div class="bg-gray-100 text-brand text-2xl font-black w-16 h-16 rounded-full flex items-center justify-center shrink-0">4</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Dirección Transformacional (DET)</h3>
+                        <p class="text-gray-600 text-sm">Planeación Estratégica, Balanced Scorecard y Big Data para anticipación.</p>
+                    </div>
+                    <div class="md:w-1/3 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                        <span class="block text-xs text-purple-600 font-bold uppercase mb-1">Tecnología Aplicada</span>
+                        <span class="text-gray-800 font-medium"><i class="fas fa-chart-pie text-brand mr-2"></i> Business Intelligence (BI)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section id="diagnostico" class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand/5 skew-y-3 transform origin-bottom-left"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <i class="fas fa-laptop-medical text-6xl text-brand-accent mb-6"></i>
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6">El primer paso es saber dónde te duele.</h2>
+            <p class="text-xl text-gray-600 mb-10">Hemos desarrollado un algoritmo único que evalúa 36 áreas críticas de tu empresa. En menos de 5 minutos, obtendrás tu <strong>Índice de Prioridad de Automatización (IPA)</strong> y un Plan de Acción a tu medida.</p>
+            <a href="/diagnostico" class="inline-block bg-brand hover:bg-brand-light text-white text-xl px-12 py-5 rounded-full font-bold shadow-2xl transition-transform hover:scale-105">
+                Iniciar Diagnóstico Gratuito Ahora <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <p class="mt-6 text-gray-500 text-sm">Totalmente confidencial. Resultados instantáneos.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <i class="fas fa-layer-group text-2xl text-white"></i>
+                    <span class="font-bold text-xl text-white">Consultores NyT</span>
+                </div>
+                <p class="text-sm pr-4">Ingeniería de Sistemas y Negocios. Transformando empresas a través de metodologías de ciclo de vida, excelencia operativa e innovación tecnológica.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces Internos</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/diagnostico" class="hover:text-brand-accent transition-colors">Test de Diagnóstico</a></li>
+                    <li><a href="/crm" class="hover:text-brand-accent transition-colors"><i class="fas fa-lock text-xs mr-1"></i> Acceso Consultores (CRM)</a></li>
+                    <li><a href="/portal" class="hover:text-brand-accent transition-colors"><i class="fas fa-user text-xs mr-1"></i> Portal de Clientes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fas fa-envelope mr-2"></i> contacto@consultoresnyt.com</li>
+                    <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt mr-2"></i> Centro de Innovación, NYT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+            &copy; 2026 Consultores NyT. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
