@@ -1,0 +1,122 @@
+[
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Característica / Paquete",
+    "__EMPTY": "NyTEX Auto-Guiado (Self-Service)",
+    "__EMPTY_1": "NyTEX Express",
+    "__EMPTY_2": "NyTEX Advanced",
+    "__EMPTY_3": "NyTEX Enterprise"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Precio Fijo de Implementación",
+    "__EMPTY": "$0 USD (¡Gratis!)",
+    "__EMPTY_1": "$1,500 USD",
+    "__EMPTY_2": "$4,500 USD",
+    "__EMPTY_3": "Cotización a Medida"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "PRECIO LICENCIA (TARIFA PLANA)",
+    "__EMPTY": "$35 USD / mes",
+    "__EMPTY_1": "$149 USD / mes",
+    "__EMPTY_2": "$299 USD / mes",
+    "__EMPTY_3": "$499 USD / mes"
+  },
+  {
+    "__EMPTY": "(Fijo para toda la empresa)",
+    "__EMPTY_1": "(Fijo para toda la empresa)",
+    "__EMPTY_2": "(Fijo para toda la empresa)",
+    "__EMPTY_3": "(Fijo para toda la empresa)"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Acceso a Módulos (Software)",
+    "__EMPTY": "Hasta 1 Módulos",
+    "__EMPTY_1": "Hasta 6 Módulos",
+    "__EMPTY_2": "Hasta 10 Módulos",
+    "__EMPTY_3": "Todos los Módulos"
+  },
+  {
+    "__EMPTY": "(Ventas, Inventario)",
+    "__EMPTY_1": "(Se suma Compras, Contabilidad, etc.)",
+    "__EMPTY_2": "(Se suma Producción, Nómina, RRHH, etc.)",
+    "__EMPTY_3": "(Full Suite + Configuración Avanzada)"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Usuarios Incluidos",
+    "__EMPTY": "Ilimitados",
+    "__EMPTY_1": "Ilimitados",
+    "__EMPTY_2": "Ilimitados",
+    "__EMPTY_3": "Ilimitados"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Tiempo de Salida (Go-Live)",
+    "__EMPTY": "Inmediato (A tu propio ritmo)",
+    "__EMPTY_1": "2 a 3 semanas",
+    "__EMPTY_2": "1 a 2 meses",
+    "__EMPTY_3": "3+ meses"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "¿Qué incluye el Partner? (Implementación)",
+    "__EMPTY": " Cero intervención humana.",
+    "__EMPTY_1": " Levantamiento rápido",
+    "__EMPTY_2": " GAP Analysis profundo",
+    "__EMPTY_3": " Arquitectura a medida"
+  },
+  {
+    "__EMPTY": " Proveen link de acceso.",
+    "__EMPTY_1": " Configuración de 3 a 6 módulos",
+    "__EMPTY_2": " Configuración de hasta 10 módulos",
+    "__EMPTY_3": " Integraciones con APIs"
+  },
+  {
+    "__EMPTY_1": " Migración básica (Excel)",
+    "__EMPTY_2": " Automatización de procesos",
+    "__EMPTY_3": " Desarrollo de BI"
+  },
+  {
+    "__EMPTY_1": " Capacitación grupal online",
+    "__EMPTY_2": " Capacitación por áreas",
+    "__EMPTY_3": " Migración de DBs complejas"
+  },
+  {
+    "__EMPTY_3": " Pruebas UAT exhaustivas"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "¿Cómo funciona la ejecución?",
+    "__EMPTY": "Usas nuestro Asistente de Configuración (Wizard) en la web y academia en video.",
+    "__EMPTY_1": "Un Partner lidera la configuración basándose en mejores prácticas estándar para salir rápido.",
+    "__EMPTY_2": "Un Partner hace ingeniería de procesos y personaliza el sistema para cada departamento.",
+    "__EMPTY_3": "Un equipo de consultores actúa como tu departamento de TI, ejecutando el proyecto por fases."
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Facturación de la Implementación",
+    "__EMPTY": "No aplica",
+    "__EMPTY_1": "Facturado directamente por el Partner",
+    "__EMPTY_2": "Facturado directamente por el Partner",
+    "__EMPTY_3": "Facturado directamente por el Partner"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Facturación de Licencias",
+    "__EMPTY": "Facturado automáticamente por NyTEX",
+    "__EMPTY_1": "Facturado automáticamente por NyTEX",
+    "__EMPTY_2": "Facturado automáticamente por NyTEX",
+    "__EMPTY_3": "Facturado automáticamente por NyTEX"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Soporte Incluido",
+    "__EMPTY": "Soporte vía Tickets / Email directamente con NyTEX",
+    "__EMPTY_1": "Soporte humano con tu Partner asignado",
+    "__EMPTY_2": "Soporte VIP con tu Partner asignado",
+    "__EMPTY_3": "Soporte Dedicado del Partner + Soporte Nivel 2 Prioritario de NyTEX"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "¿Por qué esta estructura es un arma letal en el mercado?"
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "1. Destroza a la competencia: Tus competidores (SAP, Odoo, Oracle) castigan al cliente por contratar más gente (cobrando por usuario). Tú le dices al cliente: \"Contrata a todos los empleados que quieras, dales acceso al sistema; solo págame por el tamaño de tu operación (los módulos)\"."
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "2. Upselling natural para ti y el Partner: Cuando la empresa pequeña (Plan de $49) empieza a crecer y de pronto necesita automatizar su Nómina o Producción, forzosamente tendrán que subir de nivel de licencia (a $149 o $299). Y al hacerlo, necesitarán contratar a tu Partner para que les implemente esos nuevos módulos."
+  },
+  {
+    "Tabla Maestra Actualizada (Tarifa Plana por Módulos)": "Ambos ganan más dinero conforme la empresa del cliente crece y se vuelve más compleja. ¿Te cuadran mejor estos montos de Tarifa Plana ($49, $149, $299, $499) para tus expectativas de ingresos?"
+  }
+]

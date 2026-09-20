@@ -1,0 +1,52 @@
+[
+  {
+    "MATRIZ DE EVOLUCIÓN OPERATIVA": "ETAPA / CULTURA",
+    "__EMPTY": "TALENTO HUMANO",
+    "__EMPTY_1": "PROCESOS",
+    "__EMPTY_2": "DATOS",
+    "__EMPTY_3": "APLICACIONES TECNOLOGICAS QUE USAN",
+    "__EMPTY_4": "PLAN RECOMENDADO",
+    "__EMPTY_5": "APLICACIONES TECNOLOGICAS  RECOMENDADAS",
+    "__EMPTY_6": "ORIENTADO A QUE TIPO DE EMPRESA"
+  },
+  {
+    "MATRIZ DE EVOLUCIÓN OPERATIVA": "Infancia (Inestable)",
+    "__EMPTY": "Enfoque administrativo/compras",
+    "__EMPTY_1": "Sin procesos formales",
+    "__EMPTY_2": "Registros manuales",
+    "__EMPTY_3": "Sin ERP / Excel básico",
+    "__EMPTY_4": "1. NyTEX Auto-Guiado",
+    "__EMPTY_5": "📈 NyTEX Lite (o Starter)",
+    "__EMPTY_6": "Para microempresas, autónomos o negocios que apenas empiezan."
+  },
+  {
+    "MATRIZ DE EVOLUCIÓN OPERATIVA": "Juventud (Estable/Eficiente)",
+    "__EMPTY": "Enfoque agresivo en ventas",
+    "__EMPTY_1": "Prácticas iniciales de mejora",
+    "__EMPTY_2": "KPIs básicos de ventas",
+    "__EMPTY_3": "ERP con módulos básicos",
+    "__EMPTY_4": "2. NyTEX Express",
+    "__EMPTY_5": "📈 NyTEX Standard",
+    "__EMPTY_6": "Para pequeñas empresas que necesitan el control básico del día a día."
+  },
+  {
+    "MATRIZ DE EVOLUCIÓN OPERATIVA": "Madurez (Proactiva)",
+    "__EMPTY": "Gestión por conocimiento y resultados",
+    "__EMPTY_1": "Lean y Six Sigma integrales",
+    "__EMPTY_2": "KPIs de eficiencia operacional",
+    "__EMPTY_3": "Integración BPM, CRM, BI",
+    "__EMPTY_4": "3. NyTEX Advanced",
+    "__EMPTY_5": "📈 NyTEX Professional (o Pro)",
+    "__EMPTY_6": "Para medianas empresas con procesos integrados y más usuarios."
+  },
+  {
+    "MATRIZ DE EVOLUCIÓN OPERATIVA": "Plenitud (Futurista)",
+    "__EMPTY": "Análisis predictivo de procesos",
+    "__EMPTY_1": "Mejores prácticas globales",
+    "__EMPTY_2": "KPIs internos, externos y de proveedores",
+    "__EMPTY_3": "IA, Big Data, Blockchain",
+    "__EMPTY_4": "4. NyTEX Enterprise",
+    "__EMPTY_5": "📈 NyTEX Enterprise",
+    "__EMPTY_6": "Para corporativos, grandes empresas o negocios que requieren personalización"
+  }
+]

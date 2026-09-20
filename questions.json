@@ -1,82 +1,443 @@
 {
-  "ageQuestions": [],
+  "ageQuestions": [
+    {
+      "id": "age1",
+      "text": "¿Cómo se toman las principales decisiones en la empresa?",
+      "options": [
+        { "text": "El fundador/dueño toma casi todas las decisiones directamente. (Agilidad pero dependencia)", "value": "infancia" },
+        { "text": "Hay líderes por departamento, pero suelen chocar entre estandarizar y la visión del fundador.", "value": "adolescencia" },
+        { "text": "Se basan en datos y comités integrados, equilibrando innovación y administración.", "value": "plenitud" },
+        { "text": "Son muy lentas, priman las reglas formales y la política interna sobre los resultados.", "value": "burocracia" },
+        { "text": "No aplica para mi empresa", "value": "NA" }
+      ]
+    },
+    {
+      "id": "age2",
+      "text": "¿Cómo es la gestión de los procesos clave actualmente?",
+      "options": [
+        { "text": "Informal, en la mente de las personas, con enfoque en apagar incendios diarios.", "value": "infancia" },
+        { "text": "Comenzando a documentarse e implementando sistemas (a veces con resistencia).", "value": "adolescencia" },
+        { "text": "Sistematizados, predecibles y en constante optimización y mejora.", "value": "plenitud" },
+        { "text": "Excesivamente rígidos, donde 'seguir el procedimiento' es más importante que el cliente.", "value": "burocracia" },
+        { "text": "No aplica para mi empresa", "value": "NA" }
+      ]
+    },
+    {
+      "id": "age3",
+      "text": "¿Cuál es el rol predominante o el enfoque principal en el día a día?",
+      "options": [
+        { "text": "Producir y Vender (Hacer que las cosas sucedan a toda costa).", "value": "infancia" },
+        { "text": "Administrar y Estructurar (Poner orden al caos del crecimiento).", "value": "adolescencia" },
+        { "text": "Equilibrio (Producir, Administrar, Emprender e Integrar al equipo).", "value": "plenitud" },
+        { "text": "Control Excesivo (Administración pura sin visión emprendedora ni agilidad).", "value": "burocracia" },
+        { "text": "No aplica para mi empresa", "value": "NA" }
+      ]
+    },
+    {
+      "id": "age4",
+      "text": "¿Cómo perciben el uso de tecnología y software?",
+      "options": [
+        { "text": "Herramientas básicas, gratuitas o aisladas (WhatsApp, Excel, cuadernos).", "value": "infancia" },
+        { "text": "Buscando unificar sistemas, pasando del Excel a un ERP o CRM centralizado.", "value": "adolescencia" },
+        { "text": "Plataformas robustas integradas a gran escala con enfoque en gobernanza y analítica.", "value": "plenitud" },
+        { "text": "Sistemas heredados costosos y lentos; resistencia a adoptar nuevas tecnologías ágiles.", "value": "burocracia" },
+        { "text": "No aplica para mi empresa", "value": "NA" }
+      ]
+    }
+  ],
   "areas": [
     {
-      "id": "talento",
-      "name": "Talento Humano",
+      "id": "operaciones",
+      "name": "Operaciones",
       "questions": [
         {
-          "id": "th1",
-          "text": "¿Cómo se gestiona el Talento Humano y liderazgo corporativo?",
+          "id": "op1",
+          "text": "¿Se cuenta con un proceso documentado y automatizado para la recepción, almacenamiento y despacho de mercancías en bodega?",
           "options": [
-            { "text": "Liderazgo autoritario, enfoque administrativo/compras y control básico.", "score": 1 },
-            { "text": "Organigrama definido, con enfoque agresivo en ventas y objetivos.", "score": 2 },
-            { "text": "Gestión por conocimiento, resultados claros y capacitación continua.", "score": 3 },
-            { "text": "Equipos de alto rendimiento, análisis predictivo y mejora continua.", "score": 4 }
+            { "text": "Sí, está totalmente sistematizado y se audita periódicamente.", "score": 3 },
+            { "text": "Existe un proceso parcial, apoyado en hojas de cálculo y algunos controles manuales.", "score": 2 },
+            { "text": "No, depende del conocimiento empírico del personal y hay descuadres frecuentes.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "op2",
+          "text": "¿Con qué frecuencia e impacto se realizan conteos cíclicos de inventario para validar las existencias del sistema contra la realidad?",
+          "options": [
+            { "text": "Mensualmente o de forma continua, con alta precisión (98%+).", "score": 3 },
+            { "text": "Esporádicamente (ej. una vez al año) o hay diferencias moderadas no justificadas.", "score": 2 },
+            { "text": "Casi nunca se realizan conteos cíclicos y los faltantes son un problema diario.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "op3",
+          "text": "¿Cómo se administra el mantenimiento y control de la flota de distribución?",
+          "options": [
+            { "text": "Mediante un sistema de telemetría, ruteo y mantenimientos preventivos programados.", "score": 3 },
+            { "text": "Se lleva un control básico (bitácoras manuales) y los mantenimientos son mayormente correctivos.", "score": 2 },
+            { "text": "No hay control formal sobre uso de combustible, kilometraje o mantenimientos.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "op4",
+          "text": "¿Existe un proceso formal para el mantenimiento y administración de los inmuebles e instalaciones (servicios, infraestructura, ornato)?",
+          "options": [
+            { "text": "Sí, hay presupuestos, planes preventivos y control de activos bien gestionados.", "score": 3 },
+            { "text": "Se atienden reparaciones a demanda, sin un plan estructurado preventivo.", "score": 2 },
+            { "text": "No, el deterioro de las instalaciones es evidente y afecta las operaciones/clima.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "op5",
+          "text": "¿Qué protocolos de Seguridad Física se tienen implementados para proteger el inventario y activos?",
+          "options": [
+            { "text": "Sistemas de CCTV, controles de acceso estrictos y protocolos de prevención de pérdidas.", "score": 3 },
+            { "text": "Solo seguridad básica (vigilante o cámaras sin monitoreo activo).", "score": 2 },
+            { "text": "Prácticamente nulos, existen vulnerabilidades y robos constantes.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "op6",
+          "text": "¿Están establecidas y operativas las políticas de Seguridad y Salud Ocupacional para el personal (especialmente en centros de distribución)?",
+          "options": [
+            { "text": "Sí, existen comités, reglamentos activos e indicadores de cero accidentes.", "score": 3 },
+            { "text": "Se cumple con lo mínimo legal pero carece de cultura preventiva continua.", "score": 2 },
+            { "text": "No, existen riesgos latentes no atendidos para el personal operativo.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
           ]
         }
       ]
     },
     {
-      "id": "procesos",
-      "name": "Procesos",
+      "id": "logistica_compras",
+      "name": "Logística y Compras",
       "questions": [
         {
-          "id": "pro1",
-          "text": "¿Cuál es el nivel de formalidad de los procesos en su empresa?",
+          "id": "log1",
+          "text": "¿Existe una Matriz de Políticas de Compra y Disponibilidad claramente definida para las distintas categorías de productos?",
           "options": [
-            { "text": "Sin procesos formales, dependemos de la experiencia de la gente.", "score": 1 },
-            { "text": "Prácticas iniciales de mejora y algunos procesos documentados.", "score": 2 },
-            { "text": "Procesos integrados (Lean/Six Sigma) gestionando toda la cadena de valor.", "score": 3 },
-            { "text": "Mejores prácticas globales con innovación y rediseño de procesos constantes.", "score": 4 }
+            { "text": "Sí, el surtido, marcas y roles de categorías están estructurados y alineados estratégicamente.", "score": 3 },
+            { "text": "Se compran productos según la costumbre, sin matriz clara de surtido óptimo.", "score": 2 },
+            { "text": "Las compras se hacen empíricamente sin políticas definidas, provocando desabastecimiento o sobreinventario.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "log2",
+          "text": "¿Cómo se realiza la evaluación, selección y seguimiento del nivel de servicio de los proveedores?",
+          "options": [
+            { "text": "Mediante auditorías métricas, fill rates y control riguroso de tiempos de entrega (lead times).", "score": 3 },
+            { "text": "Solo se negocian precios o se resuelven reclamos cuando hay problemas graves.", "score": 2 },
+            { "text": "No existe un seguimiento ni evaluación al desempeño de los proveedores.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "log3",
+          "text": "¿Cómo se calculan los niveles actuales de inventario y los pronósticos de demanda (sugeridos de compra)?",
+          "options": [
+            { "text": "Basados en algoritmos estadísticos, puntos de reorden automatizados y lead times en sistema.", "score": 3 },
+            { "text": "Por promedios simples en Excel o intuición de los compradores.", "score": 2 },
+            { "text": "No hay análisis de demanda, se compra sólo cuando falta (reactivo).", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "log4",
+          "text": "¿Cómo se controla y mitiga la Venta Perdida (quiebre de inventario) y la obsolescencia?",
+          "options": [
+            { "text": "Se monitorea continuamente y hay estrategias agresivas para liquidar o sustituir códigos lentos.", "score": 3 },
+            { "text": "Se analiza ocasionalmente, pero se acumula inventario obsoleto o defectuoso.", "score": 2 },
+            { "text": "Desconocen el porcentaje real de venta perdida o obsolescencia acumulada.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "log5",
+          "text": "¿Cómo se optimizan los beneficios de compras (descuentos por volumen, pronto pago, promociones comerciales)?",
+          "options": [
+            { "text": "Se negocian activa y sistemáticamente acuerdos estratégicos, logísticos y financieros a largo plazo.", "score": 3 },
+            { "text": "Solo se aplican los descuentos de lista u ofertas temporales que ofrecen los proveedores.", "score": 2 },
+            { "text": "Se pierde la oportunidad de capitalizar descuentos logísticos y financieros.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "log6",
+          "text": "¿Se monitorea rigurosamente el Ciclo de Conversión de Efectivo y los costos del Capital de Trabajo (días inventario, días proveedores)?",
+          "options": [
+            { "text": "Constantemente, buscando equilibrar el apalancamiento de proveedores con la rotación de inventarios.", "score": 3 },
+            { "text": "Finanzas lo ve a final de mes, pero logística/compras no opera bajo estos KPIs.", "score": 2 },
+            { "text": "No existe integración ni medición clara entre las operaciones de compra y su impacto en capital de trabajo.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
           ]
         }
       ]
     },
     {
-      "id": "datos",
-      "name": "Datos",
+      "id": "recursos_humanos",
+      "name": "Recursos Humanos",
       "questions": [
         {
-          "id": "dat1",
-          "text": "¿Cuál es el nivel de uso de Datos y Analítica para la toma de decisiones?",
+          "id": "rh1",
+          "text": "¿La empresa cuenta con un Organigrama actualizado, Perfiles de Puesto documentados y un presupuesto anual de vacantes?",
           "options": [
-            { "text": "Registros manuales, decisiones puramente empíricas.", "score": 1 },
-            { "text": "KPIs básicos de ventas y reportes históricos descriptivos.", "score": 2 },
-            { "text": "KPIs de eficiencia operacional (alertas, tableros de control directivo).", "score": 3 },
-            { "text": "KPIs predictivos, datos de proveedores, externos y modelos prescriptivos.", "score": 4 }
+            { "text": "Sí, todo estructurado bajo procesos documentados y presupuesto aprobado.", "score": 3 },
+            { "text": "Hay organigrama pero los perfiles son ambiguos y no se ciñen a un presupuesto estricto.", "score": 2 },
+            { "text": "No hay descripciones de puesto formales, se contrata conforme 'se necesita'.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "rh2",
+          "text": "¿Cómo es el proceso de Reclutamiento, Selección y Contratación?",
+          "options": [
+            { "text": "Riguroso: con filtros psicométricos, verificación de referencias y proceso formal de altas legales.", "score": 3 },
+            { "text": "Semi-formal: basado solo en entrevistas, pero se cumple lo legal.", "score": 2 },
+            { "text": "Informal: por recomendaciones directas, sin pruebas previas de adecuación al rol.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "rh3",
+          "text": "¿El personal de nuevo ingreso pasa por un Programa de Inducción formal (cultura de la empresa y puesto específico)?",
+          "options": [
+            { "text": "Sí, es un plan calendarizado con evaluación y firma de bitácoras de aprendizaje.", "score": 3 },
+            { "text": "Reciben una charla rápida el primer día y luego aprenden sobre la marcha.", "score": 2 },
+            { "text": "No hay inducción; el empleado debe descubrir todo por su cuenta.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "rh4",
+          "text": "¿Existen procesos estructurados para Evaluación del Desempeño y Diagnóstico de Necesidades de Capacitación (DNC)?",
+          "options": [
+            { "text": "Sí, Evaluaciones periódicas (ej. 180°/360°) y un plan anual de capacitación estructurado.", "score": 3 },
+            { "text": "Se hacen retroalimentaciones anuales subjetivas, capacitaciones solo cuando hay errores.", "score": 2 },
+            { "text": "No se evalúa formalmente el desempeño ni se invierte en capacitación planificada.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "rh5",
+          "text": "¿Cómo se mide y gestiona el Clima Laboral y las relaciones interpersonales?",
+          "options": [
+            { "text": "Mediante encuestas periódicas anónimas y planes de acción; existe un reglamento (RIT) claro.", "score": 3 },
+            { "text": "Se percibe el clima 'a ojo' por la gerencia y se aplican amonestaciones según criterio del momento.", "score": 2 },
+            { "text": "No se mide, alta desmotivación, conflictos constantes y reglas poco claras.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "rh6",
+          "text": "¿Cómo se maneja el proceso de Desvinculación (renuncias/despidos)?",
+          "options": [
+            { "text": "Con entrevistas de salida, finiquitos exactos de ley y actas de devolución de activos formales.", "score": 3 },
+            { "text": "Se paga lo de ley, pero no se indaga en motivos (causas de rotación) ni se documenta formalmente la salida.", "score": 2 },
+            { "text": "Altamente conflictivo, riesgoso legalmente y no se recuperan los activos tecnológicos de la empresa.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
           ]
         }
       ]
     },
     {
-      "id": "aplicaciones",
-      "name": "Aplicaciones Tecnológicas que Usan",
+      "id": "mercadeo_ventas",
+      "name": "Mercadeo y Ventas",
       "questions": [
         {
-          "id": "app1",
-          "text": "¿Qué nivel de madurez tecnológica tienen sus sistemas?",
+          "id": "mkt1",
+          "text": "¿Se tiene definido y analizado formalmente el Segmento de Mercado objetivo (Contexto, Competencia, Clientes, Propuesta de Valor)?",
           "options": [
-            { "text": "Sin sistema centralizado (uso intensivo de Excel o papel).", "score": 1 },
-            { "text": "ERP con módulos básicos (Facturación, Ventas, Contabilidad sencilla).", "score": 2 },
-            { "text": "Integración avanzada de ERP, CRM, BPM y herramientas de Business Intelligence.", "score": 3 },
-            { "text": "Plataformas conectadas con Inteligencia Artificial, Big Data y ecosistemas completos.", "score": 4 }
+            { "text": "Sí, basado en modelos de negocio claros (ej. EDLP, High-Low) y clusterización demográfica.", "score": 3 },
+            { "text": "Se tiene una idea general, pero no documentada ni con métricas actualizadas.", "score": 2 },
+            { "text": "No, se le intenta vender a todos por igual, sin diferenciación.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "mkt2",
+          "text": "¿Qué nivel de conocimiento se tiene sobre la sensibilidad al precio del mercado (Pricing)?",
+          "options": [
+            { "text": "Se analizan efectos de comparación, calidad-precio y elasticidad para cada categoría.", "score": 3 },
+            { "text": "Los precios se definen solo por margen fijo o mirando someramente a un competidor.", "score": 2 },
+            { "text": "No se tiene estrategia de precios, se cambia aleatoriamente o empíricamente.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "mkt3",
+          "text": "¿Cómo se estructuran los programas de comunicación, promociones e Imagen Institucional?",
+          "options": [
+            { "text": "Existe un plan anual con presupuesto definido y métricas de retorno de inversión para acelerar ventas.", "score": 3 },
+            { "text": "Se hacen campañas espontáneas cuando las ventas bajan, sin un presupuesto planificado.", "score": 2 },
+            { "text": "La imagen y publicidad está descuidada y no apoya la retención de clientes.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "mkt4",
+          "text": "¿Existe un proceso de prospectación activa, seguimiento de cotizaciones y visitas a clientes clave (cuentas clave)?",
+          "options": [
+            { "text": "Sí, con embudos de venta, CRMs y seguimiento de cierre exhaustivo para eliminar objeciones.", "score": 3 },
+            { "text": "Los vendedores prospectan, pero sin trazabilidad centralizada de su avance.", "score": 2 },
+            { "text": "Solo se atienden los clientes que llegan o llaman; no hay prospectación proactiva.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "mkt5",
+          "text": "¿Cómo se administra el Despacho a Domicilio y resolución de Reclamos del cliente?",
+          "options": [
+            { "text": "En tiempos óptimos, con seguimiento, trazabilidad de quejas y mejora de la satisfacción del cliente.", "score": 3 },
+            { "text": "Es funcional pero hay retrasos frecuentes y las quejas se atienden de manera reactiva.", "score": 2 },
+            { "text": "Entregas muy impuntuales, pérdida de clientes y sin canales formales de reclamos.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "mkt6",
+          "text": "¿Existe un programa formal de Retención y Fidelización de Clientes?",
+          "options": [
+            { "text": "Sí, enfocado en alargar el ciclo de vida del cliente con beneficios concretos.", "score": 3 },
+            { "text": "Se ofrecen descuentos aislados, pero no hay un programa estructurado.", "score": 2 },
+            { "text": "No, se asume la lealtad sin invertir en mantenerla.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
           ]
         }
       ]
     },
     {
-      "id": "cultura",
-      "name": "Etapa / Cultura",
+      "id": "administracion",
+      "name": "Administración",
       "questions": [
         {
-          "id": "cul1",
-          "text": "¿Cómo se describe la cultura predominante y etapa de su organización?",
+          "id": "adm1",
+          "text": "¿Cómo se gestiona el archivo y la documentación física/digital de la empresa (Gestión Documental)?",
           "options": [
-            { "text": "Inestable. Enfoque casi exclusivo en supervivencia y generar ingresos.", "score": 1 },
-            { "text": "Estable/Eficiente. Administración enfocada en crecer y ordenar tareas.", "score": 2 },
-            { "text": "Madurez Proactiva. Cultura de procesos, resolución desde la raíz y eficiencia.", "score": 3 },
-            { "text": "Plenitud Futurista. Cultura de innovación disruptiva, agilidad y prosperidad.", "score": 4 }
+            { "text": "Con matrices de control, respaldos digitales y procesos de búsqueda eficientes.", "score": 3 },
+            { "text": "Mayormente físico en archiveros con control básico.", "score": 2 },
+            { "text": "Desorganizado, frecuentemente se pierden documentos críticos o es difícil hallarlos.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "adm2",
+          "text": "¿Existe un control y calendario de vencimientos de Contratos (proveedores, alquileres, servicios)?",
+          "options": [
+            { "text": "Se monitorea centralmente y se avisa con anticipación de renovaciones o cancelaciones.", "score": 3 },
+            { "text": "Cada área maneja sus contratos y a veces hay renovaciones automáticas no deseadas.", "score": 2 },
+            { "text": "No hay control consolidado, se vencen contratos sin conocimiento gerencial.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "adm3",
+          "text": "¿Cómo se gestionan los servicios generales diarios (aseo, mensajería, insumos de oficina)?",
+          "options": [
+            { "text": "Existe un control de insumos y evaluación constante de eficiencia y costo de estos servicios.", "score": 3 },
+            { "text": "Funciona a demanda, se atiende según piden las áreas sin mucho control presupuestario.", "score": 2 },
+            { "text": "Frecuentemente hay interrupciones operativas por falta de insumos o fallas de servicio básico.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "adm4",
+          "text": "¿Se lleva una correcta administración de licencias operativas, permisos legales y matrículas?",
+          "options": [
+            { "text": "Todo se encuentra vigente, organizado y con recordatorios automatizados de renovación.", "score": 3 },
+            { "text": "Están al día, pero el seguimiento es manual y puede haber olvidos esporádicos.", "score": 2 },
+            { "text": "Se trabaja en riesgo, con permisos vencidos o multas frecuentes por descuidos.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "adm5",
+          "text": "¿Cómo se administran las pólizas de seguros (vehículos, instalaciones, salud, riesgos empresariales)?",
+          "options": [
+            { "text": "Hay reportes de siniestros, evaluación de coberturas idóneas y pagos de primas oportunos.", "score": 3 },
+            { "text": "Se renuevan por inercia año tras año sin optimizar la relación riesgo-costo.", "score": 2 },
+            { "text": "Baja protección frente a riesgos y desorganización al hacer reclamos por siniestros.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "adm6",
+          "text": "¿Cómo se controlan y reportan las incidencias de mantenimiento menor preventivo/correctivo de infraestructura de oficinas?",
+          "options": [
+            { "text": "Mediante sistema de tickets o solicitudes con prioridades y reportes de cumplimiento.", "score": 3 },
+            { "text": "A través de correos, WhatsApp o avisos verbales al encargado.", "score": 2 },
+            { "text": "Solo cuando algo crítico se rompe o detiene el trabajo se repara.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contabilidad_finanzas",
+      "name": "Contabilidad y Finanzas",
+      "questions": [
+        {
+          "id": "fin1",
+          "text": "¿Con qué oportunidad y calidad se elaboran los Estados Financieros (Balance, Estado de Resultados)?",
+          "options": [
+            { "text": "Se emiten puntualmente los primeros días del mes y sirven como base para la toma de decisiones gerenciales.", "score": 3 },
+            { "text": "Se entregan pero con retrasos que disminuyen su utilidad estratégica (solo fin fiscal).", "score": 2 },
+            { "text": "No se cuenta con Estados Financieros periódicos o son poco confiables.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "fin2",
+          "text": "¿Cómo se maneja la planeación y el monitoreo del Flujo de Caja (Cashflow)?",
+          "options": [
+            { "text": "Existen proyecciones semanales/mensuales, monitoreando ingresos contra obligaciones a futuro.", "score": 3 },
+            { "text": "Se monitorea cuánto hay en el banco, pero con proyecciones empíricas a corto plazo.", "score": 2 },
+            { "text": "El flujo es una caja negra; hay sorpresas constantes por falta de liquidez.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "fin3",
+          "text": "¿Se realiza de forma consistente la conciliación bancaria de todas las cuentas operativas?",
+          "options": [
+            { "text": "Sí, al cierre de mes o semanalmente para detectar discrepancias inmediatamente.", "score": 3 },
+            { "text": "Se realiza, pero quedan partidas antiguas pendientes de revisión y justificación.", "score": 2 },
+            { "text": "No se realizan conciliaciones regulares o los saldos en libros rara vez cruzan con bancos.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "fin4",
+          "text": "¿Existen presupuestos formales anuales y se lleva control sobre las desviaciones en gastos e ingresos?",
+          "options": [
+            { "text": "Sí, cada área tiene su presupuesto y rinde cuentas de las variaciones mensualmente.", "score": 3 },
+            { "text": "Hay un presupuesto global pero rara vez se usa para sancionar/autorizar sobregiros.", "score": 2 },
+            { "text": "No existe cultura presupuestaria; se gasta según disponibilidad del momento.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "fin5",
+          "text": "¿Cómo es la gestión de recuperación de Cuentas por Cobrar (Créditos a clientes)?",
+          "options": [
+            { "text": "Automatizada, con medición de morosidad, bloqueos preventivos y gestión constante.", "score": 3 },
+            { "text": "Se hace gestión pero la cartera vencida es alta y los límites de crédito se violan ocasionalmente.", "score": 2 },
+            { "text": "Descontrol. No se sabe con certeza quién debe, desde cuándo, y cuesta mucho recuperar saldos.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
+          ]
+        },
+        {
+          "id": "fin6",
+          "text": "¿Existen procesos y controles internos formales para prevenir fraudes, fugas y garantizar el cumplimiento fiscal?",
+          "options": [
+            { "text": "Sí, hay auditorías, segregación de funciones (quien paga no es quien aprueba) y cumplimiento fiscal estricto.", "score": 3 },
+            { "text": "Controles básicos en manos de pocas personas de confianza.", "score": 2 },
+            { "text": "Nulos; existe alta exposición a fraudes internos o multas tributarias.", "score": 1 },
+            { "text": "No aplica para mi empresa", "score": "NA" }
           ]
         }
       ]

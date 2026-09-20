@@ -1,0 +1,104 @@
+[
+  {
+    "__EMPTY": "MÓDULOS / PAQUETES",
+    "__EMPTY_1": "📈 NyTEX starter (Auto-Guiado)",
+    "__EMPTY_2": "📈 NyTEX Express",
+    "__EMPTY_3": "📈 NyTEX Advanced",
+    "__EMPTY_4": "📈 NyTEX Enterprise"
+  },
+  {
+    "__EMPTY": "NyTEX Ventas",
+    "__EMPTY_1": "X",
+    "__EMPTY_2": "X",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Inventario",
+    "__EMPTY_2": "X",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Contabilidad",
+    "__EMPTY_2": "X",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Cuentas por Cobrar",
+    "__EMPTY_2": "X",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Cuentas por Pagar",
+    "__EMPTY_2": "X",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Compras",
+    "__EMPTY_2": "X",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Logística",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX CRM",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Nómina",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX RRHH",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Activos Fijos",
+    "__EMPTY_3": "X",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Tesorería",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Servicio al cliente",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX BI/KPI y Analytics",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Process Suite",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Mineria de Datos",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Business Partners",
+    "__EMPTY_4": "X"
+  },
+  {
+    "__EMPTY": "NyTEX Configuración"
+  },
+  {
+    "__EMPTY_1": 1,
+    "__EMPTY_2": 6,
+    "__EMPTY_3": 11,
+    "__EMPTY_4": 16
+  }
+]
