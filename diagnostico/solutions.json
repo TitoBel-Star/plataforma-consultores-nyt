@@ -2,79 +2,66 @@
   "ages": {
     "infancia": {
       "title": "Etapa: Infancia / Inestabilidad",
-      "description": "Su organización opera bajo un liderazgo centralizado, sin sistemas informáticos robustos (solo Excel) y con un enfoque administrativo básico de 'hacer dinero del ahorro'.",
-      "solutions": [
-        "Implementar un ERP Básico para control de Kardex, Facturación y Contabilidad.",
-        "Definir Organigrama y Descriptores de Puesto básicos.",
-        "Pasar de decisiones sin análisis a un Análisis Descriptivo (qué ha ocurrido)."
-      ]
+      "description": "Su organización opera de manera reactiva, con registros manuales y sin formalidad de procesos.",
+      "paquete": "NyTEX Starter (Auto-Guiado)",
+      "modulos": ["Ventas"],
+      "precio_implementacion": "$0 USD (¡Gratis!)",
+      "precio_licencia": "$35 USD / mes",
+      "soporte": "Soporte vía Tickets / Email"
     },
     "juventud": {
       "title": "Etapa: Juventud / Crecimiento",
-      "description": "La empresa experimenta crecimiento rápido. Se enfoca en productividad de ventas, pero empieza a requerir integración de procesos y análisis diagnóstico (por qué ocurren las cosas).",
-      "solutions": [
-        "Integrar módulos de Cadena de Suministros, Mercadeo, Ventas y Presupuestos.",
-        "Implementar TQM (Calidad Total) en los procesos clave.",
-        "Ingeniería de Mercado y Producto mediante un CRM estructurado."
-      ]
+      "description": "La empresa está en crecimiento. Se enfoca en ventas pero necesita controlar su operación e inventario de manera urgente.",
+      "paquete": "NyTEX Express",
+      "modulos": ["Ventas", "Inventario", "Contabilidad", "Cuentas por Cobrar", "Cuentas por Pagar", "Compras"],
+      "precio_implementacion": "$1,500 USD",
+      "precio_licencia": "$149 USD / mes",
+      "soporte": "Soporte humano con Partner asignado"
     },
     "madurez": {
       "title": "Etapa: Madurez / Eficiencia Operacional",
-      "description": "Alta eficiencia y control administrativo. Todos los procesos de la cadena de valor están mapeados (BPMN) e integrados en tiempo real con prácticas de mejora continua.",
-      "solutions": [
-        "Integrar el ERP con módulos de BPM y CRM en tiempo real.",
-        "Implementar Balanced Scorecard y KPIs completos de eficiencia operativa.",
-        "Aplicar Análisis Predictivo para anticipar escenarios y automatizar decisiones."
-      ]
+      "description": "Busca eficiencia total. Requiere integración de toda su cadena de valor para analizar KPIs y eliminar desperdicios.",
+      "paquete": "NyTEX Advanced",
+      "modulos": ["Ventas", "Inventario", "Contabilidad", "CxC", "CxP", "Compras", "Logística", "CRM Básico", "Recursos Humanos"],
+      "precio_implementacion": "$4,500 USD",
+      "precio_licencia": "$299 USD / mes",
+      "soporte": "Soporte VIP con Partner asignado"
     },
     "plenitud": {
       "title": "Etapa: Plenitud / Dirección Transformacional",
-      "description": "Cultura de mejora continua extrema (Lean, Six Sigma). La empresa es capaz de convertir grandes volúmenes de datos en decisiones prescriptivas e innovación constante.",
-      "solutions": [
-        "Implementar Inteligencia Artificial, Big Data y Cloud computing.",
-        "Sistemas de Análisis Prescriptivo para decisiones a largo plazo (Inteligencia de Mercado).",
-        "Estructuras ágiles y sistemas de recompensas basados en rendimiento óptimo."
-      ]
+      "description": "Requiere disrupción e innovación. Sus sistemas necesitan inteligencia artificial para predecir escenarios futuros.",
+      "paquete": "NyTEX Enterprise",
+      "modulos": ["Todos los módulos Advanced", "Servicio al Cliente", "BI/KPI y Analytics", "Process Suite", "Minería de Datos", "Inteligencia Artificial", "Business Partners"],
+      "precio_implementacion": "Cotización a Medida",
+      "precio_licencia": "$499 USD / mes",
+      "soporte": "Soporte Dedicado Partner + Nivel 2 Prioritario NyTEX"
     }
   },
   "methodology": [
     {
-      "fase": "Fase 1: Fundamentos y Relación con el Cliente",
-      "enfoque": "Diagnóstico, Identidad y Mercado",
-      "practicas": ["Posicionamiento Estratégico (Modelo Delta)", "Ingeniería de Mercado", "Declaraciones de Visión y Misión"],
-      "appDigital": "Módulo CRM Corporativo y Portal de Planeación"
+      "fase": "Fase 1: Diagnóstico e Integración",
+      "enfoque": "Visibilidad Básica y Transaccional",
+      "practicas": ["Identificación de Procesos Críticos", "Digitalización de Registros"],
+      "appDigital": "NyTEX Starter / Express"
     },
     {
-      "fase": "Fase 2: Eficiencia Operacional y Control",
-      "enfoque": "Procesos, Calidad y Estructura",
-      "practicas": ["Organigrama y Descriptores de Puesto", "Total Quality Management (TQM)", "Control Administrativo (BPMN)"],
-      "appDigital": "Sistema ERP Central + Gestor Documental (BPM)"
+      "fase": "Fase 2: Eficiencia Operacional (EO)",
+      "enfoque": "Estandarización y Control",
+      "practicas": ["Automatización de Cuellos de Botella", "Indicadores (KPIs) Operativos", "BPMN"],
+      "appDigital": "NyTEX Advanced + CRM + RRHH"
     },
     {
-      "fase": "Fase 3: Optimización de la Cadena de Valor",
-      "enfoque": "Costos y Logística (Rendimiento Óptimo)",
-      "practicas": ["Supply Chain Management", "Just-in-Time (JIT)", "Costeo ABC / ABM"],
-      "appDigital": "Módulo Avanzado de Inventarios y Logística"
-    },
-    {
-      "fase": "Fase 4: Dirección Estratégica Transformacional",
-      "enfoque": "Inteligencia, Anticipación y Escalamiento",
-      "practicas": ["Planeación Estratégica", "Benchmarking", "Balanced Scorecard (KPIs)", "Big Data"],
-      "appDigital": "Plataforma Integral de BI (Business Intelligence) y Dashboards"
-    },
-    {
-      "fase": "Fase 5: Institucionalización y Talento",
-      "enfoque": "Cultura y Alto Rendimiento",
-      "practicas": ["Encuestas de Compromiso", "Sistema de Recompensas", "Análisis Prescriptivo"],
-      "appDigital": "Sistema HRMS (Recursos Humanos) y Módulos de IA"
+      "fase": "Fase 3: Dirección Estratégica Transformacional (DET)",
+      "enfoque": "Inteligencia y Anticipación",
+      "practicas": ["Minería de Datos", "Modelos Predictivos", "Business Intelligence"],
+      "appDigital": "NyTEX Enterprise + IA"
     }
   ],
   "areaSolutions": {
-    "operaciones": ["Sistema WMS (Gestión de Almacenes) con escaneo código de barras", "Módulo de Mantenimiento Preventivo Automático"],
-    "logistica_compras": ["Módulo Avanzado de Supply Chain Management", "Integración EDI con Proveedores y Costeo ABC"],
-    "recursos_humanos": ["Sistema HRMS Integral (Nómina, Evaluaciones, Reclutamiento)", "Portal de Empleados y Encuestas de Clima"],
-    "mercadeo_ventas": ["CRM Corporativo Omnicanal (WhatsApp, Email, Redes)", "Módulo de Automatización de Marketing (Embudos)"],
-    "administracion": ["Gestor Documental Digital (BPM) con Firmas Electrónicas", "Sistema de Control de Contratos y Vencimientos"],
-    "contabilidad_finanzas": ["ERP Central con Conciliación Bancaria Automática", "Plataforma de BI (Business Intelligence) para Flujo de Caja Predictivo"]
+    "talento": ["NyTEX Recursos Humanos (HRMS) para evaluación de talento y estructura."],
+    "procesos": ["NyTEX Process Suite (BPM) para digitalización de flujos y aprobaciones."],
+    "datos": ["NyTEX BI & Minería de Datos para cuadros de mando y alertas en tiempo real."],
+    "aplicaciones": ["Migración hacia Ecosistema NyTEX integrado (ERP + CRM + BI)."],
+    "cultura": ["Talleres de alineación estratégica y gestión del cambio organizacional."]
   }
 }
