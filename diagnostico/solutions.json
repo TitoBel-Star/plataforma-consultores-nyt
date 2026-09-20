@@ -42,19 +42,25 @@
       "fase": "Fase 1: Diagnóstico e Integración",
       "enfoque": "Visibilidad Básica y Transaccional",
       "practicas": ["Identificación de Procesos Críticos", "Digitalización de Registros"],
-      "appDigital": "NyTEX Starter / Express"
+      "appDigital": "NyTEX Starter / Express",
+      "tiempo": "2 a 3 semanas",
+      "costo": "Desde $0 hasta $1,500 USD"
     },
     {
       "fase": "Fase 2: Eficiencia Operacional (EO)",
       "enfoque": "Estandarización y Control",
       "practicas": ["Automatización de Cuellos de Botella", "Indicadores (KPIs) Operativos", "BPMN"],
-      "appDigital": "NyTEX Advanced + CRM + RRHH"
+      "appDigital": "NyTEX Advanced + CRM + RRHH",
+      "tiempo": "1 a 2 meses",
+      "costo": "$4,500 USD"
     },
     {
       "fase": "Fase 3: Dirección Estratégica Transformacional (DET)",
       "enfoque": "Inteligencia y Anticipación",
       "practicas": ["Minería de Datos", "Modelos Predictivos", "Business Intelligence"],
-      "appDigital": "NyTEX Enterprise + IA"
+      "appDigital": "NyTEX Enterprise + IA",
+      "tiempo": "3+ meses",
+      "costo": "Cotización a medida"
     }
   ],
   "areaSolutions": {

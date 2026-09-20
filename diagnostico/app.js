@@ -238,14 +238,22 @@ function App() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {data.solutions.methodology && data.solutions.methodology.map((fase, idx) => (
-                <div key={idx} className="border border-purple-200 rounded p-4 bg-purple-50 shadow-sm">
+                <div key={idx} className="border border-purple-200 rounded p-4 bg-purple-50 shadow-sm flex flex-col">
                   <h3 className="font-bold text-purple-900 mb-1">{fase.fase}</h3>
                   <p className="text-xs text-purple-700 font-semibold mb-2">{fase.enfoque}</p>
-                  <ul className="list-disc list-inside text-sm text-gray-700 mb-3">
+                  <ul className="list-disc list-inside text-sm text-gray-700 mb-3 flex-grow">
                     {fase.practicas.map((p, i) => <li key={i}>{p}</li>)}
                   </ul>
-                  <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
-                    <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
+                  <div className="space-y-2 mt-auto">
+                    <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
+                      <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
+                    </div>
+                    {(fase.tiempo || fase.costo) && (
+                      <div className="bg-purple-100 p-2 rounded text-xs text-purple-800">
+                        {fase.tiempo && <div className="font-semibold"><i className="fas fa-clock w-4 text-center"></i> Tiempo: {fase.tiempo}</div>}
+                        {fase.costo && <div className="font-bold mt-1"><i className="fas fa-dollar-sign w-4 text-center"></i> Costo Extra: {fase.costo}</div>}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
