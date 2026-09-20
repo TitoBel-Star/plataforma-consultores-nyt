@@ -73,7 +73,19 @@ function App() {
       
       let alertMsg = "";
       if (ipa > 40) {
-        alertMsg = "Se requieren mejoras y control informático para cerrar fugas de valor.";
+        if (area.id === 'talento') {
+          alertMsg = "Fuga Crítica de Capital Intelectual: La falta de evaluación objetiva y métricas de rendimiento genera dependencia de 'héroes operativos', rotación costosa y nóminas sin retorno de inversión claro. Está pagando sueldos por tareas repetitivas que deberían ser automáticas.";
+        } else if (area.id === 'procesos') {
+          alertMsg = "Hemorragia de Rentabilidad Operativa: Su cadena de valor carece de estandarización formal (BPM). Esto quema dinero a diario en reprocesos, tiempos muertos, fallas de calidad y falta de trazabilidad. Cada tarea manual es una fuga directa de sus márgenes de ganancia.";
+        } else if (area.id === 'datos') {
+          alertMsg = "Ceguera Estratégica: Operar empíricamente sin Inteligencia de Negocios (BI) causa que solo se apaguen incendios reaccionando al pasado. La falta de alertas predictivas oculta mermas, inventarios mal costeados y oportunidades de venta perdidas que su competencia sí aprovecha.";
+        } else if (area.id === 'aplicaciones') {
+          alertMsg = "Fragmentación Digital: Los sistemas desconectados y el abuso de hojas de cálculo obligan a su equipo a hacer 'trabajo de robots'. La falta de un ERP integral aumenta drásticamente el riesgo de fraude, pérdida de información e impide escalar el negocio sin inflar sus costos operativos.";
+        } else if (area.id === 'cultura') {
+          alertMsg = "Estancamiento Estructural: Una cultura centrada en la simple supervivencia, en apagar fuegos o en la microgestión administrativa bloquea la innovación. Altera el techo de crecimiento y limita su capacidad para competir contra organizaciones altamente digitalizadas.";
+        } else {
+          alertMsg = "Se requieren mejoras estructurales urgentes para frenar la pérdida masiva de valor y competitividad.";
+        }
       }
 
       return { id: area.id, name: area.name, ipa, leaks, alertMsg };
