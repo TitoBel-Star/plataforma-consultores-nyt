@@ -329,7 +329,7 @@ function App() {
           {/* 4. Cotización y Licenciamiento */}
           <div className="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 text-white">
             <h2 className="text-2xl font-bold mb-4 text-yellow-500"><i className="fas fa-file-invoice-dollar mr-2"></i> 4. Propuesta de Implementación (Dos Caminos)</h2>
-            <p className="text-gray-300 mb-6">Basado en sus resultados, le ofrecemos dos caminos: uno para crecer con una solución que se adapta a su empresa y evoluciona con ella, y otro para corregir de inmediato las debilidades específicas detectadas en su IPA (Índice de Prioridad de Automatización según las Fugas Operativas Detectadas).</p>
+            <p className="text-gray-300 mb-6">Basado en sus resultados, le ofrecemos dos caminos: <strong>Camino 1: Evolutivo</strong>, para crecer con una solución que se adapta a su empresa y evoluciona con ella, y <strong>Camino 2: Impacto Inmediato</strong>, para corregir de inmediato las debilidades específicas detectadas en su IPA (Índice de Prioridad de Automatización según las Fugas Operativas Detectadas).</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
