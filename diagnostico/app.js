@@ -81,10 +81,21 @@ function App() {
 
     // Calcular etapa dominante basada en el promedio (1 a 4)
     const avgScore = answeredQuestions > 0 ? totalScore / answeredQuestions : 1;
+    let baseTier = 1;
+    if (avgScore > 3.25) baseTier = 4;
+    else if (avgScore > 2.5) baseTier = 3;
+    else if (avgScore > 1.75) baseTier = 2;
+    else baseTier = 1;
+
+    // REGLA DE NEGOCIO: Nunca recomendar un paquete que tenga menos tecnología de la que el cliente ya tiene.
+    // Verificamos la respuesta de la pregunta 'app1' (Aplicaciones Tecnológicas)
+    const techScore = areaAnswers['app1'] || 1;
+    const finalTier = Math.max(baseTier, techScore);
+
     let dominantAgeKey = 'infancia';
-    if (avgScore > 3.25) dominantAgeKey = 'plenitud';
-    else if (avgScore > 2.5) dominantAgeKey = 'madurez';
-    else if (avgScore > 1.75) dominantAgeKey = 'juventud';
+    if (finalTier === 4) dominantAgeKey = 'plenitud';
+    else if (finalTier === 3) dominantAgeKey = 'madurez';
+    else if (finalTier === 2) dominantAgeKey = 'juventud';
     else dominantAgeKey = 'infancia';
 
     setResults({
@@ -176,6 +187,50 @@ function App() {
   if (step === 'results') {
     const ageData = data.solutions.ages[results.dominantAgeKey];
     
+    // Calcular paquete de impacto y módulos críticos basados en áreas con fugas
+    let maxTier = 1;
+    let criticalModulesNeeded = [];
+
+    results.areaScores.forEach(area => {
+      if (area.ipa > 30) {
+        if (area.id === 'procesos') {
+          maxTier = Math.max(maxTier, 4);
+          if (!criticalModulesNeeded.includes('NyTEX Process Suite (BPM)')) criticalModulesNeeded.push('NyTEX Process Suite (BPM)');
+        }
+        else if (area.id === 'datos') {
+          maxTier = Math.max(maxTier, 4);
+          if (!criticalModulesNeeded.includes('NyTEX BI & Minería de Datos')) criticalModulesNeeded.push('NyTEX BI & Minería de Datos');
+        }
+        else if (area.id === 'talento') {
+          maxTier = Math.max(maxTier, 3);
+          if (!criticalModulesNeeded.includes('NyTEX Recursos Humanos (HRMS)')) criticalModulesNeeded.push('NyTEX Recursos Humanos (HRMS)');
+        }
+        else if (area.id === 'aplicaciones') {
+          maxTier = Math.max(maxTier, 2);
+          if (!criticalModulesNeeded.includes('Ecosistema ERP+CRM')) criticalModulesNeeded.push('Ecosistema ERP+CRM');
+        }
+      }
+    });
+
+    const ageToTier = { 'infancia': 1, 'juventud': 2, 'madurez': 3, 'plenitud': 4 };
+    const currentTier = ageToTier[results.dominantAgeKey];
+    
+    // El camino de impacto siempre debe ser al menos el nivel actual, idealmente un paso más si hay fugas, a menos que ya estemos en plenitud
+    if (maxTier <= currentTier && currentTier < 4) {
+      maxTier = currentTier + 1;
+    }
+    
+    if (criticalModulesNeeded.length === 0) {
+      criticalModulesNeeded.push('Módulos de integración avanzada');
+    }
+
+    let impactKey = 'plenitud';
+    if (maxTier === 1) impactKey = 'infancia';
+    else if (maxTier === 2) impactKey = 'juventud';
+    else if (maxTier === 3) impactKey = 'madurez';
+    
+    const impactData = data.solutions.ages[impactKey];
+
     return (
       <div className="min-h-screen p-4 md:p-8 bg-gray-100 flex justify-center">
         <div className="max-w-5xl w-full space-y-8">
@@ -244,16 +299,16 @@ function App() {
                   <ul className="list-disc list-inside text-sm text-gray-700 mb-3 flex-grow">
                     {fase.practicas.map((p, i) => <li key={i}>{p}</li>)}
                   </ul>
-                    <div className="space-y-2 mt-auto">
-                      <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
-                        <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
-                      </div>
-                      {fase.tiempo && (
-                        <div className="bg-purple-100 p-2 rounded text-xs text-purple-800">
-                          <div className="font-semibold"><i className="fas fa-clock w-4 text-center"></i> Tiempo de Implementación: {fase.tiempo}</div>
-                        </div>
-                      )}
+                  <div className="space-y-2 mt-auto">
+                    <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
+                      <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
                     </div>
+                    {fase.tiempo && (
+                      <div className="bg-purple-100 p-2 rounded text-xs text-purple-800">
+                        <div className="font-semibold"><i className="fas fa-clock w-4 text-center"></i> Tiempo de Implementación: {fase.tiempo}</div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -262,7 +317,7 @@ function App() {
           {/* 4. Cotización y Licenciamiento */}
           <div className="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 text-white">
             <h2 className="text-2xl font-bold mb-4 text-yellow-500"><i className="fas fa-file-invoice-dollar mr-2"></i> 4. Propuesta de Implementación (Dos Caminos)</h2>
-            <p className="text-gray-300 mb-6">Basado en sus resultados, le ofrecemos dos caminos: uno para crecer orgánicamente según su cultura actual, y otro para corregir de inmediato las debilidades específicas detectadas en su IPA.</p>
+            <p className="text-gray-300 mb-6">Basado en sus resultados, le ofrecemos dos caminos: uno para crecer orgánicamente según su etapa actual, y otro para corregir de inmediato las debilidades específicas detectadas en su IPA.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
@@ -284,59 +339,35 @@ function App() {
                 </div>
 
                 <div className="bg-gray-700/50 p-4 rounded-lg mb-4 text-sm text-gray-300">
-                  <p className="font-bold text-white mb-2">Incluye módulos base:</p>
-                  <p>{ageData.modulos.slice(0, 4).join(', ')}{ageData.modulos.length > 4 ? '...' : ''}</p>
+                  <p className="font-bold text-white mb-2">Módulos clave incluidos en su nivel actual:</p>
+                  <p>{ageData.modulos.filter(m => !m.startsWith('Todos')).join(', ')}</p>
                 </div>
                 <p className="text-xs text-gray-400"><i className="fas fa-headset mr-2"></i> {ageData.soporte}</p>
               </div>
 
               {/* Opción 2: Impacto Inmediato */}
-              {(() => {
-                // Calcular paquete de impacto basado en las áreas más débiles
-                let maxTier = 1;
-                results.areaScores.forEach(area => {
-                  if (area.ipa > 30) {
-                    if (area.id === 'procesos' || area.id === 'datos') maxTier = Math.max(maxTier, 4);
-                    else if (area.id === 'talento') maxTier = Math.max(maxTier, 3);
-                    else maxTier = Math.max(maxTier, 2);
-                  }
-                });
-                const ageToTier = { 'infancia': 1, 'juventud': 2, 'madurez': 3, 'plenitud': 4 };
-                const currentTier = ageToTier[results.dominantAgeKey];
-                if (maxTier <= currentTier && currentTier < 4) maxTier = currentTier + 1;
+              <div className="bg-blue-900/30 rounded-xl p-6 border border-blue-500 relative shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl uppercase">Camino 2: Impacto Inmediato</div>
+                <h3 className="text-2xl font-black text-white mb-2 mt-2">{impactData.paquete}</h3>
+                <p className="text-sm text-blue-300 mb-6 border-b border-blue-800 pb-4">Implementación avanzada para tapar las fugas críticas HOY.</p>
                 
-                let impactKey = 'plenitud';
-                if (maxTier === 1) impactKey = 'infancia';
-                else if (maxTier === 2) impactKey = 'juventud';
-                else if (maxTier === 3) impactKey = 'madurez';
-                
-                const impactData = data.solutions.ages[impactKey];
-
-                return (
-                  <div className="bg-blue-900/30 rounded-xl p-6 border border-blue-500 relative shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                    <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl uppercase">Camino 2: Impacto Inmediato</div>
-                    <h3 className="text-2xl font-black text-white mb-2 mt-2">{impactData.paquete}</h3>
-                    <p className="text-sm text-blue-300 mb-6 border-b border-blue-800 pb-4">Implementación avanzada para tapar las fugas críticas HOY.</p>
-                    
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div>
-                        <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Implementación</p>
-                        <p className="text-xl font-bold text-white">{impactData.precio_implementacion}</p>
-                      </div>
-                      <div>
-                        <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Licencia NyTEX</p>
-                        <p className="text-xl font-bold text-yellow-400">{impactData.precio_licencia}</p>
-                      </div>
-                    </div>
-
-                    <div className="bg-blue-800/40 p-4 rounded-lg mb-4 text-sm text-blue-100">
-                      <p className="font-bold text-white mb-2">Módulos clave que resuelven sus debilidades:</p>
-                      <p>{impactData.modulos.slice(-3).join(', ')}</p>
-                    </div>
-                    <p className="text-xs text-blue-300"><i className="fas fa-headset mr-2"></i> {impactData.soporte}</p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Implementación</p>
+                    <p className="text-xl font-bold text-white">{impactData.precio_implementacion}</p>
                   </div>
-                );
-              })()}
+                  <div>
+                    <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Licencia NyTEX</p>
+                    <p className="text-xl font-bold text-yellow-400">{impactData.precio_licencia}</p>
+                  </div>
+                </div>
+
+                <div className="bg-blue-800/40 p-4 rounded-lg mb-4 text-sm text-blue-100">
+                  <p className="font-bold text-white mb-2">Incluye los módulos exactos para resolver su IPA:</p>
+                  <p className="font-semibold text-yellow-300">{criticalModulesNeeded.join(', ')}</p>
+                </div>
+                <p className="text-xs text-blue-300"><i className="fas fa-headset mr-2"></i> {impactData.soporte}</p>
+              </div>
 
             </div>
           </div>
