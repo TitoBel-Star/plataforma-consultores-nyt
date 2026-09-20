@@ -1,0 +1,305 @@
+const { useState, useEffect } = React;
+
+function App() {
+  const [data, setData] = useState({ questions: null, solutions: null });
+  const [step, setStep] = useState('welcome');
+  const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
+  const [areaAnswers, setAreaAnswers] = useState({});
+  const [results, setResults] = useState(null);
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/diagnostico/questions.json?v=' + Date.now()).then(r => r.json()),
+      fetch('/diagnostico/solutions.json?v=' + Date.now()).then(r => r.json())
+    ]).then(([questions, solutions]) => {
+      setData({ questions, solutions });
+    }).catch(err => console.error("Error cargando datos:", err));
+  }, []);
+
+  if (!data.questions || !data.solutions) {
+    return <div className="min-h-screen flex items-center justify-center text-xl">Cargando aplicación...</div>;
+  }
+
+  const startDiagnosis = () => {
+    setAreaAnswers({});
+    setCurrentAreaIndex(0);
+    setStep('areas');
+    window.scrollTo(0,0);
+  };
+
+  const handleAreaAnswer = (questionId, score) => {
+    setAreaAnswers(prev => ({ ...prev, [questionId]: score }));
+  };
+
+  const nextArea = () => {
+    const currentArea = data.questions.areas[currentAreaIndex];
+    const answeredInArea = currentArea.questions.filter(q => areaAnswers[q.id] !== undefined);
+    
+    if (answeredInArea.length < currentArea.questions.length) {
+      alert('Por favor responde todas las preguntas de esta área para continuar.');
+      return;
+    }
+
+    if (currentAreaIndex < data.questions.areas.length - 1) {
+      setCurrentAreaIndex(currentAreaIndex + 1);
+      window.scrollTo(0,0);
+    } else {
+      calculateResults();
+    }
+  };
+
+  const calculateResults = () => {
+    let totalScore = 0;
+    let answeredQuestions = 0;
+    
+    const areaScores = data.questions.areas.map(area => {
+      let areaTotal = 0;
+      let areaMax = 0;
+      let leaks = [];
+      area.questions.forEach(q => {
+        const score = areaAnswers[q.id];
+        if (score !== undefined && score !== 'NA') {
+          totalScore += score;
+          answeredQuestions++;
+          areaTotal += score;
+          areaMax += 4;
+          if (score <= 2) {
+            leaks.push({ question: q.text, score });
+          }
+        }
+      });
+      const percentage = areaMax > 0 ? Math.round((areaTotal / areaMax) * 100) : 100;
+      const ipa = 100 - percentage; // Índice de Prioridad de Automatización
+      
+      let alertMsg = "";
+      if (ipa > 40) {
+        alertMsg = "Se requieren mejoras y control informático para cerrar fugas de valor.";
+      }
+
+      return { id: area.id, name: area.name, ipa, leaks, alertMsg };
+    });
+
+    // Calcular etapa dominante basada en el promedio (1 a 4)
+    const avgScore = answeredQuestions > 0 ? totalScore / answeredQuestions : 1;
+    let dominantAgeKey = 'infancia';
+    if (avgScore > 3.25) dominantAgeKey = 'plenitud';
+    else if (avgScore > 2.5) dominantAgeKey = 'madurez';
+    else if (avgScore > 1.75) dominantAgeKey = 'juventud';
+    else dominantAgeKey = 'infancia';
+
+    setResults({
+      areaScores: areaScores.sort((a,b) => b.ipa - a.ipa),
+      dominantAgeKey,
+      avgScore
+    });
+
+    setStep('results');
+    window.scrollTo(0,0);
+  };
+
+  if (step === 'welcome') {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gray-100">
+        <div className="max-w-2xl bg-white p-8 md:p-12 rounded-xl shadow-xl text-center border-t-8 border-blue-600">
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Diagnóstico Operativo NyT</h1>
+          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            Descubra su Índice de Prioridad de Automatización (IPA) y el paquete de NyTEX ideal para transformar su empresa.
+          </p>
+          <div className="bg-blue-50 border border-blue-100 rounded-lg p-6 mb-8 text-left">
+            <h3 className="font-bold text-blue-800 mb-2"><i className="fas fa-info-circle mr-2"></i>¿Qué obtendrá?</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
+              <li>Identificación del Nivel Evolutivo de su Empresa.</li>
+              <li>Roadmap de Transformación (Eficiencia y Dirección).</li>
+              <li>Cotización y licenciamiento exacto según su etapa.</li>
+            </ul>
+          </div>
+          <button onClick={startDiagnosis} className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full shadow-lg text-lg transition-transform transform hover:-translate-y-1">
+            Iniciar Diagnóstico Gratuito <i className="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (step === 'areas') {
+    const area = data.questions.areas[currentAreaIndex];
+    return (
+      <div className="min-h-screen p-4 md:p-8 bg-gray-100 flex justify-center">
+        <div className="max-w-3xl w-full bg-white p-6 md:p-10 rounded-xl shadow-xl">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-bold text-gray-800">Sección: {area.name}</h2>
+            <span className="text-sm font-semibold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+              Paso {currentAreaIndex + 1} de {data.questions.areas.length}
+            </span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2.5 mb-6">
+            <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${((currentAreaIndex) / data.questions.areas.length) * 100}%` }}></div>
+          </div>
+          <div className="space-y-8">
+            {area.questions.map((q, idx) => (
+              <div key={q.id} className="bg-gray-50 p-4 rounded-lg border">
+                <p className="font-semibold text-lg mb-4">{q.text}</p>
+                <div className="space-y-2">
+                  {q.options.map((opt, oIdx) => (
+                    <label key={oIdx} className="flex items-center space-x-3 p-3 bg-white rounded shadow-sm hover:bg-blue-50 cursor-pointer border border-transparent hover:border-blue-200 transition-colors">
+                      <input 
+                        type="radio" 
+                        name={q.id} 
+                        value={opt.score}
+                        checked={areaAnswers[q.id] === opt.score}
+                        onChange={() => handleAreaAnswer(q.id, opt.score)}
+                        className="h-5 w-5 text-blue-600"
+                      />
+                      <span className="text-gray-700">{opt.text}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 flex justify-between">
+            <button 
+              onClick={() => currentAreaIndex > 0 ? setCurrentAreaIndex(currentAreaIndex-1) : setStep('welcome')} 
+              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded shadow">
+              <i className="fas fa-arrow-left mr-2"></i> Atrás
+            </button>
+            <button onClick={nextArea} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded shadow">
+              {currentAreaIndex < data.questions.areas.length - 1 ? 'Siguiente' : 'Ver Resultados'} 
+              {currentAreaIndex < data.questions.areas.length - 1 && <i className="fas fa-arrow-right ml-2"></i>}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (step === 'results') {
+    const ageData = data.solutions.ages[results.dominantAgeKey];
+    
+    return (
+      <div className="min-h-screen p-4 md:p-8 bg-gray-100 flex justify-center">
+        <div className="max-w-5xl w-full space-y-8">
+          
+          <div className="bg-white p-8 rounded-lg shadow-xl text-center">
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">Diagnóstico y Plan de Acción</h1>
+            <p className="text-xl text-blue-800 font-bold mb-4">{ageData.title}</p>
+            <p className="text-gray-600">{ageData.description}</p>
+          </div>
+
+          {/* 1. Detección de Fugas Económicas */}
+          <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-red-600">
+            <h2 className="text-2xl font-bold mb-4 text-red-700"><i className="fas fa-exclamation-triangle mr-2"></i> 1. Fugas Operativas Detectadas</h2>
+            <div className="space-y-4">
+              {results.areaScores.filter(a => a.ipa > 40).length === 0 ? (
+                 <p className="text-green-700">No se detectaron fugas graves en sus procesos evaluados.</p>
+              ) : (
+                results.areaScores.filter(a => a.ipa > 40).map(area => (
+                  <div key={area.id} className="bg-red-50 p-4 border border-red-200 rounded">
+                    <h3 className="font-bold text-red-800 mb-1">{area.name}</h3>
+                    <p className="text-red-700 mb-2">{area.alertMsg}</p>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+
+          {/* 2. Índice de Prioridad de Automatización (IPA) */}
+          <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-blue-600">
+            <h2 className="text-2xl font-bold mb-4 text-blue-800"><i className="fas fa-sort-amount-down mr-2"></i> 2. Índice de Prioridad de Automatización (IPA)</h2>
+            <p className="text-gray-600 mb-6">Rankeado del 0 al 100, indicando qué áreas urgen automatizar de inmediato.</p>
+            <div className="space-y-6">
+              {results.areaScores.map(area => (
+                <div key={area.id} className="border rounded-lg p-5">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-xl font-bold">{area.name}</h3>
+                    <span className={`font-bold text-lg ${area.ipa > 60 ? 'text-red-600' : area.ipa > 30 ? 'text-yellow-600' : 'text-green-600'}`}>
+                      IPA: {area.ipa}/100
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-3 mb-4">
+                    <div className={`h-3 rounded-full ${area.ipa > 60 ? 'bg-red-600' : area.ipa > 30 ? 'bg-yellow-500' : 'bg-green-500'}`} style={{ width: `${area.ipa}%` }}></div>
+                  </div>
+                  {area.ipa > 0 && (
+                    <div className="bg-blue-50 p-3 rounded text-sm text-blue-800 border border-blue-100">
+                      <strong>Solución Sugerida:</strong> {
+                        data.solutions.areaSolutions[area.id] ? data.solutions.areaSolutions[area.id][0] : "Implementar módulos de gestión empresarial."
+                      }
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 3. El Roadmap de Transformación */}
+          <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-purple-600">
+            <h2 className="text-2xl font-bold mb-4 text-purple-800"><i className="fas fa-route mr-2"></i> 3. El Roadmap de Transformación</h2>
+            <p className="text-gray-600 mb-6">Proponemos este plan de consultoría e implementación tecnológica (Consultores NyT):</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {data.solutions.methodology && data.solutions.methodology.map((fase, idx) => (
+                <div key={idx} className="border border-purple-200 rounded p-4 bg-purple-50 shadow-sm">
+                  <h3 className="font-bold text-purple-900 mb-1">{fase.fase}</h3>
+                  <p className="text-xs text-purple-700 font-semibold mb-2">{fase.enfoque}</p>
+                  <ul className="list-disc list-inside text-sm text-gray-700 mb-3">
+                    {fase.practicas.map((p, i) => <li key={i}>{p}</li>)}
+                  </ul>
+                  <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
+                    <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 4. Cotización y Licenciamiento */}
+          <div className="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 text-white">
+            <h2 className="text-2xl font-bold mb-4 text-yellow-500"><i className="fas fa-file-invoice-dollar mr-2"></i> 4. Propuesta de Paquete NyTEX</h2>
+            <p className="text-gray-300 mb-6">El paquete tecnológico exacto y la cotización recomendada para el tamaño de su operación:</p>
+            
+            <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+              <h3 className="text-3xl font-black text-white mb-2">{ageData.paquete}</h3>
+              <p className="text-sm text-gray-400 mb-6 border-b border-gray-700 pb-4">Tarifa Plana. Usuarios Ilimitados.</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                  <p className="text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Precio de Implementación</p>
+                  <p className="text-3xl font-bold text-white">{ageData.precio_implementacion}</p>
+                  <p className="text-xs text-gray-500 mt-1">Facturado por el Partner Consultor</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Licencia Mensual NyTEX</p>
+                  <p className="text-3xl font-bold text-yellow-500">{ageData.precio_licencia}</p>
+                  <p className="text-xs text-gray-500 mt-1">Facturado directamente por NyTEX</p>
+                </div>
+              </div>
+
+              <div className="bg-gray-700/50 p-4 rounded-lg mb-4">
+                <p className="text-sm font-bold text-white mb-2">Módulos Incluidos:</p>
+                <div className="flex flex-wrap gap-2">
+                  {ageData.modulos.map((mod, idx) => (
+                    <span key={idx} className="bg-gray-900 text-gray-300 text-xs px-2 py-1 rounded border border-gray-600">{mod}</span>
+                  ))}
+                </div>
+              </div>
+              
+              <p className="text-sm text-gray-400"><i className="fas fa-headset mr-2"></i> {ageData.soporte}</p>
+            </div>
+          </div>
+          
+          <div className="text-center pb-8">
+            <button onClick={() => window.location.reload()} className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg">
+              <i className="fas fa-redo mr-2"></i> Realizar nuevo diagnóstico
+            </button>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

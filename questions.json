@@ -1,0 +1,85 @@
+{
+  "ageQuestions": [],
+  "areas": [
+    {
+      "id": "talento",
+      "name": "Talento Humano",
+      "questions": [
+        {
+          "id": "th1",
+          "text": "¿Cómo se gestiona el Talento Humano y liderazgo corporativo?",
+          "options": [
+            { "text": "Liderazgo autoritario, enfoque administrativo/compras y control básico.", "score": 1 },
+            { "text": "Organigrama definido, con enfoque agresivo en ventas y objetivos.", "score": 2 },
+            { "text": "Gestión por conocimiento, resultados claros y capacitación continua.", "score": 3 },
+            { "text": "Equipos de alto rendimiento, análisis predictivo y mejora continua.", "score": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "procesos",
+      "name": "Procesos",
+      "questions": [
+        {
+          "id": "pro1",
+          "text": "¿Cuál es el nivel de formalidad de los procesos en su empresa?",
+          "options": [
+            { "text": "Sin procesos formales, dependemos de la experiencia de la gente.", "score": 1 },
+            { "text": "Prácticas iniciales de mejora y algunos procesos documentados.", "score": 2 },
+            { "text": "Procesos integrados (Lean/Six Sigma) gestionando toda la cadena de valor.", "score": 3 },
+            { "text": "Mejores prácticas globales con innovación y rediseño de procesos constantes.", "score": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "datos",
+      "name": "Datos",
+      "questions": [
+        {
+          "id": "dat1",
+          "text": "¿Cuál es el nivel de uso de Datos y Analítica para la toma de decisiones?",
+          "options": [
+            { "text": "Registros manuales, decisiones puramente empíricas.", "score": 1 },
+            { "text": "KPIs básicos de ventas y reportes históricos descriptivos.", "score": 2 },
+            { "text": "KPIs de eficiencia operacional (alertas, tableros de control directivo).", "score": 3 },
+            { "text": "KPIs predictivos, datos de proveedores, externos y modelos prescriptivos.", "score": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aplicaciones",
+      "name": "Aplicaciones Tecnológicas que Usan",
+      "questions": [
+        {
+          "id": "app1",
+          "text": "¿Qué nivel de madurez tecnológica tienen sus sistemas?",
+          "options": [
+            { "text": "Sin sistema centralizado (uso intensivo de Excel o papel).", "score": 1 },
+            { "text": "ERP con módulos básicos (Facturación, Ventas, Contabilidad sencilla).", "score": 2 },
+            { "text": "Integración avanzada de ERP, CRM, BPM y herramientas de Business Intelligence.", "score": 3 },
+            { "text": "Plataformas conectadas con Inteligencia Artificial, Big Data y ecosistemas completos.", "score": 4 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cultura",
+      "name": "Etapa / Cultura",
+      "questions": [
+        {
+          "id": "cul1",
+          "text": "¿Cómo se describe la cultura predominante y etapa de su organización?",
+          "options": [
+            { "text": "Inestable. Enfoque casi exclusivo en supervivencia y generar ingresos.", "score": 1 },
+            { "text": "Estable/Eficiente. Administración enfocada en crecer y ordenar tareas.", "score": 2 },
+            { "text": "Madurez Proactiva. Cultura de procesos, resolución desde la raíz y eficiencia.", "score": 3 },
+            { "text": "Plenitud Futurista. Cultura de innovación disruptiva, agilidad y prosperidad.", "score": 4 }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "ages": {
+    "infancia": {
+      "title": "Etapa: Infancia / Inestabilidad",
+      "description": "Su organización opera de manera reactiva, con registros manuales y sin formalidad de procesos.",
+      "paquete": "NyTEX Starter (Auto-Guiado)",
+      "modulos": ["Ventas"],
+      "precio_implementacion": "$0 USD (¡Gratis!)",
+      "precio_licencia": "$35 USD / mes",
+      "soporte": "Soporte vía Tickets / Email"
+    },
+    "juventud": {
+      "title": "Etapa: Juventud / Crecimiento",
+      "description": "La empresa está en crecimiento. Se enfoca en ventas pero necesita controlar su operación e inventario de manera urgente.",
+      "paquete": "NyTEX Express",
+      "modulos": ["Ventas", "Inventario", "Contabilidad", "Cuentas por Cobrar", "Cuentas por Pagar", "Compras"],
+      "precio_implementacion": "$1,500 USD",
+      "precio_licencia": "$149 USD / mes",
+      "soporte": "Soporte humano con Partner asignado"
+    },
+    "madurez": {
+      "title": "Etapa: Madurez / Eficiencia Operacional",
+      "description": "Busca eficiencia total. Requiere integración de toda su cadena de valor para analizar KPIs y eliminar desperdicios.",
+      "paquete": "NyTEX Advanced",
+      "modulos": ["Ventas", "Inventario", "Contabilidad", "CxC", "CxP", "Compras", "Logística", "CRM Básico", "Recursos Humanos"],
+      "precio_implementacion": "$4,500 USD",
+      "precio_licencia": "$299 USD / mes",
+      "soporte": "Soporte VIP con Partner asignado"
+    },
+    "plenitud": {
+      "title": "Etapa: Plenitud / Dirección Transformacional",
+      "description": "Requiere disrupción e innovación. Sus sistemas necesitan inteligencia artificial para predecir escenarios futuros.",
+      "paquete": "NyTEX Enterprise",
+      "modulos": ["Todos los módulos Advanced", "Servicio al Cliente", "BI/KPI y Analytics", "Process Suite", "Minería de Datos", "Inteligencia Artificial", "Business Partners"],
+      "precio_implementacion": "Cotización a Medida",
+      "precio_licencia": "$499 USD / mes",
+      "soporte": "Soporte Dedicado Partner + Nivel 2 Prioritario NyTEX"
+    }
+  },
+  "methodology": [
+    {
+      "fase": "Fase 1: Diagnóstico e Integración",
+      "enfoque": "Visibilidad Básica y Transaccional",
+      "practicas": ["Identificación de Procesos Críticos", "Digitalización de Registros"],
+      "appDigital": "NyTEX Starter / Express"
+    },
+    {
+      "fase": "Fase 2: Eficiencia Operacional (EO)",
+      "enfoque": "Estandarización y Control",
+      "practicas": ["Automatización de Cuellos de Botella", "Indicadores (KPIs) Operativos", "BPMN"],
+      "appDigital": "NyTEX Advanced + CRM + RRHH"
+    },
+    {
+      "fase": "Fase 3: Dirección Estratégica Transformacional (DET)",
+      "enfoque": "Inteligencia y Anticipación",
+      "practicas": ["Minería de Datos", "Modelos Predictivos", "Business Intelligence"],
+      "appDigital": "NyTEX Enterprise + IA"
+    }
+  ],
+  "areaSolutions": {
+    "talento": ["NyTEX Recursos Humanos (HRMS) para evaluación de talento y estructura."],
+    "procesos": ["NyTEX Process Suite (BPM) para digitalización de flujos y aprobaciones."],
+    "datos": ["NyTEX BI & Minería de Datos para cuadros de mando y alertas en tiempo real."],
+    "aplicaciones": ["Migración hacia Ecosistema NyTEX integrado (ERP + CRM + BI)."],
+    "cultura": ["Talleres de alineación estratégica y gestión del cambio organizacional."]
+  }
+}
