@@ -347,6 +347,7 @@ function App() {
                   <div>
                     <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Licencia NyTEX</p>
                     <p className="text-xl font-bold text-yellow-500">{ageData.precio_licencia}</p>
+                    <p className="text-[10px] text-gray-500 mt-1">(Tarifa Plana: Fijo para toda la empresa)</p>
                   </div>
                 </div>
 
@@ -371,6 +372,7 @@ function App() {
                   <div>
                     <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Licencia NyTEX</p>
                     <p className="text-xl font-bold text-yellow-400">{impactData.precio_licencia}</p>
+                    <p className="text-[10px] text-blue-300 mt-1">(Tarifa Plana: Fijo para toda la empresa)</p>
                   </div>
                 </div>
 
