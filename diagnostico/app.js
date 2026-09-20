@@ -244,17 +244,16 @@ function App() {
                   <ul className="list-disc list-inside text-sm text-gray-700 mb-3 flex-grow">
                     {fase.practicas.map((p, i) => <li key={i}>{p}</li>)}
                   </ul>
-                  <div className="space-y-2 mt-auto">
-                    <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
-                      <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
-                    </div>
-                    {(fase.tiempo || fase.costo) && (
-                      <div className="bg-purple-100 p-2 rounded text-xs text-purple-800">
-                        {fase.tiempo && <div className="font-semibold"><i className="fas fa-clock w-4 text-center"></i> Tiempo: {fase.tiempo}</div>}
-                        {fase.costo && <div className="font-bold mt-1"><i className="fas fa-dollar-sign w-4 text-center"></i> Costo Extra: {fase.costo}</div>}
+                    <div className="space-y-2 mt-auto">
+                      <div className="bg-white border border-purple-100 p-2 rounded text-xs font-bold text-gray-800">
+                        <i className="fas fa-laptop-code text-purple-600 mr-1"></i> {fase.appDigital}
                       </div>
-                    )}
-                  </div>
+                      {fase.tiempo && (
+                        <div className="bg-purple-100 p-2 rounded text-xs text-purple-800">
+                          <div className="font-semibold"><i className="fas fa-clock w-4 text-center"></i> Tiempo de Implementación: {fase.tiempo}</div>
+                        </div>
+                      )}
+                    </div>
                 </div>
               ))}
             </div>
