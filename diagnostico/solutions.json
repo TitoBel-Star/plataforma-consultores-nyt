@@ -39,28 +39,32 @@
   },
   "methodology": [
     {
-      "fase": "Fase 1: Diagnóstico e Integración",
-      "enfoque": "Visibilidad Básica y Transaccional",
-      "practicas": ["Identificación de Procesos Críticos", "Digitalización de Registros"],
-      "appDigital": "NyTEX Starter / Express",
-      "tiempo": "2 a 3 semanas",
-      "costo": "Desde $0 hasta $1,500 USD"
+      "fase": "Fase 1: NyTEX Starter",
+      "enfoque": "Visibilidad Básica (Auto-Guiado)",
+      "practicas": ["Identificación de Procesos Críticos", "Digitalización de Registros", "Gestión Autónoma"],
+      "appDigital": "NyTEX Starter",
+      "tiempo": "Inmediato (A tu propio ritmo)"
     },
     {
-      "fase": "Fase 2: Eficiencia Operacional (EO)",
-      "enfoque": "Estandarización y Control",
-      "practicas": ["Automatización de Cuellos de Botella", "Indicadores (KPIs) Operativos", "BPMN"],
-      "appDigital": "NyTEX Advanced + CRM + RRHH",
-      "tiempo": "1 a 2 meses",
-      "costo": "$4,500 USD"
+      "fase": "Fase 2: NyTEX Express",
+      "enfoque": "Control Transaccional",
+      "practicas": ["Automatización de Ventas e Inventario", "Contabilidad y Facturación", "Cuentas por Cobrar y Pagar"],
+      "appDigital": "NyTEX Express",
+      "tiempo": "2 a 3 semanas"
     },
     {
-      "fase": "Fase 3: Dirección Estratégica Transformacional (DET)",
-      "enfoque": "Inteligencia y Anticipación",
-      "practicas": ["Minería de Datos", "Modelos Predictivos", "Business Intelligence"],
+      "fase": "Fase 3: NyTEX Advanced",
+      "enfoque": "Eficiencia Operacional (EO)",
+      "practicas": ["Logística y Cadena de Suministro", "CRM Básico", "Gestión de Recursos Humanos"],
+      "appDigital": "NyTEX Advanced",
+      "tiempo": "1 a 2 meses"
+    },
+    {
+      "fase": "Fase 4: NyTEX Enterprise",
+      "enfoque": "Dirección Estratégica Transformacional",
+      "practicas": ["Minería de Datos y Business Intelligence", "Inteligencia Artificial", "Integración de Ecosistemas"],
       "appDigital": "NyTEX Enterprise + IA",
-      "tiempo": "3+ meses",
-      "costo": "Cotización a medida"
+      "tiempo": "3+ meses"
     }
   ],
   "areaSolutions": {

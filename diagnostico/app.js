@@ -236,7 +236,7 @@ function App() {
             <h2 className="text-2xl font-bold mb-4 text-purple-800"><i className="fas fa-route mr-2"></i> 3. El Roadmap de Transformación</h2>
             <p className="text-gray-600 mb-6">Proponemos este plan de consultoría e implementación tecnológica (Consultores NyT):</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {data.solutions.methodology && data.solutions.methodology.map((fase, idx) => (
                 <div key={idx} className="border border-purple-200 rounded p-4 bg-purple-50 shadow-sm flex flex-col">
                   <h3 className="font-bold text-purple-900 mb-1">{fase.fase}</h3>
