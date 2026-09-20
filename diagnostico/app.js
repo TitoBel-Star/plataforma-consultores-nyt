@@ -261,36 +261,83 @@ function App() {
 
           {/* 4. Cotización y Licenciamiento */}
           <div className="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-yellow-500 text-white">
-            <h2 className="text-2xl font-bold mb-4 text-yellow-500"><i className="fas fa-file-invoice-dollar mr-2"></i> 4. Propuesta de Paquete NyTEX</h2>
-            <p className="text-gray-300 mb-6">El paquete tecnológico exacto y la cotización recomendada para el tamaño de su operación:</p>
+            <h2 className="text-2xl font-bold mb-4 text-yellow-500"><i className="fas fa-file-invoice-dollar mr-2"></i> 4. Propuesta de Implementación (Dos Caminos)</h2>
+            <p className="text-gray-300 mb-6">Basado en sus resultados, le ofrecemos dos caminos: uno para crecer orgánicamente según su cultura actual, y otro para corregir de inmediato las debilidades específicas detectadas en su IPA.</p>
             
-            <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-              <h3 className="text-3xl font-black text-white mb-2">{ageData.paquete}</h3>
-              <p className="text-sm text-gray-400 mb-6 border-b border-gray-700 pb-4">Tarifa Plana. Usuarios Ilimitados.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                <div>
-                  <p className="text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Precio de Implementación</p>
-                  <p className="text-3xl font-bold text-white">{ageData.precio_implementacion}</p>
-                  <p className="text-xs text-gray-500 mt-1">Facturado por el Partner Consultor</p>
+              {/* Opción 1: Crecimiento Evolutivo */}
+              <div className="bg-gray-800 rounded-xl p-6 border border-gray-600 relative">
+                <div className="absolute top-0 right-0 bg-gray-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl uppercase">Camino 1: Evolutivo</div>
+                <h3 className="text-2xl font-black text-white mb-2 mt-2">{ageData.paquete}</h3>
+                <p className="text-sm text-gray-400 mb-6 border-b border-gray-700 pb-4">Ideal para no abrumar a su equipo y avanzar paso a paso.</p>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div>
+                    <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Implementación</p>
+                    <p className="text-xl font-bold text-white">{ageData.precio_implementacion}</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Licencia NyTEX</p>
+                    <p className="text-xl font-bold text-yellow-500">{ageData.precio_licencia}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-gray-400 text-sm font-bold uppercase tracking-wider mb-2">Licencia Mensual NyTEX</p>
-                  <p className="text-3xl font-bold text-yellow-500">{ageData.precio_licencia}</p>
-                  <p className="text-xs text-gray-500 mt-1">Facturado directamente por NyTEX</p>
+
+                <div className="bg-gray-700/50 p-4 rounded-lg mb-4 text-sm text-gray-300">
+                  <p className="font-bold text-white mb-2">Incluye módulos base:</p>
+                  <p>{ageData.modulos.slice(0, 4).join(', ')}{ageData.modulos.length > 4 ? '...' : ''}</p>
                 </div>
+                <p className="text-xs text-gray-400"><i className="fas fa-headset mr-2"></i> {ageData.soporte}</p>
               </div>
 
-              <div className="bg-gray-700/50 p-4 rounded-lg mb-4">
-                <p className="text-sm font-bold text-white mb-2">Módulos Incluidos:</p>
-                <div className="flex flex-wrap gap-2">
-                  {ageData.modulos.map((mod, idx) => (
-                    <span key={idx} className="bg-gray-900 text-gray-300 text-xs px-2 py-1 rounded border border-gray-600">{mod}</span>
-                  ))}
-                </div>
-              </div>
-              
-              <p className="text-sm text-gray-400"><i className="fas fa-headset mr-2"></i> {ageData.soporte}</p>
+              {/* Opción 2: Impacto Inmediato */}
+              {(() => {
+                // Calcular paquete de impacto basado en las áreas más débiles
+                let maxTier = 1;
+                results.areaScores.forEach(area => {
+                  if (area.ipa > 30) {
+                    if (area.id === 'procesos' || area.id === 'datos') maxTier = Math.max(maxTier, 4);
+                    else if (area.id === 'talento') maxTier = Math.max(maxTier, 3);
+                    else maxTier = Math.max(maxTier, 2);
+                  }
+                });
+                const ageToTier = { 'infancia': 1, 'juventud': 2, 'madurez': 3, 'plenitud': 4 };
+                const currentTier = ageToTier[results.dominantAgeKey];
+                if (maxTier <= currentTier && currentTier < 4) maxTier = currentTier + 1;
+                
+                let impactKey = 'plenitud';
+                if (maxTier === 1) impactKey = 'infancia';
+                else if (maxTier === 2) impactKey = 'juventud';
+                else if (maxTier === 3) impactKey = 'madurez';
+                
+                const impactData = data.solutions.ages[impactKey];
+
+                return (
+                  <div className="bg-blue-900/30 rounded-xl p-6 border border-blue-500 relative shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                    <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl uppercase">Camino 2: Impacto Inmediato</div>
+                    <h3 className="text-2xl font-black text-white mb-2 mt-2">{impactData.paquete}</h3>
+                    <p className="text-sm text-blue-300 mb-6 border-b border-blue-800 pb-4">Implementación avanzada para tapar las fugas críticas HOY.</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div>
+                        <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Implementación</p>
+                        <p className="text-xl font-bold text-white">{impactData.precio_implementacion}</p>
+                      </div>
+                      <div>
+                        <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Licencia NyTEX</p>
+                        <p className="text-xl font-bold text-yellow-400">{impactData.precio_licencia}</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-blue-800/40 p-4 rounded-lg mb-4 text-sm text-blue-100">
+                      <p className="font-bold text-white mb-2">Módulos clave que resuelven sus debilidades:</p>
+                      <p>{impactData.modulos.slice(-3).join(', ')}</p>
+                    </div>
+                    <p className="text-xs text-blue-300"><i className="fas fa-headset mr-2"></i> {impactData.soporte}</p>
+                  </div>
+                );
+              })()}
+
             </div>
           </div>
           
