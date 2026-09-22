@@ -4,7 +4,9 @@
       "title": "Etapa: Infancia / Inestabilidad",
       "description": "Su organización opera de manera reactiva, con registros manuales y sin formalidad de procesos.",
       "paquete": "NyTEX Starter (Auto-Guiado)",
-      "modulos": ["Ventas"],
+      "modulos": [
+        "Ventas"
+      ],
       "precio_implementacion": "$0 USD (¡Gratis!)",
       "precio_licencia": "$35 USD / mes",
       "soporte": "Soporte vía Tickets / Email"
@@ -13,7 +15,14 @@
       "title": "Etapa: Juventud / Crecimiento",
       "description": "La empresa está en crecimiento. Se enfoca en ventas pero necesita controlar su operación e inventario de manera urgente.",
       "paquete": "NyTEX Express",
-      "modulos": ["Ventas", "Inventario", "Contabilidad", "Cuentas por Cobrar", "Cuentas por Pagar", "Compras"],
+      "modulos": [
+        "Ventas",
+        "Inventario",
+        "Contabilidad",
+        "Cuentas por Cobrar",
+        "Cuentas por Pagar",
+        "Compras"
+      ],
       "precio_implementacion": "$1,500 USD",
       "precio_licencia": "$149 USD / mes",
       "soporte": "Soporte humano con Partner asignado"
@@ -22,7 +31,17 @@
       "title": "Etapa: Madurez / Eficiencia Operacional",
       "description": "Busca eficiencia total. Requiere integración de toda su cadena de valor para analizar KPIs y eliminar desperdicios.",
       "paquete": "NyTEX Advanced",
-      "modulos": ["Ventas", "Inventario", "Contabilidad", "CxC", "CxP", "Compras", "Logística", "CRM Básico", "Recursos Humanos"],
+      "modulos": [
+        "Ventas",
+        "Inventario",
+        "Contabilidad",
+        "CxC",
+        "CxP",
+        "Compras",
+        "Logística",
+        "CRM Básico",
+        "Recursos Humanos"
+      ],
       "precio_implementacion": "$4,500 USD",
       "precio_licencia": "$299 USD / mes",
       "soporte": "Soporte VIP con Partner asignado"
@@ -31,7 +50,15 @@
       "title": "Etapa: Plenitud / Dirección Transformacional",
       "description": "Requiere disrupción e innovación. Sus sistemas necesitan inteligencia artificial para predecir escenarios futuros.",
       "paquete": "NyTEX Enterprise",
-      "modulos": ["Todos los módulos Advanced", "Servicio al Cliente", "BI/KPI y Analytics", "Process Suite", "Minería de Datos", "Inteligencia Artificial", "Business Partners"],
+      "modulos": [
+        "Todos los módulos Advanced",
+        "Servicio al Cliente",
+        "BI/KPI y Analytics",
+        "Process Suite",
+        "Minería de Datos",
+        "Inteligencia Artificial",
+        "Business Partners"
+      ],
       "precio_implementacion": "Cotización a Medida",
       "precio_licencia": "$499 USD / mes",
       "soporte": "Soporte Dedicado Partner + Nivel 2 Prioritario NyTEX"
@@ -41,37 +68,66 @@
     {
       "fase": "Fase 1: NyTEX Starter",
       "enfoque": "Visibilidad Básica (Auto-Guiado)",
-      "practicas": ["Identificación de Procesos Críticos", "Digitalización de Registros", "Gestión Autónoma"],
+      "practicas": [
+        "Identificación de Procesos Críticos",
+        "Digitalización de Registros",
+        "Gestión Autónoma"
+      ],
       "appDigital": "NyTEX Starter",
       "tiempo": "Inmediato (A tu propio ritmo)"
     },
     {
       "fase": "Fase 2: NyTEX Express",
       "enfoque": "Control Transaccional",
-      "practicas": ["Automatización de Ventas e Inventario", "Contabilidad y Facturación", "Cuentas por Cobrar y Pagar"],
+      "practicas": [
+        "Automatización de Ventas e Inventario",
+        "Contabilidad y Facturación",
+        "Cuentas por Cobrar y Pagar"
+      ],
       "appDigital": "NyTEX Express",
       "tiempo": "2 a 3 semanas"
     },
     {
       "fase": "Fase 3: NyTEX Advanced",
       "enfoque": "Eficiencia Operacional (EO)",
-      "practicas": ["Logística y Cadena de Suministro", "CRM Básico", "Gestión de Recursos Humanos"],
+      "practicas": [
+        "Logística y Cadena de Suministro",
+        "CRM Básico",
+        "Gestión de Recursos Humanos"
+      ],
       "appDigital": "NyTEX Advanced",
       "tiempo": "1 a 2 meses"
     },
     {
       "fase": "Fase 4: NyTEX Enterprise",
       "enfoque": "Dirección Estratégica Transformacional",
-      "practicas": ["Minería de Datos y Business Intelligence", "Inteligencia Artificial", "Integración de Ecosistemas"],
+      "practicas": [
+        "Minería de Datos y Business Intelligence",
+        "Inteligencia Artificial",
+        "Integración de Ecosistemas"
+      ],
       "appDigital": "NyTEX Enterprise + IA",
       "tiempo": "3+ meses"
     }
   ],
   "areaSolutions": {
-    "talento": ["NyTEX Recursos Humanos (HRMS) para evaluación de talento y estructura."],
-    "procesos": ["NyTEX Process Suite (BPM) para digitalización de flujos y aprobaciones."],
-    "datos": ["NyTEX BI & Minería de Datos para cuadros de mando y alertas en tiempo real."],
-    "aplicaciones": ["Migración hacia Ecosistema NyTEX integrado (ERP + CRM + BI)."],
-    "cultura": ["Talleres de alineación estratégica y gestión del cambio organizacional."]
+    "operaciones": [
+      "Sistema WMS y Control Operativo NyTEX para evitar fugas en bodega y ejecución."
+    ],
+    "logistica_y_compras": [
+      "Módulos de Logística y Cadena de Suministro NyTEX para control de proveedores e inventario."
+    ],
+    "recursos_humanos": [
+      "NyTEX Recursos Humanos (HRMS) para evaluación de talento, métricas de clima y compensación."
+    ],
+    "mercadeo_y_ventas": [
+      "NyTEX CRM Básico y Módulos de Ventas para inteligencia de mercado y retención."
+    ],
+    "administracion": [
+      "NyTEX Process Suite (BPM) para gestión documental y control estratégico sin papel."
+    ],
+    "contabilidad_y_finanzas": [
+      "Ecosistema Financiero NyTEX y BI para escenarios predictivos y flujo de caja."
+    ]
   }
 }

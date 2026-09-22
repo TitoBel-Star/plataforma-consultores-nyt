@@ -203,26 +203,34 @@ function App() {
     let maxTier = 1;
     let criticalModulesNeeded = [];
 
-    results.areaScores.forEach(area => {
-      if (area.ipa > 30) {
-        if (area.id === 'procesos') {
-          maxTier = Math.max(maxTier, 4);
-          if (!criticalModulesNeeded.includes('NyTEX Process Suite (BPM)')) criticalModulesNeeded.push('NyTEX Process Suite (BPM)');
+      results.areaScores.forEach(area => {
+        if (area.ipa > 30) {
+          if (area.id === 'operaciones') {
+            maxTier = Math.max(maxTier, 2);
+            if (!criticalModulesNeeded.includes('NyTEX Inventario y WMS')) criticalModulesNeeded.push('NyTEX Inventario y WMS');
+          }
+          else if (area.id === 'logistica_y_compras') {
+            maxTier = Math.max(maxTier, 3);
+            if (!criticalModulesNeeded.includes('NyTEX Compras y Logística')) criticalModulesNeeded.push('NyTEX Compras y Logística');
+          }
+          else if (area.id === 'recursos_humanos') {
+            maxTier = Math.max(maxTier, 3);
+            if (!criticalModulesNeeded.includes('NyTEX Recursos Humanos (HRMS)')) criticalModulesNeeded.push('NyTEX Recursos Humanos (HRMS)');
+          }
+          else if (area.id === 'mercadeo_y_ventas') {
+            maxTier = Math.max(maxTier, 3);
+            if (!criticalModulesNeeded.includes('NyTEX CRM y Ventas')) criticalModulesNeeded.push('NyTEX CRM y Ventas');
+          }
+          else if (area.id === 'administracion') {
+            maxTier = Math.max(maxTier, 4);
+            if (!criticalModulesNeeded.includes('NyTEX Process Suite (BPM)')) criticalModulesNeeded.push('NyTEX Process Suite (BPM)');
+          }
+          else if (area.id === 'contabilidad_y_finanzas') {
+            maxTier = Math.max(maxTier, 4);
+            if (!criticalModulesNeeded.includes('NyTEX BI & Flujo de Caja')) criticalModulesNeeded.push('NyTEX BI & Flujo de Caja');
+          }
         }
-        else if (area.id === 'datos') {
-          maxTier = Math.max(maxTier, 4);
-          if (!criticalModulesNeeded.includes('NyTEX BI & Minería de Datos')) criticalModulesNeeded.push('NyTEX BI & Minería de Datos');
-        }
-        else if (area.id === 'talento') {
-          maxTier = Math.max(maxTier, 3);
-          if (!criticalModulesNeeded.includes('NyTEX Recursos Humanos (HRMS)')) criticalModulesNeeded.push('NyTEX Recursos Humanos (HRMS)');
-        }
-        else if (area.id === 'aplicaciones') {
-          maxTier = Math.max(maxTier, 2);
-          if (!criticalModulesNeeded.includes('Ecosistema ERP+CRM')) criticalModulesNeeded.push('Ecosistema ERP+CRM');
-        }
-      }
-    });
+      });
 
     const ageToTier = { 'infancia': 1, 'juventud': 2, 'madurez': 3, 'plenitud': 4 };
     const currentTier = ageToTier[results.dominantAgeKey];

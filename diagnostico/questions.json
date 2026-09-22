@@ -1,82 +1,829 @@
 {
-  "ageQuestions": [],
   "areas": [
     {
-      "id": "talento",
-      "name": "Talento Humano",
+      "id": "operaciones",
+      "title": "Operaciones",
       "questions": [
         {
-          "id": "th1",
-          "text": "¿Cómo se gestiona el Talento Humano y liderazgo corporativo?",
+          "id": "operaciones_q0",
+          "text": "¿Cómo se gestiona la ejecución diaria de bodega?",
           "options": [
-            { "text": "Liderazgo autoritario, enfoque administrativo/compras y control básico.", "score": 1 },
-            { "text": "Organigrama definido, con enfoque agresivo en ventas y objetivos.", "score": 2 },
-            { "text": "Gestión por conocimiento, resultados claros y capacitación continua.", "score": 3 },
-            { "text": "Equipos de alto rendimiento, análisis predictivo y mejora continua.", "score": 4 }
+            {
+              "score": 1,
+              "text": "Sin controles: el personal ejecuta de forma empírica y reactiva."
+            },
+            {
+              "score": 2,
+              "text": "Control Manual: Procesos documentados en Excel/ERP básico."
+            },
+            {
+              "score": 3,
+              "text": "Eficiencia Operacional: Sistema WMS automatizado con TQM."
+            },
+            {
+              "score": 4,
+              "text": "Transformacional: Procesos predictivos e integrados con metodologías Lean."
+            }
+          ]
+        },
+        {
+          "id": "operaciones_q1",
+          "text": "¿Nivel de exactitud en los inventarios?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Nulo: Grandes diferencias y mermas sin justificar."
+            },
+            {
+              "score": 2,
+              "text": "Básico: Conteos esporádicos basados en históricos."
+            },
+            {
+              "score": 3,
+              "text": "Eficiente: Conteos sistemáticos que activan alertas tempranas."
+            },
+            {
+              "score": 4,
+              "text": "Transformacional: Big Data y JIT que predice mermas y optimiza stock."
+            }
+          ]
+        },
+        {
+          "id": "operaciones_q2",
+          "text": "¿Productividad en flota de distribución?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No se mide. Mantenimiento puramente correctivo."
+            },
+            {
+              "score": 2,
+              "text": "Se miden gastos básicos en un módulo de control."
+            },
+            {
+              "score": 3,
+              "text": "Existen KPIs que evalúan tiempos, costos y calidad."
+            },
+            {
+              "score": 4,
+              "text": "Analítica predictiva y telemetría para optimizar rutas."
+            }
+          ]
+        },
+        {
+          "id": "operaciones_q3",
+          "text": "¿Incidencias de instalaciones/infraestructura?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Actuamos solo cuando algo se rompe y paraliza."
+            },
+            {
+              "score": 2,
+              "text": "Registro manual de reparaciones (control de gastos)."
+            },
+            {
+              "score": 3,
+              "text": "Presupuestos preventivos, tickets automatizados y BPMN."
+            },
+            {
+              "score": 4,
+              "text": "Mantenimiento predictivo integrado a Facility Management y Six Sigma."
+            }
+          ]
+        },
+        {
+          "id": "operaciones_q4",
+          "text": "¿Seguridad física y prevención de activos?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Casi nulo, asumimos vulnerabilidades constantes."
+            },
+            {
+              "score": 2,
+              "text": "Cámaras y vigilancia (análisis solo descriptivo)."
+            },
+            {
+              "score": 3,
+              "text": "Protocolos estandarizados (TQM), auditorías y KPIs."
+            },
+            {
+              "score": 4,
+              "text": "Sistemas preventivos basados en patrones y analítica avanzada."
+            }
+          ]
+        },
+        {
+          "id": "operaciones_q5",
+          "text": "¿Eficiencia en Seguridad y Salud Ocupacional?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No hay procesos, solo reaccionamos ante accidentes."
+            },
+            {
+              "score": 2,
+              "text": "Cumplimos la normativa legal mínima por requisito."
+            },
+            {
+              "score": 3,
+              "text": "Analizamos causas-raíz y aplicamos mejora continua."
+            },
+            {
+              "score": 4,
+              "text": "La salud es pilar estratégico del Balanced Scorecard."
+            }
           ]
         }
       ]
     },
     {
-      "id": "procesos",
-      "name": "Procesos",
+      "id": "logistica_y_compras",
+      "title": "Logística y Compras",
       "questions": [
         {
-          "id": "pro1",
-          "text": "¿Cuál es el nivel de formalidad de los procesos en su empresa?",
+          "id": "logistica_y_compras_q0",
+          "text": "¿Estrategia de compras (Supply Chain)?",
           "options": [
-            { "text": "Sin procesos formales, dependemos de la experiencia de la gente.", "score": 1 },
-            { "text": "Prácticas iniciales de mejora y algunos procesos documentados.", "score": 2 },
-            { "text": "Procesos integrados (Lean/Six Sigma) gestionando toda la cadena de valor.", "score": 3 },
-            { "text": "Mejores prácticas globales con innovación y rediseño de procesos constantes.", "score": 4 }
+            {
+              "score": 1,
+              "text": "Empírica; se compra lo que falta sin planificar."
+            },
+            {
+              "score": 2,
+              "text": "Control básico enfocado en el ahorro de precios."
+            },
+            {
+              "score": 3,
+              "text": "Procesos estandarizados (BPMN), evaluando eficiencia."
+            },
+            {
+              "score": 4,
+              "text": "S&OP e inteligencia de mercado / Big Data para anticipar demanda."
+            }
+          ]
+        },
+        {
+          "id": "logistica_y_compras_q1",
+          "text": "¿Tecnología en red de proveedores?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Teléfono, WhatsApp y Excel."
+            },
+            {
+              "score": 2,
+              "text": "|"
+            },
+            {
+              "score": 3,
+              "text": "Integración Supply Chain, KPIs de Fill Rate."
+            },
+            {
+              "score": 4,
+              "text": "Integración B2B automatizada y modelos Just-in-Time (JIT)."
+            }
+          ]
+        },
+        {
+          "id": "logistica_y_compras_q2",
+          "text": "¿Cálculo de puntos de reorden (ROP)?",
+          "options": [
+            {
+              "score": 1,
+              "text": "A ojo o intuición del comprador."
+            },
+            {
+              "score": 2,
+              "text": "Promedios históricos en hojas de cálculo."
+            },
+            {
+              "score": 3,
+              "text": "Sistemas con alertas matemáticas basadas en lead times."
+            },
+            {
+              "score": 4,
+              "text": "IA predictiva que simula escenarios de demanda."
+            }
+          ]
+        },
+        {
+          "id": "logistica_y_compras_q3",
+          "text": "¿Mitigación de Venta Perdida / Obsolescencia?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No se mide, nos damos cuenta por quejas."
+            },
+            {
+              "score": 2,
+              "text": "Se revisan reportes históricos a fin de mes."
+            },
+            {
+              "score": 3,
+              "text": "Mejora continua (Kaizen) identificando la causa raíz."
+            },
+            {
+              "score": 4,
+              "text": "Analítica prescriptiva ajusta inventarios antes del quiebre."
+            }
+          ]
+        },
+        {
+          "id": "logistica_y_compras_q4",
+          "text": "¿Metodologías de optimización logística?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Ninguna, se asumen costos globales."
+            },
+            {
+              "score": 2,
+              "text": "Búsqueda de descuentos comerciales directos."
+            },
+            {
+              "score": 3,
+              "text": "Costeo ABC/ABM integrado a KPIs operativos."
+            },
+            {
+              "score": 4,
+              "text": "Análisis estratégico financiero del ROIC logístico."
+            }
+          ]
+        },
+        {
+          "id": "logistica_y_compras_q5",
+          "text": "¿Integración logística-financiera?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Compras opera desconectado del flujo financiero."
+            },
+            {
+              "score": 2,
+              "text": "Finanzas impone presupuestos restrictivos."
+            },
+            {
+              "score": 3,
+              "text": "Eficiencia Operacional cruzando días inventario vs pago."
+            },
+            {
+              "score": 4,
+              "text": "Parte del Balanced Scorecard para crecimiento escalable."
+            }
           ]
         }
       ]
     },
     {
-      "id": "datos",
-      "name": "Datos",
+      "id": "recursos_humanos",
+      "title": "Recursos Humanos",
       "questions": [
         {
-          "id": "dat1",
-          "text": "¿Cuál es el nivel de uso de Datos y Analítica para la toma de decisiones?",
+          "id": "recursos_humanos_q0",
+          "text": "¿Estructura y talento?",
           "options": [
-            { "text": "Registros manuales, decisiones puramente empíricas.", "score": 1 },
-            { "text": "KPIs básicos de ventas y reportes históricos descriptivos.", "score": 2 },
-            { "text": "KPIs de eficiencia operacional (alertas, tableros de control directivo).", "score": 3 },
-            { "text": "KPIs predictivos, datos de proveedores, externos y modelos prescriptivos.", "score": 4 }
+            {
+              "score": 1,
+              "text": "No hay organigrama, liderazgo autoritario central."
+            },
+            {
+              "score": 2,
+              "text": "Organigrama básico enfocado en cumplir tareas."
+            },
+            {
+              "score": 3,
+              "text": "Talento valorado por innovación y automatización."
+            },
+            {
+              "score": 4,
+              "text": "Estructuras ágiles, competencias y visión/misión claras."
+            }
+          ]
+        },
+        {
+          "id": "recursos_humanos_q1",
+          "text": "¿Tecnología de Selección y Contratación?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Manual, recomendaciones y carpetas físicas."
+            },
+            {
+              "score": 2,
+              "text": "Excel y bolsas web, sin software propio."
+            },
+            {
+              "score": 3,
+              "text": "Sistema HRMS controla el flujo (BPMN) de atracción."
+            },
+            {
+              "score": 4,
+              "text": "IA filtra talento predictivamente basado en cultura."
+            }
+          ]
+        },
+        {
+          "id": "recursos_humanos_q2",
+          "text": "¿Integración/Inducción de nuevo ingreso?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Aprenden sobre la marcha bajo presión."
+            },
+            {
+              "score": 2,
+              "text": "Charla inicial básica."
+            },
+            {
+              "score": 3,
+              "text": "Plan estructurado (TQM) con seguimiento de eficiencia."
+            },
+            {
+              "score": 4,
+              "text": "Inmersivo, apoyado en plataformas digitales y filosofía Lean."
+            }
+          ]
+        },
+        {
+          "id": "recursos_humanos_q3",
+          "text": "¿Métricas de Evaluación de Desempeño?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Criterio subjetivo del dueño."
+            },
+            {
+              "score": 2,
+              "text": "Evaluación anual de tareas y asistencia."
+            },
+            {
+              "score": 3,
+              "text": "Basada en KPIs de eficiencia operacional."
+            },
+            {
+              "score": 4,
+              "text": "Alineado al Balanced Scorecard y metas estratégicas (OKRs)."
+            }
+          ]
+        },
+        {
+          "id": "recursos_humanos_q4",
+          "text": "¿Clima Laboral y compromiso?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No importa, prioridad es la operación inestable."
+            },
+            {
+              "score": 2,
+              "text": "Se percibe reactivamente si hay problemas."
+            },
+            {
+              "score": 3,
+              "text": "Encuestas regulares con análisis diagnóstico para corregir."
+            },
+            {
+              "score": 4,
+              "text": "Encuestas de compromiso son métrica predictiva clave."
+            }
+          ]
+        },
+        {
+          "id": "recursos_humanos_q5",
+          "text": "¿Sistema de Compensación?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Salario base sin incentivos claros."
+            },
+            {
+              "score": 2,
+              "text": "Comisiones básicas por hacer dinero."
+            },
+            {
+              "score": 3,
+              "text": "Premia mejora de procesos, eficiencia y ahorro."
+            },
+            {
+              "score": 4,
+              "text": "Sistema avanzado para retener talento transformacional."
+            }
           ]
         }
       ]
     },
     {
-      "id": "aplicaciones",
-      "name": "Aplicaciones Tecnológicas que Usan",
+      "id": "mercadeo_y_ventas",
+      "title": "Mercadeo y Ventas",
       "questions": [
         {
-          "id": "app1",
-          "text": "¿Qué nivel de madurez tecnológica tienen sus sistemas?",
+          "id": "mercadeo_y_ventas_q0",
+          "text": "¿Posicionamiento y Modelo Delta?",
           "options": [
-            { "text": "Sin sistema centralizado (uso intensivo de Excel o papel).", "score": 1 },
-            { "text": "ERP con módulos básicos (Facturación, Ventas, Contabilidad sencilla).", "score": 2 },
-            { "text": "Integración avanzada de ERP, CRM, BPM y herramientas de Business Intelligence.", "score": 3 },
-            { "text": "Plataformas conectadas con Inteligencia Artificial, Big Data y ecosistemas completos.", "score": 4 }
+            {
+              "score": 1,
+              "text": "Sin estrategia, vendemos a quien nos compre."
+            },
+            {
+              "score": 2,
+              "text": "Por precio/empuje, productividad en tareas."
+            },
+            {
+              "score": 3,
+              "text": "Propuestas de valor claras y eficiencia de embudos."
+            },
+            {
+              "score": 4,
+              "text": "Ingeniería de Mercado con Big Data y segmentación."
+            }
+          ]
+        },
+        {
+          "id": "mercadeo_y_ventas_q1",
+          "text": "¿Tecnología CRM en Relación con el Cliente?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Sin CRM, seguimiento por libretas o WhatsApp."
+            },
+            {
+              "score": 2,
+              "text": "ERP básico para facturar, sin seguimiento formal."
+            },
+            {
+              "score": 3,
+              "text": "CRM formal estandariza procesos y mide conversión."
+            },
+            {
+              "score": 4,
+              "text": "CRM integrado con IA y Marketing Automático prescriptivo."
+            }
+          ]
+        },
+        {
+          "id": "mercadeo_y_ventas_q2",
+          "text": "¿Benchmarking y análisis de mercado?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Mirar precios de la competencia empíricamente."
+            },
+            {
+              "score": 2,
+              "text": "Análisis descriptivo básico de nuestras ventas."
+            },
+            {
+              "score": 3,
+              "text": "Análisis diagnóstico de por qué ganamos/perdemos."
+            },
+            {
+              "score": 4,
+              "text": "Benchmarking usando Market Intelligence predictivo."
+            }
+          ]
+        },
+        {
+          "id": "mercadeo_y_ventas_q3",
+          "text": "¿Estructura de canales de venta?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Promociones impulsivas ante caídas."
+            },
+            {
+              "score": 2,
+              "text": "Canales operan sin integración (silos)."
+            },
+            {
+              "score": 3,
+              "text": "Canales integrados y medidos bajo KPIs de ROI."
+            },
+            {
+              "score": 4,
+              "text": "Desarrollo constante de nuevos modelos (E-commerce)."
+            }
+          ]
+        },
+        {
+          "id": "mercadeo_y_ventas_q4",
+          "text": "¿Medición de satisfacción/retención?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No medimos; asumimos clientes felices si no reclaman."
+            },
+            {
+              "score": 2,
+              "text": "Atendemos quejas reactivamente (histórico)."
+            },
+            {
+              "score": 3,
+              "text": "Encuestas y Consejo de Calidad atienden causa-raíz."
+            },
+            {
+              "score": 4,
+              "text": "Inteligencia Analítica anticipa la fuga (Churn) preventivamente."
+            }
+          ]
+        },
+        {
+          "id": "mercadeo_y_ventas_q5",
+          "text": "¿Estrategia comercial y Dirección Transformacional?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Solo sobrevivir el día a día."
+            },
+            {
+              "score": 2,
+              "text": "Hacer mejor lo que ya sabemos (crecimiento orgánico)."
+            },
+            {
+              "score": 3,
+              "text": "Optimizamos el modelo actual al máximo (metodologías ágiles)."
+            },
+            {
+              "score": 4,
+              "text": "Evaluar constantemente cómo reinventarnos para el futuro."
+            }
           ]
         }
       ]
     },
     {
-      "id": "cultura",
-      "name": "Etapa / Cultura",
+      "id": "administracion",
+      "title": "Administración",
       "questions": [
         {
-          "id": "cul1",
-          "text": "¿Cómo se describe la cultura predominante y etapa de su organización?",
+          "id": "administracion_q0",
+          "text": "¿Documentación, normativas y gestión?",
           "options": [
-            { "text": "Inestable. Enfoque casi exclusivo en supervivencia y generar ingresos.", "score": 1 },
-            { "text": "Estable/Eficiente. Administración enfocada en crecer y ordenar tareas.", "score": 2 },
-            { "text": "Madurez Proactiva. Cultura de procesos, resolución desde la raíz y eficiencia.", "score": 3 },
-            { "text": "Plenitud Futurista. Cultura de innovación disruptiva, agilidad y prosperidad.", "score": 4 }
+            {
+              "score": 1,
+              "text": "Archivos físicos desorganizados o red sin estructura."
+            },
+            {
+              "score": 2,
+              "text": "Procesos clave documentados enfocados al gasto."
+            },
+            {
+              "score": 3,
+              "text": "Control Administrativo (BPMN) rige la documentación."
+            },
+            {
+              "score": 4,
+              "text": "Gestión en la nube con Workflows 100% automatizados."
+            }
+          ]
+        },
+        {
+          "id": "administracion_q1",
+          "text": "¿Contratos, licencias y ámbito legal?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Ocurren vencimientos y multas por falta de visibilidad."
+            },
+            {
+              "score": 2,
+              "text": "Administración en Excel o alertas simples."
+            },
+            {
+              "score": 3,
+              "text": "KPIs de cumplimiento y alertas en sistema formal."
+            },
+            {
+              "score": 4,
+              "text": "Gobernanza corporativa mitiga riesgos legalmente predictivos."
+            }
+          ]
+        },
+        {
+          "id": "administracion_q2",
+          "text": "¿Canal de comunicaciones ascendente/descendente?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Nulo; dueños mandan, empleados ejecutan a ciegas."
+            },
+            {
+              "score": 2,
+              "text": "Reuniones operativas básicas y correos."
+            },
+            {
+              "score": 3,
+              "text": "Estructuras de comunicación (Consejo de Calidad) formales."
+            },
+            {
+              "score": 4,
+              "text": "Dashboards interactivos y transparentes compartidos en tiempo real."
+            }
+          ]
+        },
+        {
+          "id": "administracion_q3",
+          "text": "¿Ejecución de la Planificación Estratégica?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No existe, es operación de apagar incendios."
+            },
+            {
+              "score": 2,
+              "text": "Presupuesto anual financiero como guía."
+            },
+            {
+              "score": 3,
+              "text": "Se traduce en KPIs operativos por área (Eficiencia)."
+            },
+            {
+              "score": 4,
+              "text": "Balanced Scorecard transforma el modelo continuamente."
+            }
+          ]
+        },
+        {
+          "id": "administracion_q4",
+          "text": "¿Decisiones administrativas: Control vs Inteligencia?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Urgencia e intuición."
+            },
+            {
+              "score": 2,
+              "text": "Data -> KPI -> Control -> Acción Correctiva."
+            },
+            {
+              "score": 3,
+              "text": "Mejorar -> Eliminar desperdicios (Lean Six Sigma)."
+            },
+            {
+              "score": 4,
+              "text": "Data -> Patrón -> Escenario -> Decisión Estratégica (Inteligencia)."
+            }
+          ]
+        },
+        {
+          "id": "administracion_q5",
+          "text": "¿Auditorías para la excelencia?",
+          "options": [
+            {
+              "score": 1,
+              "text": "No se realizan."
+            },
+            {
+              "score": 2,
+              "text": "Básicas, fiscales o inventario por mero cumplimiento."
+            },
+            {
+              "score": 3,
+              "text": "Calidad (TQM), estandarización y certificación."
+            },
+            {
+              "score": 4,
+              "text": "Innovación y Estrategia para cuestionar el modelo de negocio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contabilidad_y_finanzas",
+      "title": "Contabilidad y Finanzas",
+      "questions": [
+        {
+          "id": "contabilidad_y_finanzas_q0",
+          "text": "¿Sofisticación de los Estados Financieros?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Atrasada, solo para impuestos (sin sistema)."
+            },
+            {
+              "score": 2,
+              "text": "Reportes básicos (ERP) enfocados al control de gastos."
+            },
+            {
+              "score": 3,
+              "text": "Integrados (BPMN), oportunos, miden rentabilidad por proceso."
+            },
+            {
+              "score": 4,
+              "text": "Plataforma BI proyecta escenarios financieros futuros."
+            }
+          ]
+        },
+        {
+          "id": "contabilidad_y_finanzas_q1",
+          "text": "¿Control y Asignación de Recursos?",
+          "options": [
+            {
+              "score": 1,
+              "text": "El dueño autoriza cada gasto a dedo."
+            },
+            {
+              "score": 2,
+              "text": "Presupuestos asignados basados en análisis descriptivo del pasado."
+            },
+            {
+              "score": 3,
+              "text": "Enfoque en Eficiencia: reducir tiempos y desperdicios (Lean)."
+            },
+            {
+              "score": 4,
+              "text": "Asignación estratégica: Inversión Transformacional vs Gasto."
+            }
+          ]
+        },
+        {
+          "id": "contabilidad_y_finanzas_q2",
+          "text": "¿Rentabilidad y Costeo de servicios?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Costo + Margen calculado empíricamente."
+            },
+            {
+              "score": 2,
+              "text": "Prorrateo contable tradicional de gastos generales."
+            },
+            {
+              "score": 3,
+              "text": "Metodología formal ABC/ABM (Basado en Actividades)."
+            },
+            {
+              "score": 4,
+              "text": "Modelos predictivos ajustan precios por elasticidad de mercado."
+            }
+          ]
+        },
+        {
+          "id": "contabilidad_y_finanzas_q3",
+          "text": "¿Rol general de las finanzas?",
+          "options": [
+            {
+              "score": 1,
+              "text": "100% Operativo: pagos, facturar, bancos."
+            },
+            {
+              "score": 2,
+              "text": "Eficiencia básica: buscar dónde ahorrar dinero."
+            },
+            {
+              "score": 3,
+              "text": "Eficiencia Operacional: procesos de negocio rentables y medidos."
+            },
+            {
+              "score": 4,
+              "text": "Transformacional: el financiero asesora el modelo de negocio."
+            }
+          ]
+        },
+        {
+          "id": "contabilidad_y_finanzas_q4",
+          "text": "¿Análisis del Flujo de Efectivo?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Inestable. Se sufre por liquidez día a día."
+            },
+            {
+              "score": 2,
+              "text": "Gestión y cobranza estructurada pero reactiva."
+            },
+            {
+              "score": 3,
+              "text": "Se corrigen desviaciones de inmediato para estabilidad."
+            },
+            {
+              "score": 4,
+              "text": "Modelado prescriptivo de escenarios para asegurar inversiones."
+            }
+          ]
+        },
+        {
+          "id": "contabilidad_y_finanzas_q5",
+          "text": "¿Gestión de Riesgo Financiero y Control Interno?",
+          "options": [
+            {
+              "score": 1,
+              "text": "Sin gestión, vulnerabilidad a fraudes."
+            },
+            {
+              "score": 2,
+              "text": "Controles básicos en procesos clave."
+            },
+            {
+              "score": 3,
+              "text": "Matriz de riesgos integrada a TQM y certificaciones ISO."
+            },
+            {
+              "score": 4,
+              "text": "Blockchain/Auditorías algorítmicas garantizando transparencia."
+            }
           ]
         }
       ]
