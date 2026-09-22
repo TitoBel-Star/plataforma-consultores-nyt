@@ -2,7 +2,6 @@
   "areas": [
     {
       "id": "operaciones",
-      "title": "Operaciones",
       "questions": [
         {
           "id": "operaciones_q0",
@@ -136,11 +135,11 @@
             }
           ]
         }
-      ]
+      ],
+      "name": "1. Operaciones"
     },
     {
       "id": "logistica_y_compras",
-      "title": "Logística y Compras",
       "questions": [
         {
           "id": "logistica_y_compras_q0",
@@ -274,11 +273,11 @@
             }
           ]
         }
-      ]
+      ],
+      "name": "2. Logística y Compras"
     },
     {
       "id": "recursos_humanos",
-      "title": "Recursos Humanos",
       "questions": [
         {
           "id": "recursos_humanos_q0",
@@ -412,11 +411,11 @@
             }
           ]
         }
-      ]
+      ],
+      "name": "3. Recursos Humanos"
     },
     {
       "id": "mercadeo_y_ventas",
-      "title": "Mercadeo y Ventas",
       "questions": [
         {
           "id": "mercadeo_y_ventas_q0",
@@ -550,11 +549,11 @@
             }
           ]
         }
-      ]
+      ],
+      "name": "4. Mercadeo y Ventas"
     },
     {
       "id": "administracion",
-      "title": "Administración",
       "questions": [
         {
           "id": "administracion_q0",
@@ -688,11 +687,11 @@
             }
           ]
         }
-      ]
+      ],
+      "name": "5. Administración"
     },
     {
       "id": "contabilidad_y_finanzas",
-      "title": "Contabilidad y Finanzas",
       "questions": [
         {
           "id": "contabilidad_y_finanzas_q0",
@@ -826,7 +825,8 @@
             }
           ]
         }
-      ]
+      ],
+      "name": "6. Contabilidad y Finanzas"
     }
   ]
 }
