@@ -3,7 +3,14 @@ const { useState, useEffect } = React;
 function App() {
   const [data, setData] = useState({ questions: null, solutions: null });
   const [step, setStep] = useState('welcome');
-    const [userInfo, setUserInfo] = useState({ companyName: '', email: '', userName: '', userRole: '' });
+    const [userInfo, setUserInfo] = useState(() => {
+      try {
+        const saved = localStorage.getItem("nyt_user_info");
+        return saved ? JSON.parse(saved) : { companyName: "", email: "", userName: "", userRole: "" };
+      } catch(e) {
+        return { companyName: "", email: "", userName: "", userRole: "" };
+      }
+    });
   const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
   const [areaAnswers, setAreaAnswers] = useState({});
   const [results, setResults] = useState(null);
@@ -24,7 +31,11 @@ function App() {
   const startDiagnosis = () => {
     setAreaAnswers({});
     setCurrentAreaIndex(0);
-    setStep('form');
+    if (userInfo && userInfo.companyName) {
+      setStep('areas');
+    } else {
+      setStep('form');
+    }
     window.scrollTo(0,0);
   };
 
