@@ -39,7 +39,8 @@
                     <a href="#diagnostico" class="text-gray-900 hover:text-brand transition-colors">Diagnóstico Empresarial</a>
                     <a href="#exito" class="text-gray-900 hover:text-brand transition-colors">Casos de Éxito</a>
                     <a href="#por-que" class="text-gray-900 hover:text-brand transition-colors">Nosotros</a>
-                    <a href="/portal/" class="text-gray-900 hover:text-brand transition-colors"><i class="fas fa-lock mr-1"></i> Portal Clientes</a>
+                    <button type="button" class="ver-apps-btn w-full bg-transparent hover:bg-[#4B2979] text-white font-bold text-[10px] text-center py-2 rounded mt-2 mb-2 transition-colors border border-[#4B2979]" data-phase="5">Ver aplicaciones &darr;</button>
+                        <a href="/portal/" class="text-gray-900 hover:text-brand transition-colors"><i class="fas fa-lock mr-1"></i> Portal Clientes</a>
                     <a href="/diagnostico/" class="bg-brand text-white px-5 py-2.5 rounded-full hover:bg-brand-light transition-all shadow-md">DIAGNÓSTICO GRATUITO</a>
                 </div>
             </div>
@@ -164,6 +165,606 @@
             </div>
 
             
+            
+            <!-- Grid Interactivo de Módulos (Replicado del Portal) -->
+            <div id="nytex-modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 mb-16 px-4">
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Ventas">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Ventas</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de ventas y facturación.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="CRM">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX CRM</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de relaciones con los clientes.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Inventario">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Inventario</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Control de stock y almacén.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Compras">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Compras</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de proveedores y compras.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Produccion">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Producción</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Control de procesos de manufactura.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Contabilidad">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Contabilidad</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión contable financiera.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="CxC">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Cuentas por Cobrar (CxC)</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de cuentas por cobrar.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="CxP">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Cuentas por Pagar (CxP)</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de cuentas por pagar.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Tesoreria">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Tesorería</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Control de flujo de caja y bancos.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="ActivosFijos">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Activos Fijos</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Control de bienes de la empresa.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Logistica">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Logística</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de despachos y distribución.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="RRHH">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX RRHH</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de recursos humanos.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Nomina">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Nómina</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Cálculo y pago de planillas.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="ProcessSuite">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Process Suite</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Automatización de procesos.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="BusinessPartners">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Business Partners</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Gestión de socios de negocio.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="BIyReportes">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX BI y Reportes</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Inteligencia de negocios y analítica.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Configuracion">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Configuración</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Ajustes globales del sistema.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="WMS">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX WMS</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Sistema de gestión de almacenes avanzado.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Dashboards">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Dashboards Operativos</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Visualización de métricas en tiempo real.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="BI">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX BI</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Business Intelligence avanzado.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="BigData">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Big Data</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Procesamiento de grandes volúmenes de datos.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="IA">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX IA</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Inteligencia artificial aplicada a negocios.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Predictivos">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Modelos Predictivos</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Análisis y proyecciones a futuro.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+
+                <div class="nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0" data-module="Planeacion">
+                    <div class="p-6 flex flex-col h-full">
+                        <h3 class="text-xl font-extrabold text-[#0a2342] mb-2">NyTEX Planeación</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Planificación estratégica y operativa.</p>
+                        <a href="/portal/" target="_blank" class="nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm">
+                            Módulo Bloqueado
+                        </a>
+                    </div>
+                    
+                    <div class="nytex-module-badge-requerido absolute top-0 right-0 bg-gray-300 text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm">
+                        REQUERIDO
+                    </div>
+                    
+                    <div class="nytex-module-badge-adquirido absolute top-0 right-0 bg-[#15A36A] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        ADQUIRIDO
+                    </div>
+
+                    <div class="nytex-module-badge-seleccionado absolute top-0 right-0 bg-[#09a9e8] text-white px-3 py-1 text-[10px] font-extrabold rounded-bl-lg shadow-sm hidden">
+                        SELECCIONADO
+                    </div>
+                </div>
+            </div>
+            <script>
+                const phasesConfig = {"1":["Ventas"],"2":["Ventas","Inventario","Contabilidad","CxC","CxP","Compras"],"3":["Ventas","Inventario","Contabilidad","CxC","CxP","Compras","Produccion","RRHH","Nomina","ActivosFijos","Tesoreria","Logistica","CRM"],"4":["Ventas","CRM","Inventario","Compras","Produccion","Contabilidad","CxC","CxP","Tesoreria","ActivosFijos","Logistica","RRHH","Nomina","ProcessSuite","BusinessPartners","BIyReportes","Configuracion","WMS","Dashboards","BI","BigData","IA","Predictivos","Planeacion"]};
+                
+                document.addEventListener('DOMContentLoaded', () => {
+                    const buttons = document.querySelectorAll('.ver-apps-btn');
+                    const moduleCards = document.querySelectorAll('.nytex-module-card');
+                    
+                    buttons.forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            
+                            // Resetear todos los botones
+                            buttons.forEach(b => {
+                                b.innerHTML = 'Ver aplicaciones &darr;';
+                                b.classList.remove('bg-[#15A36A]', 'border-[#15A36A]');
+                                b.classList.add('bg-transparent', 'border-[#4B2979]', 'hover:bg-[#4B2979]');
+                            });
+                            
+                            // Activar botón actual
+                            btn.innerHTML = 'Aplicaciones incluidas &darr;';
+                            btn.classList.remove('bg-transparent', 'border-[#4B2979]', 'hover:bg-[#4B2979]');
+                            btn.classList.add('bg-[#15A36A]', 'border-[#15A36A]');
+                            
+                            const phaseId = btn.getAttribute('data-phase');
+                            
+                            if (phaseId === '5') {
+                                // A su medida: iluminar todo en cyan
+                                moduleCards.forEach(card => {
+                                    card.className = 'nytex-module-card relative bg-white rounded-xl overflow-hidden border transition-all duration-300 border-[#09a9e8] ring-4 ring-[#09a9e8] shadow-[0_0_20px_rgba(9,169,232,0.8)] transform scale-105 z-20';
+                                    
+                                    card.querySelector('.nytex-module-btn').className = 'nytex-module-btn mt-auto block w-full text-center bg-[#09a9e8] text-white py-2 px-4 rounded-md font-bold shadow-lg text-sm';
+                                    card.querySelector('.nytex-module-btn').innerText = 'Seleccionar';
+                                    
+                                    card.querySelector('.nytex-module-badge-requerido').classList.add('hidden');
+                                    card.querySelector('.nytex-module-badge-adquirido').classList.add('hidden');
+                                    card.querySelector('.nytex-module-badge-seleccionado').classList.remove('hidden');
+                                });
+                            } else {
+                                const activeModules = phasesConfig[phaseId] || [];
+                                
+                                moduleCards.forEach(card => {
+                                    const moduleId = card.getAttribute('data-module');
+                                    if (activeModules.includes(moduleId)) {
+                                        card.className = 'nytex-module-card relative bg-white rounded-xl overflow-hidden border transition-all duration-300 border-[#15A36A] shadow-md opacity-100 z-10';
+                                        
+                                        card.querySelector('.nytex-module-btn').className = 'nytex-module-btn mt-auto block w-full text-center bg-[#15A36A] text-white py-2 px-4 rounded-md font-bold hover:bg-[#108253] transition-colors shadow-lg text-sm';
+                                        card.querySelector('.nytex-module-btn').innerText = 'Abrir Módulo';
+                                        
+                                        card.querySelector('.nytex-module-badge-requerido').classList.add('hidden');
+                                        card.querySelector('.nytex-module-badge-seleccionado').classList.add('hidden');
+                                        card.querySelector('.nytex-module-badge-adquirido').classList.remove('hidden');
+                                    } else {
+                                        card.className = 'nytex-module-card relative bg-white rounded-xl overflow-hidden border border-gray-200 opacity-60 transition-all duration-300 z-0';
+                                        
+                                        card.querySelector('.nytex-module-btn').className = 'nytex-module-btn mt-auto block w-full text-center bg-[#f0f4f8] text-[#0a2342] py-2 px-4 rounded-md font-bold border border-gray-300 cursor-not-allowed text-sm';
+                                        card.querySelector('.nytex-module-btn').innerText = 'Módulo Bloqueado';
+                                        
+                                        card.querySelector('.nytex-module-badge-requerido').classList.remove('hidden');
+                                        card.querySelector('.nytex-module-badge-seleccionado').classList.add('hidden');
+                                        card.querySelector('.nytex-module-badge-adquirido').classList.add('hidden');
+                                    }
+                                });
+                            }
+                        });
+                    });
+                });
+            </script>
+
             <!-- Marco de Ecosistema NyTEX y Áreas Funcionales -->
             <div class="bg-gradient-to-br from-gray-950 via-[#0a0f1d] to-[#0f172a] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-gray-800 mt-12 mb-16">
                 <!-- Encabezado del marco -->
@@ -877,6 +1478,7 @@ flowchart TD
                         <p class="text-white font-bold text-sm">$0 USD</p>
                         <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
                         <p class="text-brand-accent font-bold text-sm">$35 USD / mes</p>
+                        <button type="button" class="ver-apps-btn w-full bg-transparent hover:bg-[#4B2979] text-white font-bold text-[10px] text-center py-2 rounded mt-2 mb-2 transition-colors border border-[#4B2979]" data-phase="1">Ver aplicaciones &darr;</button>
                         <a href="/portal/?phase=1" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
                     </div>
                 </div>
@@ -894,6 +1496,7 @@ flowchart TD
                         <p class="text-white font-bold text-sm">$1,500 USD</p>
                         <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
                         <p class="text-brand-accent font-bold text-sm">$149 USD / mes</p>
+                        <button type="button" class="ver-apps-btn w-full bg-transparent hover:bg-[#4B2979] text-white font-bold text-[10px] text-center py-2 rounded mt-2 mb-2 transition-colors border border-[#4B2979]" data-phase="2">Ver aplicaciones &darr;</button>
                         <a href="/portal/?phase=2" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
                     </div>
                 </div>
@@ -911,6 +1514,7 @@ flowchart TD
                         <p class="text-white font-bold text-sm">$4,500 USD</p>
                         <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
                         <p class="text-brand-accent font-bold text-sm">$299 USD / mes</p>
+                        <button type="button" class="ver-apps-btn w-full bg-transparent hover:bg-[#4B2979] text-white font-bold text-[10px] text-center py-2 rounded mt-2 mb-2 transition-colors border border-[#4B2979]" data-phase="3">Ver aplicaciones &darr;</button>
                         <a href="/portal/?phase=3" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
                     </div>
                 </div>
