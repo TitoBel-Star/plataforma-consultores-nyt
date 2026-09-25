@@ -178,60 +178,91 @@
                 </div>
 
                 <!-- Grid Principal: Diagrama de Flujo (Izquierda) + Panel de Áreas Funcionales (Derecha) -->
-                <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+                <!-- Estilos específicos para escala del diagrama -->
+                <style>
+                    #diagramWrapper .mermaid svg {
+                        width: 100% !important;
+                        min-width: 920px !important;
+                        max-width: none !important;
+                        height: auto !important;
+                        margin: 0 auto;
+                        transition: transform 0.2s ease;
+                    }
+                </style>
+
+                <!-- Grid Principal: 75% Diagrama (Grande) + 25% Áreas Funcionales (Compacto) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
                     
-                    <!-- Columna Izquierda: Diagrama de Flujo Interactivo (8 columnas en XL) -->
-                    <div class="xl:col-span-8 bg-[#030712]/90 rounded-2xl p-4 sm:p-6 border border-gray-800/80 shadow-inner flex flex-col">
-                        <div class="flex flex-wrap items-center justify-between pb-3 mb-4 border-b border-gray-800 gap-2">
-                            <span class="text-xs font-bold text-gray-300 flex items-center gap-2">
-                                <i class="fas fa-project-diagram text-brand-accent"></i> Diagrama Operativo de Sincronización
-                            </span>
-                            <span class="text-[11px] font-semibold bg-gray-800 text-gray-400 px-2.5 py-1 rounded-full border border-gray-700">
-                                26 Módulos Conectados en Tiempo Real
-                            </span>
+                    <!-- Columna Izquierda: Diagrama de Flujo Ampliado (9 columnas en XL / 8 en LG) -->
+                    <div class="lg:col-span-8 xl:col-span-9 bg-[#030712]/95 rounded-2xl p-4 sm:p-5 border border-gray-800/80 shadow-inner flex flex-col">
+                        <div class="flex flex-wrap items-center justify-between pb-3 mb-3 border-b border-gray-800 gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                                    <i class="fas fa-project-diagram text-brand-accent"></i> Diagrama Operativo de Sincronización
+                                </span>
+                                <span class="text-[10px] font-semibold bg-gray-800/90 text-gray-400 px-2 py-0.5 rounded-full border border-gray-700">
+                                    26 Módulos Conectados
+                                </span>
+                            </div>
+
+                            <!-- Controles de Zoom para el Diagrama -->
+                            <div class="flex items-center gap-1.5 bg-gray-900 border border-gray-700/80 px-2 py-1 rounded-lg">
+                                <span class="text-gray-400 text-[10px] font-semibold mr-1">Zoom:</span>
+                                <button type="button" onclick="adjustDiagramZoom(0.15)" class="w-6 h-6 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 flex items-center justify-center text-[10px] transition-colors" title="Ampliar diagrama">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                                <button type="button" onclick="adjustDiagramZoom(-0.15)" class="w-6 h-6 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 flex items-center justify-center text-[10px] transition-colors" title="Reducir diagrama">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" onclick="resetDiagramZoom()" class="w-6 h-6 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 flex items-center justify-center text-[10px] transition-colors" title="Restablecer tamaño">
+                                    <i class="fas fa-compress-arrows-alt"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div class="overflow-x-auto py-2">
-                            <pre class="mermaid text-center">
+
+                        <!-- Contenedor scrollable y escalable para el diagrama -->
+                        <div id="diagramWrapper" class="overflow-x-auto py-3 bg-[#02050e]/60 rounded-xl p-2 border border-gray-800/50 min-h-[560px] flex items-center justify-center">
+                            <pre class="mermaid text-center w-full">
 flowchart TD
-    classDef sales fill:#0284C7,stroke:#38BDF8,stroke-width:2px,color:#FFFFFF,font-size:13px
-    classDef supply fill:#15803D,stroke:#4ADE80,stroke-width:2px,color:#FFFFFF,font-size:13px
-    classDef prod fill:#047857,stroke:#34D399,stroke-width:2px,color:#FFFFFF,font-size:13px
-    classDef finance fill:#B45309,stroke:#FBBF24,stroke-width:2px,color:#FFFFFF,font-size:13px
-    classDef hr fill:#7E22CE,stroke:#C084FC,stroke-width:2px,color:#FFFFFF,font-size:13px
-    classDef data fill:#0F172A,stroke:#60A5FA,stroke-width:2px,color:#93C5FD,font-size:13px
-    classDef core fill:#1E293B,stroke:#94A3B8,stroke-width:2px,color:#FFFFFF,font-size:13px
+    classDef sales fill:#0284C7,stroke:#38BDF8,stroke-width:2.5px,color:#FFFFFF,font-size:14px
+    classDef supply fill:#15803D,stroke:#4ADE80,stroke-width:2.5px,color:#FFFFFF,font-size:14px
+    classDef prod fill:#047857,stroke:#34D399,stroke-width:2.5px,color:#FFFFFF,font-size:14px
+    classDef finance fill:#B45309,stroke:#FBBF24,stroke-width:2.5px,color:#FFFFFF,font-size:14px
+    classDef hr fill:#7E22CE,stroke:#C084FC,stroke-width:2.5px,color:#FFFFFF,font-size:14px
+    classDef data fill:#0F172A,stroke:#60A5FA,stroke-width:2.5px,color:#93C5FD,font-size:14px
+    classDef core fill:#1E293B,stroke:#94A3B8,stroke-width:2.5px,color:#FFFFFF,font-size:14px
 
-    BP["<span style='font-size:10px;color:#94a3b8;font-weight:bold'>Área 7</span><br/><b>NyTEX Business Partners</b><br/>Clientes y Proveedores"]:::core
-    CONF["<span style='font-size:10px;color:#94a3b8;font-weight:bold'>Área 7</span><br/><b>NyTEX Configuración</b><br/>Parámetros Globales"]:::core
-    PS["<span style='font-size:10px;color:#94a3b8;font-weight:bold'>Área 7</span><br/><b>NyTEX Process Suite</b><br/>Reglas de Negocio"]:::core
-    PM["<span style='font-size:10px;color:#94a3b8;font-weight:bold'>Área 7</span><br/><b>NyTEX Process Mining</b><br/>Minería de Procesos"]:::core
+    BP["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Business Partners</b><br/><span style='font-size:12px'>Clientes y Proveedores</span>"]:::core
+    CONF["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Configuración</b><br/><span style='font-size:12px'>Parámetros Globales</span>"]:::core
+    PS["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Process Suite</b><br/><span style='font-size:12px'>Reglas de Negocio</span>"]:::core
+    PM["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Process Mining</b><br/><span style='font-size:12px'>Minería de Procesos</span>"]:::core
 
-    CRM["<span style='font-size:10px;color:#bae6fd;font-weight:bold'>Área 1</span><br/><b>NyTEX CRM</b><br/>Embudo de Ventas"]:::sales
-    VTS["<span style='font-size:10px;color:#bae6fd;font-weight:bold'>Área 1</span><br/><b>NyTEX Ventas</b><br/>Cotizaciones y Pedidos"]:::sales
-    CXC["<span style='font-size:10px;color:#fde68a;font-weight:bold'>Área 4</span><br/><b>NyTEX CxC</b><br/>Gestión de Cobranza"]:::finance
+    CRM["<span style='font-size:11px;font-weight:bold;color:#bae6fd'>ÁREA 1</span><br/><b>NyTEX CRM</b><br/><span style='font-size:12px'>Embudo de Ventas</span>"]:::sales
+    VTS["<span style='font-size:11px;font-weight:bold;color:#bae6fd'>ÁREA 1</span><br/><b>NyTEX Ventas</b><br/><span style='font-size:12px'>Cotizaciones y Pedidos</span>"]:::sales
+    CXC["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX CxC</b><br/><span style='font-size:12px'>Gestión de Cobranza</span>"]:::finance
 
-    PLAN["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX Planeación</b><br/>MRP y Pronósticos"]:::data
-    COMP["<span style='font-size:10px;color:#bbf7d0;font-weight:bold'>Área 2</span><br/><b>NyTEX Compras</b><br/>Órdenes y Requisiciones"]:::supply
-    INV["<span style='font-size:10px;color:#bbf7d0;font-weight:bold'>Área 2</span><br/><b>NyTEX Inventario</b><br/>Control de Stock"]:::supply
-    WMS["<span style='font-size:10px;color:#bbf7d0;font-weight:bold'>Área 2</span><br/><b>NyTEX WMS</b><br/>Gestión de Bodegas"]:::supply
-    PROD["<span style='font-size:10px;color:#a7f3d0;font-weight:bold'>Área 3</span><br/><b>NyTEX Producción</b><br/>Recetas y Órdenes"]:::prod
-    LOG["<span style='font-size:10px;color:#bbf7d0;font-weight:bold'>Área 2</span><br/><b>NyTEX Logística</b><br/>Rutas y Despachos"]:::supply
+    PLAN["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Planeación</b><br/><span style='font-size:12px'>MRP y Pronósticos</span>"]:::data
+    COMP["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX Compras</b><br/><span style='font-size:12px'>Órdenes y Requisiciones</span>"]:::supply
+    INV["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX Inventario</b><br/><span style='font-size:12px'>Control de Stock</span>"]:::supply
+    WMS["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX WMS</b><br/><span style='font-size:12px'>Gestión de Bodegas</span>"]:::supply
+    PROD["<span style='font-size:11px;font-weight:bold;color:#a7f3d0'>ÁREA 3</span><br/><b>NyTEX Producción</b><br/><span style='font-size:12px'>Recetas y Órdenes</span>"]:::prod
+    LOG["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX Logística</b><br/><span style='font-size:12px'>Rutas y Despachos</span>"]:::supply
 
-    CXP["<span style='font-size:10px;color:#fde68a;font-weight:bold'>Área 4</span><br/><b>NyTEX CxP</b><br/>Control de Deudas"]:::finance
-    TES["<span style='font-size:10px;color:#fde68a;font-weight:bold'>Área 4</span><br/><b>NyTEX Tesorería</b><br/>Flujo de Efectivo"]:::finance
-    CONT["<span style='font-size:10px;color:#fde68a;font-weight:bold'>Área 4</span><br/><b>NyTEX Contabilidad</b><br/>Pólizas y Balances"]:::finance
-    AF["<span style='font-size:10px;color:#fde68a;font-weight:bold'>Área 4</span><br/><b>NyTEX Activos Fijos</b><br/>Depreciaciones"]:::finance
+    CXP["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX CxP</b><br/><span style='font-size:12px'>Control de Deudas</span>"]:::finance
+    TES["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX Tesorería</b><br/><span style='font-size:12px'>Flujo de Efectivo</span>"]:::finance
+    CONT["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX Contabilidad</b><br/><span style='font-size:12px'>Pólizas y Balances</span>"]:::finance
+    AF["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX Activos Fijos</b><br/><span style='font-size:12px'>Depreciaciones</span>"]:::finance
 
-    RRHH["<span style='font-size:10px;color:#e9d5ff;font-weight:bold'>Área 5</span><br/><b>NyTEX RRHH</b><br/>Expedientes"]:::hr
-    NOM["<span style='font-size:10px;color:#e9d5ff;font-weight:bold'>Área 5</span><br/><b>NyTEX Nómina</b><br/>Cálculo de Sueldos"]:::hr
+    RRHH["<span style='font-size:11px;font-weight:bold;color:#e9d5ff'>ÁREA 5</span><br/><b>NyTEX RRHH</b><br/><span style='font-size:12px'>Expedientes</span>"]:::hr
+    NOM["<span style='font-size:11px;font-weight:bold;color:#e9d5ff'>ÁREA 5</span><br/><b>NyTEX Nómina</b><br/><span style='font-size:12px'>Cálculo de Sueldos</span>"]:::hr
 
-    DASH["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX Dashboards Operativos</b><br/>KPIs Operativos"]:::data
-    BI_R["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX BI y Reportes</b><br/>Consultas"]:::data
-    BI["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX BI</b><br/>Inteligencia"]:::data
-    BD["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX Big Data</b><br/>Lagos de Datos"]:::data
-    MIN["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX Minería de Datos</b><br/>Data Mining"]:::data
-    PRED["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX Modelos Predictivos</b>"]:::data
-    IA["<span style='font-size:10px;color:#93c5fd;font-weight:bold'>Área 6</span><br/><b>NyTEX IA</b><br/>Decisiones Autónomas"]:::data
+    DASH["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Dashboards</b><br/><span style='font-size:12px'>KPIs Operativos</span>"]:::data
+    BI_R["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX BI y Reportes</b><br/><span style='font-size:12px'>Consultas</span>"]:::data
+    BI["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX BI</b><br/><span style='font-size:12px'>Inteligencia</span>"]:::data
+    BD["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Big Data</b><br/><span style='font-size:12px'>Lagos de Datos</span>"]:::data
+    MIN["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Minería de Datos</b><br/><span style='font-size:12px'>Data Mining</span>"]:::data
+    PRED["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Modelos Predictivos</b>"]:::data
+    IA["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX IA</b><br/><span style='font-size:12px'>Decisiones Autónomas</span>"]:::data
 
     BP ==> CRM
     BP ==> VTS
@@ -269,91 +300,115 @@ flowchart TD
                         </div>
                     </div>
 
-                    <!-- Columna Derecha: Tarjetas de Áreas Funcionales (4 columnas en XL) -->
-                    <div class="xl:col-span-4 bg-[#030712]/90 rounded-2xl p-5 sm:p-6 border border-gray-800/80 shadow-inner flex flex-col justify-between">
-                        <div>
-                            <div class="mb-5 pb-3 border-b border-gray-800">
-                                <h4 class="text-xl font-black text-white uppercase tracking-wider flex items-center gap-2">
-                                    <i class="fas fa-sitemap text-brand-accent"></i> ÁREAS FUNCIONALES
-                                </h4>
-                                <p class="text-xs text-gray-400 mt-1">Mapeo organizacional del ecosistema NyTEX</p>
+                    <!-- Columna Derecha: Tarjetas de Áreas Funcionales (Compactas y Proporcionadas) -->
+                    <div class="lg:col-span-4 xl:col-span-3 bg-[#030712]/95 rounded-2xl p-3.5 sm:p-4 border border-gray-800/80 shadow-inner flex flex-col">
+                        <div class="mb-3 pb-2 border-b border-gray-800">
+                            <h4 class="text-xs font-black text-white uppercase tracking-wider flex items-center gap-1.5">
+                                <i class="fas fa-sitemap text-brand-accent"></i> ÁREAS FUNCIONALES
+                            </h4>
+                            <p class="text-[10px] text-gray-400">Mapeo organizacional NyTEX</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <!-- Área 1 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-sky-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-sky-500 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">1</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">1. Dirección Comercial</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-sky-300 font-medium">CRM, Ventas</span>
+                                    </p>
+                                </div>
                             </div>
 
-                            <div class="space-y-3">
-                                <!-- Área 1 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-sky-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-sky-500 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">1</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">1. Dirección Comercial</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-sky-400 font-semibold mt-0.5">NyTEX CRM, NyTEX Ventas</p>
-                                    </div>
+                            <!-- Área 2 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-emerald-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-emerald-500 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">2</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">2. Cadena de Suministro</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-emerald-300 font-medium">Compras, Inventario, WMS, Logística</span>
+                                    </p>
                                 </div>
+                            </div>
 
-                                <!-- Área 2 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-emerald-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-emerald-500 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">2</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">2. Cadena de Suministro</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-emerald-400 font-semibold mt-0.5">NyTEX Compras, Inventario, WMS, Logística</p>
-                                    </div>
+                            <!-- Área 3 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-green-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-green-500 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">3</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">3. Operaciones y Producción</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-green-300 font-medium">Producción</span>
+                                    </p>
                                 </div>
+                            </div>
 
-                                <!-- Área 3 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-green-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-green-500 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">3</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">3. Operaciones y Producción</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-green-400 font-semibold mt-0.5">NyTEX Producción</p>
-                                    </div>
+                            <!-- Área 4 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-amber-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-amber-500 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">4</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">4. Administración y Finanzas</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-amber-300 font-medium">CxP, CxC, Activos Fijos, Tesorería, Contabilidad</span>
+                                    </p>
                                 </div>
+                            </div>
 
-                                <!-- Área 4 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-amber-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-amber-500 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">4</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">4. Administración y Finanzas</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-amber-400 font-semibold mt-0.5">NyTEX CxP, CxC, Activos Fijos, Tesorería, Contabilidad</p>
-                                    </div>
+                            <!-- Área 5 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-purple-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-purple-600 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">5</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">5. Talento Humano</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-purple-300 font-medium">RRHH, Nómina</span>
+                                    </p>
                                 </div>
+                            </div>
 
-                                <!-- Área 5 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-purple-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-purple-600 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">5</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">5. Talento Humano</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-purple-400 font-semibold mt-0.5">NyTEX RRHH, NyTEX Nómina</p>
-                                    </div>
+                            <!-- Área 6 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-blue-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-blue-600 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">6</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">6. Inteligencia y Analítica</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-blue-300 font-medium">BI, Dashboards, Big Data, Minería, Modelos, IA, Planeación</span>
+                                    </p>
                                 </div>
+                            </div>
 
-                                <!-- Área 6 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-blue-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-blue-600 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">6</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">6. Inteligencia de Negocios y Analítica</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-blue-400 font-semibold mt-0.5 leading-relaxed">NyTEX BI, BI y Rep., Big Data, Minería, Modelos, IA, Dashboards, Planeación</p>
-                                    </div>
-                                </div>
-
-                                <!-- Área 7 -->
-                                <div class="bg-gray-900/80 hover:bg-gray-800/70 border border-gray-800 hover:border-slate-500/50 rounded-xl p-3.5 transition-all flex items-start gap-3">
-                                    <div class="w-7 h-7 rounded-lg bg-slate-600 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-md">7</div>
-                                    <div class="flex-grow">
-                                        <h5 class="text-white font-bold text-sm leading-tight">7. Gobernanza, Procesos y TI</h5>
-                                        <p class="text-[11px] text-gray-400 mt-1">Módulos asignados:</p>
-                                        <p class="text-xs text-slate-300 font-semibold mt-0.5">NyTEX Business Partners, Configuración, Process Suite, Process Mining</p>
-                                    </div>
+                            <!-- Área 7 -->
+                            <div class="bg-gray-900/90 hover:bg-gray-800/70 border border-gray-800 hover:border-slate-500/50 rounded-lg p-2 transition-all flex items-start gap-2">
+                                <div class="w-5 h-5 rounded bg-slate-600 text-white font-black flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5 shadow-sm">7</div>
+                                <div class="flex-grow min-w-0">
+                                    <h5 class="text-white font-bold text-xs leading-tight truncate">7. Gobernanza y TI</h5>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
+                                        <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-slate-300 font-medium">Partners, Configuración, Process Suite, Process Mining</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                
+                <script>
+                    let currentDiagramZoom = 1;
+                    function adjustDiagramZoom(delta) {
+                        currentDiagramZoom = Math.max(0.6, Math.min(2.5, currentDiagramZoom + delta));
+                        applyDiagramZoom();
+                    }
+                    function resetDiagramZoom() {
+                        currentDiagramZoom = 1;
+                        applyDiagramZoom();
+                    }
+                    function applyDiagramZoom() {
+                        const svg = document.querySelector("#diagramWrapper .mermaid svg");
+                        if (svg) {
+                            svg.style.transform = "scale(" + currentDiagramZoom + ")";
+                            svg.style.transformOrigin = "top center";
+                        }
+                    }
+                </script>
 
                 <!-- Sección Inferior del Marco: Tabla Completa de Mapeo Organizacional -->
                 <div class="mt-10 pt-8 border-t border-gray-800/90">
