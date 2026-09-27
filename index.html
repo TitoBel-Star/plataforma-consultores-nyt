@@ -701,50 +701,129 @@ flowchart TD
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Agrupación Visual Superior (Desktop) -->
+            <div class="hidden lg:grid lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-brand text-white text-center py-3.5 px-6 rounded-2xl font-black tracking-widest text-sm uppercase shadow-md flex items-center justify-center gap-2 border border-brand-light">
+                    <i class="fas fa-cogs text-brand-accent text-lg"></i>
+                    <span>EFICIENCIA OPERACIONAL · NIVELES 1 Y 2</span>
+                </div>
+                <div class="bg-brand-accent text-brand-dark text-center py-3.5 px-6 rounded-2xl font-black tracking-widest text-sm uppercase shadow-md flex items-center justify-center gap-2 border border-amber-300">
+                    <i class="fas fa-chess-knight text-brand text-lg"></i>
+                    <span>DIRECCIÓN ESTRATÉGICA · NIVELES 3 Y 4</span>
+                </div>
+            </div>
+
+            <!-- Grilla de los 4 Niveles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
                 <!-- Nivel 1 -->
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-brand">
-                    <span class="text-brand font-black text-lg tracking-widest uppercase mb-2 block">NIVEL 1</span>
-                    <h3 class="text-3xl font-extrabold text-gray-900 mb-4">EFICIENCIA OPERACIONAL</h3>
-                    <p class="text-xl font-medium text-brand-accent mb-6">Hacer mejor lo que hoy hacemos.</p>
-                    <p class="text-gray-600 mb-8">Ideal cuando existen problemas de control, productividad, inventarios, procesos, costos o servicio.</p>
-                    
-                    <div class="mb-6">
-                        <strong class="text-gray-900 block mb-2">Objetivo:</strong>
-                        <p class="text-sm font-bold text-gray-500 tracking-wide">ORDENAR → ESTANDARIZAR → CONTROLAR → MEDIR → AUTOMATIZAR</p>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <strong class="text-gray-900 block mb-2">Tecnología:</strong>
-                        <p class="text-brand font-medium">ERP · CRM · BPM · WMS · Dashboards operativos</p>
+                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-brand font-black text-xs tracking-widest uppercase bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">NIVEL 1</span>
+                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Eficiencia Operacional</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">CONTROL TRANSACCIONAL</h3>
+                        <p class="text-sm font-semibold text-brand-accent mb-4">Ordenar y estabilizar la operación diaria.</p>
+                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">Ideal cuando existen problemas de control, descontrol en inventarios, procesos manuales y reportes en Excel dispersos.</p>
+                        
+                        <div class="mb-5">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
+                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">REGISTRAR → ORDENAR → ESTANDARIZAR → CONTROLAR</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
+                            <p class="text-xs font-semibold text-brand leading-relaxed">ERP Core · Compras · Inventarios · Facturación/CxC · CxP · Tesorería · Contabilidad</p>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                        <strong class="text-gray-900 block mb-1">Resultado:</strong>
-                        <p class="text-gray-700">Una empresa controlada, medible y eficiente.</p>
+                    <div class="bg-purple-50/60 p-4 rounded-xl border border-purple-100 mt-2">
+                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
+                        <p class="text-xs text-gray-700 leading-snug">Una empresa con control estricto de sus recursos, inventarios exactos y cero fugas.</p>
                     </div>
                 </div>
 
                 <!-- Nivel 2 -->
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-brand-accent">
-                    <span class="text-brand font-black text-lg tracking-widest uppercase mb-2 block">NIVEL 2</span>
-                    <h3 class="text-3xl font-extrabold text-gray-900 mb-4">DIRECCIÓN ESTRATÉGICA</h3>
-                    <p class="text-xl font-medium text-brand-accent mb-6">Decidir qué debemos hacer diferente.</p>
-                    <p class="text-gray-600 mb-8">No se trata solamente de hacer mejor las cosas. Se trata de anticipar, escalar y dominar el mercado.</p>
-                    
-                    <div class="mb-6">
-                        <strong class="text-gray-900 block mb-2">Objetivo:</strong>
-                        <p class="text-sm font-bold text-gray-500 tracking-wide">ANALIZAR → ANTICIPAR → INNOVAR → ESCALAR → TRANSFORMAR</p>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <strong class="text-gray-900 block mb-2">Tecnología:</strong>
-                        <p class="text-brand font-medium">BI · Big Data · Minería de Datos · IA · Modelos Predictivos · Planeación</p>
+                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-brand font-black text-xs tracking-widest uppercase bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">NIVEL 2</span>
+                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Eficiencia Operacional</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">PRODUCTIVIDAD Y FLUJO</h3>
+                        <p class="text-sm font-semibold text-brand-accent mb-4">Hacer más rápido y eficiente lo que hoy hacemos.</p>
+                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">Ideal cuando los procesos dependen de personas clave, existen cuellos de botella entre áreas y falta sincronización logística y comercial.</p>
+                        
+                        <div class="mb-5">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
+                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">INTEGRAR → SINCRONIZAR → MEDIR → AUTOMATIZAR</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
+                            <p class="text-xs font-semibold text-brand leading-relaxed">CRM · WMS (Bodegas) · BPM (Workflows) · Logística / Rutas · Dashboards Operativos</p>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                        <strong class="text-gray-900 block mb-1">Resultado:</strong>
-                        <p class="text-gray-700">Una empresa capaz de anticipar el futuro e innovar.</p>
+                    <div class="bg-purple-50/60 p-4 rounded-xl border border-purple-100 mt-2">
+                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
+                        <p class="text-xs text-gray-700 leading-snug">Operación ágil, tiempos de respuesta mínimos y seguimiento comercial sistemático.</p>
+                    </div>
+                </div>
+
+                <!-- Nivel 3 -->
+                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-amber-800 font-black text-xs tracking-widest uppercase bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">NIVEL 3</span>
+                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Dirección Estratégica</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">INTELIGENCIA Y RENTABILIDAD</h3>
+                        <p class="text-sm font-semibold text-brand mb-4">Decidir con datos exactos y rentabilizar cada área.</p>
+                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">Ideal cuando la dirección trabaja a ciegas, no sabe qué producto o cliente deja mayor margen neto y los reportes llegan con semanas de retraso.</p>
+                        
+                        <div class="mb-5">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
+                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">CENTRALIZAR → ANALIZAR → DIAGNOSTICAR → RENTABILIZAR</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
+                            <p class="text-xs font-semibold text-brand-dark leading-relaxed">Business Intelligence (BI) · Data Warehouse · Dashboards Ejecutivos · Planeación & MRP</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200 mt-2">
+                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
+                        <p class="text-xs text-gray-700 leading-snug">Visibilidad ejecutiva 360° en tiempo real y decisiones estratégicas 100% basadas en datos.</p>
+                    </div>
+                </div>
+
+                <!-- Nivel 4 -->
+                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-amber-800 font-black text-xs tracking-widest uppercase bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">NIVEL 4</span>
+                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Dirección Estratégica</span>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">ANTICIPACIÓN Y ESCALA</h3>
+                        <p class="text-sm font-semibold text-brand mb-4">Anticipar el futuro, innovar y liderar el mercado.</p>
+                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">No se trata solo de hacer mejor las cosas. Se trata de predecir demanda, innovar en procesos y escalar agresivamente sin inflar costos fijos.</p>
+                        
+                        <div class="mb-5">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
+                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">ANTICIPAR → SIMULAR → INNOVAR → ESCALAR → TRANSFORMAR</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
+                            <p class="text-xs font-semibold text-brand-dark leading-relaxed">IA Predictiva · Big Data · Minería de Procesos · Modelos Predictivos · Agentes Autónomos</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200 mt-2">
+                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
+                        <p class="text-xs text-gray-700 leading-snug">Una empresa inteligente, autónoma y predictiva capaz de anticipar y liderar su industria.</p>
                     </div>
                 </div>
             </div>
