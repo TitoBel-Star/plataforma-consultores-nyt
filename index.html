@@ -173,7 +173,7 @@
                     </span>
                     <h3 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Ecosistema Operativo y Mapeo por Áreas Funcionales</h3>
                     <p class="text-gray-400 text-sm md:text-base mt-3 leading-relaxed">
-                        Conozca la interconexión viva de las <strong class="text-white font-bold">26 aplicaciones</strong> de nuestro ecosistema, clasificadas según su <strong class="text-brand-accent">Dirección Estratégica</strong> y los departamentos que operan día a día.
+                        Conozca la interconexión viva de las <strong class="text-white font-bold">24 aplicaciones</strong> de nuestro ecosistema, clasificadas según su <strong class="text-brand-accent">Dirección Estratégica</strong> y los departamentos que operan día a día.
                     </p>
 
                     <!-- Banner de Alumbrado Activo -->
@@ -209,7 +209,7 @@
                                     <i class="fas fa-project-diagram text-brand-accent"></i> Diagrama Operativo de Sincronización
                                 </span>
                                 <span class="text-[10px] font-semibold bg-gray-800/90 text-gray-400 px-2 py-0.5 rounded-full border border-gray-700">
-                                    26 Módulos Conectados
+                                    24 Módulos Conectados
                                 </span>
                             </div>
 
@@ -230,82 +230,234 @@
 
                         <!-- Contenedor scrollable y escalable para el diagrama -->
                         <div id="diagramWrapper" class="overflow-x-auto py-3 bg-[#02050e]/60 rounded-xl p-2 border border-gray-800/50 min-h-[560px] flex items-center justify-center">
-                            <pre class="mermaid text-center w-full">
-flowchart TD
-    classDef sales fill:#0284C7,stroke:#38BDF8,stroke-width:2.5px,color:#FFFFFF,font-size:14px
-    classDef supply fill:#15803D,stroke:#4ADE80,stroke-width:2.5px,color:#FFFFFF,font-size:14px
-    classDef prod fill:#047857,stroke:#34D399,stroke-width:2.5px,color:#FFFFFF,font-size:14px
-    classDef finance fill:#B45309,stroke:#FBBF24,stroke-width:2.5px,color:#FFFFFF,font-size:14px
-    classDef hr fill:#7E22CE,stroke:#C084FC,stroke-width:2.5px,color:#FFFFFF,font-size:14px
-    classDef data fill:#0F172A,stroke:#60A5FA,stroke-width:2.5px,color:#93C5FD,font-size:14px
-    classDef core fill:#1E293B,stroke:#94A3B8,stroke-width:2.5px,color:#FFFFFF,font-size:14px
+<svg viewBox="0 0 1024 940" class="w-full h-auto select-none" style="filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5)); min-width: 920px;">
+    <defs>
+        <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrow-white" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#cbd5e1" />
+        </marker>
+        <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#94a3b8" />
+        </marker>
+    </defs>
 
-    BP["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Business Partners</b><br/><span style='font-size:12px'>Clientes y Proveedores</span>"]:::core
-    CONF["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Configuración</b><br/><span style='font-size:12px'>Parámetros Globales</span>"]:::core
-    PS["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Process Suite</b><br/><span style='font-size:12px'>Reglas de Negocio</span>"]:::core
-    PM["<span style='font-size:11px;font-weight:bold;color:#94a3b8'>ÁREA 7</span><br/><b>NyTEX Process Mining</b><br/><span style='font-size:12px'>Minería de Procesos</span>"]:::core
+    <!-- 1. ÁREA 7: NÚCLEO MAESTRO & GOBERNANZA -->
+    <g id="subgraph-area7">
+        <rect x="30" y="60" width="810" height="76" rx="2" fill="#080e1c" stroke="#334155" stroke-width="1.5" />
+        <text x="42" y="76" fill="#f8fafc" font-size="11" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">
+            ÁREA 7: NÚCLEO MAESTRO &amp; GOBERNANZA
+        </text>
+        <line x1="30" y1="84" x2="840" y2="84" stroke="#1e293b" stroke-width="1" />
+    </g>
 
-    CRM["<span style='font-size:11px;font-weight:bold;color:#bae6fd'>ÁREA 1</span><br/><b>NyTEX CRM</b><br/><span style='font-size:12px'>Embudo de Ventas</span>"]:::sales
-    VTS["<span style='font-size:11px;font-weight:bold;color:#bae6fd'>ÁREA 1</span><br/><b>NyTEX Ventas</b><br/><span style='font-size:12px'>Cotizaciones y Pedidos</span>"]:::sales
-    CXC["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX CxC</b><br/><span style='font-size:12px'>Gestión de Cobranza</span>"]:::finance
+    <!-- 2. ÁREA 5: TALENTO HUMANO (Hire-to-Pay) -->
+    <g id="subgraph-area5">
+        <rect x="858" y="16" width="156" height="136" rx="2" fill="#0c071a" stroke="#7e22ce" stroke-width="1.5" />
+        <rect x="858" y="16" width="156" height="18" fill="#7e22ce" />
+        <text x="936" y="28" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="8.5" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">
+            ÁREA 5: TALENTO HUMANO (Hire-to-Pay)
+        </text>
+    </g>
 
-    PLAN["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Planeación</b><br/><span style='font-size:12px'>MRP y Pronósticos</span>"]:::data
-    COMP["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX Compras</b><br/><span style='font-size:12px'>Órdenes y Requisiciones</span>"]:::supply
-    INV["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX Inventario</b><br/><span style='font-size:12px'>Control de Stock</span>"]:::supply
-    WMS["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX WMS</b><br/><span style='font-size:12px'>Gestión de Bodegas</span>"]:::supply
-    PROD["<span style='font-size:11px;font-weight:bold;color:#a7f3d0'>ÁREA 3</span><br/><b>NyTEX Producción</b><br/><span style='font-size:12px'>Recetas y Órdenes</span>"]:::prod
-    LOG["<span style='font-size:11px;font-weight:bold;color:#bbf7d0'>ÁREA 2</span><br/><b>NyTEX Logística</b><br/><span style='font-size:12px'>Rutas y Despachos</span>"]:::supply
+    <!-- 3. ÁREA 1: CICLO COMERCIAL (Order-to-Cash) -->
+    <g id="subgraph-area1">
+        <rect x="98" y="360" width="140" height="140" rx="2" fill="#051429" stroke="#0284c7" stroke-width="1.5" />
+        <rect x="98" y="360" width="140" height="18" fill="#0284c7" />
+        <text x="168" y="372" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="7.8" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">
+            ÁREA 1: CICLO COMERCIAL (Order-to-Cash)
+        </text>
+    </g>
 
-    CXP["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX CxP</b><br/><span style='font-size:12px'>Control de Deudas</span>"]:::finance
-    TES["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX Tesorería</b><br/><span style='font-size:12px'>Flujo de Efectivo</span>"]:::finance
-    CONT["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX Contabilidad</b><br/><span style='font-size:12px'>Pólizas y Balances</span>"]:::finance
-    AF["<span style='font-size:11px;font-weight:bold;color:#fde68a'>ÁREA 4</span><br/><b>NyTEX Activos Fijos</b><br/><span style='font-size:12px'>Depreciaciones</span>"]:::finance
+    <!-- 4. ÁREA 6: CAPA ESTRATÉGICA & ANALÍTICA -->
+    <g id="subgraph-area6">
+        <rect x="452" y="168" width="370" height="316" rx="2" fill="#060f24" stroke="#1e40af" stroke-width="1.5" />
+        <rect x="452" y="168" width="370" height="20" fill="#1e3a8a" />
+        <text x="464" y="182" fill="#93c5fd" font-size="9.5" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">
+            ÁREA 6: CAPA ESTRATÉGICA &amp; ANALÍTICA
+        </text>
+    </g>
 
-    RRHH["<span style='font-size:11px;font-weight:bold;color:#e9d5ff'>ÁREA 5</span><br/><b>NyTEX RRHH</b><br/><span style='font-size:12px'>Expedientes</span>"]:::hr
-    NOM["<span style='font-size:11px;font-weight:bold;color:#e9d5ff'>ÁREA 5</span><br/><b>NyTEX Nómina</b><br/><span style='font-size:12px'>Cálculo de Sueldos</span>"]:::hr
+    <!-- 5. ÁREA 2 & 3: CADENA DE SUMINISTRO Y PLANTA -->
+    <g id="subgraph-area2-3">
+        <rect x="152" y="562" width="678" height="90" rx="2" fill="#041a10" stroke="#16a34a" stroke-width="1.5" />
+        <rect x="152" y="562" width="678" height="19" fill="#16a34a" />
+        <text x="164" y="575" fill="#ffffff" font-size="9" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">
+            ÁREA 2 &amp; 3: CADENA DE SUMINISTRO Y PLANTA
+        </text>
+    </g>
 
-    DASH["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Dashboards</b><br/><span style='font-size:12px'>KPIs Operativos</span>"]:::data
-    BI_R["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX BI y Reportes</b><br/><span style='font-size:12px'>Consultas</span>"]:::data
-    BI["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX BI</b><br/><span style='font-size:12px'>Inteligencia</span>"]:::data
-    BD["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Big Data</b><br/><span style='font-size:12px'>Lagos de Datos</span>"]:::data
-    MIN["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Minería de Datos</b><br/><span style='font-size:12px'>Data Mining</span>"]:::data
-    PRED["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX Modelos Predictivos</b>"]:::data
-    IA["<span style='font-size:11px;font-weight:bold;color:#93c5fd'>ÁREA 6</span><br/><b>NyTEX IA</b><br/><span style='font-size:12px'>Decisiones Autónomas</span>"]:::data
+    <!-- 6. ÁREA 4: ADMINISTRACIÓN Y FINANZAS -->
+    <g id="subgraph-area4">
+        <rect x="198" y="728" width="428" height="182" rx="2" fill="#180e05" stroke="#d97706" stroke-width="1.5" />
+        <rect x="198" y="728" width="428" height="19" fill="#d97706" />
+        <text x="208" y="741" fill="#ffffff" font-size="9" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">
+            ÁREA 4: ADMINISTRACIÓN Y FINANZAS
+        </text>
+    </g>
 
-    BP ==> CRM
-    BP ==> VTS
-    BP ==> COMP
-    CONF -.-> PS
-    CONF -.-> PM
-    RRHH -.-> PS
-    CRM ==> VTS
-    VTS ==> CXC
-    CXC ==> TES
-    PLAN ==> COMP
-    PLAN ==> PROD
-    COMP ==> CXP
-    CXP ==> TES
-    COMP ===> INV
-    INV ===> WMS
-    INV ===> PROD
-    PROD ===> INV
-    VTS ===> LOG
-    INV ===> LOG
-    TES ===> CONT
-    AF ===> CONT
-    RRHH ===> NOM
-    NOM ===> TES
-    CONT -.-> DASH
-    VTS -.-> BI_R
-    INV -.-> BI
-    WMS -.-> BD
-    BD -.-> MIN
-    MIN -.-> PRED
-    BD -.-> PRED
-    PRED -.-> IA
-    IA -.-> PLAN
-                            </pre>
-                        </div>
+    <!-- LÍNEAS Y CONEXIONES -->
+    <path d="M 129.5 130 L 129.5 250" stroke="#cbd5e1" stroke-width="1.4" fill="none" />
+    <path d="M 129.5 250 L 168 250 L 168 388" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 129.5 250 L 358 250 L 358 605" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 168 426 L 168 454" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 186 492 L 186 542 L 481 542 L 481 605" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="286" y="534" width="76" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="324" y="543" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Reserva stock</text></g>
+    <path d="M 110 492 L 110 774 L 208 774" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="78" y="694" width="82" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="119" y="703" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Venta a crédito</text></g>
+    <path d="M 224 641 L 224 756" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="148" y="676" width="116" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="206" y="685" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Prueba de entrega digital</text></g>
+    <path d="M 358 641 L 358 756" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="324" y="676" width="84" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="366" y="685" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Factura validada</text></g>
+    <path d="M 476 641 L 476 695 L 535 695 L 535 756" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="482" y="676" width="84" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="524" y="685" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Costo de Ventas</text></g>
+    <path d="M 606 494 L 606 530 L 358 530 L 358 605" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="508" y="522" width="102" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="559" y="531" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Requerimientos MRP</text></g>
+    <path d="M 674 494 L 674 530 L 759 530 L 759 605" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="636" y="522" width="98" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="685" y="531" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Programa de fábrica</text></g>
+    <path d="M 260 792 L 260 840 L 306 840 L 306 866" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="226" y="822" width="92" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="272" y="831" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Cobranza al banco</text></g>
+    <path d="M 386 792 L 386 840 L 342 840 L 342 866" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
+    <g><rect x="352" y="822" width="90" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="397" y="831" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Propuesta de pago</text></g>
+    <path d="M 936 79 L 936 106" stroke="#38bdf8" stroke-width="1.5" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 640 230 L 640 262" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 640 290 L 640 320" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 640 356 L 640 390" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 640 426 L 640 458" stroke="#38bdf8" stroke-width="1.5" fill="none" marker-end="url(#arrow-cyan)" />
+    <path d="M 324 902 L 324 926 L 852 926 L 852 158 L 756 158 L 756 200" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,4" fill="none" marker-end="url(#arrow-slate)" />
+
+    <!-- 24 MÓDULOS DE ARQUITECTURA (CON CLASE .node) -->
+    <!-- ÁREA 7 -->
+    <g class="node cursor-pointer transition-all duration-300" id="node-businesspartners">
+        <rect x="42" y="90" width="175" height="40" rx="4" fill="#0e182e" stroke="#eab308" stroke-width="1.5" />
+        <text x="129.5" y="105" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="11" font-weight="bold">NyTEX Business Partners</text>
+        <text x="129.5" y="119" text-anchor="middle" dominant-baseline="middle" fill="#cbd5e1" font-size="9">(Ficha Única: Clientes y Proveedores)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-configuracion">
+        <rect x="236" y="90" width="180" height="40" rx="4" fill="#0e182e" stroke="#eab308" stroke-width="1.5" />
+        <text x="326" y="105" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="11" font-weight="bold">NyTEX Configuración</text>
+        <text x="326" y="119" text-anchor="middle" dominant-baseline="middle" fill="#cbd5e1" font-size="9">(Seguridad RBAC, Multi-Empresa, APIs)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-processsuite">
+        <rect x="434" y="90" width="175" height="40" rx="4" fill="#0e182e" stroke="#eab308" stroke-width="1.5" />
+        <text x="521.5" y="105" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="11" font-weight="bold">NyTEX Process Suite</text>
+        <text x="521.5" y="119" text-anchor="middle" dominant-baseline="middle" fill="#cbd5e1" font-size="9">(Reglas de Negocio y Aprobaciones)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-processmining">
+        <rect x="626" y="90" width="204" height="40" rx="4" fill="#0e182e" stroke="#eab308" stroke-width="1.5" />
+        <text x="728" y="105" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="11" font-weight="bold">NyTEX Process Mining</text>
+        <text x="728" y="119" text-anchor="middle" dominant-baseline="middle" fill="#cbd5e1" font-size="9">(Auditoría de Event Logs y Cuellos de Botella)</text>
+    </g>
+
+    <!-- ÁREA 5 -->
+    <g class="node cursor-pointer transition-all duration-300" id="node-rrhh">
+        <rect x="868" y="44" width="136" height="35" rx="4" fill="#581c87" stroke="#eab308" stroke-width="1.5" />
+        <text x="936" y="57" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX RRHH</text>
+        <text x="936" y="69" text-anchor="middle" dominant-baseline="middle" fill="#e9d5ff" font-size="8.5">(Expedientes y Asistencias)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-nomina">
+        <rect x="868" y="106" width="136" height="35" rx="4" fill="#581c87" stroke="#eab308" stroke-width="1.5" />
+        <text x="936" y="119" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Nómina</text>
+        <text x="936" y="131" text-anchor="middle" dominant-baseline="middle" fill="#e9d5ff" font-size="8.5">(Sueldos e Impuestos)</text>
+    </g>
+
+    <!-- ÁREA 1 -->
+    <g class="node cursor-pointer transition-all duration-300" id="node-crm">
+        <rect x="114" y="388" width="108" height="38" rx="4" fill="#0284c7" stroke="#eab308" stroke-width="1.5" />
+        <text x="168" y="403" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="11" font-weight="bold">NyTEX CRM</text>
+        <text x="168" y="416" text-anchor="middle" dominant-baseline="middle" fill="#e0f2fe" font-size="9">(Embudo / Pipeline)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-ventas">
+        <rect x="110" y="454" width="116" height="38" rx="4" fill="#0284c7" stroke="#eab308" stroke-width="1.5" />
+        <text x="168" y="469" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="11" font-weight="bold">NyTEX Ventas</text>
+        <text x="168" y="482" text-anchor="middle" dominant-baseline="middle" fill="#e0f2fe" font-size="9">(Cotización y Factura)</text>
+    </g>
+
+    <!-- ÁREA 6 -->
+    <g class="node cursor-pointer transition-all duration-300" id="node-biyreportes">
+        <rect x="466" y="200" width="112" height="30" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="522" y="215" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10" font-weight="bold">NyTEX BI y Reportes</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-bigdata">
+        <rect x="594" y="200" width="92" height="30" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="640" y="215" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10" font-weight="bold">NyTEX Big Data</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-dashboards">
+        <rect x="702" y="200" width="108" height="38" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="756" y="214" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Dashboards</text>
+        <text x="756" y="227" text-anchor="middle" dominant-baseline="middle" fill="#bfdbfe" font-size="8.5">(Cockpit en Vivo)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-mineriadatos">
+        <rect x="574" y="262" width="132" height="28" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="640" y="276" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10" font-weight="bold">NyTEX Minería de Datos</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-predictivos">
+        <rect x="566" y="320" width="148" height="36" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="640" y="333" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10" font-weight="bold">NyTEX Modelos Predictivos</text>
+        <text x="640" y="346" text-anchor="middle" dominant-baseline="middle" fill="#bfdbfe" font-size="8">(Series de Tiempo + Logit/OR)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-ia">
+        <rect x="576" y="390" width="128" height="36" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="640" y="404" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX IA</text>
+        <text x="640" y="417" text-anchor="middle" dominant-baseline="middle" fill="#bfdbfe" font-size="8.5">(Decisiones Autónomas)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-planeacion">
+        <rect x="572" y="458" width="136" height="36" rx="4" fill="#0f2b5c" stroke="#eab308" stroke-width="1.5" />
+        <text x="640" y="472" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Planeación</text>
+        <text x="640" y="485" text-anchor="middle" dominant-baseline="middle" fill="#bfdbfe" font-size="8.5">(S&OP y Presupuestos)</text>
+    </g>
+
+    <!-- ÁREA 2 & 3 -->
+    <g class="node cursor-pointer transition-all duration-300" id="node-logistica">
+        <rect x="162" y="605" width="124" height="36" rx="4" fill="#14532d" stroke="#eab308" stroke-width="1.5" />
+        <text x="224" y="619" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Logística</text>
+        <text x="224" y="632" text-anchor="middle" dominant-baseline="middle" fill="#bbf7d0" font-size="8.5">(Rutas, Camiones y POD)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-compras">
+        <rect x="302" y="605" width="112" height="36" rx="4" fill="#14532d" stroke="#eab308" stroke-width="1.5" />
+        <text x="358" y="619" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Compras</text>
+        <text x="358" y="632" text-anchor="middle" dominant-baseline="middle" fill="#bbf7d0" font-size="8.5">(Órdenes de Compra)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-inventario">
+        <rect x="430" y="605" width="102" height="36" rx="4" fill="#14532d" stroke="#eab308" stroke-width="1.5" />
+        <text x="481" y="619" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Inventario</text>
+        <text x="481" y="632" text-anchor="middle" dominant-baseline="middle" fill="#bbf7d0" font-size="8.5">(Kardex y Stock)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-wms">
+        <rect x="548" y="605" width="136" height="36" rx="4" fill="#14532d" stroke="#eab308" stroke-width="1.5" />
+        <text x="616" y="619" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX WMS</text>
+        <text x="616" y="632" text-anchor="middle" dominant-baseline="middle" fill="#bbf7d0" font-size="8.5">(Racks, Picking RF, FEFO)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-produccion">
+        <rect x="700" y="605" width="118" height="36" rx="4" fill="#065f46" stroke="#eab308" stroke-width="1.5" />
+        <text x="759" y="619" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Producción</text>
+        <text x="759" y="632" text-anchor="middle" dominant-baseline="middle" fill="#a7f3d0" font-size="8.5">(Recetas BOM y Planta)</text>
+    </g>
+
+    <!-- ÁREA 4 -->
+    <g class="node cursor-pointer transition-all duration-300" id="node-cxc">
+        <rect x="208" y="756" width="104" height="36" rx="4" fill="#78350f" stroke="#eab308" stroke-width="1.5" />
+        <text x="260" y="770" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX CxC</text>
+        <text x="260" y="783" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="8.5">(Cartera y Crédito)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-cxp">
+        <rect x="324" y="756" width="124" height="36" rx="4" fill="#78350f" stroke="#eab308" stroke-width="1.5" />
+        <text x="386" y="770" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX CxP</text>
+        <text x="386" y="783" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="8.5">(3-Way Match y Deudas)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-contabilidad">
+        <rect x="460" y="756" width="152" height="36" rx="4" fill="#78350f" stroke="#eab308" stroke-width="1.5" />
+        <text x="536" y="770" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Contabilidad</text>
+        <text x="536" y="783" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="7.8">(Consolidación en Tiempo Real)</text>
+    </g>
+    <g class="node cursor-pointer transition-all duration-300" id="node-tesoreria">
+        <rect x="266" y="866" width="116" height="36" rx="4" fill="#78350f" stroke="#eab308" stroke-width="1.5" />
+        <text x="324" y="880" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Tesorería</text>
+        <text x="324" y="893" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="8.5">(Bancos y Cash Flow)</text>
+    </g>
+</svg>
+</div>
                     </div>
 
                     <!-- Columna Derecha: Tarjetas de Áreas Funcionales (Interactivas) -->
@@ -372,7 +524,7 @@ flowchart TD
                                     <div class="min-w-0">
                                         <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-amber-300 transition-colors">4. Administración y Finanzas</h5>
                                         <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-amber-300 font-medium">CxP, CxC, Activos Fijos, Tesorería, Contabilidad</span>
+                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-amber-300 font-medium">CxP, CxC, Tesorería, Contabilidad</span>
                                         </p>
                                     </div>
                                 </div>
@@ -400,7 +552,7 @@ flowchart TD
                                     <div class="min-w-0">
                                         <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-blue-300 transition-colors">6. Inteligencia y Analítica</h5>
                                         <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-blue-300 font-medium">BI, Dashboards, Big Data, Minería, Modelos, IA, Planeación</span>
+                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-blue-300 font-medium">BI y Reportes, Dashboards, Big Data, Minería, Modelos, IA, Planeación</span>
                                         </p>
                                     </div>
                                 </div>
@@ -467,7 +619,7 @@ flowchart TD
                         },
                         4: {
                             areaNum: "4",
-                            modules: ["cxp", "cxc", "activos fijos", "tesorería", "contabilidad", "cobranza", "deudas", "efectivo"],
+                            modules: ["cxp", "cxc", "tesorería", "contabilidad", "cobranza", "deudas", "efectivo"],
                             activeClass: ["bg-amber-950/70", "border-amber-400", "ring-2", "ring-amber-400/50"],
                             badgeClass: ["bg-amber-400", "text-slate-950", "border-amber-300"]
                         },
@@ -609,14 +761,14 @@ flowchart TD
                     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
                         <div>
                             <h4 class="text-lg md:text-xl font-bold text-white flex items-center gap-2">
-                                <i class="fas fa-table-list text-brand-accent"></i> Matriz Organizacional de las 26 Aplicaciones
+                                <i class="fas fa-table-list text-brand-accent"></i> Matriz Organizacional de las 24 Aplicaciones
                             </h4>
                             <p class="text-xs md:text-sm text-gray-400 mt-0.5">
                                 Clasificación exacta: <span class="text-gray-300 font-medium">Funcional Macro / Nivel Dirección</span> · <span class="text-brand-accent font-medium">Aplicación NyTEX</span> · <span class="text-gray-300 font-medium">Área / Departamento</span>
                             </p>
                         </div>
                         <span class="text-xs text-gray-400 bg-gray-900 border border-gray-800 px-3 py-1.5 rounded-lg">
-                            <i class="fas fa-check-circle text-green-400 mr-1.5"></i>26 Aplicaciones Mapeadas
+                            <i class="fas fa-check-circle text-green-400 mr-1.5"></i>24 Aplicaciones Mapeadas
                         </span>
                     </div>
 
@@ -693,11 +845,7 @@ flowchart TD
                                     <td class="py-3 px-5"><span class="bg-amber-950/80 text-amber-300 border border-amber-800/60 px-2.5 py-1 rounded-md font-bold text-xs">NyTEX Tesorería</span></td>
                                     <td class="py-3 px-5 text-gray-400">Finanzas</td>
                                 </tr>
-                                <tr class="hover:bg-white/[0.03] transition-colors">
-                                    <td class="py-3 px-5 text-gray-200 font-medium">Dirección de Administración y Finanzas - DAF (Finanzas y Contabilidad)</td>
-                                    <td class="py-3 px-5"><span class="bg-amber-950/80 text-amber-300 border border-amber-800/60 px-2.5 py-1 rounded-md font-bold text-xs">NyTEX Activos Fijos</span></td>
-                                    <td class="py-3 px-5 text-gray-400">Finanzas / Contabilidad</td>
-                                </tr>
+                                
 
                                 <!-- Área 5: Talento Humano -->
                                 <tr class="hover:bg-white/[0.03] transition-colors">
@@ -717,11 +865,7 @@ flowchart TD
                                     <td class="py-3 px-5"><span class="bg-blue-950/80 text-blue-300 border border-blue-800/60 px-2.5 py-1 rounded-md font-bold text-xs">NyTEX BI y Reportes</span></td>
                                     <td class="py-3 px-5 text-gray-400">Transversal / Gerencia y Operaciones</td>
                                 </tr>
-                                <tr class="hover:bg-white/[0.03] transition-colors">
-                                    <td class="py-3 px-5 text-gray-200 font-medium">Dirección de Inteligencia de Negocios y Analítica (Estratégico / BI)</td>
-                                    <td class="py-3 px-5"><span class="bg-blue-950/80 text-blue-300 border border-blue-800/60 px-2.5 py-1 rounded-md font-bold text-xs">NyTEX BI</span></td>
-                                    <td class="py-3 px-5 text-gray-400">Planificación Estratégica / Dirección General</td>
-                                </tr>
+                                
                                 <tr class="hover:bg-white/[0.03] transition-colors">
                                     <td class="py-3 px-5 text-gray-200 font-medium">Dirección de Inteligencia de Negocios y Analítica (Estratégico / BI)</td>
                                     <td class="py-3 px-5"><span class="bg-blue-950/80 text-blue-300 border border-blue-800/60 px-2.5 py-1 rounded-md font-bold text-xs">NyTEX Dashboards Operativos</span></td>
@@ -1193,7 +1337,7 @@ flowchart TD
                     <h3 class="text-white font-bold text-base mb-1">Fase 4: NyTEX Enterprise</h3>
                     <p class="text-gray-400 text-[11px] mb-1">Anticipación y Escala</p>
                     <div class="flex-grow mb-3">
-                        <p class="text-brand-accent text-[9px] font-bold mb-0.5">26 MÓDULOS:</p>
+                        <p class="text-brand-accent text-[9px] font-bold mb-0.5">24 MÓDULOS:</p>
                         <p class="text-gray-400 text-[9px] leading-tight">Todo el Ecosistema: Fase 3 + IA, Modelos Predictivos, Minería de Datos, Process Mining, Business Partners, Configuración</p>
                     </div>
                     <div class="border-t border-white/10 pt-3 mt-auto">
