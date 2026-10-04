@@ -32,6 +32,15 @@
         .hero-glow {
             background: radial-gradient(circle at 50% 30%, rgba(2, 132, 199, 0.12) 0%, rgba(11, 15, 25, 0) 70%);
         }
+        /* Custom scrollbar for module picker */
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased selection:bg-[#0284c7] selection:text-white">
@@ -55,7 +64,7 @@
                     <a href="#planes" class="hover:text-[#0284c7] transition-colors">Fases</a>
                     <a href="#exito" class="hover:text-[#0284c7] transition-colors">Casos</a>
                     <a href="#nosotros" class="hover:text-[#0284c7] transition-colors">Nosotros</a>
-                    <a href="/portal/" class="hover:text-[#0284c7] transition-colors flex items-center gap-1">
+                    <a href="/portal/" target="_blank" class="hover:text-[#0284c7] transition-colors flex items-center gap-1">
                         <i class="fas fa-lock text-[10px]"></i> Portal clientes
                     </a>
                 </div>
@@ -333,7 +342,7 @@
                             Registrar → Ordenar → Estandarizar → Controlar
                         </p>
                     </div>
-                    <button type="button" onclick="selectPhase(1)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200">
+                    <button type="button" onclick="selectPhase(1)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200 cursor-pointer">
                         Ver módulos en el ecosistema
                     </button>
                 </div>
@@ -350,7 +359,7 @@
                             Integrar → Sincronizar → Medir → Automatizar
                         </p>
                     </div>
-                    <button type="button" onclick="selectPhase(2)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#0284c7] hover:bg-blue-700 transition-colors text-center shadow-sm">
+                    <button type="button" onclick="selectPhase(2)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#0284c7] hover:bg-blue-700 transition-colors text-center shadow-sm cursor-pointer">
                         Ver módulos en el ecosistema
                     </button>
                 </div>
@@ -367,7 +376,7 @@
                             Centralizar → Analizar → Diagnosticar → Rentabilizar
                         </p>
                     </div>
-                    <button type="button" onclick="selectPhase(3)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200">
+                    <button type="button" onclick="selectPhase(3)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200 cursor-pointer">
                         Ver módulos en el ecosistema
                     </button>
                 </div>
@@ -384,7 +393,7 @@
                             Anticipar → Simular → Innovar → Escalar
                         </p>
                     </div>
-                    <button type="button" onclick="selectPhase(4)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200">
+                    <button type="button" onclick="selectPhase(4)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200 cursor-pointer">
                         Ver módulos en el ecosistema
                     </button>
                 </div>
@@ -457,7 +466,7 @@
                         Ecosistema NyTEX: 7 áreas conectadas
                     </h2>
                     <p class="text-xs sm:text-sm text-gray-400 mt-1">
-                        Seleccione una fase para iluminar sus módulos incluidos.
+                        Seleccione una fase para iluminar sus módulos incluidos o escoja los módulos exactos a su medida.
                     </p>
                 </div>
 
@@ -470,36 +479,67 @@
 
                     <!-- Controles Zoom -->
                     <div class="flex items-center gap-1 bg-gray-900 border border-gray-700/80 px-2 py-1 rounded-lg text-xs">
-                        <button type="button" onclick="adjustDiagramZoom(-0.15)" class="w-5 h-5 rounded hover:bg-gray-800 text-gray-300 flex items-center justify-center" title="Reducir">-</button>
-                        <button type="button" onclick="adjustDiagramZoom(0.15)" class="w-5 h-5 rounded hover:bg-gray-800 text-gray-300 flex items-center justify-center" title="Aumentar">+</button>
-                        <button type="button" onclick="resetDiagramZoom()" class="px-1.5 py-0.5 text-[10px] rounded hover:bg-gray-800 text-gray-300" title="Restablecer">Restablecer</button>
+                        <button type="button" onclick="adjustDiagramZoom(-0.15)" class="w-5 h-5 rounded hover:bg-gray-800 text-gray-300 flex items-center justify-center cursor-pointer" title="Reducir">-</button>
+                        <button type="button" onclick="adjustDiagramZoom(0.15)" class="w-5 h-5 rounded hover:bg-gray-800 text-gray-300 flex items-center justify-center cursor-pointer" title="Aumentar">+</button>
+                        <button type="button" onclick="resetDiagramZoom()" class="px-1.5 py-0.5 text-[10px] rounded hover:bg-gray-800 text-gray-300 cursor-pointer" title="Restablecer">Restablecer</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Pestañas de las 4 Fases (Tabs principales) -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
-                <button type="button" id="tabPhase-1" onclick="selectPhase(1)" class="phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+            <!-- Pestañas de las Fases: 5 TABS (INCLUYE "A SU MEDIDA") -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-3">
+                <button type="button" id="tabPhase-1" onclick="selectPhase(1)" class="phase-tab py-3 px-3 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
                     <span class="block text-sm font-bold text-gray-200">Starter</span>
                     <span class="block text-[11px] text-gray-400">7 módulos</span>
                 </button>
-                <button type="button" id="tabPhase-2" onclick="selectPhase(2)" class="phase-tab py-3 px-4 rounded-xl border border-[#0284c7] bg-[#0284c7] text-white text-center transition-all cursor-pointer shadow-lg shadow-blue-500/20">
+                <button type="button" id="tabPhase-2" onclick="selectPhase(2)" class="phase-tab py-3 px-3 rounded-xl border border-[#0284c7] bg-[#0284c7] text-white text-center transition-all cursor-pointer shadow-lg shadow-blue-500/20">
                     <span class="block text-sm font-black text-white">Express</span>
                     <span class="block text-[11px] text-blue-100 font-medium">15 módulos</span>
                 </button>
-                <button type="button" id="tabPhase-3" onclick="selectPhase(3)" class="phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+                <button type="button" id="tabPhase-3" onclick="selectPhase(3)" class="phase-tab py-3 px-3 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
                     <span class="block text-sm font-bold text-gray-200">Advanced</span>
                     <span class="block text-[11px] text-gray-400">18 módulos</span>
                 </button>
-                <button type="button" id="tabPhase-4" onclick="selectPhase(4)" class="phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+                <button type="button" id="tabPhase-4" onclick="selectPhase(4)" class="phase-tab py-3 px-3 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
                     <span class="block text-sm font-bold text-gray-200">Enterprise</span>
                     <span class="block text-[11px] text-gray-400">24 módulos</span>
                 </button>
+                <button type="button" id="tabPhase-custom" onclick="selectPhase('custom')" class="phase-tab py-3 px-3 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+                    <span class="block text-sm font-bold text-gray-200">A su medida</span>
+                    <span class="block text-[11px] text-gray-400"><span id="tabCustomCount">0</span> módulos</span>
+                </button>
+            </div>
+
+            <!-- Panel desplegable interactivo cuando está activa "A su medida" -->
+            <div id="customPickerPanel" class="hidden mb-4 bg-[#111827]/90 border border-gray-700/80 rounded-2xl p-4 transition-all">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-3 mb-3 border-b border-gray-800 gap-2">
+                    <div>
+                        <span class="text-xs font-extrabold text-white flex items-center gap-1.5">
+                            <i class="fas fa-sliders text-[#38bdf8]"></i> Seleccione los módulos que necesita:
+                        </span>
+                        <p class="text-[11px] text-gray-400">
+                            Haga clic en las casillas o directamente en los módulos del diagrama para iluminarlos:
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="selectAllCustomModules()" class="text-[10px] font-bold px-2.5 py-1 rounded bg-blue-900/50 hover:bg-blue-800 text-blue-200 border border-blue-700 transition-colors">
+                            Seleccionar todos
+                        </button>
+                        <button type="button" onclick="clearCustomModules()" class="text-[10px] font-bold px-2.5 py-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 border border-gray-700 transition-colors">
+                            Limpiar selección
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lista de los 24 módulos en píldoras seleccionables -->
+                <div id="customPillContainer" class="flex flex-wrap gap-1.5 custom-scroll max-h-36 overflow-y-auto pr-1">
+                    <!-- Inyectados por JavaScript -->
+                </div>
             </div>
 
             <!-- Indicador de fase actual -->
-            <div class="text-xs text-gray-300 font-semibold mb-6 flex items-center justify-between">
-                <div>
+            <div class="text-xs text-gray-300 font-semibold mb-6 flex flex-wrap items-center justify-between gap-2">
+                <div id="statusPhaseContainer">
                     Fase seleccionada: <span id="statusPhaseName" class="text-[#38bdf8] font-bold">Express</span> | <span id="statusModuleCount" class="text-white font-bold">15</span> de 24 módulos
                 </div>
                 <div id="activeFilterBadge" class="hidden text-[11px] bg-blue-900/60 border border-blue-500/50 text-blue-200 px-3 py-0.5 rounded-full">
@@ -817,10 +857,10 @@
                         </div>
                     </div>
 
-                    <!-- Botón Dinámico de Consulta -->
+                    <!-- Botón Dinámico de Contratación hacia el Portal -->
                     <div class="mt-6 pt-4 border-t border-gray-800">
-                        <a href="#planes" id="btnSidebarPhase" class="block w-full text-center bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold py-3 px-3 rounded-xl text-xs md:text-sm transition-all shadow-md">
-                            Consultar NyTEX Express
+                        <a href="/portal/?phase=2" target="_blank" id="btnSidebarPhase" class="block w-full text-center bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold py-3 px-3 rounded-xl text-xs md:text-sm transition-all shadow-md uppercase tracking-wide">
+                            Contratar en Portal
                         </a>
                     </div>
                 </div>
@@ -1078,21 +1118,24 @@
         </div>
     </section>
 
-    <!-- 10. PLANES NyTEX: ALCANCE E INVERSIÓN -->
+    <!-- 10. PLANES NyTEX: ALCANCE E INVERSIÓN (5 PLANES INCLUYENDO 'A SU MEDIDA') -->
     <section id="planes" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
                     Planes NyTEX: alcance e inversión
                 </h2>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                    Seleccione un paquete preconfigurado o arme su solución personalizada seleccionando los módulos que necesita.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-8">
                 
-                <!-- Starter -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                <!-- 1. Starter -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
                     <div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Starter</h3>
+                        <h3 class="text-lg font-extrabold text-gray-900 mb-0.5">Starter</h3>
                         <p class="text-xs text-gray-500 mb-3">Control transaccional</p>
                         
                         <div class="mb-4">
@@ -1102,29 +1145,29 @@
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-gray-100 mb-6">
-                            <div class="text-2xl font-black text-gray-900">$35 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                        <div class="pt-3 border-t border-gray-100 mb-5">
+                            <div class="text-xl font-black text-gray-900">$35 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
                             <p class="text-[11px] text-gray-500 mt-1">Implementación: $0</p>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <button type="button" onclick="selectPhase(1)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                        <button type="button" onclick="selectPhase(1)" class="w-full py-1.5 text-xs font-bold text-[#0284c7] hover:underline text-center cursor-pointer">
                             Ver módulos en el ecosistema
                         </button>
-                        <a href="/portal/?phase=1" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
-                            Consultar este plan
+                        <a href="/portal/?phase=1" target="_blank" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm uppercase tracking-wide">
+                            Contratar en Portal
                         </a>
                     </div>
                 </div>
 
-                <!-- Express (Destacado) -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-[#0284c7] shadow-lg flex flex-col justify-between hover:shadow-xl transition-all relative">
-                    <div class="absolute -top-3 right-6 bg-[#0284c7] text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-sm">
+                <!-- 2. Express (Destacado) -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-[#0284c7] shadow-lg flex flex-col justify-between hover:shadow-xl transition-all relative">
+                    <div class="absolute -top-3 right-4 bg-[#0284c7] text-white text-[9px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-sm">
                         Recomendado
                     </div>
                     <div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Express</h3>
+                        <h3 class="text-lg font-extrabold text-gray-900 mb-0.5">Express</h3>
                         <p class="text-xs text-gray-500 mb-3">Productividad y flujo</p>
                         
                         <div class="mb-4">
@@ -1134,26 +1177,26 @@
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-gray-100 mb-6">
-                            <div class="text-2xl font-black text-gray-900">$149 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                        <div class="pt-3 border-t border-gray-100 mb-5">
+                            <div class="text-xl font-black text-gray-900">$149 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
                             <p class="text-[11px] text-gray-500 mt-1">Implementación: $1,150</p>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <button type="button" onclick="selectPhase(2)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                        <button type="button" onclick="selectPhase(2)" class="w-full py-1.5 text-xs font-bold text-[#0284c7] hover:underline text-center cursor-pointer">
                             Ver módulos en el ecosistema
                         </button>
-                        <a href="/portal/?phase=2" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
-                            Consultar este plan
+                        <a href="/portal/?phase=2" target="_blank" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm uppercase tracking-wide">
+                            Contratar en Portal
                         </a>
                     </div>
                 </div>
 
-                <!-- Advanced -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                <!-- 3. Advanced -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
                     <div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Advanced</h3>
+                        <h3 class="text-lg font-extrabold text-gray-900 mb-0.5">Advanced</h3>
                         <p class="text-xs text-gray-500 mb-3">Inteligencia y rentabilidad</p>
                         
                         <div class="mb-4">
@@ -1163,47 +1206,81 @@
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-gray-100 mb-6">
-                            <div class="text-2xl font-black text-gray-900">$299 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                        <div class="pt-3 border-t border-gray-100 mb-5">
+                            <div class="text-xl font-black text-gray-900">$299 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
                             <p class="text-[11px] text-gray-500 mt-1">Implementación: $4,500</p>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <button type="button" onclick="selectPhase(3)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                        <button type="button" onclick="selectPhase(3)" class="w-full py-1.5 text-xs font-bold text-[#0284c7] hover:underline text-center cursor-pointer">
                             Ver módulos en el ecosistema
                         </button>
-                        <a href="/portal/?phase=3" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
-                            Consultar este plan
+                        <a href="/portal/?phase=3" target="_blank" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm uppercase tracking-wide">
+                            Contratar en Portal
                         </a>
                     </div>
                 </div>
 
-                <!-- Enterprise -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                <!-- 4. Enterprise -->
+                <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
                     <div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Enterprise</h3>
+                        <h3 class="text-lg font-extrabold text-gray-900 mb-0.5">Enterprise</h3>
                         <p class="text-xs text-gray-500 mb-3">Anticipación y escala</p>
                         
                         <div class="mb-4">
                             <span class="text-xs font-bold text-[#0284c7] block mb-1">24 módulos</span>
                             <p class="text-[11px] text-gray-600 leading-snug">
-                                Advanced + IA, Modelos Predictivos, Minería de Datos, Process Mining, Business Partners y Configuración
+                                Todo el ecosistema: Advanced + IA, Modelos, Minería, Process Mining, Partners y Config.
                             </p>
                         </div>
 
-                        <div class="pt-4 border-t border-gray-100 mb-6">
-                            <div class="text-2xl font-black text-gray-900">$499 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                        <div class="pt-3 border-t border-gray-100 mb-5">
+                            <div class="text-xl font-black text-gray-900">$499 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
                             <p class="text-[11px] text-gray-500 mt-1">Implementación: A medida</p>
                         </div>
                     </div>
 
                     <div class="space-y-2">
-                        <button type="button" onclick="selectPhase(4)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                        <button type="button" onclick="selectPhase(4)" class="w-full py-1.5 text-xs font-bold text-[#0284c7] hover:underline text-center cursor-pointer">
                             Ver módulos en el ecosistema
                         </button>
-                        <a href="/portal/?phase=4" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
-                            Consultar este plan
+                        <a href="/portal/?phase=4" target="_blank" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm uppercase tracking-wide">
+                            Contratar en Portal
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. A su medida (Card interactiva en planes) -->
+                <div class="bg-gradient-to-b from-[#f8fafc] to-white p-5 rounded-2xl border-2 border-indigo-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-0.5">
+                            <h3 class="text-lg font-extrabold text-indigo-950">A su medida</h3>
+                            <span class="text-[9px] font-bold bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded-full uppercase">Flexible</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-3">Selección personalizada</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-indigo-600 block mb-1">
+                                <span id="cardCustomCount">0</span> módulos elegidos
+                            </span>
+                            <p class="text-[11px] text-gray-600 leading-snug">
+                                Elija desde 1 módulo hasta los que su negocio requiera exactamente.
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-t border-gray-200/80 mb-5">
+                            <div class="text-xl font-black text-indigo-950" id="cardCustomLic">$0 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                            <p class="text-[11px] text-gray-500 mt-1">Implementación: <span id="cardCustomImp" class="font-bold text-gray-800">$0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <button type="button" onclick="selectPhase('custom')" class="w-full py-1.5 text-xs font-bold text-indigo-600 hover:underline text-center cursor-pointer">
+                            Ver módulos en el ecosistema
+                        </button>
+                        <a href="/portal/?phase=custom" target="_blank" id="btnPlanCustomContratar" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm uppercase tracking-wide">
+                            Contratar en Portal
                         </a>
                     </div>
                 </div>
@@ -1218,70 +1295,58 @@
         </div>
     </section>
 
-    <!-- 11. UNA SOLUCIÓN A SU MEDIDA -->
-    <section class="py-12 bg-white border-t border-gray-100">
+    <!-- 11. CALCULADORA INTERACTIVA "UNA SOLUCIÓN A SU MEDIDA" -->
+    <section class="py-12 bg-[#f8fafc] border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-[#f8fafc] border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm">
                 
-                <div class="w-full lg:w-3/4">
-                    <h3 class="text-lg sm:text-xl font-extrabold text-gray-900 mb-1">Una solución a su medida</h3>
-                    <p class="text-xs text-gray-500 mb-6">Seleccione sus aplicaciones para estimar su inversión.</p>
+                <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-6 border-b border-gray-100 gap-4">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                            Una solución a su medida
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-500 mt-1">
+                            Marque los módulos que necesita. Se iluminarán automáticamente en el Ecosistema y podrá contratarlos directamente en el portal.
+                        </p>
+                    </div>
 
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-xs text-gray-700">
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Ventas
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Contabilidad
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Logística
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Servicio al Cliente
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Minería de Datos
-                        </label>
-                        
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Inventario
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> CxC
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> CRM
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> BI y Reportes
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> IA
-                        </label>
-
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Compras
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> CxP
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> RRHH
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Process Suite
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
-                            <input type="checkbox" class="accent-[#0284c7] rounded"> Business Partners
-                        </label>
+                    <div class="flex items-center gap-3">
+                        <button type="button" onclick="selectPhase('custom')" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1.5">
+                            <i class="fas fa-eye"></i> Ver selección en Ecosistema ↑
+                        </button>
                     </div>
                 </div>
 
-                <div class="w-full lg:w-1/4 text-center lg:text-right shrink-0">
-                    <a href="/portal/?phase=custom" class="inline-block w-full sm:w-auto bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-xs md:text-sm shadow-md transition-all text-center">
-                        Solicitar propuesta
-                    </a>
+                <!-- 24 MÓDULOS CON CHECKBOXES INTERACTIVOS -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-xs text-gray-700 mb-8" id="calculatorGrid">
+                    <!-- Inyectados por JavaScript con precios y enlace directo a los nodos del SVG -->
+                </div>
+
+                <!-- Resumen de Costo y Botón de Contratación -->
+                <div class="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Módulos seleccionados</span>
+                            <span class="text-base font-extrabold text-gray-900" id="calcSummaryCount">0 de 24</span>
+                        </div>
+                        <div class="border-l border-gray-200 pl-6">
+                            <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Implementación estimada</span>
+                            <span class="text-base font-extrabold text-gray-900" id="calcSummaryImp">$0 USD</span>
+                        </div>
+                        <div class="border-l border-gray-200 pl-6">
+                            <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Licencia NyTEX mensual</span>
+                            <span class="text-base font-extrabold text-[#0284c7]" id="calcSummaryLic">$0 USD / mes</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                        <button type="button" onclick="selectPhase('custom')" class="w-full sm:w-auto px-4 py-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors border border-blue-200">
+                            Ver en Ecosistema ↑
+                        </button>
+                        <a href="/portal/?phase=custom" target="_blank" id="btnCalculatorContratar" class="w-full sm:w-auto bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-xs md:text-sm shadow-md transition-all text-center uppercase tracking-wide">
+                            Contratar en Portal
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -1289,7 +1354,7 @@
     </section>
 
     <!-- 12. RESULTADOS QUE SE PUEDEN DEMOSTRAR -->
-    <section id="exito" class="py-20 bg-[#f8fafc] border-t border-gray-200">
+    <section id="exito" class="py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
@@ -1359,7 +1424,7 @@
     </section>
 
     <!-- 13. CONSULTORÍA Y TECNOLOGÍA + METODOLOGÍA -->
-    <section id="nosotros" class="py-20 bg-white">
+    <section id="nosotros" class="py-20 bg-[#f8fafc] border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 
@@ -1373,26 +1438,26 @@
                     </p>
 
                     <div class="flex flex-wrap gap-2.5 text-xs font-semibold text-gray-700">
-                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
                             <i class="fas fa-compass text-[#0284c7]"></i> Consultoría estratégica
                         </span>
-                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
                             <i class="fas fa-stethoscope text-[#0284c7]"></i> Diagnóstico operativo
                         </span>
-                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
                             <i class="fas fa-wrench text-[#0284c7]"></i> Implementación
                         </span>
-                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
                             <i class="fas fa-code text-[#0284c7]"></i> Desarrollo a medida
                         </span>
-                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
                             <i class="fas fa-graduation-cap text-[#0284c7]"></i> Capacitación
                         </span>
                     </div>
                 </div>
 
                 <!-- Derecha: Metodología -->
-                <div class="lg:col-span-5 bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                     <h4 class="text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wider">
                         Metodología
                     </h4>
@@ -1406,7 +1471,7 @@
     </section>
 
     <!-- 14. PREGUNTAS FRECUENTES -->
-    <section class="py-16 bg-[#f8fafc] border-t border-gray-200">
+    <section class="py-16 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-8">
                 <h3 class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
@@ -1415,19 +1480,19 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-semibold text-gray-800">
-                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
                     <span>¿Qué incluye la implementación?</span>
                     <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
-                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
                     <span>¿Puedo integrar mis sistemas actuales?</span>
                     <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
-                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
                     <span>¿Cómo se define el alcance de mi plan?</span>
                     <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
-                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
                     <span>¿Qué capacitación y soporte recibiré?</span>
                     <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
@@ -1526,18 +1591,48 @@
         </div>
     </div>
 
-    <!-- SCRIPT DE INTERACCIÓN DEL ECOSISTEMA Y NAVEGACIÓN -->
+    <!-- SCRIPT DE INTERACCIÓN INTEGRAL DEL ECOSISTEMA Y CALCULADORA -->
     <script>
-        // Mapeo de Fases y Módulos
+        // Definición de los 24 módulos con sus nombres, costos y mapeo a nodos SVG
+        const ALL_MODULES = [
+            { id: "ventas", name: "Ventas", area: 1, imp: 0, lic: 35 },
+            { id: "crm", name: "CRM", area: 1, imp: 1000, lic: 60 },
+            { id: "inventario", name: "Inventario", area: 2, imp: 300, lic: 30 },
+            { id: "compras", name: "Compras", area: 2, imp: 400, lic: 14 },
+            { id: "wms", name: "WMS (Bodegas)", area: 2, imp: 1000, lic: 40 },
+            { id: "logistica", name: "Logística", area: 2, imp: 1000, lic: 40 },
+            { id: "produccion", name: "Producción", area: 3, imp: 1500, lic: 50 },
+            { id: "contabilidad", name: "Contabilidad", area: 4, imp: 400, lic: 30 },
+            { id: "cxc", name: "Cuentas por Cobrar (CxC)", area: 4, imp: 200, lic: 20 },
+            { id: "cxp", name: "Cuentas por Pagar (CxP)", area: 4, imp: 200, lic: 20 },
+            { id: "tesoreria", name: "Tesorería", area: 4, imp: 200, lic: 20 },
+            { id: "rrhh", name: "Recursos Humanos (RRHH)", area: 5, imp: 1000, lic: 50 },
+            { id: "nomina", name: "Nómina", area: 5, imp: 500, lic: 30 },
+            { id: "dashboards", name: "Dashboards", area: 6, imp: 500, lic: 25 },
+            { id: "processsuite", name: "Process Suite (BPM)", area: 7, imp: 1000, lic: 30 },
+            { id: "biyreportes", name: "BI y Reportes", area: 6, imp: 1200, lic: 40 },
+            { id: "bigdata", name: "Big Data", area: 6, imp: 1500, lic: 40 },
+            { id: "planeacion", name: "Planeación & S&OP", area: 6, imp: 1000, lic: 30 },
+            { id: "ia", name: "Inteligencia Artificial (IA)", area: 6, imp: 2000, lic: 40 },
+            { id: "predictivos", name: "Modelos Predictivos", area: 6, imp: 1800, lic: 45 },
+            { id: "mineriadatos", name: "Minería de Datos", area: 6, imp: 1500, lic: 30 },
+            { id: "processmining", name: "Process Mining", area: 7, imp: 2000, lic: 50 },
+            { id: "businesspartners", name: "Business Partners", area: 7, imp: 1000, lic: 20 },
+            { id: "configuracion", name: "Configuración & Seguridad", area: 7, imp: 500, lic: 20 }
+        ];
+
+        // Mapeo de Fases fijas
         const PHASE_CONFIG = {
             1: {
                 name: "Starter",
                 count: 7,
+                portalUrl: "/portal/?phase=1",
                 modules: ["ventas", "inventario", "compras", "contabilidad", "cxc", "cxp", "tesoreria"]
             },
             2: {
                 name: "Express",
                 count: 15,
+                portalUrl: "/portal/?phase=2",
                 modules: [
                     "ventas", "crm", "inventario", "wms", "logistica", "compras", "produccion",
                     "contabilidad", "cxc", "cxp", "tesoreria", "rrhh", "nomina", "dashboards", "processsuite"
@@ -1546,6 +1641,7 @@
             3: {
                 name: "Advanced",
                 count: 18,
+                portalUrl: "/portal/?phase=3",
                 modules: [
                     "ventas", "crm", "inventario", "wms", "logistica", "compras", "produccion",
                     "contabilidad", "cxc", "cxp", "tesoreria", "rrhh", "nomina", "dashboards", "processsuite",
@@ -1555,12 +1651,8 @@
             4: {
                 name: "Enterprise",
                 count: 24,
-                modules: [
-                    "ventas", "crm", "inventario", "wms", "logistica", "compras", "produccion",
-                    "contabilidad", "cxc", "cxp", "tesoreria", "rrhh", "nomina", "dashboards", "processsuite",
-                    "biyreportes", "bigdata", "planeacion",
-                    "ia", "predictivos", "mineriadatos", "processmining", "businesspartners", "configuracion"
-                ]
+                portalUrl: "/portal/?phase=4",
+                modules: ALL_MODULES.map(m => m.id)
             }
         };
 
@@ -1574,23 +1666,35 @@
             7: { name: "Gobernanza y TI", modules: ["businesspartners", "configuracion", "processsuite", "processmining"] }
         };
 
-        // Estado inicial: FASE 2 (EXPRESS) ACTIVA POR DEFECTO
-        let activeSelectedPhase = 2;
+        // Estado Global
+        let activeSelectedPhase = 2; // Por defecto Express
         const selectedAreas = new Set();
+        const customSelectedModules = new Set(["ventas", "inventario", "crm"]); // Inicial para A su medida
 
+        // Función para cambiar o quitar (toggle) la fase seleccionada
         function selectPhase(phaseNum) {
-            activeSelectedPhase = phaseNum;
+            if (activeSelectedPhase === phaseNum) {
+                // TOGGLE OFF: Si se vuelve a presionar la misma fase, se quitan los colores y se desactiva
+                activeSelectedPhase = null;
+            } else {
+                activeSelectedPhase = phaseNum;
+            }
             selectedAreas.clear();
+
             updateTabsUI();
             updateDiagramHighlight();
             updateAreasUI();
+            updateCustomUI();
 
-            const eco = document.getElementById("ecosistema");
-            if (eco && window.scrollY < eco.offsetTop - 300) {
-                eco.scrollIntoView({ behavior: "smooth" });
+            if (activeSelectedPhase !== null) {
+                const eco = document.getElementById("ecosistema");
+                if (eco && window.scrollY < eco.offsetTop - 300) {
+                    eco.scrollIntoView({ behavior: "smooth" });
+                }
             }
         }
 
+        // Toggle de áreas funcionales
         function toggleArea(areaId) {
             if (selectedAreas.has(areaId)) {
                 selectedAreas.delete(areaId);
@@ -1601,34 +1705,105 @@
             updateDiagramHighlight();
         }
 
+        // Toggle individual de módulo en modo "A su medida"
+        function toggleCustomModule(modId) {
+            if (customSelectedModules.has(modId)) {
+                customSelectedModules.delete(modId);
+            } else {
+                customSelectedModules.add(modId);
+            }
+            
+            // Activar automáticamente pestaña A su medida si no estaba activa
+            if (activeSelectedPhase !== 'custom') {
+                activeSelectedPhase = 'custom';
+                updateTabsUI();
+            }
+
+            updateCustomUI();
+            updateDiagramHighlight();
+        }
+
+        function selectAllCustomModules() {
+            ALL_MODULES.forEach(m => customSelectedModules.add(m.id));
+            if (activeSelectedPhase !== 'custom') activeSelectedPhase = 'custom';
+            updateTabsUI();
+            updateCustomUI();
+            updateDiagramHighlight();
+        }
+
+        function clearCustomModules() {
+            customSelectedModules.clear();
+            updateCustomUI();
+            updateDiagramHighlight();
+        }
+
+        // Actualizar UI de Pestañas Superiores
         function updateTabsUI() {
-            for (let p = 1; p <= 4; p++) {
+            const tabs = [1, 2, 3, 4, 'custom'];
+            tabs.forEach(p => {
                 const tab = document.getElementById("tabPhase-" + p);
-                if (!tab) continue;
-                if (p === activeSelectedPhase) {
-                    tab.className = "phase-tab py-3 px-4 rounded-xl border border-[#0284c7] bg-[#0284c7] text-white text-center transition-all cursor-pointer shadow-lg shadow-blue-500/20";
-                    tab.querySelector("span:first-child").className = "block text-sm font-black text-white";
-                    tab.querySelector("span:last-child").className = "block text-[11px] text-blue-100 font-medium";
+                if (!tab) return;
+                const isCurrent = (activeSelectedPhase === p);
+                if (isCurrent) {
+                    tab.className = "phase-tab py-3 px-3 rounded-xl border border-[#0284c7] bg-[#0284c7] text-white text-center transition-all cursor-pointer shadow-lg shadow-blue-500/20";
+                    const s1 = tab.querySelector("span:first-child");
+                    const s2 = tab.querySelector("span:last-child");
+                    if (s1) s1.className = "block text-sm font-black text-white";
+                    if (s2) s2.className = "block text-[11px] text-blue-100 font-medium";
                 } else {
-                    tab.className = "phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer";
-                    tab.querySelector("span:first-child").className = "block text-sm font-bold text-gray-200";
-                    tab.querySelector("span:last-child").className = "block text-[11px] text-gray-400";
+                    tab.className = "phase-tab py-3 px-3 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer";
+                    const s1 = tab.querySelector("span:first-child");
+                    const s2 = tab.querySelector("span:last-child");
+                    if (s1) s1.className = "block text-sm font-bold text-gray-200";
+                    if (s2) s2.className = "block text-[11px] text-gray-400";
+                }
+            });
+
+            // Mostrar u ocultar panel de selección para A su medida
+            const pickerPanel = document.getElementById("customPickerPanel");
+            if (pickerPanel) {
+                if (activeSelectedPhase === 'custom') {
+                    pickerPanel.classList.remove("hidden");
+                } else {
+                    pickerPanel.classList.add("hidden");
                 }
             }
 
-            const cfg = PHASE_CONFIG[activeSelectedPhase];
-            const nameEl = document.getElementById("statusPhaseName");
-            const countEl = document.getElementById("statusModuleCount");
+            // Actualizar textos informativos de fase
+            const statusContainer = document.getElementById("statusPhaseContainer");
             const btnSidebar = document.getElementById("btnSidebarPhase");
-            
-            if (nameEl) nameEl.textContent = cfg.name;
-            if (countEl) countEl.textContent = cfg.count;
-            if (btnSidebar) {
-                btnSidebar.textContent = "Consultar NyTEX " + cfg.name;
-                btnSidebar.href = "/portal/?phase=" + activeSelectedPhase;
+
+            if (activeSelectedPhase === null) {
+                if (statusContainer) {
+                    statusContainer.innerHTML = 'Seleccione una fase o área para iluminar sus módulos en el ecosistema (24 módulos disponibles)';
+                }
+                if (btnSidebar) {
+                    btnSidebar.textContent = "Contratar en Portal";
+                    btnSidebar.href = "/portal/";
+                }
+            } else if (activeSelectedPhase === 'custom') {
+                const count = customSelectedModules.size;
+                if (statusContainer) {
+                    statusContainer.innerHTML = 'Fase seleccionada: <span class="text-[#38bdf8] font-bold">A su medida</span> | <span class="text-white font-bold">' + count + '</span> de 24 módulos seleccionados';
+                }
+                if (btnSidebar) {
+                    const modsParam = Array.from(customSelectedModules).join(',');
+                    btnSidebar.textContent = count > 0 ? "Contratar A su medida (" + count + " mód.) en Portal" : "Contratar A su medida en Portal";
+                    btnSidebar.href = "/portal/?phase=custom&modules=" + encodeURIComponent(modsParam);
+                }
+            } else {
+                const cfg = PHASE_CONFIG[activeSelectedPhase];
+                if (statusContainer) {
+                    statusContainer.innerHTML = 'Fase seleccionada: <span class="text-[#38bdf8] font-bold">' + cfg.name + '</span> | <span class="text-white font-bold">' + cfg.count + '</span> de 24 módulos';
+                }
+                if (btnSidebar) {
+                    btnSidebar.textContent = "Contratar NyTEX " + cfg.name + " en Portal";
+                    btnSidebar.href = cfg.portalUrl;
+                }
             }
         }
 
+        // Actualizar UI de Áreas funcionales
         function updateAreasUI() {
             for (let a = 1; a <= 7; a++) {
                 const card = document.getElementById("areaCard-" + a);
@@ -1655,13 +1830,22 @@
             }
         }
 
+        // Iluminación o atenuación del diagrama SVG
         function updateDiagramHighlight() {
             const svg = document.querySelector("#diagramWrapper svg");
             if (!svg) return;
 
             const nodes = svg.querySelectorAll("g.node");
             const hasAreaFilter = selectedAreas.size > 0;
-            const phaseModules = PHASE_CONFIG[activeSelectedPhase].modules;
+            const hasPhaseFilter = activeSelectedPhase !== null;
+
+            // Módulos que deben encenderse
+            let targetModules = [];
+            if (activeSelectedPhase === 'custom') {
+                targetModules = Array.from(customSelectedModules);
+            } else if (hasPhaseFilter) {
+                targetModules = PHASE_CONFIG[activeSelectedPhase].modules;
+            }
 
             nodes.forEach(g => {
                 const id = (g.id || "").replace("node-", "").toLowerCase();
@@ -1674,12 +1858,26 @@
                             break;
                         }
                     }
+                } else if (hasPhaseFilter) {
+                    isMatch = targetModules.includes(id);
                 } else {
-                    isMatch = phaseModules.includes(id);
+                    // Si no hay filtro ni fase activa: estado neutral normal (todos visibles)
+                    isMatch = true;
                 }
 
                 const rect = g.querySelector("rect");
-                if (isMatch) {
+
+                if (!hasPhaseFilter && !hasAreaFilter) {
+                    // Sin filtro: Restaurar colores originales limpios sin atenuación
+                    g.style.opacity = "1";
+                    g.style.filter = "none";
+                    g.style.transition = "all 0.3s ease";
+                    if (rect) {
+                        rect.style.stroke = "#eab308";
+                        rect.style.strokeWidth = "1.5px";
+                    }
+                } else if (isMatch) {
+                    // Encendido iluminado en cyan/blue
                     g.style.opacity = "1";
                     g.style.filter = "drop-shadow(0 0 10px #0284c7) drop-shadow(0 0 20px #38bdf8)";
                     g.style.transition = "all 0.3s ease";
@@ -1688,7 +1886,8 @@
                         rect.style.strokeWidth = "3px";
                     }
                 } else {
-                    g.style.opacity = "0.22";
+                    // Atenuado en segundo plano
+                    g.style.opacity = "0.20";
                     g.style.filter = "grayscale(85%)";
                     g.style.transition = "all 0.3s ease";
                     if (rect) {
@@ -1699,7 +1898,114 @@
             });
         }
 
-        // Control de Zoom
+        // Actualizar UI del calculador y píldoras de A su medida
+        function updateCustomUI() {
+            const count = customSelectedModules.size;
+
+            // Actualizar contadores
+            const tabCount = document.getElementById("tabCustomCount");
+            const cardCount = document.getElementById("cardCustomCount");
+            const summaryCount = document.getElementById("calcSummaryCount");
+            if (tabCount) tabCount.textContent = count;
+            if (cardCount) cardCount.textContent = count;
+            if (summaryCount) summaryCount.textContent = count + " de 24";
+
+            // Calcular totales de inversión y licencia
+            let totalImp = 0;
+            let totalLic = 0;
+            ALL_MODULES.forEach(m => {
+                if (customSelectedModules.has(m.id)) {
+                    totalImp += m.imp;
+                    totalLic += m.lic;
+                }
+            });
+
+            const cardImp = document.getElementById("cardCustomImp");
+            const cardLic = document.getElementById("cardCustomLic");
+            const sumImp = document.getElementById("calcSummaryImp");
+            const sumLic = document.getElementById("calcSummaryLic");
+
+            if (cardImp) cardImp.textContent = "$" + totalImp.toLocaleString() + " USD";
+            if (cardLic) cardLic.innerHTML = "$" + totalLic.toLocaleString() + ' <span class="text-xs text-gray-500 font-normal">/ mes</span>';
+            if (sumImp) sumImp.textContent = "$" + totalImp.toLocaleString() + " USD";
+            if (sumLic) sumLic.textContent = "$" + totalLic.toLocaleString() + " USD / mes";
+
+            // Actualizar enlaces de contratación con los módulos seleccionados
+            const modsParam = Array.from(customSelectedModules).join(',');
+            const targetUrl = "/portal/?phase=custom&modules=" + encodeURIComponent(modsParam);
+            
+            const btnPlan = document.getElementById("btnPlanCustomContratar");
+            const btnCalc = document.getElementById("btnCalculatorContratar");
+            if (btnPlan) btnPlan.href = targetUrl;
+            if (btnCalc) btnCalc.href = targetUrl;
+
+            // Sincronizar checkboxes en el calculador
+            const cbs = document.querySelectorAll(".calc-module-cb");
+            cbs.forEach(cb => {
+                const mId = cb.getAttribute("data-module");
+                cb.checked = customSelectedModules.has(mId);
+            });
+
+            // Sincronizar píldoras en el panel superior
+            renderCustomPills();
+        }
+
+        // Render de píldoras rápidas para A su medida
+        function renderCustomPills() {
+            const container = document.getElementById("customPillContainer");
+            if (!container) return;
+
+            container.innerHTML = ALL_MODULES.map(m => {
+                const isSelected = customSelectedModules.has(m.id);
+                return `
+                    <button type="button" onclick="toggleCustomModule('${m.id}')" class="px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                        isSelected 
+                            ? 'bg-[#0284c7] text-white border border-[#38bdf8] shadow-sm' 
+                            : 'bg-gray-800/80 hover:bg-gray-700 text-gray-400 border border-gray-700'
+                    }">
+                        <span>${isSelected ? '✓' : '+'}</span>
+                        <span>${m.name}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        // Render del grid de checkboxes del calculador inferior
+        function renderCalculatorGrid() {
+            const grid = document.getElementById("calculatorGrid");
+            if (!grid) return;
+
+            grid.innerHTML = ALL_MODULES.map(m => {
+                const isChecked = customSelectedModules.has(m.id);
+                return `
+                    <label class="flex items-center gap-2 p-2 rounded-xl bg-gray-50 hover:bg-blue-50/60 border border-gray-200/80 cursor-pointer transition-colors select-none group">
+                        <input type="checkbox" data-module="${m.id}" onchange="toggleCustomModule('${m.id}')" class="calc-module-cb accent-[#0284c7] w-4 h-4 rounded" ${isChecked ? 'checked' : ''}>
+                        <div class="min-w-0">
+                            <span class="block font-bold text-gray-900 text-xs truncate group-hover:text-[#0284c7]">${m.name}</span>
+                            <span class="block text-[10px] text-gray-400 font-medium">+$${m.lic}/mes</span>
+                        </div>
+                    </label>
+                `;
+            }).join('');
+        }
+
+        // Permitir hacer clic directo en los nodos del diagrama para togglear en "A su medida"
+        function attachDiagramNodeListeners() {
+            const svg = document.querySelector("#diagramWrapper svg");
+            if (!svg) return;
+
+            const nodes = svg.querySelectorAll("g.node");
+            nodes.forEach(g => {
+                const id = (g.id || "").replace("node-", "").toLowerCase();
+                g.style.cursor = "pointer";
+                g.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    toggleCustomModule(id);
+                });
+            });
+        }
+
+        // Controles de Zoom
         let currentDiagramZoom = 1;
         function adjustDiagramZoom(delta) {
             currentDiagramZoom = Math.max(0.6, Math.min(2.2, currentDiagramZoom + delta));
@@ -1757,9 +2063,13 @@
 
         // Inicializar Estado en carga del DOM
         document.addEventListener("DOMContentLoaded", () => {
+            renderCalculatorGrid();
+            renderCustomPills();
+            attachDiagramNodeListeners();
             updateTabsUI();
             updateDiagramHighlight();
             updateAreasUI();
+            updateCustomUI();
         });
     </script>
 </body>
