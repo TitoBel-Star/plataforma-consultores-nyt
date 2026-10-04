@@ -316,88 +316,180 @@
     <section id="modelo" class="py-20 bg-[#f8fafc] border-t border-gray-200/70">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
                     El modelo de transformación NyT
                 </h2>
+                <p class="text-sm sm:text-base text-gray-500 font-semibold mt-2">
+                    Dos enfoques. Cuatro fases para transformar su empresa.
+                </p>
             </div>
 
-            <!-- Cabeceras de categorías superiores -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 text-xs font-bold uppercase tracking-wider text-gray-500">
-                <div class="text-left pl-2 text-[#0284c7]">Eficiencia operacional · Fases 1 y 2</div>
-                <div class="text-left pl-2 text-indigo-700">Dirección estratégica · Fases 3 y 4</div>
+            <!-- Cabeceras de categorías superiores (Banners Imagen 2) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Banner 1: Eficiencia Operativa -->
+                <div class="rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-[#0a1f44] via-[#0369a1] to-[#0284c7] text-white shadow-lg flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-2xl text-white shrink-0 shadow-inner">
+                        <i class="fas fa-gear"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-black tracking-wider uppercase text-white leading-tight">
+                            EFICIENCIA OPERATIVA
+                        </h3>
+                        <span class="inline-block mt-1.5 px-3 py-0.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-white/15 text-blue-100 border border-white/20">
+                            FASES 1 Y 2
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Banner 2: Dirección Estratégica -->
+                <div class="rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-[#450a0a] via-[#991b1b] to-[#dc2626] text-white shadow-lg flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-2xl text-white shrink-0 shadow-inner">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-black tracking-wider uppercase text-white leading-tight">
+                            DIRECCIÓN ESTRATÉGICA
+                        </h3>
+                        <span class="inline-block mt-1.5 px-3 py-0.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-white/15 text-red-100 border border-white/20">
+                            FASES 3 Y 4
+                        </span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Grilla de las 4 Fases -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Grilla de las 4 Fases (Tarjetas de alto impacto) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- Fase 1 -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <i class="fas fa-layer-group text-[#0284c7] text-lg"></i>
-                            <h3 class="font-black text-gray-900 text-base">1. NyTEX Starter</h3>
+                <!-- Fase 1: Starter -->
+                <div class="bg-white rounded-2xl border-t-4 border-t-[#0284c7] border-x border-b border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden group">
+                    <span class="absolute top-3 right-4 text-5xl font-black text-blue-100/60 select-none pointer-events-none group-hover:text-blue-200/70 transition-colors">01</span>
+                    <div class="relative z-10">
+                        <div class="w-11 h-11 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-4 shadow-sm border border-blue-100">
+                            <i class="fas fa-layer-group"></i>
                         </div>
-                        <p class="text-xs font-semibold text-gray-600 mb-4">Control transaccional</p>
-                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
-                            Registrar → Ordenar → Estandarizar → Controlar
+                        <span class="inline-block mb-3 px-3 py-1 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-blue-50 text-[#0284c7] border border-blue-200/80">
+                            FASE 1 · NyTEX Starter
+                        </span>
+                        <h4 class="font-black text-gray-900 text-lg leading-snug mb-1">
+                            Control transaccional
+                        </h4>
+                        <p class="text-xs text-gray-500 font-medium mb-6">
+                            Ordene y estabilice su operación diaria.
                         </p>
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <span class="block text-[10px] font-extrabold tracking-widest text-[#0284c7] uppercase mb-1.5">
+                                OBJETIVO
+                            </span>
+                            <p class="text-xs font-bold text-gray-700 leading-relaxed">
+                                Registrar → Ordenar → Estandarizar → Controlar
+                            </p>
+                        </div>
                     </div>
-                    <button type="button" onclick="selectPhase(1)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200 cursor-pointer">
-                        Ver módulos en el ecosistema
+                    <button type="button" onclick="selectPhase(1)" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#0284c7] hover:bg-blue-700 transition-all text-center flex items-center justify-center gap-2 shadow-sm cursor-pointer relative z-10">
+                        <span>Ver módulos en el ecosistema</span>
+                        <i class="fas fa-arrow-right text-[11px]"></i>
                     </button>
                 </div>
 
-                <!-- Fase 2 (Express) -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-[#0284c7] shadow-md flex flex-col justify-between hover:shadow-lg transition-all relative">
-                    <div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <i class="fas fa-gear text-[#0284c7] text-lg"></i>
-                            <h3 class="font-black text-gray-900 text-base">2. NyTEX Express</h3>
+                <!-- Fase 2: Express -->
+                <div class="bg-white rounded-2xl border-t-4 border-t-[#0284c7] border-x border-b border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden group">
+                    <span class="absolute top-3 right-4 text-5xl font-black text-blue-100/60 select-none pointer-events-none group-hover:text-blue-200/70 transition-colors">02</span>
+                    <div class="relative z-10">
+                        <div class="w-11 h-11 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-4 shadow-sm border border-blue-100">
+                            <i class="fas fa-gear"></i>
                         </div>
-                        <p class="text-xs font-semibold text-gray-600 mb-4">Productividad y flujo</p>
-                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
-                            Integrar → Sincronizar → Medir → Automatizar
+                        <span class="inline-block mb-3 px-3 py-1 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-blue-50 text-[#0284c7] border border-blue-200/80">
+                            FASE 2 · NyTEX Express
+                        </span>
+                        <h4 class="font-black text-gray-900 text-lg leading-snug mb-1">
+                            Productividad y flujo
+                        </h4>
+                        <p class="text-xs text-gray-500 font-medium mb-6">
+                            Conecte sus áreas y agilice la operación.
                         </p>
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <span class="block text-[10px] font-extrabold tracking-widest text-[#0284c7] uppercase mb-1.5">
+                                OBJETIVO
+                            </span>
+                            <p class="text-xs font-bold text-gray-700 leading-relaxed">
+                                Integrar → Sincronizar → Medir → Automatizar
+                            </p>
+                        </div>
                     </div>
-                    <button type="button" onclick="selectPhase(2)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#0284c7] hover:bg-blue-700 transition-colors text-center shadow-sm cursor-pointer">
-                        Ver módulos en el ecosistema
+                    <button type="button" onclick="selectPhase(2)" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#0284c7] hover:bg-blue-700 transition-all text-center flex items-center justify-center gap-2 shadow-sm cursor-pointer relative z-10">
+                        <span>Ver módulos en el ecosistema</span>
+                        <i class="fas fa-arrow-right text-[11px]"></i>
                     </button>
                 </div>
 
-                <!-- Fase 3 -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <i class="fas fa-chart-line text-[#0284c7] text-lg"></i>
-                            <h3 class="font-black text-gray-900 text-base">3. NyTEX Advanced</h3>
+                <!-- Fase 3: Advanced -->
+                <div class="bg-white rounded-2xl border-t-4 border-t-[#dc2626] border-x border-b border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden group">
+                    <span class="absolute top-3 right-4 text-5xl font-black text-red-100/60 select-none pointer-events-none group-hover:text-red-200/70 transition-colors">03</span>
+                    <div class="relative z-10">
+                        <div class="w-11 h-11 rounded-xl bg-red-50 text-[#dc2626] flex items-center justify-center text-lg mb-4 shadow-sm border border-red-100">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <p class="text-xs font-semibold text-gray-600 mb-4">Inteligencia y rentabilidad</p>
-                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
-                            Centralizar → Analizar → Diagnosticar → Rentabilizar
+                        <span class="inline-block mb-3 px-3 py-1 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-red-50 text-[#dc2626] border border-red-200/80">
+                            FASE 3 · NyTEX Advanced
+                        </span>
+                        <h4 class="font-black text-gray-900 text-lg leading-snug mb-1">
+                            Inteligencia y rentabilidad
+                        </h4>
+                        <p class="text-xs text-gray-500 font-medium mb-6">
+                            Decida con información y gestione sus resultados.
                         </p>
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <span class="block text-[10px] font-extrabold tracking-widest text-[#dc2626] uppercase mb-1.5">
+                                OBJETIVO
+                            </span>
+                            <p class="text-xs font-bold text-gray-700 leading-relaxed">
+                                Centralizar → Analizar → Diagnosticar → Rentabilizar
+                            </p>
+                        </div>
                     </div>
-                    <button type="button" onclick="selectPhase(3)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200 cursor-pointer">
-                        Ver módulos en el ecosistema
+                    <button type="button" onclick="selectPhase(3)" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#dc2626] hover:bg-red-700 transition-all text-center flex items-center justify-center gap-2 shadow-sm cursor-pointer relative z-10">
+                        <span>Ver módulos en el ecosistema</span>
+                        <i class="fas fa-arrow-right text-[11px]"></i>
                     </button>
                 </div>
 
-                <!-- Fase 4 -->
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
-                    <div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <i class="fas fa-rocket text-[#0284c7] text-lg"></i>
-                            <h3 class="font-black text-gray-900 text-base">4. NyTEX Enterprise</h3>
+                <!-- Fase 4: Enterprise -->
+                <div class="bg-white rounded-2xl border-t-4 border-t-[#dc2626] border-x border-b border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between relative overflow-hidden group">
+                    <span class="absolute top-3 right-4 text-5xl font-black text-red-100/60 select-none pointer-events-none group-hover:text-red-200/70 transition-colors">04</span>
+                    <div class="relative z-10">
+                        <div class="w-11 h-11 rounded-xl bg-red-50 text-[#dc2626] flex items-center justify-center text-lg mb-4 shadow-sm border border-red-100">
+                            <i class="fas fa-rocket"></i>
                         </div>
-                        <p class="text-xs font-semibold text-gray-600 mb-4">Anticipación y escala</p>
-                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
-                            Anticipar → Simular → Innovar → Escalar
+                        <span class="inline-block mb-3 px-3 py-1 rounded-full text-[11px] font-extrabold tracking-wider uppercase bg-red-50 text-[#dc2626] border border-red-200/80">
+                            FASE 4 · NyTEX Enterprise
+                        </span>
+                        <h4 class="font-black text-gray-900 text-lg leading-snug mb-1">
+                            Anticipación y escala
+                        </h4>
+                        <p class="text-xs text-gray-500 font-medium mb-6">
+                            Anticipe escenarios y amplíe su capacidad de crecimiento.
                         </p>
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <span class="block text-[10px] font-extrabold tracking-widest text-[#dc2626] uppercase mb-1.5">
+                                OBJETIVO
+                            </span>
+                            <p class="text-xs font-bold text-gray-700 leading-relaxed">
+                                Anticipar → Simular → Innovar → Escalar
+                            </p>
+                        </div>
                     </div>
-                    <button type="button" onclick="selectPhase(4)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200 cursor-pointer">
-                        Ver módulos en el ecosistema
+                    <button type="button" onclick="selectPhase(4)" class="w-full py-3 px-4 rounded-xl text-xs font-bold text-white bg-[#dc2626] hover:bg-red-700 transition-all text-center flex items-center justify-center gap-2 shadow-sm cursor-pointer relative z-10">
+                        <span>Ver módulos en el ecosistema</span>
+                        <i class="fas fa-arrow-right text-[11px]"></i>
                     </button>
                 </div>
 
+            </div>
+
+            <!-- Texto de ayuda inferior -->
+            <div class="mt-8 text-center flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-500 font-semibold">
+                <i class="fas fa-circle-nodes text-[#0284c7] text-base"></i>
+                <span>Seleccione una fase para iluminar sus módulos en el ecosistema.</span>
             </div>
         </div>
     </section>
