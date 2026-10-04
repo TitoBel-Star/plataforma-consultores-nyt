@@ -12,381 +12,508 @@
                 extend: {
                     colors: {
                         brand: {
-                            light: '#4c1d95',
-                            DEFAULT: '#3b0764',
-                            dark: '#2e054e',
-                            accent: '#fbc044',
+                            navy: '#0b0f19',
+                            dark: '#0f172a',
+                            coral: '#d94828',
+                            coralHover: '#c23e1f',
+                            blue: '#0284c7',
+                            cyan: '#38bdf8'
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(2, 132, 199, 0.12) 0%, rgba(11, 15, 25, 0) 70%);
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-white text-gray-800 antialiased selection:bg-[#0284c7] selection:text-white">
 
     <!-- 1. HEADER / MENÚ PRINCIPAL -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <img src="logo.png" alt="CNyT Consultores" class="h-12 object-contain">
+                <div class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Consultores NyT" class="h-10 object-contain">
+                    <div class="border-l border-gray-200 pl-3">
+                        <span class="block font-black text-gray-900 text-base leading-tight tracking-tight">Consultores NyT</span>
+                        <span class="block text-[10px] text-gray-500 font-semibold tracking-wider uppercase">Estrategia + Tecnología</span>
+                    </div>
                 </div>
-                <div class="hidden lg:flex space-x-6 items-center text-sm font-semibold">
-                    <a href="#inicio" class="text-gray-900 hover:text-brand transition-colors">Inicio</a>
-                    <a href="#modelo" class="text-gray-900 hover:text-brand transition-colors">Cómo Transformamos</a>
-                    <a href="#ecosistema" class="text-gray-900 hover:text-brand transition-colors">Soluciones</a>
-                    <a href="#diagnostico" class="text-gray-900 hover:text-brand transition-colors">Diagnóstico Empresarial</a>
-                    <a href="#exito" class="text-gray-900 hover:text-brand transition-colors">Casos de Éxito</a>
-                    <a href="#por-que" class="text-gray-900 hover:text-brand transition-colors">Nosotros</a>
-                    <a href="/portal/" class="text-gray-900 hover:text-brand transition-colors"><i class="fas fa-lock mr-1"></i> Portal Clientes</a>
-                    <a href="/diagnostico/" class="bg-brand text-white px-5 py-2.5 rounded-full hover:bg-brand-light transition-all shadow-md">DIAGNÓSTICO GRATUITO</a>
+                
+                <div class="hidden lg:flex items-center space-x-7 text-xs font-semibold text-gray-600">
+                    <a href="#inicio" class="hover:text-[#0284c7] transition-colors">Inicio</a>
+                    <a href="#modelo" class="hover:text-[#0284c7] transition-colors">Cómo transformamos</a>
+                    <a href="#ecosistema" class="hover:text-[#0284c7] transition-colors">Ecosistema</a>
+                    <a href="#planes" class="hover:text-[#0284c7] transition-colors">Fases</a>
+                    <a href="#exito" class="hover:text-[#0284c7] transition-colors">Casos</a>
+                    <a href="#nosotros" class="hover:text-[#0284c7] transition-colors">Nosotros</a>
+                    <a href="/portal/" class="hover:text-[#0284c7] transition-colors flex items-center gap-1">
+                        <i class="fas fa-lock text-[10px]"></i> Portal clientes
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <a href="/diagnostico/" class="bg-[#d94828] hover:bg-[#c23e1f] text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded-lg shadow-sm transition-all transform hover:-translate-y-0.5">
+                        Realizar diagnóstico gratuito
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 2. HERO -->
-    <section id="inicio" class="pt-32 pb-20 bg-brand text-white relative overflow-hidden">
-        <!-- Decoración de fondo -->
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-light rounded-full opacity-20 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-brand-accent rounded-full opacity-10 blur-3xl"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block text-brand-accent font-bold tracking-wider uppercase text-sm mb-4 border border-brand-accent/30 rounded-full px-4 py-1 bg-brand-accent/10">Consultores NyT</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                NO VENDEMOS SOFTWARE.<br>
-                <span class="text-brand-accent">TRANSFORMAMOS EMPRESAS.</span>
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed mb-8">
-                Integramos estrategia, procesos, datos y tecnología para convertir empresas tradicionales en organizaciones eficientes, controladas, inteligentes y rentables.
-            </p>
-            
-            <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mb-10 text-sm md:text-base font-semibold text-gray-300">
-                <span>ERP</span> <span class="text-brand-accent">•</span>
-                <span>CRM</span> <span class="text-brand-accent">•</span>
-                <span>BPM</span> <span class="text-brand-accent">•</span>
-                <span>BI</span> <span class="text-brand-accent">•</span>
-                <span>Minería de Datos</span> <span class="text-brand-accent">•</span>
-                <span>IA</span>
-            </div>
-
-            
-            <div class="mt-12 mb-16">
-                <a href="/diagnostico/" class="bg-brand-accent text-brand font-bold py-4 px-10 rounded-full shadow-lg text-lg hover:-translate-y-1 transition-all inline-block text-center uppercase tracking-wide">
-                    DIAGNOSTICAR MI EMPRESA <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <!-- 3. FRASE INFERIOR -->
-            <div class="border-t border-white/10 pt-8 mt-12">
-                <h3 class="text-2xl font-bold text-white tracking-widest mb-2">EVOLUCIÓN NyT™</h3>
-                <p class="text-brand-accent text-lg">De procesos manuales a empresas inteligentes.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. FRANJA DE BENEFICIOS -->
-    <div class="bg-brand-dark py-5 text-center text-xs md:text-sm text-gray-300 font-bold tracking-widest uppercase">
-        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-x-8 gap-y-4">
-            <span>Más Control</span>
-            <span class="hidden md:inline text-brand-accent">•</span>
-            <span>Menos Costos Ocultos</span>
-            <span class="hidden md:inline text-brand-accent">•</span>
-            <span>Procesos Integrados</span>
-            <span class="hidden md:inline text-brand-accent">•</span>
-            <span>Decisiones con Datos</span>
-        </div>
-    </div>
-
-    <!-- 5. PROBLEMAS DEL EMPRESARIO -->
-    <section class="py-24 bg-gray-50">
+    <!-- 2. HERO SECTION -->
+    <section id="inicio" class="relative bg-[#0b0f19] hero-glow text-white pt-12 pb-20 overflow-hidden border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">¿Reconoce alguno de estos problemas en su empresa?</h2>
-                <div class="w-24 h-1 bg-brand-accent mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Problema 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="text-brand text-3xl mb-4"><i class="fas fa-file-excel"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Información dispersa</h3>
-                    <p class="text-gray-600">Excel, WhatsApp, correos y sistemas que no se comunican entre sí.</p>
-                </div>
-                <!-- Problema 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="text-brand text-3xl mb-4"><i class="fas fa-boxes"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Inventarios sin control</h3>
-                    <p class="text-gray-600">Diferencias, faltantes, sobreinventario y compras sin información confiable.</p>
-                </div>
-                <!-- Problema 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="text-brand text-3xl mb-4"><i class="fas fa-hand-paper"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Procesos manuales</h3>
-                    <p class="text-gray-600">Demasiadas tareas dependen de personas, llamadas y seguimiento manual.</p>
-                </div>
-                <!-- Problema 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="text-brand text-3xl mb-4"><i class="fas fa-funnel-dollar"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ventas sin seguimiento</h3>
-                    <p class="text-gray-600">Prospectos, cotizaciones y oportunidades que se enfrían o se pierden.</p>
-                </div>
-                <!-- Problema 5 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="text-brand text-3xl mb-4"><i class="fas fa-fire-extinguisher"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Gerentes apagando incendios</h3>
-                    <p class="text-gray-600">La dirección trabaja resolviendo urgencias operativas en lugar de dirigir estratégicamente.</p>
-                </div>
-                <!-- Problema 6 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <div class="text-brand text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Decisiones sin datos</h3>
-                    <p class="text-gray-600">Los reportes llegan tarde y las decisiones se toman por experiencia o intuición.</p>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center max-w-3xl mx-auto bg-brand text-white p-8 rounded-2xl shadow-xl">
-                <p class="text-xl font-semibold leading-relaxed">
-                    Si estos problemas le resultan familiares, probablemente <span class="text-brand-accent">no necesita más software.</span><br>Necesita transformar cómo funciona su empresa.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7 & 8 & 9. EL MODELO DE TRANSFORMACIÓN NyT -->
-    <section id="modelo" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">EL MODELO DE TRANSFORMACIÓN NyT™</h2>
-                <div class="w-24 h-1 bg-brand mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    No todas las empresas necesitan la misma tecnología. Primero identificamos dónde está su empresa. Después determinamos qué transformar.
-                </p>
-            </div>
-
-            <!-- Agrupación Visual Superior (Desktop) -->
-            <div class="hidden lg:grid lg:grid-cols-2 gap-8 mb-8">
-                <div class="bg-brand text-white text-center py-3.5 px-6 rounded-2xl font-black tracking-widest text-sm uppercase shadow-md flex items-center justify-center gap-2 border border-brand-light">
-                    <i class="fas fa-cogs text-brand-accent text-lg"></i>
-                    <span>EFICIENCIA OPERACIONAL · NIVELES 1 Y 2</span>
-                </div>
-                <div class="bg-brand-accent text-brand-dark text-center py-3.5 px-6 rounded-2xl font-black tracking-widest text-sm uppercase shadow-md flex items-center justify-center gap-2 border border-amber-300">
-                    <i class="fas fa-chess-knight text-brand text-lg"></i>
-                    <span>DIRECCIÓN ESTRATÉGICA · NIVELES 3 Y 4</span>
-                </div>
-            </div>
-
-            <!-- Grilla de los 4 Niveles -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
-                <!-- Nivel 1 -->
-                <div id="cardPhase-1" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-brand font-black text-xs tracking-wider uppercase bg-purple-50 px-3 py-1.5 rounded-full border border-purple-200">Fase 1: NyTEX Starter</span>
-                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Eficiencia Operacional</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">CONTROL TRANSACCIONAL</h3>
-                        <p class="text-sm font-semibold text-brand-accent mb-4">Ordenar y estabilizar la operación diaria.</p>
-                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">Ideal cuando existen problemas de control, descontrol en inventarios, procesos manuales y reportes en Excel dispersos.</p>
-                        
-                        <div class="mb-5">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
-                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">REGISTRAR → ORDENAR → ESTANDARIZAR → CONTROLAR</p>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
-                            <p class="text-xs font-semibold text-brand leading-relaxed">ERP Core · Compras · Inventarios · Facturación/CxC · CxP · Tesorería · Contabilidad</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-100 text-center">
-                        <div class="text-xs text-gray-600 leading-relaxed flex flex-wrap items-center justify-center gap-1.5">
-                            <span>Para ver las aplicaciones del ecosistema, haz clic aquí ↓</span>
-                            <button type="button" onclick="selectPhase(1)" id="btnPhase-1" class="py-1 px-3 rounded-lg text-xs font-bold transition-all border border-[#2A114B] bg-[#2A114B] text-white hover:bg-purple-900 shadow-sm cursor-pointer">
-                                Ver aplicaciones
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nivel 2 -->
-                <div id="cardPhase-2" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-brand font-black text-xs tracking-wider uppercase bg-purple-50 px-3 py-1.5 rounded-full border border-purple-200">Fase 2: NyTEX Express</span>
-                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Eficiencia Operacional</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">PRODUCTIVIDAD Y FLUJO</h3>
-                        <p class="text-sm font-semibold text-brand-accent mb-4">Hacer más rápido y eficiente lo que hoy hacemos.</p>
-                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">Ideal cuando los procesos dependen de personas clave, existen cuellos de botella entre áreas y falta sincronización logística y comercial.</p>
-                        
-                        <div class="mb-5">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
-                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">INTEGRAR → SINCRONIZAR → MEDIR → AUTOMATIZAR</p>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
-                            <p class="text-xs font-semibold text-brand leading-relaxed">CRM · WMS (Bodegas) · BPM (Workflows) · Logística / Rutas · Dashboards Operativos</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-100 text-center">
-                        <div class="text-xs text-gray-600 leading-relaxed flex flex-wrap items-center justify-center gap-1.5">
-                            <span>Para ver las aplicaciones del ecosistema, haz clic aquí ↓</span>
-                            <button type="button" onclick="selectPhase(2)" id="btnPhase-2" class="py-1 px-3 rounded-lg text-xs font-bold transition-all border border-[#2A114B] bg-[#2A114B] text-white hover:bg-purple-900 shadow-sm cursor-pointer">
-                                Ver aplicaciones
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nivel 3 -->
-                <div id="cardPhase-3" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-amber-800 font-black text-xs tracking-wider uppercase bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">Fase 3: NyTEX Advanced</span>
-                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Dirección Estratégica</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">INTELIGENCIA Y RENTABILIDAD</h3>
-                        <p class="text-sm font-semibold text-brand mb-4">Decidir con datos exactos y rentabilizar cada área.</p>
-                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">Ideal cuando la dirección trabaja a ciegas, no sabe qué producto o cliente deja mayor margen neto y los reportes llegan con semanas de retraso.</p>
-                        
-                        <div class="mb-5">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
-                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">CENTRALIZAR → ANALIZAR → DIAGNOSTICAR → RENTABILIZAR</p>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
-                            <p class="text-xs font-semibold text-brand-dark leading-relaxed">Business Intelligence (BI) · Data Warehouse · Dashboards Ejecutivos · Planeación & MRP</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-100 text-center">
-                        <div class="text-xs text-gray-600 leading-relaxed flex flex-wrap items-center justify-center gap-1.5">
-                            <span>Para ver las aplicaciones del ecosistema, haz clic aquí ↓</span>
-                            <button type="button" onclick="selectPhase(3)" id="btnPhase-3" class="py-1 px-3 rounded-lg text-xs font-bold transition-all border border-amber-400 bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 hover:from-amber-500 hover:to-yellow-500 shadow-sm cursor-pointer font-black">
-                                Ver aplicaciones
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nivel 4 -->
-                <div id="cardPhase-4" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-amber-800 font-black text-xs tracking-wider uppercase bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">Fase 4: NyTEX Enterprise</span>
-                            <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Dirección Estratégica</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">ANTICIPACIÓN Y ESCALA</h3>
-                        <p class="text-sm font-semibold text-brand mb-4">Anticipar el futuro, innovar y liderar el mercado.</p>
-                        <p class="text-xs text-gray-600 mb-6 leading-relaxed">No se trata solo de hacer mejor las cosas. Se trata de predecir demanda, innovar en procesos y escalar agresivamente sin inflar costos fijos.</p>
-                        
-                        <div class="mb-5">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Objetivo:</strong>
-                            <p class="text-[11px] font-bold text-gray-500 tracking-wide uppercase leading-snug">ANTICIPAR → SIMULAR → INNOVAR → ESCALAR → TRANSFORMAR</p>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <strong class="text-xs font-bold text-gray-900 block mb-1">Tecnología:</strong>
-                            <p class="text-xs font-semibold text-brand-dark leading-relaxed">IA Predictiva · Big Data · Minería de Procesos · Modelos Predictivos · Agentes Autónomos</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 pt-3 border-t border-gray-100 text-center">
-                        <div class="text-xs text-gray-600 leading-relaxed flex flex-wrap items-center justify-center gap-1.5">
-                            <span>Para ver las aplicaciones del ecosistema, haz clic aquí ↓</span>
-                            <button type="button" onclick="selectPhase(4)" id="btnPhase-4" class="py-1 px-3 rounded-lg text-xs font-bold transition-all border border-amber-400 bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 hover:from-amber-500 hover:to-yellow-500 shadow-sm cursor-pointer font-black">
-                                Ver aplicaciones
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. ECOSISTEMA / SOLUCIONES -->
-    <section id="ecosistema" class="py-24 bg-white border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm mb-2 block">Las Aplicaciones</span>
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">UN ECOSISTEMA. TODA SU EMPRESA CONECTADA.</h2>
-                <div class="w-24 h-1 bg-brand mx-auto"></div>
-            </div>
-
-            
-            <!-- Marco de Ecosistema NyTEX y Áreas Funcionales -->
-            <div class="bg-gradient-to-br from-gray-950 via-[#0a0f1d] to-[#0f172a] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-gray-800 mt-12 mb-16">
-                <!-- Encabezado del marco -->
-                <div class="text-center max-w-3xl mx-auto mb-10">
-                    <span class="bg-brand-accent/15 text-brand-accent border border-brand-accent/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-block mb-3">
-                        <i class="fas fa-network-wired mr-1.5"></i> Arquitectura Empresarial NyTEX
-                    </span>
-                    <h3 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Ecosistema Operativo y Mapeo por Áreas Funcionales</h3>
-                    <p class="text-gray-400 text-sm md:text-base mt-3 leading-relaxed">
-                        Conozca la interconexión viva de las <strong class="text-white font-bold">24 aplicaciones</strong> de nuestro ecosistema, clasificadas según su <strong class="text-brand-accent">Dirección Estratégica</strong> y los departamentos que operan día a día.
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Columna Izquierda: Mensaje Central -->
+                <div class="lg:col-span-6 text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[46px] xl:text-[52px] font-extrabold text-white tracking-tight leading-[1.15] mb-5">
+                        Más control de su empresa.<br>
+                        Mejores decisiones para crecer.
+                    </h1>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-xl font-normal">
+                        Integramos estrategia, procesos, datos y tecnología para conectar sus áreas y mejorar la rentabilidad de su negocio.
                     </p>
 
-                    <!-- Banner de Alumbrado Activo -->
-                    <div id="ecosystemNotification" class="mt-4 inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/40 text-amber-300 px-4 py-1.5 rounded-full text-xs font-bold flex-wrap justify-center hidden transition-all animate-pulse">
-                        <span id="ecosystemNotificationText">✨ Alumbrando en dorado aplicaciones seleccionadas</span>
-                        <button type="button" onclick="clearAllAreas()" class="ml-2 bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 px-2.5 py-0.5 rounded-full text-[11px] font-bold transition-colors border border-amber-400/30">
-                            ✕ Quitar iluminación
-                        </button>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="/diagnostico/" class="bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-sm transition-all shadow-md transform hover:-translate-y-0.5">
+                            Realizar diagnóstico gratuito
+                        </a>
+                        <a href="#accion" class="bg-[#151c2e] hover:bg-[#1e293b] text-white border border-gray-700 font-bold px-6 py-3 rounded-lg text-sm transition-all">
+                            Ver NyTEX en acción
+                        </a>
+                    </div>
+
+                    <!-- 4 Garantías / Pilares en fila -->
+                    <div class="pt-6 border-t border-gray-800/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-gray-300 font-medium">
+                        <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#38bdf8] text-sm"></i> Más control</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-arrow-trend-down text-[#38bdf8] text-sm"></i> Menos costos ocultos</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-network-wired text-[#38bdf8] text-sm"></i> Procesos integrados</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-chart-pie text-[#38bdf8] text-sm"></i> Decisiones con datos</span>
                     </div>
                 </div>
 
-                <!-- Grid Principal: Diagrama de Flujo (Izquierda) + Panel de Áreas Funcionales (Derecha) -->
-                <!-- Estilos específicos para escala del diagrama -->
-                <style>
-                    #diagramWrapper .mermaid svg {
-                        width: 100% !important;
-                        min-width: 920px !important;
-                        max-width: none !important;
-                        height: auto !important;
-                        margin: 0 auto;
-                        transition: transform 0.2s ease;
-                    }
-                </style>
-
-                <!-- Grid Principal: 75% Diagrama (Grande) + 25% Áreas Funcionales (Compacto) -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-                    
-                    <!-- Columna Izquierda: Diagrama de Flujo Ampliado (9 columnas en XL / 8 en LG) -->
-                    <div class="lg:col-span-8 xl:col-span-9 bg-[#030712]/95 rounded-2xl p-4 sm:p-5 border border-gray-800/80 shadow-inner flex flex-col">
-                        <div class="flex flex-wrap items-center justify-between pb-3 mb-3 border-b border-gray-800 gap-2">
+                <!-- Columna Derecha: Mockup Interactivo NyTEX ERP -->
+                <div class="lg:col-span-6">
+                    <div class="bg-[#111827] rounded-2xl border border-gray-700/80 shadow-2xl p-4 sm:p-5 relative backdrop-blur">
+                        
+                        <!-- Top Bar Mockup -->
+                        <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-700/80 text-xs text-gray-400">
                             <div class="flex items-center gap-2">
-                                <span class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
-                                    <i class="fas fa-project-diagram text-brand-accent"></i> Diagrama Operativo de Sincronización
-                                </span>
-                                <span class="text-[10px] font-semibold bg-gray-800/90 text-gray-400 px-2 py-0.5 rounded-full border border-gray-700">
-                                    24 Módulos Conectados
+                                <span class="font-extrabold text-white text-sm tracking-tight flex items-center gap-1.5">
+                                    <span class="w-2.5 h-2.5 rounded-sm bg-[#0284c7]"></span> NyTEX ERP
                                 </span>
                             </div>
-
-                            <!-- Controles de Zoom para el Diagrama -->
-                            <div class="flex items-center gap-1.5 bg-gray-900 border border-gray-700/80 px-2 py-1 rounded-lg">
-                                <span class="text-gray-400 text-[10px] font-semibold mr-1">Zoom:</span>
-                                <button type="button" onclick="adjustDiagramZoom(0.15)" class="w-6 h-6 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 flex items-center justify-center text-[10px] transition-colors" title="Ampliar diagrama">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                                <button type="button" onclick="adjustDiagramZoom(-0.15)" class="w-6 h-6 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 flex items-center justify-center text-[10px] transition-colors" title="Reducir diagrama">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" onclick="resetDiagramZoom()" class="w-6 h-6 rounded bg-gray-800 hover:bg-gray-700 text-gray-200 flex items-center justify-center text-[10px] transition-colors" title="Restablecer tamaño">
-                                    <i class="fas fa-compress-arrows-alt"></i>
-                                </button>
+                            <div class="hidden sm:flex items-center bg-[#1f2937] px-3 py-1 rounded-md text-[11px] w-52 text-gray-400 border border-gray-700">
+                                <i class="fas fa-search mr-2 text-gray-500"></i> Buscar módulo o dato...
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-bell text-gray-400 hover:text-white cursor-pointer"></i>
+                                <div class="w-6 h-6 rounded-full bg-[#0284c7] text-white flex items-center justify-center font-bold text-[10px]">
+                                    JD
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Contenedor scrollable y escalable para el diagrama -->
-                        <div id="diagramWrapper" class="overflow-x-auto py-3 bg-[#02050e]/60 rounded-xl p-2 border border-gray-800/50 min-h-[560px] flex items-center justify-center">
-<svg viewBox="0 0 1024 940" class="w-full h-auto select-none" style="filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5)); min-width: 920px;">
+                        <!-- Panel con Mini Sidebar + KPIs y Gráficos -->
+                        <div class="grid grid-cols-12 gap-3">
+                            <!-- Mini Sidebar -->
+                            <div class="col-span-3 hidden sm:block bg-[#1f2937]/70 rounded-xl p-2.5 border border-gray-800 text-[11px] space-y-1 text-gray-400">
+                                <div class="bg-[#0284c7] text-white font-bold px-2 py-1.5 rounded flex items-center gap-2">
+                                    <i class="fas fa-home text-[10px]"></i> Inicio
+                                </div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-shopping-cart text-[10px]"></i> Ventas</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-truck text-[10px]"></i> Compras</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-boxes text-[10px]"></i> Inventario</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-industry text-[10px]"></i> Producción</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-wallet text-[10px]"></i> Finanzas</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-users text-[10px]"></i> Talento Humano</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-chart-bar text-[10px]"></i> BI y Reportes</div>
+                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-sliders-h text-[10px]"></i> Configuración</div>
+                            </div>
+
+                            <!-- Área Principal del Dashboard -->
+                            <div class="col-span-12 sm:col-span-9 space-y-3">
+                                <!-- 4 KPI Cards -->
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
+                                        <p class="text-[10px] text-gray-400 font-medium">Ventas</p>
+                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">$125,430</p>
+                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-up"></i> +18%</span>
+                                    </div>
+                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
+                                        <p class="text-[10px] text-gray-400 font-medium">Costos</p>
+                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">$49,310</p>
+                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-down"></i> -3%</span>
+                                    </div>
+                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
+                                        <p class="text-[10px] text-gray-400 font-medium">Utilidad</p>
+                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">$51,820</p>
+                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-up"></i> +24%</span>
+                                    </div>
+                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
+                                        <p class="text-[10px] text-gray-400 font-medium">Órdenes</p>
+                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">1,284</p>
+                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-up"></i> +28%</span>
+                                    </div>
+                                </div>
+
+                                <!-- Gráfica 1: Ventas por Mes (Línea SVG) -->
+                                <div class="bg-[#1f2937]/80 p-3 rounded-xl border border-gray-700/60">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="text-[11px] font-bold text-gray-200">Ventas por mes</span>
+                                        <span class="text-[9px] text-gray-400">Año actual</span>
+                                    </div>
+                                    <svg viewBox="0 0 320 85" class="w-full h-20 overflow-visible">
+                                        <defs>
+                                            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#0284c7" stop-opacity="0.4"/>
+                                                <stop offset="100%" stop-color="#0284c7" stop-opacity="0.0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M 0 65 Q 40 50, 80 58 T 160 38 T 240 25 T 320 12 L 320 85 L 0 85 Z" fill="url(#areaGrad)"/>
+                                        <path d="M 0 65 Q 40 50, 80 58 T 160 38 T 240 25 T 320 12" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+                                        <circle cx="320" cy="12" r="3.5" fill="#38bdf8" stroke="#111827" stroke-width="2"/>
+                                    </svg>
+                                    <div class="flex justify-between text-[8px] text-gray-500 mt-1">
+                                        <span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span>
+                                    </div>
+                                </div>
+
+                                <!-- Gráfica 2: Órdenes por Área (Donut Chart) -->
+                                <div class="bg-[#1f2937]/80 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between">
+                                    <div>
+                                        <p class="text-[11px] font-bold text-gray-200 mb-1">Órdenes por área</p>
+                                        <div class="space-y-1 text-[9px] text-gray-400">
+                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0284c7]"></span> Ventas 35%</div>
+                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#38bdf8]"></span> Producción 25%</div>
+                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span> Logística 22%</div>
+                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#64748b]"></span> Otros 18%</div>
+                                        </div>
+                                    </div>
+                                    <div class="relative w-16 h-16 flex items-center justify-center">
+                                        <svg viewBox="0 0 36 36" class="w-16 h-16 transform -rotate-90">
+                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#1e293b" stroke-width="4.5"/>
+                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#0284c7" stroke-width="4.5" stroke-dasharray="35 65" stroke-dashoffset="0"/>
+                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#38bdf8" stroke-width="4.5" stroke-dasharray="25 75" stroke-dashoffset="-35"/>
+                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#10b981" stroke-width="4.5" stroke-dasharray="22 78" stroke-dashoffset="-60"/>
+                                        </svg>
+                                        <span class="absolute text-[9px] font-extrabold text-white">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer ilustrativo -->
+                        <div class="text-right mt-2">
+                            <span class="text-[9px] text-gray-500 italic">Vista ilustrativa</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ¿RECONOCE ESTOS PROBLEMAS EN SU EMPRESA? -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                    ¿Reconoce estos problemas en su empresa?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-xl shrink-0 border border-blue-100">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Información dispersa</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Los datos están en diferentes hojas y sistemas.</p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-xl shrink-0 border border-blue-100">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Inventarios sin control</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">No tiene visibilidad real de sus existencias.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-xl shrink-0 border border-blue-100">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Procesos manuales</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Tareas repetitivas que consumen tiempo y generan errores.</p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-xl shrink-0 border border-blue-100">
+                        <i class="fas fa-chart-simple"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Ventas sin seguimiento</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Oportunidades que se pierden por falta de control.</p>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-xl shrink-0 border border-blue-100">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Gerentes apagando incendios</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Se trabaja de forma reactiva y sin prioridad.</p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-[#0284c7] flex items-center justify-center text-xl shrink-0 border border-blue-100">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base mb-1">Decisiones sin datos</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Falta de información confiable y oportuna para decidir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EL MODELO DE TRANSFORMACIÓN NyT -->
+    <section id="modelo" class="py-20 bg-[#f8fafc] border-t border-gray-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                    El modelo de transformación NyT
+                </h2>
+            </div>
+
+            <!-- Cabeceras de categorías superiores -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 text-xs font-bold uppercase tracking-wider text-gray-500">
+                <div class="text-left pl-2 text-[#0284c7]">Eficiencia operacional · Fases 1 y 2</div>
+                <div class="text-left pl-2 text-indigo-700">Dirección estratégica · Fases 3 y 4</div>
+            </div>
+
+            <!-- Grilla de las 4 Fases -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <!-- Fase 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-layer-group text-[#0284c7] text-lg"></i>
+                            <h3 class="font-black text-gray-900 text-base">1. NyTEX Starter</h3>
+                        </div>
+                        <p class="text-xs font-semibold text-gray-600 mb-4">Control transaccional</p>
+                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
+                            Registrar → Ordenar → Estandarizar → Controlar
+                        </p>
+                    </div>
+                    <button type="button" onclick="selectPhase(1)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200">
+                        Ver módulos en el ecosistema
+                    </button>
+                </div>
+
+                <!-- Fase 2 (Express) -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-[#0284c7] shadow-md flex flex-col justify-between hover:shadow-lg transition-all relative">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-gear text-[#0284c7] text-lg"></i>
+                            <h3 class="font-black text-gray-900 text-base">2. NyTEX Express</h3>
+                        </div>
+                        <p class="text-xs font-semibold text-gray-600 mb-4">Productividad y flujo</p>
+                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
+                            Integrar → Sincronizar → Medir → Automatizar
+                        </p>
+                    </div>
+                    <button type="button" onclick="selectPhase(2)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#0284c7] hover:bg-blue-700 transition-colors text-center shadow-sm">
+                        Ver módulos en el ecosistema
+                    </button>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-chart-line text-[#0284c7] text-lg"></i>
+                            <h3 class="font-black text-gray-900 text-base">3. NyTEX Advanced</h3>
+                        </div>
+                        <p class="text-xs font-semibold text-gray-600 mb-4">Inteligencia y rentabilidad</p>
+                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
+                            Centralizar → Analizar → Diagnosticar → Rentabilizar
+                        </p>
+                    </div>
+                    <button type="button" onclick="selectPhase(3)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200">
+                        Ver módulos en el ecosistema
+                    </button>
+                </div>
+
+                <!-- Fase 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-rocket text-[#0284c7] text-lg"></i>
+                            <h3 class="font-black text-gray-900 text-base">4. NyTEX Enterprise</h3>
+                        </div>
+                        <p class="text-xs font-semibold text-gray-600 mb-4">Anticipación y escala</p>
+                        <p class="text-[11px] font-bold text-gray-400 tracking-wide uppercase leading-snug mb-6">
+                            Anticipar → Simular → Innovar → Escalar
+                        </p>
+                    </div>
+                    <button type="button" onclick="selectPhase(4)" class="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#0284c7] bg-blue-50 hover:bg-blue-100 transition-colors text-center border border-blue-200">
+                        Ver módulos en el ecosistema
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONOZCA NyTEX EN ACCIÓN -->
+    <section id="accion" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div class="lg:col-span-5 text-left">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                        Conozca NyTEX en acción
+                    </h2>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6 font-normal">
+                        Ventas, inventarios y finanzas en una misma plataforma.
+                    </p>
+                    <a href="/diagnostico/" class="inline-block bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-sm shadow-md transition-all">
+                        Solicitar demostración
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col sm:flex-row items-center gap-6">
+                    <!-- Video / Laptop Preview Mockup con botón Play -->
+                    <div class="relative w-full sm:w-3/5 bg-gradient-to-tr from-[#0a0f1d] via-[#111827] to-[#1f2937] rounded-2xl p-5 border border-gray-700/80 shadow-xl flex flex-col justify-center items-center min-h-[220px]">
+                        <div class="w-16 h-16 rounded-full bg-[#0284c7] hover:bg-blue-500 text-white flex items-center justify-center text-xl shadow-lg cursor-pointer transition-transform hover:scale-110 mb-3">
+                            <i class="fas fa-play ml-1"></i>
+                        </div>
+                        <h4 class="text-white font-extrabold text-base tracking-tight">NyTEX ERP</h4>
+                        <p class="text-[11px] text-gray-400">Ver recorrido en 3 minutos</p>
+                    </div>
+
+                    <!-- 4 Bullets con checkmarks azules -->
+                    <div class="w-full sm:w-2/5 space-y-3.5 text-xs text-gray-700 font-semibold">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fas fa-circle-check text-[#0284c7] text-base"></i>
+                            <span>Una plataforma integrada</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fas fa-circle-check text-[#0284c7] text-base"></i>
+                            <span>Datos en tiempo real</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fas fa-circle-check text-[#0284c7] text-base"></i>
+                            <span>Todas sus áreas conectadas</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fas fa-circle-check text-[#0284c7] text-base"></i>
+                            <span>Información para mejores decisiones</span>
+                        </div>
+                        <p class="text-[10px] text-gray-400 italic pt-2">Vista ilustrativa</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ECOSISTEMA NyTEX: 7 ÁREAS CONECTADAS -->
+    <section id="ecosistema" class="py-20 bg-[#0a0f1d] text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado de la sección -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                        Ecosistema NyTEX: 7 áreas conectadas
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-1">
+                        Seleccione una fase para iluminar sus módulos incluidos.
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4 text-xs">
+                    <!-- Leyenda -->
+                    <div class="flex items-center gap-3 text-[11px] text-gray-400">
+                        <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#0284c7]"></span> Incluido</span>
+                        <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full border border-gray-600"></span> Disponible en otra fase</span>
+                    </div>
+
+                    <!-- Controles Zoom -->
+                    <div class="flex items-center gap-1 bg-gray-900 border border-gray-700/80 px-2 py-1 rounded-lg text-xs">
+                        <button type="button" onclick="adjustDiagramZoom(-0.15)" class="w-5 h-5 rounded hover:bg-gray-800 text-gray-300 flex items-center justify-center" title="Reducir">-</button>
+                        <button type="button" onclick="adjustDiagramZoom(0.15)" class="w-5 h-5 rounded hover:bg-gray-800 text-gray-300 flex items-center justify-center" title="Aumentar">+</button>
+                        <button type="button" onclick="resetDiagramZoom()" class="px-1.5 py-0.5 text-[10px] rounded hover:bg-gray-800 text-gray-300" title="Restablecer">Restablecer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestañas de las 4 Fases (Tabs principales) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+                <button type="button" id="tabPhase-1" onclick="selectPhase(1)" class="phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+                    <span class="block text-sm font-bold text-gray-200">Starter</span>
+                    <span class="block text-[11px] text-gray-400">7 módulos</span>
+                </button>
+                <button type="button" id="tabPhase-2" onclick="selectPhase(2)" class="phase-tab py-3 px-4 rounded-xl border border-[#0284c7] bg-[#0284c7] text-white text-center transition-all cursor-pointer shadow-lg shadow-blue-500/20">
+                    <span class="block text-sm font-black text-white">Express</span>
+                    <span class="block text-[11px] text-blue-100 font-medium">15 módulos</span>
+                </button>
+                <button type="button" id="tabPhase-3" onclick="selectPhase(3)" class="phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+                    <span class="block text-sm font-bold text-gray-200">Advanced</span>
+                    <span class="block text-[11px] text-gray-400">18 módulos</span>
+                </button>
+                <button type="button" id="tabPhase-4" onclick="selectPhase(4)" class="phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer">
+                    <span class="block text-sm font-bold text-gray-200">Enterprise</span>
+                    <span class="block text-[11px] text-gray-400">24 módulos</span>
+                </button>
+            </div>
+
+            <!-- Indicador de fase actual -->
+            <div class="text-xs text-gray-300 font-semibold mb-6 flex items-center justify-between">
+                <div>
+                    Fase seleccionada: <span id="statusPhaseName" class="text-[#38bdf8] font-bold">Express</span> | <span id="statusModuleCount" class="text-white font-bold">15</span> de 24 módulos
+                </div>
+                <div id="activeFilterBadge" class="hidden text-[11px] bg-blue-900/60 border border-blue-500/50 text-blue-200 px-3 py-0.5 rounded-full">
+                    Filtrado por área funcional
+                </div>
+            </div>
+
+            <!-- Contenedor Principal: Diagrama SVG (Izquierda) + Áreas Funcionales (Derecha) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+                
+                <!-- Columna Izquierda: Diagrama SVG -->
+                <div class="lg:col-span-9 bg-[#040814] rounded-2xl p-3 border border-gray-800 shadow-inner flex flex-col">
+                    <div id="diagramWrapper" class="overflow-x-auto py-2 bg-[#02050e]/80 rounded-xl p-2 border border-gray-900 min-h-[560px] flex items-center justify-center">
+                        <svg viewBox="0 0 1024 940" class="w-full h-auto select-none" style="filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5)); min-width: 920px;">
     <defs>
         <marker id="arrow-cyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#38bdf8" />
@@ -613,921 +740,755 @@
         <text x="324" y="893" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="8.5">(Bancos y Cash Flow)</text>
     </g>
 </svg>
-</div>
                     </div>
+                </div>
 
-                    <!-- Columna Derecha: Tarjetas de Áreas Funcionales (Interactivas) -->
-                    <div class="lg:col-span-4 xl:col-span-3 bg-[#030712]/95 rounded-2xl p-3.5 sm:p-4 border border-gray-800/80 shadow-inner flex flex-col">
-                        <div class="mb-3 pb-2 border-b border-gray-800 flex items-center justify-between">
-                            <div>
-                                <h4 class="text-xs font-black text-white uppercase tracking-wider flex items-center gap-1.5">
-                                    <i class="fas fa-sitemap text-brand-accent"></i> ÁREAS FUNCIONALES
-                                </h4>
-                                <p class="text-[10px] text-gray-400">Clic en 1 o varias para alumbrar</p>
-                            </div>
-                            <button id="btnClearAreas" type="button" onclick="clearAllAreas()" class="text-[10px] font-bold px-2.5 py-1 rounded bg-amber-400/20 hover:bg-amber-400/30 text-amber-300 border border-amber-400/40 transition-colors hidden" title="Restablecer todas">
-                                Limpiar (<span id="countSelectedAreas">0</span>) ✕
-                            </button>
+                <!-- Columna Derecha: Áreas Funcionales (1 a 7) -->
+                <div class="lg:col-span-3 bg-[#0f172a] rounded-2xl p-4 border border-gray-800 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="mb-3">
+                            <h4 class="text-xs font-black text-white uppercase tracking-wider">Áreas funcionales</h4>
+                            <p class="text-[10px] text-gray-400">Seleccione una o varias áreas</p>
                         </div>
 
                         <div class="space-y-2">
-                            <!-- Área 1 -->
-                            <div id="areaCard-1" onclick="toggleArea(1)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-sky-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-sky-500 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">1</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-sky-300 transition-colors">1. Dirección Comercial</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-sky-300 font-medium">CRM, Ventas</span>
-                                        </p>
-                                    </div>
+                            <!-- 1 -->
+                            <div id="areaCard-1" onclick="toggleArea(1)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-[#0284c7] text-white font-black flex items-center justify-center text-[10px]">1</div>
+                                    <span class="text-xs text-white font-semibold">Dirección Comercial</span>
                                 </div>
-                                <span id="areaBadge-1" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-1" class="text-[9px] font-bold text-sky-400 uppercase hidden">✓</span>
                             </div>
 
-                            <!-- Área 2 -->
-                            <div id="areaCard-2" onclick="toggleArea(2)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-emerald-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-emerald-500 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">2</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-emerald-300 transition-colors">2. Cadena de Suministro</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-emerald-300 font-medium">Compras, Inventario, WMS, Logística</span>
-                                        </p>
-                                    </div>
+                            <!-- 2 -->
+                            <div id="areaCard-2" onclick="toggleArea(2)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-emerald-600 text-white font-black flex items-center justify-center text-[10px]">2</div>
+                                    <span class="text-xs text-white font-semibold">Cadena de Suministro</span>
                                 </div>
-                                <span id="areaBadge-2" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-2" class="text-[9px] font-bold text-emerald-400 uppercase hidden">✓</span>
                             </div>
 
-                            <!-- Área 3 -->
-                            <div id="areaCard-3" onclick="toggleArea(3)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-green-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-green-500 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">3</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-green-300 transition-colors">3. Operaciones y Producción</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-green-300 font-medium">Producción</span>
-                                        </p>
-                                    </div>
+                            <!-- 3 -->
+                            <div id="areaCard-3" onclick="toggleArea(3)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-green-600 text-white font-black flex items-center justify-center text-[10px]">3</div>
+                                    <span class="text-xs text-white font-semibold">Operaciones y Producción</span>
                                 </div>
-                                <span id="areaBadge-3" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-3" class="text-[9px] font-bold text-green-400 uppercase hidden">✓</span>
                             </div>
 
-                            <!-- Área 4 -->
-                            <div id="areaCard-4" onclick="toggleArea(4)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-amber-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-amber-500 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">4</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-amber-300 transition-colors">4. Administración y Finanzas</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-amber-300 font-medium">CxP, CxC, Tesorería, Contabilidad</span>
-                                        </p>
-                                    </div>
+                            <!-- 4 -->
+                            <div id="areaCard-4" onclick="toggleArea(4)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-amber-600 text-white font-black flex items-center justify-center text-[10px]">4</div>
+                                    <span class="text-xs text-white font-semibold">Administración y Finanzas</span>
                                 </div>
-                                <span id="areaBadge-4" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-4" class="text-[9px] font-bold text-amber-400 uppercase hidden">✓</span>
                             </div>
 
-                            <!-- Área 5 -->
-                            <div id="areaCard-5" onclick="toggleArea(5)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-purple-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-purple-600 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">5</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-purple-300 transition-colors">5. Talento Humano</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-purple-300 font-medium">RRHH, Nómina</span>
-                                        </p>
-                                    </div>
+                            <!-- 5 -->
+                            <div id="areaCard-5" onclick="toggleArea(5)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-purple-600 text-white font-black flex items-center justify-center text-[10px]">5</div>
+                                    <span class="text-xs text-white font-semibold">Talento Humano</span>
                                 </div>
-                                <span id="areaBadge-5" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-5" class="text-[9px] font-bold text-purple-400 uppercase hidden">✓</span>
                             </div>
 
-                            <!-- Área 6 -->
-                            <div id="areaCard-6" onclick="toggleArea(6)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-blue-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-blue-600 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">6</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-blue-300 transition-colors">6. Inteligencia y Analítica</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-blue-300 font-medium">BI y Reportes, Dashboards, Big Data, Minería, Modelos, IA, Planeación</span>
-                                        </p>
-                                    </div>
+                            <!-- 6 -->
+                            <div id="areaCard-6" onclick="toggleArea(6)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-blue-600 text-white font-black flex items-center justify-center text-[10px]">6</div>
+                                    <span class="text-xs text-white font-semibold">Inteligencia y Analítica</span>
                                 </div>
-                                <span id="areaBadge-6" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-6" class="text-[9px] font-bold text-blue-400 uppercase hidden">✓</span>
                             </div>
 
-                            <!-- Área 7 -->
-                            <div id="areaCard-7" onclick="toggleArea(7)" class="bg-gray-900/90 hover:bg-gray-800/80 border border-gray-800 hover:border-slate-500/60 rounded-xl p-2.5 transition-all duration-200 cursor-pointer flex items-center justify-between gap-2 select-none group">
-                                <div class="flex items-start gap-2 flex-grow min-w-0">
-                                    <div class="w-6 h-6 rounded bg-slate-600 text-white font-black flex items-center justify-center text-xs flex-shrink-0 mt-0.5 shadow-sm">7</div>
-                                    <div class="min-w-0">
-                                        <h5 class="text-white font-bold text-xs leading-tight truncate group-hover:text-slate-300 transition-colors">7. Gobernanza y TI</h5>
-                                        <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">
-                                            <span class="text-[9px] text-gray-500 uppercase">Módulos:</span> <span class="text-slate-300 font-medium">Partners, Configuración, Process Suite, Process Mining</span>
-                                        </p>
-                                    </div>
+                            <!-- 7 -->
+                            <div id="areaCard-7" onclick="toggleArea(7)" class="bg-[#1e293b]/80 hover:bg-[#334155] border border-gray-700 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded bg-slate-600 text-white font-black flex items-center justify-center text-[10px]">7</div>
+                                    <span class="text-xs text-white font-semibold">Gobernanza y TI</span>
                                 </div>
-                                <span id="areaBadge-7" class="text-[9px] font-black uppercase px-2 py-0.5 rounded border border-transparent transition-all hidden">✓ ACTIVA</span>
+                                <span id="areaBadge-7" class="text-[9px] font-bold text-slate-400 uppercase hidden">✓</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Botón Dinámico de Consulta -->
+                    <div class="mt-6 pt-4 border-t border-gray-800">
+                        <a href="#planes" id="btnSidebarPhase" class="block w-full text-center bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold py-3 px-3 rounded-xl text-xs md:text-sm transition-all shadow-md">
+                            Consultar NyTEX Express
+                        </a>
+                    </div>
                 </div>
-                
-                <script>
-                    let currentDiagramZoom = 1;
-                    function adjustDiagramZoom(delta) {
-                        currentDiagramZoom = Math.max(0.6, Math.min(2.5, currentDiagramZoom + delta));
-                        applyDiagramZoom();
-                    }
-                    function resetDiagramZoom() {
-                        currentDiagramZoom = 1;
-                        applyDiagramZoom();
-                    }
-                    function applyDiagramZoom() {
-                        const svg = document.querySelector("#diagramWrapper .mermaid svg, #diagramWrapper svg");
-                        if (svg) {
-                            svg.style.transform = "scale(" + currentDiagramZoom + ")";
-                            svg.style.transformOrigin = "top center";
-                        }
-                    }
-
-                    // Interacción Áreas Funcionales & Alumbrado de Nodos
-                    const selectedAreas = new Set();
-
-                    const AREAS_MAP = {
-                        1: {
-                            areaNum: "1",
-                            modules: ["crm", "ventas"],
-                            activeClass: ["bg-sky-950/70", "border-sky-400", "ring-2", "ring-sky-400/50"],
-                            badgeClass: ["bg-sky-500", "text-white", "border-sky-400"]
-                        },
-                        2: {
-                            areaNum: "2",
-                            modules: ["compras", "inventario", "wms", "logística"],
-                            activeClass: ["bg-emerald-950/70", "border-emerald-400", "ring-2", "ring-emerald-400/50"],
-                            badgeClass: ["bg-emerald-500", "text-white", "border-emerald-400"]
-                        },
-                        3: {
-                            areaNum: "3",
-                            modules: ["producción"],
-                            activeClass: ["bg-green-950/70", "border-green-400", "ring-2", "ring-green-400/50"],
-                            badgeClass: ["bg-green-500", "text-white", "border-green-400"]
-                        },
-                        4: {
-                            areaNum: "4",
-                            modules: ["cxp", "cxc", "tesorería", "contabilidad", "cobranza", "deudas", "efectivo"],
-                            activeClass: ["bg-amber-950/70", "border-amber-400", "ring-2", "ring-amber-400/50"],
-                            badgeClass: ["bg-amber-400", "text-slate-950", "border-amber-300"]
-                        },
-                        5: {
-                            areaNum: "5",
-                            modules: ["rrhh", "nómina", "expedientes", "sueldos"],
-                            activeClass: ["bg-purple-950/70", "border-purple-400", "ring-2", "ring-purple-400/50"],
-                            badgeClass: ["bg-purple-500", "text-white", "border-purple-400"]
-                        },
-                        6: {
-                            areaNum: "6",
-                            modules: ["bi y reportes", "dashboards", "nytex bi", "big data", "minería de datos", "modelos predictivos", "predictivos", "nytex ia", "planeación", "consultas", "lagos", "kpis"],
-                            activeClass: ["bg-blue-950/70", "border-blue-400", "ring-2", "ring-blue-400/50"],
-                            badgeClass: ["bg-blue-500", "text-white", "border-blue-400"]
-                        },
-                        7: {
-                            areaNum: "7",
-                            modules: ["business partners", "configuración", "process suite", "process mining", "parámetros"],
-                            activeClass: ["bg-slate-900/90", "border-slate-400", "ring-2", "ring-slate-400/50"],
-                            badgeClass: ["bg-slate-500", "text-white", "border-slate-400"]
-                        }
-                    };
-
-                    const PHASE_CONFIG = {
-                        1: {
-                            name: "Fase 1: NyTEX Starter",
-                            modules: ["ventas", "inventario", "compras", "contabilidad", "cxc", "cxp", "tesorería", "cobranza", "deudas", "efectivo"]
-                        },
-                        2: {
-                            name: "Fase 2: NyTEX Express",
-                            modules: ["ventas", "crm", "inventario", "wms", "logística", "compras", "producción", "contabilidad", "cxc", "cxp", "tesorería", "rrhh", "nómina", "dashboards", "process suite"]
-                        },
-                        3: {
-                            name: "Fase 3: NyTEX Advanced",
-                            modules: ["ventas", "crm", "inventario", "wms", "logística", "compras", "producción", "contabilidad", "cxc", "cxp", "tesorería", "rrhh", "nómina", "dashboards", "process suite", "bi y reportes", "nytex bi", "big data", "planeación"]
-                        },
-                        4: {
-                            name: "Fase 4: NyTEX Enterprise",
-                            modules: [] // 100% de los 24 módulos
-                        }
-                    };
-
-                    let activeSelectedPhase = null;
-
-                    function selectPhase(phaseNum) {
-                        if (activeSelectedPhase === phaseNum) {
-                            activeSelectedPhase = null;
-                        } else {
-                            activeSelectedPhase = phaseNum;
-                            selectedAreas.clear();
-                        }
-                        updateEcosistemaHighlight();
-                        updatePhaseCardsUI();
-
-                        if (activeSelectedPhase !== null) {
-                            const eco = document.getElementById("ecosistema");
-                            if (eco) eco.scrollIntoView({ behavior: "smooth" });
-                        }
-                    }
-
-                    function updatePhaseCardsUI() {
-                        for (let p = 1; p <= 4; p++) {
-                            const card = document.getElementById("cardPhase-" + p);
-                            const btn = document.getElementById("btnPhase-" + p);
-                            if (!btn) continue;
-                            if (activeSelectedPhase === p) {
-                                btn.innerHTML = "✨ Activas";
-                                if (card) card.classList.add("ring-4", "ring-amber-400", "shadow-[0_0_30px_rgba(245,158,11,0.5)]", "scale-[1.02]");
-                            } else {
-                                btn.innerHTML = "Ver aplicaciones";
-                                if (card) card.classList.remove("ring-4", "ring-amber-400", "shadow-[0_0_30px_rgba(245,158,11,0.5)]", "scale-[1.02]");
-                            }
-                        }
-                    }
-
-                    function toggleArea(areaId) {
-                        activeSelectedPhase = null;
-                        updatePhaseCardsUI();
-                        if (selectedAreas.has(areaId)) {
-                            selectedAreas.delete(areaId);
-                        } else {
-                            selectedAreas.add(areaId);
-                        }
-                        updateEcosistemaHighlight();
-                    }
-
-                    function clearAllAreas() {
-                        activeSelectedPhase = null;
-                        selectedAreas.clear();
-                        updatePhaseCardsUI();
-                        updateEcosistemaHighlight();
-                    }
-
-                    function updateEcosistemaHighlight() {
-                        const svg = document.querySelector("#diagramWrapper .mermaid svg, #diagramWrapper svg");
-                        const nodeElements = svg ? svg.querySelectorAll("g.node") : [];
-
-                        const hasPhaseFilter = activeSelectedPhase !== null;
-                        const hasAreaFilter = selectedAreas.size > 0;
-                        const hasFilter = hasPhaseFilter || hasAreaFilter;
-                        let lightedNodes = 0;
-
-                        if (nodeElements.length > 0) {
-                            nodeElements.forEach(g => {
-                                const text = (g.textContent || "").toLowerCase();
-                                let matches = false;
-
-                                if (hasPhaseFilter) {
-                                    if (activeSelectedPhase === 4) {
-                                        matches = true;
-                                    } else {
-                                        const cfg = PHASE_CONFIG[activeSelectedPhase];
-                                        matches = cfg.modules.some(m => text.includes(m));
-                                    }
-                                } else if (hasAreaFilter) {
-                                    for (const areaId of selectedAreas) {
-                                        const area = AREAS_MAP[areaId];
-                                        if (text.includes("área " + area.areaNum) || area.modules.some(m => text.includes(m))) {
-                                            matches = true;
-                                            break;
-                                        }
-                                    }
-                                }
-
-                                const shape = g.querySelector("rect, polygon, circle, path");
-
-                                if (!hasFilter) {
-                                    g.style.opacity = "1";
-                                    g.style.filter = "none";
-                                    g.style.transition = "all 0.35s ease";
-                                    if (shape) {
-                                        shape.style.stroke = "";
-                                        shape.style.strokeWidth = "";
-                                    }
-                                } else if (matches) {
-                                    lightedNodes++;
-                                    g.style.opacity = "1";
-                                    g.style.filter = "drop-shadow(0 0 12px #F59E0B) drop-shadow(0 0 24px #FBBF24)";
-                                    g.style.transition = "all 0.35s ease";
-                                    if (shape) {
-                                        shape.style.stroke = "#FBBF24";
-                                        shape.style.strokeWidth = "4.5px";
-                                    }
-                                } else {
-                                    g.style.opacity = "0.18";
-                                    g.style.filter = "grayscale(85%)";
-                                    g.style.transition = "all 0.35s ease";
-                                    if (shape) {
-                                        shape.style.stroke = "";
-                                        shape.style.strokeWidth = "";
-                                    }
-                                }
-                            });
-                        }
-
-                        // Actualizar tarjetas y badges de áreas
-                        for (let i = 1; i <= 7; i++) {
-                            const card = document.getElementById("areaCard-" + i);
-                            const badge = document.getElementById("areaBadge-" + i);
-                            const area = AREAS_MAP[i];
-                            if (!card || !badge) continue;
-
-                            if (selectedAreas.has(i)) {
-                                card.classList.remove("bg-gray-900/90", "border-gray-800");
-                                card.classList.add(...area.activeClass);
-                                badge.className = "text-[9px] font-black uppercase px-2 py-0.5 rounded shadow-sm border " + area.badgeClass.join(" ");
-                                badge.textContent = "✓ ACTIVA";
-                                badge.classList.remove("hidden");
-                            } else {
-                                card.classList.remove(...area.activeClass);
-                                card.classList.add("bg-gray-900/90", "border-gray-800");
-                                badge.classList.add("hidden");
-                            }
-                        }
-
-                        // Botón Limpiar
-                        const btnClear = document.getElementById("btnClearAreas");
-                        const countSpan = document.getElementById("countSelectedAreas");
-                        if (btnClear && countSpan) {
-                            if (hasFilter) {
-                                countSpan.textContent = hasPhaseFilter ? lightedNodes : selectedAreas.size;
-                                btnClear.classList.remove("hidden");
-                            } else {
-                                btnClear.classList.add("hidden");
-                            }
-                        }
-
-                        // Banner de notificación
-                        const notif = document.getElementById("ecosystemNotification");
-                        const notifText = document.getElementById("ecosystemNotificationText");
-                        if (notif && notifText) {
-                            if (hasPhaseFilter) {
-                                notif.classList.remove("hidden");
-                                notifText.textContent = "⭐ Mostrando en dorado las aplicaciones de: " + PHASE_CONFIG[activeSelectedPhase].name + " (" + lightedNodes + " aplicaciones iluminadas)";
-                            } else if (hasAreaFilter) {
-                                notif.classList.remove("hidden");
-                                notifText.textContent = "✨ Alumbrando en dorado " + lightedNodes + " aplicaciones (" + selectedAreas.size + " área" + (selectedAreas.size > 1 ? "s" : "") + " seleccionada" + (selectedAreas.size > 1 ? "s" : "") + ")";
-                            } else {
-                                notif.classList.add("hidden");
-                            }
-                        }
-                    }
-                </script>
-
 
             </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        </div>
+    </section>
+
+    <!-- 7. SOLUCIONES QUE TRABAJAN JUNTAS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                    Soluciones que trabajan juntas
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 <!-- ERP -->
-                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl hover:border-brand transition-colors group">
-                    <h3 class="text-3xl font-black text-brand mb-2">ERP</h3>
-                    <p class="text-lg font-bold text-gray-900 mb-4">Controle su empresa.</p>
-                    <p class="text-sm text-gray-600 mb-6 h-16">Finanzas · Compras · Ventas · Inventarios · CxC · CxP · Tesorería · Contabilidad</p>
-                    <a href="#contacto" class="text-brand font-bold group-hover:text-brand-accent transition-colors">CONOCER ERP <i class="fas fa-arrow-right ml-1"></i></a>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0284c7] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-3">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-lg mb-1">ERP</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2">Controla su empresa</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Gestione las operaciones clave de su negocio.</p>
+                    </div>
+                    <a href="#contacto" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1">
+                        Conocer solución <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
+
                 <!-- CRM -->
-                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl hover:border-brand transition-colors group">
-                    <h3 class="text-3xl font-black text-brand mb-2">CRM</h3>
-                    <p class="text-lg font-bold text-gray-900 mb-4">Convierta oportunidades en clientes.</p>
-                    <p class="text-sm text-gray-600 mb-6 h-16">Prospectos · Ventas · Cotizaciones · WhatsApp · Seguimiento · Servicio · Fidelización</p>
-                    <a href="/crm/" class="text-brand font-bold group-hover:text-brand-accent transition-colors">CONOCER CRM <i class="fas fa-arrow-right ml-1"></i></a>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0284c7] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-3">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-lg mb-1">CRM</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2">Convierta oportunidades en clientes</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Centralice la gestión comercial.</p>
+                    </div>
+                    <a href="#contacto" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1">
+                        Conocer solución <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
+
                 <!-- BPM -->
-                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl hover:border-brand transition-colors group">
-                    <h3 class="text-3xl font-black text-brand mb-2">BPM</h3>
-                    <p class="text-lg font-bold text-gray-900 mb-4">Convierta procesos en flujos.</p>
-                    <p class="text-sm text-gray-600 mb-6 h-16">Workflows · Aprobaciones · Responsables · SLA · Alertas · Auditoría · Automatización</p>
-                    <a href="#contacto" class="text-brand font-bold group-hover:text-brand-accent transition-colors">CONOCER BPM <i class="fas fa-arrow-right ml-1"></i></a>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0284c7] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-3">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-lg mb-1">BPM</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2">Automatice procesos</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Estandarice y optimice sus procesos.</p>
+                    </div>
+                    <a href="#contacto" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1">
+                        Conocer solución <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
+
                 <!-- BI -->
-                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl hover:border-brand transition-colors group">
-                    <h3 class="text-3xl font-black text-brand mb-2">BI</h3>
-                    <p class="text-lg font-bold text-gray-900 mb-4">Convierta datos en decisiones.</p>
-                    <p class="text-sm text-gray-600 mb-6 h-16">KPIs · Dashboards · Rentabilidad · Tendencias · Alertas · Drill-down · Predicción</p>
-                    <a href="#contacto" class="text-brand font-bold group-hover:text-brand-accent transition-colors">CONOCER BI <i class="fas fa-arrow-right ml-1"></i></a>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0284c7] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-3">
+                            <i class="fas fa-chart-simple"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-lg mb-1">BI</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2">Convierta datos en decisiones</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Transforme datos en información útil.</p>
+                    </div>
+                    <a href="#contacto" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1">
+                        Conocer solución <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
+
                 <!-- IA -->
-                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl hover:border-brand transition-colors group">
-                    <h3 class="text-3xl font-black text-brand mb-2">IA</h3>
-                    <p class="text-lg font-bold text-gray-900 mb-4">Convierta información en anticipación.</p>
-                    <p class="text-sm text-gray-600 mb-6 h-16">Predicción de demanda · Agentes IA · Recomendaciones · Automatización · Simulación</p>
-                    <a href="#contacto" class="text-brand font-bold group-hover:text-brand-accent transition-colors">CONOCER IA <i class="fas fa-arrow-right ml-1"></i></a>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0284c7] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-3">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-lg mb-1">IA</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2">Anticipe escenarios</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Utilice inteligencia artificial en su negocio.</p>
+                    </div>
+                    <a href="#contacto" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1">
+                        Conocer solución <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
-                <!-- MINERÍA DE DATOS -->
-                <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl hover:border-brand transition-colors group">
-                    <h3 class="text-3xl font-black text-brand mb-2">Minería de Datos</h3>
-                    <p class="text-lg font-bold text-gray-900 mb-4">Convierta datos ocultos en ventajas competitivas.</p>
-                    <p class="text-sm text-gray-600 mb-6 h-16">Descubrimiento de Patrones · Segmentación Avanzada · Detección de Anomalías · Clustering · Análisis de Comportamiento</p>
-                    <a href="#contacto" class="text-brand font-bold group-hover:text-brand-accent transition-colors">CONOCER MINERÍA <i class="fas fa-arrow-right ml-1"></i></a>
+
+                <!-- Minería de Datos -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:border-[#0284c7] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-3">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-lg mb-1">Minería de Datos</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2">Descubra patrones y oportunidades</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Encuentre información valiosa en sus datos.</p>
+                    </div>
+                    <a href="#contacto" class="text-xs font-bold text-[#0284c7] hover:underline flex items-center gap-1">
+                        Conocer solución <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="mt-16 text-center">
-                <p class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">
-                    ERP registra. CRM conecta. BPM automatiza. BI explica. Minería descubre. <span class="text-brand">IA anticipa.</span>
+            <div class="text-center pt-4">
+                <p class="text-xs sm:text-sm font-semibold text-gray-500">
+                    ERP registra. CRM conecta. BPM automatiza. BI explica. Minería descubre. IA anticipa.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 14. ANTES VS DESPUÉS -->
-    <section class="py-24 bg-brand text-white relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold mb-4">¿QUÉ CAMBIA CON NyT?</h2>
-                <div class="w-24 h-1 bg-brand-accent mx-auto"></div>
-            </div>
-            
-            <div class="bg-brand-dark rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                <div class="grid grid-cols-2 text-center border-b border-white/10">
-                    <div class="p-6 bg-white/5 font-bold text-xl text-gray-400">Empresa Tradicional</div>
-                    <div class="p-6 bg-brand-accent/10 font-bold text-xl text-brand-accent">Empresa Inteligente</div>
-                </div>
+    <!-- 8. COMPARATIVA & METODOLOGÍA -->
+    <section class="py-20 bg-[#f8fafc] border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 
-                <!-- Filas de comparación -->
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Excel dispersos</div>
-                    <div class="p-4 font-semibold text-white">Información integrada</div>
+                <!-- Columna Izquierda: ¿Qué cambia con NyT? -->
+                <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-extrabold text-gray-900 mb-6">¿Qué cambia con NyT?</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs text-left">
+                            <thead>
+                                <tr class="border-b border-gray-200 text-gray-400 font-bold uppercase">
+                                    <th class="pb-3 w-1/2">Antes</th>
+                                    <th class="pb-3 w-1/2 text-[#0284c7]">Con NyT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 text-gray-700">
+                                <tr>
+                                    <td class="py-2.5 text-gray-500">Información dispersa</td>
+                                    <td class="py-2.5 font-bold text-gray-900">Información integrada</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 text-gray-500">Tareas manuales</td>
+                                    <td class="py-2.5 font-bold text-gray-900">Flujos automatizados</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 text-gray-500">Datos duplicados</td>
+                                    <td class="py-2.5 font-bold text-gray-900">Información unificada</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 text-gray-500">Gerencia reactiva</td>
+                                    <td class="py-2.5 font-bold text-gray-900">Dirección estratégica</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 text-gray-500">Reportes tardíos</td>
+                                    <td class="py-2.5 font-bold text-gray-900">Indicadores operativos</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 text-gray-500">Sistemas aislados</td>
+                                    <td class="py-2.5 font-bold text-gray-900">Áreas conectadas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Procesos manuales</div>
-                    <div class="p-4 font-semibold text-white">Procesos automatizados</div>
+
+                <!-- Columna Derecha: Lo acompañamos en cada etapa -->
+                <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-extrabold text-gray-900 mb-6">Lo acompañamos en cada etapa</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-100 text-[#0284c7] font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+                            <div>
+                                <strong class="text-gray-900 block">Diagnóstico</strong>
+                                <span class="text-gray-500">Evaluamos su situación y definimos prioridades.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-100 text-[#0284c7] font-bold flex items-center justify-center shrink-0 text-xs">4</span>
+                            <div>
+                                <strong class="text-gray-900 block">Capacitación</strong>
+                                <span class="text-gray-500">Formamos a su equipo de trabajo.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-100 text-[#0284c7] font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+                            <div>
+                                <strong class="text-gray-900 block">Configuración e integración</strong>
+                                <span class="text-gray-500">Adaptamos NyTEX a sus procesos.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-100 text-[#0284c7] font-bold flex items-center justify-center shrink-0 text-xs">5</span>
+                            <div>
+                                <strong class="text-gray-900 block">Puesta en marcha</strong>
+                                <span class="text-gray-500">Iniciamos operación con acompañamiento.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-100 text-[#0284c7] font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+                            <div>
+                                <strong class="text-gray-900 block">Migración de datos</strong>
+                                <span class="text-gray-500">Cargamos su información de forma segura.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-100 text-[#0284c7] font-bold flex items-center justify-center shrink-0 text-xs">6</span>
+                            <div>
+                                <strong class="text-gray-900 block">Seguimiento y mejora</strong>
+                                <span class="text-gray-500">Medimos resultados y proponemos mejoras.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Datos duplicados</div>
-                    <div class="p-4 font-semibold text-white">Una sola fuente de verdad</div>
-                </div>
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Gerencia reactiva</div>
-                    <div class="p-4 font-semibold text-white">Dirección estratégica</div>
-                </div>
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Reportes históricos</div>
-                    <div class="p-4 font-semibold text-white">Información en tiempo real</div>
-                </div>
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Decisiones intuitivas</div>
-                    <div class="p-4 font-semibold text-white">Decisiones basadas en datos</div>
-                </div>
-                <div class="grid grid-cols-2 text-center border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Sistemas aislados</div>
-                    <div class="p-4 font-semibold text-white">Ecosistema integrado</div>
-                </div>
-                <div class="grid grid-cols-2 text-center hover:bg-white/5 transition-colors">
-                    <div class="p-4 text-gray-400">Reacción al futuro</div>
-                    <div class="p-4 font-semibold text-white">Predicción mediante IA</div>
-                </div>
+
             </div>
         </div>
     </section>
 
-
-    <!-- 11. ROADMAP (Visual) -->
-    <section class="py-24 bg-white">
+    <!-- 9. CTA BANNER: DESCUBRA POR DÓNDE COMENZAR -->
+    <section class="py-14 bg-[#0b0f19] text-white border-t border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">EL CAMINO HACIA LA EMPRESA INTELIGENTE</h2>
-                <div class="w-24 h-1 bg-brand mx-auto"></div>
-            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-4">
+                    <h3 class="text-2xl font-extrabold text-white tracking-tight mb-1">
+                        Descubra por dónde comenzar.
+                    </h3>
+                    <p class="text-xs text-gray-400">
+                        36 preguntas para identificar prioridades e iniciar su transformación.
+                    </p>
+                </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-start relative">
-                <!-- Linea conectora (solo desktop) -->
-                <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gray-100 -z-10"></div>
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-xs text-gray-300">
+                    <span class="flex items-center gap-2"><i class="fas fa-check text-[#38bdf8]"></i> Posibles pérdidas por ineficiencia</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check text-[#38bdf8]"></i> Qué no automatizar todavía</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check text-[#38bdf8]"></i> Procesos que requieren atención</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check text-[#38bdf8]"></i> Tecnología según su necesidad</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check text-[#38bdf8]"></i> Áreas para automatizar</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check text-[#38bdf8]"></i> Prioridades de inversión</span>
+                </div>
 
-                <!-- Paso 1 -->
-                <div class="flex-1 text-center px-4 mb-8 md:mb-0">
-                    <div class="w-24 h-24 mx-auto bg-brand text-white rounded-full flex items-center justify-center text-3xl font-black mb-4 shadow-lg">01</div>
-                    <h3 class="font-bold text-gray-900 mb-2">DIAGNOSTICAMOS</h3>
-                    <p class="text-sm text-gray-600">Dónde pierde dinero, tiempo y control.</p>
+                <div class="lg:col-span-3 text-left lg:text-right">
+                    <a href="/diagnostico/" class="inline-block bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-xs md:text-sm shadow-md transition-all">
+                        Realizar diagnóstico gratuito
+                    </a>
+                    <p class="text-[10px] text-gray-400 mt-1.5">Evaluación inicial · Gratuito · Sin compromiso</p>
                 </div>
-                <!-- Paso 2 -->
-                <div class="flex-1 text-center px-4 mb-8 md:mb-0">
-                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand text-brand rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-white">02</div>
-                    <h3 class="font-bold text-gray-900 mb-2">INTEGRAMOS</h3>
-                    <p class="text-sm text-gray-600">Personas + procesos + sistemas + información.</p>
-                </div>
-                <!-- Paso 3 -->
-                <div class="flex-1 text-center px-4 mb-8 md:mb-0">
-                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand text-brand rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-white">03</div>
-                    <h3 class="font-bold text-gray-900 mb-2">AUTOMATIZAMOS</h3>
-                    <p class="text-sm text-gray-600">Eliminamos tareas manuales y cuellos de botella.</p>
-                </div>
-                <!-- Paso 4 -->
-                <div class="flex-1 text-center px-4 mb-8 md:mb-0">
-                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand text-brand rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-white">04</div>
-                    <h3 class="font-bold text-gray-900 mb-2">MEDIMOS</h3>
-                    <p class="text-sm text-gray-600">KPIs + dashboards + alertas + trazabilidad.</p>
-                </div>
-                <!-- Paso 5 -->
-                <div class="flex-1 text-center px-4 mb-8 md:mb-0">
-                    <div class="w-24 h-24 mx-auto bg-white border-4 border-brand text-brand rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-white">05</div>
-                    <h3 class="font-bold text-gray-900 mb-2">PREDECIMOS</h3>
-                    <p class="text-sm text-gray-600">IA + tendencias + escenarios + demanda.</p>
-                </div>
-                <!-- Paso 6 -->
-                <div class="flex-1 text-center px-4">
-                    <div class="w-24 h-24 mx-auto bg-brand-accent text-brand rounded-full flex items-center justify-center text-3xl font-black mb-4 shadow-lg">06</div>
-                    <h3 class="font-bold text-gray-900 mb-2">TRANSFORMAMOS</h3>
-                    <p class="text-sm text-gray-600">De empresa reactiva a empresa inteligente.</p>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 13. DIAGNÓSTICO (IPA) -->
-    <section id="diagnostico" class="py-24 bg-brand-dark text-white">
+    <!-- 10. PLANES NyTEX: ALCANCE E INVERSIÓN -->
+    <section id="planes" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">ANTES DE VENDERLE TECNOLOGÍA,<br><span class="text-brand-accent">DIAGNOSTICAMOS SU EMPRESA.</span></h2>
-                <p class="text-xl text-gray-300">36 preguntas. 5 minutos. Un Roadmap personalizado.</p>
+            <div class="mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                    Planes NyTEX: alcance e inversión
+                </h2>
             </div>
-            
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto mb-12">
-                <h3 class="text-2xl font-bold mb-8 text-center">Al realizar la prueba descubrirá:</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
-                    <div class="flex items-start">
-                        <span class="text-brand-accent font-black text-xl mr-4">01</span>
-                        <p class="text-gray-300">Dónde está perdiendo dinero por ineficiencias.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                
+                <!-- Starter -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Starter</h3>
+                        <p class="text-xs text-gray-500 mb-3">Control transaccional</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-[#0284c7] block mb-1">7 módulos</span>
+                            <p class="text-[11px] text-gray-600 leading-snug">
+                                Ventas, Inventario, Compras, Contabilidad, CxC, CxP y Tesorería
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <div class="text-2xl font-black text-gray-900">$35 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                            <p class="text-[11px] text-gray-500 mt-1">Implementación: $0</p>
+                        </div>
                     </div>
-                    <div class="flex items-start">
-                        <span class="text-brand-accent font-black text-xl mr-4">02</span>
-                        <p class="text-gray-300">Qué procesos necesitan atención inmediata.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-brand-accent font-black text-xl mr-4">03</span>
-                        <p class="text-gray-300">Qué áreas debería automatizar primero.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-brand-accent font-black text-xl mr-4">04</span>
-                        <p class="text-gray-300">Qué <strong class="text-white">NO</strong> debería automatizar todavía.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-brand-accent font-black text-xl mr-4">05</span>
-                        <p class="text-gray-300">Qué tipo de tecnología necesita realmente.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-brand-accent font-black text-xl mr-4">06</span>
-                        <p class="text-gray-300">Cuál debe ser su prioridad de inversión (IPA™).</p>
+
+                    <div class="space-y-2">
+                        <button type="button" onclick="selectPhase(1)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                            Ver módulos en el ecosistema
+                        </button>
+                        <a href="/portal/?phase=1" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
+                            Consultar este plan
+                        </a>
                     </div>
                 </div>
+
+                <!-- Express (Destacado) -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-[#0284c7] shadow-lg flex flex-col justify-between hover:shadow-xl transition-all relative">
+                    <div class="absolute -top-3 right-6 bg-[#0284c7] text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-sm">
+                        Recomendado
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Express</h3>
+                        <p class="text-xs text-gray-500 mb-3">Productividad y flujo</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-[#0284c7] block mb-1">15 módulos</span>
+                            <p class="text-[11px] text-gray-600 leading-snug">
+                                Starter + CRM, WMS, Logística, Producción, RRHH, Nómina, Dashboards y Process Suite
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <div class="text-2xl font-black text-gray-900">$149 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                            <p class="text-[11px] text-gray-500 mt-1">Implementación: $1,150</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <button type="button" onclick="selectPhase(2)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                            Ver módulos en el ecosistema
+                        </button>
+                        <a href="/portal/?phase=2" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
+                            Consultar este plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Advanced -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Advanced</h3>
+                        <p class="text-xs text-gray-500 mb-3">Inteligencia y rentabilidad</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-[#0284c7] block mb-1">18 módulos</span>
+                            <p class="text-[11px] text-gray-600 leading-snug">
+                                Express + BI y Reportes, Big Data y Planeación
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <div class="text-2xl font-black text-gray-900">$299 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                            <p class="text-[11px] text-gray-500 mt-1">Implementación: $4,500</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <button type="button" onclick="selectPhase(3)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                            Ver módulos en el ecosistema
+                        </button>
+                        <a href="/portal/?phase=3" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
+                            Consultar este plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-0.5">Enterprise</h3>
+                        <p class="text-xs text-gray-500 mb-3">Anticipación y escala</p>
+                        
+                        <div class="mb-4">
+                            <span class="text-xs font-bold text-[#0284c7] block mb-1">24 módulos</span>
+                            <p class="text-[11px] text-gray-600 leading-snug">
+                                Advanced + IA, Modelos Predictivos, Minería de Datos, Process Mining, Business Partners y Configuración
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100 mb-6">
+                            <div class="text-2xl font-black text-gray-900">$499 <span class="text-xs text-gray-500 font-normal">/ mes</span></div>
+                            <p class="text-[11px] text-gray-500 mt-1">Implementación: A medida</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <button type="button" onclick="selectPhase(4)" class="w-full py-2 text-xs font-bold text-[#0284c7] hover:underline text-center">
+                            Ver módulos en el ecosistema
+                        </button>
+                        <a href="/portal/?phase=4" class="block w-full py-2.5 px-3 rounded-lg text-xs font-bold text-white bg-[#d94828] hover:bg-[#c23e1f] text-center transition-colors shadow-sm">
+                            Consultar este plan
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
             <div class="text-center">
-                <a href="/diagnostico/" class="inline-block bg-brand-accent text-brand font-black px-10 py-5 rounded-full shadow-2xl hover:scale-105 transition-transform text-xl mb-6">
-                    REALIZAR MI DIAGNÓSTICO GRATUITO
-                </a>
-                <p class="text-sm text-gray-400 font-medium">Gratuito · Confidencial · Sin compromiso · Resultado inmediato</p>
+                <p class="text-[11px] text-gray-500">
+                    Consulte usuarios, empresas, sucursales, soporte, capacitación y condiciones.
+                </p>
             </div>
         </div>
-    
-            <div class="mt-16 border-t border-white/10 pt-16 max-w-[95%] mx-auto pb-10">
-                <div class="text-center mb-10">
-                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-3">
-                        “Más control, menos pérdidas y mayor rentabilidad para su empresa.”
-                    </h3>
-                    <p class="text-base md:text-lg text-gray-300 font-normal max-w-4xl mx-auto leading-relaxed">
-                        Descubra nuestros ecosistemas tecnológicos diseñados para integrar sus procesos y fortalecer su gestión.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 text-left mt-8 mb-16">
+    </section>
+
+    <!-- 11. UNA SOLUCIÓN A SU MEDIDA -->
+    <section class="py-12 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#f8fafc] border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-8">
                 
-                <!-- 1. INSTRUCCIÓN DIAGNÓSTICO -->
-                <div class="bg-brand-accent/5 border border-brand-accent/30 rounded-xl p-5 flex flex-col relative overflow-hidden text-center justify-center items-center">
-                    <div class="absolute top-0 right-0 bg-brand-accent text-brand text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">Paso 1</div>
-                    <i class="fas fa-arrow-up text-3xl text-brand-accent mb-4 animate-bounce"></i>
-                    <h3 class="text-white font-bold text-lg mb-2 leading-tight">Inicie con el Diagnóstico</h3>
-                    <p class="text-gray-300 text-[11px] leading-relaxed mt-2">
-                        Haga clic en el <strong class="text-brand-accent">botón amarillo superior</strong>. 
-                        Nuestro algoritmo detectará sus fugas y calculará matemáticamente cuál de los siguientes paquetes es el antídoto exacto para su nivel de madurez.
+                <div class="w-full lg:w-3/4">
+                    <h3 class="text-lg sm:text-xl font-extrabold text-gray-900 mb-1">Una solución a su medida</h3>
+                    <p class="text-xs text-gray-500 mb-6">Seleccione sus aplicaciones para estimar su inversión.</p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-xs text-gray-700">
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Ventas
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Contabilidad
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Logística
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Servicio al Cliente
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Minería de Datos
+                        </label>
+                        
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Inventario
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> CxC
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> CRM
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> BI y Reportes
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> IA
+                        </label>
+
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Compras
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> CxP
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> RRHH
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Process Suite
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-black">
+                            <input type="checkbox" class="accent-[#0284c7] rounded"> Business Partners
+                        </label>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/4 text-center lg:text-right shrink-0">
+                    <a href="/portal/?phase=custom" class="inline-block w-full sm:w-auto bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-xs md:text-sm shadow-md transition-all text-center">
+                        Solicitar propuesta
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. RESULTADOS QUE SE PUEDEN DEMOSTRAR -->
+    <section id="exito" class="py-20 bg-[#f8fafc] border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                    Resultados que se pueden demostrar
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Caso 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-base mb-2">Retail y supermercados</h3>
+                        <p class="text-xs text-gray-500 mb-1 font-bold">Problema:</p>
+                        <p class="text-xs text-gray-600 mb-3">Dificultad para controlar inventarios en múltiples sucursales.</p>
+                        
+                        <p class="text-xs text-gray-500 mb-1 font-bold">Solución:</p>
+                        <p class="text-xs text-gray-600 mb-4">Implementación de NyTEX con Inventarios, Logística y BI.</p>
+                    </div>
+                    <div class="pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+                        <strong class="text-gray-700 block">Indicador de mejora:</strong>
+                        <span>Espacio para casos documentados.</span>
+                    </div>
+                </div>
+
+                <!-- Caso 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-base mb-2">Distribución mayorista</h3>
+                        <p class="text-xs text-gray-500 mb-1 font-bold">Problema:</p>
+                        <p class="text-xs text-gray-600 mb-3">Procesos manuales en ventas y compras.</p>
+                        
+                        <p class="text-xs text-gray-500 mb-1 font-bold">Solución:</p>
+                        <p class="text-xs text-gray-600 mb-4">Integración de CRM, compras, inventario y contabilidad.</p>
+                    </div>
+                    <div class="pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+                        <strong class="text-gray-700 block">Indicador de mejora:</strong>
+                        <span>Espacio para casos documentados.</span>
+                    </div>
+                </div>
+
+                <!-- Caso 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 text-[#0284c7] flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 text-base mb-2">Servicios profesionales</h3>
+                        <p class="text-xs text-gray-500 mb-1 font-bold">Problema:</p>
+                        <p class="text-xs text-gray-600 mb-3">Falta de visibilidad en la rentabilidad de proyectos.</p>
+                        
+                        <p class="text-xs text-gray-500 mb-1 font-bold">Solución:</p>
+                        <p class="text-xs text-gray-600 mb-4">Implementación de NyTEX con control de proyectos, finanzas y analítica.</p>
+                    </div>
+                    <div class="pt-3 border-t border-gray-100 text-[11px] text-gray-400">
+                        <strong class="text-gray-700 block">Indicador de mejora:</strong>
+                        <span>Espacio para casos documentados.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. CONSULTORÍA Y TECNOLOGÍA + METODOLOGÍA -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Izquierda: Consultoría NyT -->
+                <div class="lg:col-span-7">
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight mb-2">
+                        Consultoría y tecnología, con acompañamiento cercano
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-6">
+                        Consultores NyT integra estrategia empresarial, procesos y tecnología NyTEX.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2.5 text-xs font-semibold text-gray-700">
+                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                            <i class="fas fa-compass text-[#0284c7]"></i> Consultoría estratégica
+                        </span>
+                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                            <i class="fas fa-stethoscope text-[#0284c7]"></i> Diagnóstico operativo
+                        </span>
+                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                            <i class="fas fa-wrench text-[#0284c7]"></i> Implementación
+                        </span>
+                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                            <i class="fas fa-code text-[#0284c7]"></i> Desarrollo a medida
+                        </span>
+                        <span class="bg-gray-100 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200">
+                            <i class="fas fa-graduation-cap text-[#0284c7]"></i> Capacitación
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Derecha: Metodología -->
+                <div class="lg:col-span-5 bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                    <h4 class="text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wider">
+                        Metodología
+                    </h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                        BPMN · Balanced Scorecard · Lean Management · Six Sigma · ABC/ABM · Supply Chain · Modelo Delta · Calidad Total
                     </p>
                 </div>
 
-                <!-- 2. Fase 1 -->
-                <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/30 transition-all flex flex-col">
-                    <h3 class="text-white font-bold text-base mb-1">Fase 1: NyTEX Starter</h3>
-                    <p class="text-gray-400 text-[11px] mb-1">Control Transaccional</p>
-                    <div class="flex-grow mb-3">
-                        <p class="text-brand-accent text-[9px] font-bold mb-0.5">7 MÓDULOS:</p>
-                        <p class="text-gray-400 text-[9px] leading-tight">Ventas, Inventario, Compras, Contabilidad, CxC, CxP, Tesorería</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3 mt-auto">
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider">Implementación</p>
-                        <p class="text-white font-bold text-sm">$0 USD</p>
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
-                        <p class="text-brand-accent font-bold text-sm">$35 USD / mes</p>
-                        <a href="/portal/?phase=1" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
-                    </div>
-                </div>
-
-                <!-- 3. Fase 2 -->
-                <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/30 transition-all flex flex-col">
-                    <h3 class="text-white font-bold text-base mb-1">Fase 2: NyTEX Express</h3>
-                    <p class="text-gray-400 text-[11px] mb-1">Productividad y Flujo</p>
-                    <div class="flex-grow mb-3">
-                        <p class="text-brand-accent text-[9px] font-bold mb-0.5">15 MÓDULOS:</p>
-                        <p class="text-gray-400 text-[9px] leading-tight">Incluye Fase 1 + CRM, WMS, Logística, Producción, RRHH, Nómina, Dashboards, Process Suite</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3 mt-auto">
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider">Implementación</p>
-                        <p class="text-white font-bold text-sm">$1,500 USD</p>
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
-                        <p class="text-brand-accent font-bold text-sm">$149 USD / mes</p>
-                        <a href="/portal/?phase=2" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
-                    </div>
-                </div>
-
-                <!-- 4. Fase 3 -->
-                <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/30 transition-all flex flex-col">
-                    <h3 class="text-white font-bold text-base mb-1">Fase 3: NyTEX Advanced</h3>
-                    <p class="text-gray-400 text-[11px] mb-1">Inteligencia y Rentabilidad</p>
-                    <div class="flex-grow mb-3">
-                        <p class="text-brand-accent text-[9px] font-bold mb-0.5">18 MÓDULOS:</p>
-                        <p class="text-gray-400 text-[9px] leading-tight">Incluye Fase 2 + BI y Reportes, Big Data, Planeación</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3 mt-auto">
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider">Implementación</p>
-                        <p class="text-white font-bold text-sm">$4,500 USD</p>
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
-                        <p class="text-brand-accent font-bold text-sm">$299 USD / mes</p>
-                        <a href="/portal/?phase=3" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
-                    </div>
-                </div>
-
-                <!-- 5. Fase 4 -->
-                <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/30 transition-all flex flex-col">
-                    <h3 class="text-white font-bold text-base mb-1">Fase 4: NyTEX Enterprise</h3>
-                    <p class="text-gray-400 text-[11px] mb-1">Anticipación y Escala</p>
-                    <div class="flex-grow mb-3">
-                        <p class="text-brand-accent text-[9px] font-bold mb-0.5">24 MÓDULOS:</p>
-                        <p class="text-gray-400 text-[9px] leading-tight">Todo el Ecosistema: Fase 3 + IA, Modelos Predictivos, Minería de Datos, Process Mining, Business Partners, Configuración</p>
-                    </div>
-                    <div class="border-t border-white/10 pt-3 mt-auto">
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider">Implementación</p>
-                        <p class="text-white font-bold text-sm">Cotización a Medida</p>
-                        <p class="text-gray-400 text-[9px] font-bold uppercase tracking-wider mt-2">Licencia NyTEX</p>
-                        <p class="text-brand-accent font-bold text-sm">$499 USD / mes</p>
-                        <a href="/portal/?phase=4" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-4 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
-                    </div>
-                </div>
-
-                <!-- 6. A tu medida (Calculadora) -->
-                <div class="bg-white/5 border border-white/10 rounded-xl p-4 hover:border-white/30 transition-all flex flex-col h-full relative">
-                    <h3 class="text-white font-bold text-base mb-1">A su medida</h3>
-                    <p class="text-gray-400 text-[10px] mb-2 leading-tight">Escoja sus módulos:</p>
-                    <div class="flex-grow space-y-1 mb-2 overflow-y-auto max-h-[140px] pr-1 scrollbar-thin scrollbar-thumb-white/20">
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="0" data-lic="35"> Ventas</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="300" data-lic="30"> Inventario</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="400" data-lic="30"> Contabilidad</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="200" data-lic="20"> Cuentas por Cobrar (CxC)</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="200" data-lic="20"> Cuentas por Pagar (CxP)</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="400" data-lic="14"> Compras</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1000" data-lic="40"> Logística</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1000" data-lic="60"> CRM Básico</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1000" data-lic="50"> Recursos Humanos</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="800" data-lic="40"> Servicio al Cliente</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1200" data-lic="40"> BI / KPI y Analytics</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1000" data-lic="30"> Process Suite (BPM)</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1500" data-lic="30"> Minería de Datos</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="2000" data-lic="40"> Inteligencia Artificial</label>
-                        <label class="flex items-center text-[10px] text-gray-300 cursor-pointer hover:text-white"><input type="checkbox" class="mr-2 module-calc accent-brand-accent" data-imp="1000" data-lic="20"> Business Partners</label>
-                    </div>
-                    <div class="border-t border-white/10 pt-2 mt-auto">
-                        <div class="flex justify-between items-end">
-                            <div>
-                                <p class="text-gray-400 text-[8px] font-bold uppercase">Imp.</p>
-                                <p class="text-white font-bold text-[11px]" id="calc-imp">$0</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-gray-400 text-[8px] font-bold uppercase">Lic.</p>
-                                <p class="text-brand-accent font-bold text-[11px]" id="calc-lic">$0 / mes</p>
-                            </div>
-                        </div>
-                        <a href="/portal/?phase=custom" target="_blank" class="block w-full bg-white/10 hover:bg-brand-accent hover:text-brand text-white font-bold text-[10px] text-center py-2 rounded mt-3 transition-colors border border-white/20 hover:border-transparent">CONTRATAR EN PORTAL</a>
-                    </div>
-                </div>
             </div>
+        </div>
+    </section>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const checkboxes = document.querySelectorAll('.module-calc');
-                    const impDisplay = document.getElementById('calc-imp');
-                    const licDisplay = document.getElementById('calc-lic');
-                    
-                    checkboxes.forEach(cb => {
-                        cb.addEventListener('change', () => {
-                            let totalImp = 0;
-                            let totalLic = 0;
-                            checkboxes.forEach(box => {
-                                if (box.checked) {
-                                    totalImp += parseInt(box.getAttribute('data-imp'));
-                                    totalLic += parseInt(box.getAttribute('data-lic'));
-                                }
-                            });
-                            impDisplay.innerText = '$' + totalImp.toLocaleString() + ' USD';
-                            licDisplay.innerText = '$' + totalLic.toLocaleString() + ' / mes';
-                        });
-                    });
-                });
-            </script>
-            
-            
-            </div>
-        </section>
-
-    <!-- 15. CASOS DE ÉXITO -->
-    <section id="exito" class="py-24 bg-gray-50">
+    <!-- 14. PREGUNTAS FRECUENTES -->
+    <section class="py-16 bg-[#f8fafc] border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">RESULTADOS QUE HABLAN</h2>
-                <div class="w-24 h-1 bg-brand mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600">No inventamos cifras. Transformamos negocios reales.</p>
+            <div class="mb-8">
+                <h3 class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                    Preguntas frecuentes
+                </h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Caso 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-                    <span class="text-sm font-bold text-brand uppercase tracking-wider block mb-4">Retail / Supermercados</span>
-                    <h3 class="font-bold text-gray-900 mb-2">El Problema:</h3>
-                    <p class="text-gray-600 text-sm mb-4">Múltiples sucursales operando en silos, desabastecimiento frecuente y mermas ocultas en inventario.</p>
-                    <h3 class="font-bold text-gray-900 mb-2">La Solución NyT:</h3>
-                    <p class="text-gray-600 text-sm mb-6">Integración de ERP centralizado + WMS para logística en tiempo real.</p>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <strong class="text-brand block mb-1">Resultado:</strong>
-                        <p class="text-sm font-bold text-gray-800">−25% diferencias de inventario.</p>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-semibold text-gray-800">
+                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                    <span>¿Qué incluye la implementación?</span>
+                    <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
-                <!-- Caso 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-                    <span class="text-sm font-bold text-brand uppercase tracking-wider block mb-4">Distribución Mayorista</span>
-                    <h3 class="font-bold text-gray-900 mb-2">El Problema:</h3>
-                    <p class="text-gray-600 text-sm mb-4">Ciclo de ventas lento, cotizaciones perdidas y falta de seguimiento a prospectos B2B.</p>
-                    <h3 class="font-bold text-gray-900 mb-2">La Solución NyT:</h3>
-                    <p class="text-gray-600 text-sm mb-6">Implementación de CRM Corporativo y flujos BPM automatizados.</p>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <strong class="text-brand block mb-1">Resultado:</strong>
-                        <p class="text-sm font-bold text-gray-800">+18% incremento en cierres de ventas.</p>
-                    </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                    <span>¿Puedo integrar mis sistemas actuales?</span>
+                    <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
-                <!-- Caso 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-                    <span class="text-sm font-bold text-brand uppercase tracking-wider block mb-4">Servicios Profesionales</span>
-                    <h3 class="font-bold text-gray-900 mb-2">El Problema:</h3>
-                    <p class="text-gray-600 text-sm mb-4">Dirección trabajando a ciegas, reportes manuales en Excel entregados 15 días tarde.</p>
-                    <h3 class="font-bold text-gray-900 mb-2">La Solución NyT:</h3>
-                    <p class="text-gray-600 text-sm mb-6">Implementación de Business Intelligence (BI) y tableros directivos.</p>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <strong class="text-brand block mb-1">Resultado:</strong>
-                        <p class="text-sm font-bold text-gray-800">Decisiones 100% basadas en datos en tiempo real.</p>
-                    </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                    <span>¿Cómo se define el alcance de mi plan?</span>
+                    <span class="text-gray-400 font-bold text-base">+</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
+                    <span>¿Qué capacitación y soporte recibiré?</span>
+                    <span class="text-gray-400 font-bold text-base">+</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 16. POR QUÉ NYT -->
-    <section id="por-que" class="py-24 bg-white">
+    <!-- 15. PRE-FOOTER CTA BANNER -->
+    <section id="contacto" class="py-16 bg-[#0b0f19] text-white border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
-                    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">NO COMENZAMOS POR EL SOFTWARE.</h2>
-                    <p class="text-xl text-gray-600 mb-10 leading-relaxed">A diferencia de empresas que solo venden licencias, nuestro enfoque es consultivo y estratégico.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-gray-100 text-brand font-black rounded-full flex items-center justify-center mr-4 shrink-0">01</span>
-                            <p class="text-lg font-bold text-gray-800">Entendemos su estrategia</p>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-gray-100 text-brand font-black rounded-full flex items-center justify-center mr-4 shrink-0">02</span>
-                            <p class="text-lg font-bold text-gray-800">Diagnosticamos sus procesos</p>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-gray-100 text-brand font-black rounded-full flex items-center justify-center mr-4 shrink-0">03</span>
-                            <p class="text-lg font-bold text-gray-800">Identificamos las fugas operativas</p>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-brand-accent text-brand font-black rounded-full flex items-center justify-center mr-4 shrink-0">04</span>
-                            <p class="text-lg font-bold text-gray-800">Priorizamos la transformación (IPA™)</p>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-brand text-white font-black rounded-full flex items-center justify-center mr-4 shrink-0">05</span>
-                            <p class="text-lg font-bold text-gray-800">Seleccionamos la tecnología exacta</p>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-gray-100 text-brand font-black rounded-full flex items-center justify-center mr-4 shrink-0">06</span>
-                            <p class="text-lg font-bold text-gray-800">Implementamos con éxito</p>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="w-12 h-12 bg-gray-100 text-brand font-black rounded-full flex items-center justify-center mr-4 shrink-0">07</span>
-                            <p class="text-lg font-bold text-gray-800">Medimos resultados</p>
-                        </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+                        Conversemos sobre el siguiente paso de su empresa.
+                    </h3>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="/diagnostico/" class="bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-6 py-3 rounded-lg text-xs md:text-sm shadow-md transition-all">
+                        Solicitar demostración
+                    </a>
+                    <a href="mailto:contacto@consultoresnyt.com" class="bg-[#151c2e] hover:bg-[#1f293b] text-white border border-gray-700 font-bold px-6 py-3 rounded-lg text-xs md:text-sm transition-all">
+                        Hablar con un asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. FOOTER -->
+    <footer class="bg-white text-gray-500 py-12 border-t border-gray-200 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <strong class="text-gray-900 block font-black text-sm mb-1">Consultores NyT</strong>
+                    <p class="text-gray-500">Estrategia + Tecnología</p>
+                    <p class="text-gray-400 mt-4">&copy; 2026 Consultores NyT</p>
+                </div>
+
+                <div>
+                    <strong class="text-gray-900 block font-bold mb-2">Soluciones y servicios</strong>
+                    <div class="grid grid-cols-2 gap-2 text-gray-600">
+                        <a href="#ecosistema" class="hover:text-black">NyTEX ERP</a>
+                        <a href="#ecosistema" class="hover:text-black">BI y Analítica</a>
+                        <a href="#ecosistema" class="hover:text-black">NyTEX CRM</a>
+                        <a href="#ecosistema" class="hover:text-black">Inteligencia artificial</a>
+                        <a href="#ecosistema" class="hover:text-black">NyTEX BPM</a>
+                        <a href="#ecosistema" class="hover:text-black">Ecosistema</a>
                     </div>
                 </div>
-                <div class="bg-brand p-12 rounded-3xl text-center shadow-2xl relative">
-                    <i class="fas fa-quote-left text-6xl text-brand-accent/20 absolute top-8 left-8"></i>
-                    <h3 class="text-3xl font-bold text-white leading-relaxed relative z-10 mt-8 mb-8">
-                        "La tecnología es la herramienta. La transformación es el objetivo."
-                    </h3>
-                    <div class="w-16 h-1 bg-brand-accent mx-auto"></div>
+
+                <div class="md:text-right">
+                    <strong class="text-gray-900 block font-bold mb-2">Contacto</strong>
+                    <a href="mailto:contacto@consultoresnyt.com" class="text-gray-600 hover:text-black block mb-4">
+                        <i class="fas fa-envelope mr-1.5"></i> contacto@consultoresnyt.com
+                    </a>
+                    <p class="text-[10px] text-gray-400">Propuesta visual · Pantallas ilustrativas</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 12. METODOLOGÍAS -->
-    <section class="py-16 bg-gray-100 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Metodologías que respaldan nuestras soluciones</h3>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">BPMN</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">Balanced Scorecard</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">Lean Management</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">Six Sigma</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">ABC / ABM</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">Supply Chain Management</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">Modelo Delta</span>
-                <span class="bg-white text-gray-700 px-4 py-2 rounded-full font-semibold text-sm shadow-sm border border-gray-200">Total Quality Management</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 17. CTA FINAL -->
-    <section id="contacto" class="py-24 bg-brand text-white text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Toda transformación comienza con un diagnóstico.</h2>
-            <p class="text-xl text-gray-300 mb-12 leading-relaxed">
-                Descubra dónde su empresa pierde eficiencia, control y rentabilidad, y reciba un Roadmap de prioridades para iniciar su transformación.
-            </p>
-            
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-
-                <a href="/diagnostico/" class="bg-brand-accent text-brand font-bold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all text-lg">
-                    DIAGNOSTICAR MI EMPRESA GRATIS
-                </a>
-                <a href="mailto:contacto@consultoresnyt.com" class="bg-white/10 text-white font-bold px-8 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-all text-lg">
-                    SOLICITAR UNA DEMOSTRACIÓN
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 18. FOOTER -->
-    <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div class="col-span-1 md:col-span-2">
-                <div class="flex items-center space-x-3 mb-6">
-                    <img src="logo.png" alt="CNyT Consultores" class="h-10 object-contain grayscale brightness-200 opacity-80">
-                </div>
-                <p class="text-lg font-bold text-white mb-2">CONSULTORES NyT</p>
-                <p class="text-sm mb-6">Ingeniería de Negocios + Transformación Digital</p>
-                <p class="text-xs text-gray-500">Soluciones empresariales para Latinoamérica.</p>
-            </div>
-            
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Soluciones y Servicios</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#ecosistema" class="hover:text-brand-accent transition-colors">ERP · CRM · BPM · BI · IA</a></li>
-                    <li><span class="text-gray-600 block mt-2 mb-1">Servicios:</span></li>
-                    <li>Consultoría Estratégica</li>
-                    <li>Diagnóstico Operativo</li>
-                    <li>Implementación de Software</li>
-                    <li>Desarrollo a Medida</li>
-                    <li>Capacitación Corporativa</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contacto</h4>
-                <ul class="space-y-4 text-sm">
-                    <li>
-                        <a href="mailto:contacto@consultoresnyt.com" class="hover:text-brand-accent transition-colors flex items-center">
-                            <i class="fas fa-envelope w-6"></i> contacto@consultoresnyt.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-brand-accent transition-colors flex items-center">
-                            <i class="fab fa-whatsapp w-6 text-lg"></i> +503 7000-0000
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:text-brand-accent transition-colors flex items-center">
-                            <i class="fab fa-linkedin w-6 text-lg"></i> Consultores NyT
-                        </a>
-                    </li>
-                    <li class="pt-4 mt-4 border-t border-gray-800 text-xs">
-                        &copy; 2026 Consultores NyT. Todos los derechos reservados.
-                    </li>
-                </ul>
             </div>
         </div>
     </footer>
-
 
     <!-- MODAL DE REGISTRO PRE-DIAGNÓSTICO -->
     <div id="leadModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
@@ -1535,29 +1496,29 @@
             <button onclick="closeLeadModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
                 <i class="fas fa-times text-xl"></i>
             </button>
-            <div class="bg-brand text-white p-6 text-center">
+            <div class="bg-[#0b0f19] text-white p-6 text-center border-b border-gray-800">
                 <h2 class="text-2xl font-bold mb-1">Registro de Diagnóstico</h2>
-                <p class="text-brand-accent text-sm">Complete sus datos para iniciar la evaluación gratuita</p>
+                <p class="text-[#38bdf8] text-xs">Complete sus datos para iniciar la evaluación gratuita</p>
             </div>
             <div class="p-8">
                 <form id="leadForm" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Nombre de la empresa *</label>
-                        <input required type="text" id="lead_company" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Ej. Corporación XYZ" />
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Nombre de la empresa *</label>
+                        <input required type="text" id="lead_company" class="w-full p-2.5 text-xs border border-gray-300 rounded focus:ring-2 focus:ring-[#0284c7] focus:border-[#0284c7] outline-none" placeholder="Ej. Corporación XYZ" />
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Correo electrónico *</label>
-                        <input required type="email" id="lead_email" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="ejemplo@empresa.com" />
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Correo electrónico *</label>
+                        <input required type="email" id="lead_email" class="w-full p-2.5 text-xs border border-gray-300 rounded focus:ring-2 focus:ring-[#0284c7] focus:border-[#0284c7] outline-none" placeholder="ejemplo@empresa.com" />
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Nombre de quien realiza la prueba *</label>
-                        <input required type="text" id="lead_name" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Su nombre completo" />
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Nombre de quien realiza la prueba *</label>
+                        <input required type="text" id="lead_name" class="w-full p-2.5 text-xs border border-gray-300 rounded focus:ring-2 focus:ring-[#0284c7] focus:border-[#0284c7] outline-none" placeholder="Su nombre completo" />
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Puesto (Rol) *</label>
-                        <input required type="text" id="lead_role" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Ej. Director de Operaciones" />
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Puesto (Rol) *</label>
+                        <input required type="text" id="lead_role" class="w-full p-2.5 text-xs border border-gray-300 rounded focus:ring-2 focus:ring-[#0284c7] focus:border-[#0284c7] outline-none" placeholder="Ej. Director de Operaciones" />
                     </div>
-                    <button type="submit" class="w-full bg-brand-accent hover:bg-yellow-400 text-brand font-bold py-4 px-4 rounded shadow-lg mt-6 transition-all hover:scale-[1.02]">
+                    <button type="submit" class="w-full bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold py-3.5 px-4 rounded-lg shadow-md mt-6 transition-all text-xs tracking-wider uppercase">
                         COMENZAR EVALUACIÓN <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                 </form>
@@ -1565,16 +1526,205 @@
         </div>
     </div>
 
+    <!-- SCRIPT DE INTERACCIÓN DEL ECOSISTEMA Y NAVEGACIÓN -->
     <script>
-        // Modal Logic
+        // Mapeo de Fases y Módulos
+        const PHASE_CONFIG = {
+            1: {
+                name: "Starter",
+                count: 7,
+                modules: ["ventas", "inventario", "compras", "contabilidad", "cxc", "cxp", "tesoreria"]
+            },
+            2: {
+                name: "Express",
+                count: 15,
+                modules: [
+                    "ventas", "crm", "inventario", "wms", "logistica", "compras", "produccion",
+                    "contabilidad", "cxc", "cxp", "tesoreria", "rrhh", "nomina", "dashboards", "processsuite"
+                ]
+            },
+            3: {
+                name: "Advanced",
+                count: 18,
+                modules: [
+                    "ventas", "crm", "inventario", "wms", "logistica", "compras", "produccion",
+                    "contabilidad", "cxc", "cxp", "tesoreria", "rrhh", "nomina", "dashboards", "processsuite",
+                    "biyreportes", "bigdata", "planeacion"
+                ]
+            },
+            4: {
+                name: "Enterprise",
+                count: 24,
+                modules: [
+                    "ventas", "crm", "inventario", "wms", "logistica", "compras", "produccion",
+                    "contabilidad", "cxc", "cxp", "tesoreria", "rrhh", "nomina", "dashboards", "processsuite",
+                    "biyreportes", "bigdata", "planeacion",
+                    "ia", "predictivos", "mineriadatos", "processmining", "businesspartners", "configuracion"
+                ]
+            }
+        };
+
+        const AREAS_MAP = {
+            1: { name: "Dirección Comercial", modules: ["crm", "ventas"] },
+            2: { name: "Cadena de Suministro", modules: ["compras", "inventario", "wms", "logistica"] },
+            3: { name: "Operaciones y Producción", modules: ["produccion"] },
+            4: { name: "Administración y Finanzas", modules: ["cxc", "cxp", "tesoreria", "contabilidad"] },
+            5: { name: "Talento Humano", modules: ["rrhh", "nomina"] },
+            6: { name: "Inteligencia y Analítica", modules: ["biyreportes", "bigdata", "dashboards", "mineriadatos", "predictivos", "ia", "planeacion"] },
+            7: { name: "Gobernanza y TI", modules: ["businesspartners", "configuracion", "processsuite", "processmining"] }
+        };
+
+        // Estado inicial: FASE 2 (EXPRESS) ACTIVA POR DEFECTO
+        let activeSelectedPhase = 2;
+        const selectedAreas = new Set();
+
+        function selectPhase(phaseNum) {
+            activeSelectedPhase = phaseNum;
+            selectedAreas.clear();
+            updateTabsUI();
+            updateDiagramHighlight();
+            updateAreasUI();
+
+            const eco = document.getElementById("ecosistema");
+            if (eco && window.scrollY < eco.offsetTop - 300) {
+                eco.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        function toggleArea(areaId) {
+            if (selectedAreas.has(areaId)) {
+                selectedAreas.delete(areaId);
+            } else {
+                selectedAreas.add(areaId);
+            }
+            updateAreasUI();
+            updateDiagramHighlight();
+        }
+
+        function updateTabsUI() {
+            for (let p = 1; p <= 4; p++) {
+                const tab = document.getElementById("tabPhase-" + p);
+                if (!tab) continue;
+                if (p === activeSelectedPhase) {
+                    tab.className = "phase-tab py-3 px-4 rounded-xl border border-[#0284c7] bg-[#0284c7] text-white text-center transition-all cursor-pointer shadow-lg shadow-blue-500/20";
+                    tab.querySelector("span:first-child").className = "block text-sm font-black text-white";
+                    tab.querySelector("span:last-child").className = "block text-[11px] text-blue-100 font-medium";
+                } else {
+                    tab.className = "phase-tab py-3 px-4 rounded-xl border border-gray-800 bg-[#111827] hover:bg-gray-800/80 text-center transition-all cursor-pointer";
+                    tab.querySelector("span:first-child").className = "block text-sm font-bold text-gray-200";
+                    tab.querySelector("span:last-child").className = "block text-[11px] text-gray-400";
+                }
+            }
+
+            const cfg = PHASE_CONFIG[activeSelectedPhase];
+            const nameEl = document.getElementById("statusPhaseName");
+            const countEl = document.getElementById("statusModuleCount");
+            const btnSidebar = document.getElementById("btnSidebarPhase");
+            
+            if (nameEl) nameEl.textContent = cfg.name;
+            if (countEl) countEl.textContent = cfg.count;
+            if (btnSidebar) {
+                btnSidebar.textContent = "Consultar NyTEX " + cfg.name;
+                btnSidebar.href = "/portal/?phase=" + activeSelectedPhase;
+            }
+        }
+
+        function updateAreasUI() {
+            for (let a = 1; a <= 7; a++) {
+                const card = document.getElementById("areaCard-" + a);
+                const badge = document.getElementById("areaBadge-" + a);
+                if (!card || !badge) continue;
+
+                if (selectedAreas.has(a)) {
+                    card.classList.add("border-[#0284c7]", "bg-[#1e3a8a]/40");
+                    badge.classList.remove("hidden");
+                } else {
+                    card.classList.remove("border-[#0284c7]", "bg-[#1e3a8a]/40");
+                    badge.classList.add("hidden");
+                }
+            }
+
+            const filterBadge = document.getElementById("activeFilterBadge");
+            if (filterBadge) {
+                if (selectedAreas.size > 0) {
+                    filterBadge.classList.remove("hidden");
+                    filterBadge.textContent = selectedAreas.size + " área" + (selectedAreas.size > 1 ? "s" : "") + " activa" + (selectedAreas.size > 1 ? "s" : "");
+                } else {
+                    filterBadge.classList.add("hidden");
+                }
+            }
+        }
+
+        function updateDiagramHighlight() {
+            const svg = document.querySelector("#diagramWrapper svg");
+            if (!svg) return;
+
+            const nodes = svg.querySelectorAll("g.node");
+            const hasAreaFilter = selectedAreas.size > 0;
+            const phaseModules = PHASE_CONFIG[activeSelectedPhase].modules;
+
+            nodes.forEach(g => {
+                const id = (g.id || "").replace("node-", "").toLowerCase();
+                let isMatch = false;
+
+                if (hasAreaFilter) {
+                    for (const a of selectedAreas) {
+                        if (AREAS_MAP[a].modules.includes(id)) {
+                            isMatch = true;
+                            break;
+                        }
+                    }
+                } else {
+                    isMatch = phaseModules.includes(id);
+                }
+
+                const rect = g.querySelector("rect");
+                if (isMatch) {
+                    g.style.opacity = "1";
+                    g.style.filter = "drop-shadow(0 0 10px #0284c7) drop-shadow(0 0 20px #38bdf8)";
+                    g.style.transition = "all 0.3s ease";
+                    if (rect) {
+                        rect.style.stroke = "#38bdf8";
+                        rect.style.strokeWidth = "3px";
+                    }
+                } else {
+                    g.style.opacity = "0.22";
+                    g.style.filter = "grayscale(85%)";
+                    g.style.transition = "all 0.3s ease";
+                    if (rect) {
+                        rect.style.stroke = "#334155";
+                        rect.style.strokeWidth = "1px";
+                    }
+                }
+            });
+        }
+
+        // Control de Zoom
+        let currentDiagramZoom = 1;
+        function adjustDiagramZoom(delta) {
+            currentDiagramZoom = Math.max(0.6, Math.min(2.2, currentDiagramZoom + delta));
+            applyDiagramZoom();
+        }
+        function resetDiagramZoom() {
+            currentDiagramZoom = 1;
+            applyDiagramZoom();
+        }
+        function applyDiagramZoom() {
+            const svg = document.querySelector("#diagramWrapper svg");
+            if (svg) {
+                svg.style.transform = "scale(" + currentDiagramZoom + ")";
+                svg.style.transformOrigin = "top center";
+            }
+        }
+
+        // Modal de Captura Lead
         const modal = document.getElementById("leadModal");
         const modalContent = document.getElementById("leadModalContent");
         const leadForm = document.getElementById("leadForm");
 
         function openLeadModal(e) {
-            if(e) e.preventDefault();
+            if (e) e.preventDefault();
             modal.classList.remove("hidden");
-            // small delay to allow display:block to apply before animating opacity
             setTimeout(() => {
                 modal.classList.remove("opacity-0");
                 modalContent.classList.remove("scale-95");
@@ -1589,8 +1739,7 @@
             }, 300);
         }
 
-        // Intercept all links going to /diagnostico/
-        document.querySelectorAll("a[href="/diagnostico/"]").forEach(link => {
+        document.querySelectorAll('a[href="/diagnostico/"]').forEach(link => {
             link.addEventListener("click", openLeadModal);
         });
 
@@ -1605,7 +1754,13 @@
             localStorage.setItem("nyt_user_info", JSON.stringify(data));
             window.location.href = "/diagnostico/";
         });
-    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() { mermaid.initialize({ startOnLoad: true, theme: "dark", securityLevel: "loose", flowchart: { curve: "basis" } }); });</script></body>
+        // Inicializar Estado en carga del DOM
+        document.addEventListener("DOMContentLoaded", () => {
+            updateTabsUI();
+            updateDiagramHighlight();
+            updateAreasUI();
+        });
+    </script>
+</body>
 </html>
