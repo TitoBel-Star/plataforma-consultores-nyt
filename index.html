@@ -180,10 +180,10 @@
             <!-- Grilla de los 4 Niveles -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
                 <!-- Nivel 1 -->
-                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div id="cardPhase-1" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-brand font-black text-xs tracking-widest uppercase bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">NIVEL 1</span>
+                            <span class="text-brand font-black text-xs tracking-wider uppercase bg-purple-50 px-3 py-1.5 rounded-full border border-purple-200">Fase 1: NyTEX Starter</span>
                             <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Eficiencia Operacional</span>
                         </div>
                         <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">CONTROL TRANSACCIONAL</h3>
@@ -201,17 +201,18 @@
                         </div>
                     </div>
 
-                    <div class="bg-purple-50/60 p-4 rounded-xl border border-purple-100 mt-2">
-                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
-                        <p class="text-xs text-gray-700 leading-snug">Una empresa con control estricto de sus recursos, inventarios exactos y cero fugas.</p>
+                    <div class="mt-4">
+                        <button type="button" onclick="selectPhase(1)" id="btnPhase-1" class="w-full py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold transition-all border border-[#2A114B] bg-[#2A114B] text-white hover:bg-purple-900 shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
+                            Ver aplicaciones ↓
+                        </button>
                     </div>
                 </div>
 
                 <!-- Nivel 2 -->
-                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div id="cardPhase-2" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-brand font-black text-xs tracking-widest uppercase bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">NIVEL 2</span>
+                            <span class="text-brand font-black text-xs tracking-wider uppercase bg-purple-50 px-3 py-1.5 rounded-full border border-purple-200">Fase 2: NyTEX Express</span>
                             <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Eficiencia Operacional</span>
                         </div>
                         <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">PRODUCTIVIDAD Y FLUJO</h3>
@@ -229,17 +230,18 @@
                         </div>
                     </div>
 
-                    <div class="bg-purple-50/60 p-4 rounded-xl border border-purple-100 mt-2">
-                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
-                        <p class="text-xs text-gray-700 leading-snug">Operación ágil, tiempos de respuesta mínimos y seguimiento comercial sistemático.</p>
+                    <div class="mt-4">
+                        <button type="button" onclick="selectPhase(2)" id="btnPhase-2" class="w-full py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold transition-all border border-[#2A114B] bg-[#2A114B] text-white hover:bg-purple-900 shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
+                            Ver aplicaciones ↓
+                        </button>
                     </div>
                 </div>
 
                 <!-- Nivel 3 -->
-                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div id="cardPhase-3" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-amber-800 font-black text-xs tracking-widest uppercase bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">NIVEL 3</span>
+                            <span class="text-amber-800 font-black text-xs tracking-wider uppercase bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">Fase 3: NyTEX Advanced</span>
                             <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Dirección Estratégica</span>
                         </div>
                         <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">INTELIGENCIA Y RENTABILIDAD</h3>
@@ -257,17 +259,18 @@
                         </div>
                     </div>
 
-                    <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200 mt-2">
-                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
-                        <p class="text-xs text-gray-700 leading-snug">Visibilidad ejecutiva 360° en tiempo real y decisiones estratégicas 100% basadas en datos.</p>
+                    <div class="mt-4">
+                        <button type="button" onclick="selectPhase(3)" id="btnPhase-3" class="w-full py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold transition-all border border-amber-400 bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 hover:from-amber-500 hover:to-yellow-500 shadow-md flex items-center justify-center gap-1.5 cursor-pointer font-black">
+                            Ver aplicaciones ↓
+                        </button>
                     </div>
                 </div>
 
                 <!-- Nivel 4 -->
-                <div class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div id="cardPhase-4" class="bg-white p-7 rounded-3xl shadow-xl border-t-8 border-brand-accent flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-amber-800 font-black text-xs tracking-widest uppercase bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">NIVEL 4</span>
+                            <span class="text-amber-800 font-black text-xs tracking-wider uppercase bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">Fase 4: NyTEX Enterprise</span>
                             <span class="lg:hidden text-[10px] font-bold tracking-wider uppercase text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Dirección Estratégica</span>
                         </div>
                         <h3 class="text-xl font-extrabold text-gray-900 mb-2 leading-tight">ANTICIPACIÓN Y ESCALA</h3>
@@ -285,9 +288,10 @@
                         </div>
                     </div>
 
-                    <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200 mt-2">
-                        <strong class="text-xs font-bold text-gray-900 block mb-1">Resultado:</strong>
-                        <p class="text-xs text-gray-700 leading-snug">Una empresa inteligente, autónoma y predictiva capaz de anticipar y liderar su industria.</p>
+                    <div class="mt-4">
+                        <button type="button" onclick="selectPhase(4)" id="btnPhase-4" class="w-full py-2.5 px-4 rounded-xl text-xs md:text-sm font-bold transition-all border border-amber-400 bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 hover:from-amber-500 hover:to-yellow-500 shadow-md flex items-center justify-center gap-1.5 cursor-pointer font-black">
+                            Ver aplicaciones ↓
+                        </button>
                     </div>
                 </div>
             </div>
@@ -783,7 +787,61 @@
                         }
                     };
 
+                    const PHASE_CONFIG = {
+                        1: {
+                            name: "Fase 1: NyTEX Starter",
+                            modules: ["ventas", "inventario", "compras", "contabilidad", "cxc", "cxp", "tesorería", "cobranza", "deudas", "efectivo"]
+                        },
+                        2: {
+                            name: "Fase 2: NyTEX Express",
+                            modules: ["ventas", "crm", "inventario", "wms", "logística", "compras", "producción", "contabilidad", "cxc", "cxp", "tesorería", "rrhh", "nómina", "dashboards", "process suite"]
+                        },
+                        3: {
+                            name: "Fase 3: NyTEX Advanced",
+                            modules: ["ventas", "crm", "inventario", "wms", "logística", "compras", "producción", "contabilidad", "cxc", "cxp", "tesorería", "rrhh", "nómina", "dashboards", "process suite", "bi y reportes", "nytex bi", "big data", "planeación"]
+                        },
+                        4: {
+                            name: "Fase 4: NyTEX Enterprise",
+                            modules: [] // 100% de los 24 módulos
+                        }
+                    };
+
+                    let activeSelectedPhase = null;
+
+                    function selectPhase(phaseNum) {
+                        if (activeSelectedPhase === phaseNum) {
+                            activeSelectedPhase = null;
+                        } else {
+                            activeSelectedPhase = phaseNum;
+                            selectedAreas.clear();
+                        }
+                        updateEcosistemaHighlight();
+                        updatePhaseCardsUI();
+
+                        if (activeSelectedPhase !== null) {
+                            const eco = document.getElementById("ecosistema");
+                            if (eco) eco.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }
+
+                    function updatePhaseCardsUI() {
+                        for (let p = 1; p <= 4; p++) {
+                            const card = document.getElementById("cardPhase-" + p);
+                            const btn = document.getElementById("btnPhase-" + p);
+                            if (!btn) continue;
+                            if (activeSelectedPhase === p) {
+                                btn.innerHTML = "✨ Aplicaciones activas ↓";
+                                if (card) card.classList.add("ring-4", "ring-amber-400", "shadow-[0_0_30px_rgba(245,158,11,0.5)]", "scale-[1.02]");
+                            } else {
+                                btn.innerHTML = "Ver aplicaciones ↓";
+                                if (card) card.classList.remove("ring-4", "ring-amber-400", "shadow-[0_0_30px_rgba(245,158,11,0.5)]", "scale-[1.02]");
+                            }
+                        }
+                    }
+
                     function toggleArea(areaId) {
+                        activeSelectedPhase = null;
+                        updatePhaseCardsUI();
                         if (selectedAreas.has(areaId)) {
                             selectedAreas.delete(areaId);
                         } else {
@@ -793,7 +851,9 @@
                     }
 
                     function clearAllAreas() {
+                        activeSelectedPhase = null;
                         selectedAreas.clear();
+                        updatePhaseCardsUI();
                         updateEcosistemaHighlight();
                     }
 
@@ -801,7 +861,9 @@
                         const svg = document.querySelector("#diagramWrapper .mermaid svg, #diagramWrapper svg");
                         const nodeElements = svg ? svg.querySelectorAll("g.node") : [];
 
-                        const hasFilter = selectedAreas.size > 0;
+                        const hasPhaseFilter = activeSelectedPhase !== null;
+                        const hasAreaFilter = selectedAreas.size > 0;
+                        const hasFilter = hasPhaseFilter || hasAreaFilter;
                         let lightedNodes = 0;
 
                         if (nodeElements.length > 0) {
@@ -809,7 +871,14 @@
                                 const text = (g.textContent || "").toLowerCase();
                                 let matches = false;
 
-                                if (hasFilter) {
+                                if (hasPhaseFilter) {
+                                    if (activeSelectedPhase === 4) {
+                                        matches = true;
+                                    } else {
+                                        const cfg = PHASE_CONFIG[activeSelectedPhase];
+                                        matches = cfg.modules.some(m => text.includes(m));
+                                    }
+                                } else if (hasAreaFilter) {
                                     for (const areaId of selectedAreas) {
                                         const area = AREAS_MAP[areaId];
                                         if (text.includes("área " + area.areaNum) || area.modules.some(m => text.includes(m))) {
@@ -875,7 +944,7 @@
                         const countSpan = document.getElementById("countSelectedAreas");
                         if (btnClear && countSpan) {
                             if (hasFilter) {
-                                countSpan.textContent = selectedAreas.size;
+                                countSpan.textContent = hasPhaseFilter ? lightedNodes : selectedAreas.size;
                                 btnClear.classList.remove("hidden");
                             } else {
                                 btnClear.classList.add("hidden");
@@ -886,7 +955,10 @@
                         const notif = document.getElementById("ecosystemNotification");
                         const notifText = document.getElementById("ecosystemNotificationText");
                         if (notif && notifText) {
-                            if (hasFilter) {
+                            if (hasPhaseFilter) {
+                                notif.classList.remove("hidden");
+                                notifText.textContent = "⭐ Mostrando en dorado las aplicaciones de: " + PHASE_CONFIG[activeSelectedPhase].name + " (" + lightedNodes + " aplicaciones iluminadas)";
+                            } else if (hasAreaFilter) {
                                 notif.classList.remove("hidden");
                                 notifText.textContent = "✨ Alumbrando en dorado " + lightedNodes + " aplicaciones (" + selectedAreas.size + " área" + (selectedAreas.size > 1 ? "s" : "") + " seleccionada" + (selectedAreas.size > 1 ? "s" : "") + ")";
                             } else {
