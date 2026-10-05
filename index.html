@@ -522,12 +522,14 @@
 
                 <div class="lg:col-span-7 flex flex-col sm:flex-row items-center gap-6">
                     <!-- Video / Laptop Preview Mockup con botón Play -->
-                    <div class="relative w-full sm:w-3/5 bg-gradient-to-tr from-[#0a0f1d] via-[#111827] to-[#1f2937] rounded-2xl p-5 border border-gray-700/80 shadow-xl flex flex-col justify-center items-center min-h-[220px]">
-                        <div class="w-16 h-16 rounded-full bg-[#0284c7] hover:bg-blue-500 text-white flex items-center justify-center text-xl shadow-lg cursor-pointer transition-transform hover:scale-110 mb-3">
+                    <div onclick="openNytexVideoModal()" class="relative w-full sm:w-3/5 bg-gradient-to-tr from-[#0a0f1d] via-[#111827] to-[#1f2937] rounded-2xl p-5 border border-gray-700/80 shadow-xl flex flex-col justify-center items-center min-h-[220px] cursor-pointer group hover:border-[#0284c7] transition-all">
+                        <div class="w-16 h-16 rounded-full bg-[#0284c7] group-hover:bg-blue-500 text-white flex items-center justify-center text-xl shadow-lg cursor-pointer transition-transform group-hover:scale-110 mb-3">
                             <i class="fas fa-play ml-1"></i>
                         </div>
-                        <h4 class="text-white font-extrabold text-base tracking-tight">NyTEX ERP</h4>
-                        <p class="text-[11px] text-gray-400">Ver recorrido en 3 minutos</p>
+                        <h4 class="text-white font-extrabold text-base tracking-tight group-hover:text-blue-400 transition-colors">NyTEX ERP</h4>
+                        <p class="text-[11px] text-gray-400 flex items-center gap-1.5 mt-0.5">
+                            <i class="fas fa-circle-play text-[#0284c7]"></i> Ver recorrido en 3 minutos
+                        </p>
                     </div>
 
                     <!-- 4 Bullets con checkmarks azules -->
@@ -1524,80 +1526,186 @@
         </div>
     </section>
 
-    <!-- 13. CONSULTORÍA Y TECNOLOGÍA + METODOLOGÍA -->
-    <section id="nosotros" class="py-20 bg-[#f8fafc] border-t border-gray-200">
+    <!-- 13. CÓMO TRABAJAMOS CON USTED & TECNOLOGÍA NYTEX & PREGUNTAS FRECUENTES -->
+    <section id="nosotros" class="py-16 sm:py-20 bg-[#f8fafc] border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                
-                <!-- Izquierda: Consultoría NyT -->
-                <div class="lg:col-span-7">
-                    <h3 class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight mb-2">
-                        Consultoría y tecnología, con acompañamiento cercano
-                    </h3>
-                    <p class="text-xs sm:text-sm text-gray-600 mb-6">
-                        Consultores NyT integra estrategia empresarial, procesos y tecnología NyTEX.
-                    </p>
+            
+            <!-- BLOQUE 1: CÓMO TRABAJAMOS CON USTED -->
+            <div class="mb-10 sm:mb-12">
+                <h3 class="text-xl sm:text-2xl font-extrabold text-[#0a192f] tracking-tight">
+                    Cómo trabajamos con usted
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1 font-normal">
+                    Un proceso claro y colaborativo para lograr resultados.
+                </p>
 
-                    <div class="flex flex-wrap gap-2.5 text-xs font-semibold text-gray-700">
-                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
-                            <i class="fas fa-compass text-[#0284c7]"></i> Consultoría estratégica
-                        </span>
-                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
-                            <i class="fas fa-stethoscope text-[#0284c7]"></i> Diagnóstico operativo
-                        </span>
-                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
-                            <i class="fas fa-wrench text-[#0284c7]"></i> Implementación
-                        </span>
-                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
-                            <i class="fas fa-code text-[#0284c7]"></i> Desarrollo a medida
-                        </span>
-                        <span class="bg-white px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-200 shadow-sm">
-                            <i class="fas fa-graduation-cap text-[#0284c7]"></i> Capacitación
-                        </span>
+                <!-- 5 Pasos Horizontales en tarjeta blanca -->
+                <div class="mt-5 bg-white rounded-2xl p-5 sm:p-7 border border-gray-200 shadow-sm">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-3 items-center">
+                        
+                        <!-- Paso 1 -->
+                        <div class="flex items-center justify-between gap-2.5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-[#0066cc] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                                    1
+                                </div>
+                                <div class="text-[#0066cc] text-xl shrink-0 mt-0.5">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-xs sm:text-sm leading-tight">Diagnóstico</h4>
+                                    <p class="text-[11px] text-gray-500 leading-snug mt-1 font-normal">Entendemos su empresa y sus objetivos.</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs hidden lg:block ml-auto pr-1"></i>
+                        </div>
+
+                        <!-- Paso 2 -->
+                        <div class="flex items-center justify-between gap-2.5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-[#0066cc] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                                    2
+                                </div>
+                                <div class="text-[#0066cc] text-xl shrink-0 mt-0.5">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-xs sm:text-sm leading-tight">Alcance y propuesta</h4>
+                                    <p class="text-[11px] text-gray-500 leading-snug mt-1 font-normal">Definimos la solución y el plan de trabajo.</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs hidden lg:block ml-auto pr-1"></i>
+                        </div>
+
+                        <!-- Paso 3 -->
+                        <div class="flex items-center justify-between gap-2.5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-[#0066cc] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                                    3
+                                </div>
+                                <div class="text-[#0066cc] text-xl shrink-0 mt-0.5">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-xs sm:text-sm leading-tight">Implementación</h4>
+                                    <p class="text-[11px] text-gray-500 leading-snug mt-1 font-normal">Configuramos, integramos y validamos.</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs hidden lg:block ml-auto pr-1"></i>
+                        </div>
+
+                        <!-- Paso 4 -->
+                        <div class="flex items-center justify-between gap-2.5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-[#0066cc] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                                    4
+                                </div>
+                                <div class="text-[#0066cc] text-xl shrink-0 mt-0.5">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-xs sm:text-sm leading-tight">Capacitación</h4>
+                                    <p class="text-[11px] text-gray-500 leading-snug mt-1 font-normal">Formamos a sus equipos en el uso de NyTEX.</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs hidden lg:block ml-auto pr-1"></i>
+                        </div>
+
+                        <!-- Paso 5 -->
+                        <div class="flex items-center justify-between gap-2.5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-[#0066cc] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                                    5
+                                </div>
+                                <div class="text-[#0066cc] text-xl shrink-0 mt-0.5">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-xs sm:text-sm leading-tight">Seguimiento</h4>
+                                    <p class="text-[11px] text-gray-500 leading-snug mt-1 font-normal">Acompañamos su evolución y nuevas necesidades.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <!-- Derecha: Metodología -->
-                <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h4 class="text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wider">
-                        Metodología
-                    </h4>
-                    <p class="text-xs text-gray-600 leading-relaxed font-medium">
-                        BPMN · Balanced Scorecard · Lean Management · Six Sigma · ABC/ABM · Supply Chain · Modelo Delta · Calidad Total
-                    </p>
-                </div>
-
             </div>
-        </div>
-    </section>
 
-    <!-- 14. PREGUNTAS FRECUENTES -->
-    <section class="py-16 bg-white border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-8">
-                <h3 class="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+            <!-- BLOQUE 2: TECNOLOGÍA NYTEX. ACOMPAÑAMIENTO DE CONSULTORES NYT -->
+            <div class="mb-10 sm:mb-12">
+                <h3 class="text-xl sm:text-2xl font-extrabold text-[#0a192f] tracking-tight mb-4">
+                    Tecnología NyTEX. Acompañamiento de Consultores NyT.
+                </h3>
+                
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-gray-200 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+                    <!-- NyTEX -->
+                    <div class="flex items-center gap-4 w-full lg:w-auto pb-4 lg:pb-0 lg:pr-8">
+                        <span class="text-2xl sm:text-3xl font-black text-[#0066cc] tracking-tight">NyTEX</span>
+                        <p class="text-xs text-gray-600 font-medium leading-relaxed">
+                            desarrolla y es propietaria<br class="hidden sm:inline"> de la plataforma.
+                        </p>
+                    </div>
+
+                    <!-- Consultores NyT -->
+                    <div class="flex items-center gap-4 w-full lg:w-auto pt-4 lg:pt-0 lg:px-8">
+                        <span class="text-xl sm:text-2xl font-black text-[#0a192f] tracking-tight whitespace-nowrap">Consultores NyT</span>
+                        <p class="text-xs text-gray-600 font-medium leading-relaxed">
+                            comercializa e implementa soluciones<br class="hidden sm:inline"> y servicios empresariales.
+                        </p>
+                    </div>
+
+                    <!-- Enlace Partners -->
+                    <div class="w-full lg:w-auto pt-4 lg:pt-0 lg:pl-8 flex justify-start lg:justify-end">
+                        <a href="/portal/" target="_blank" class="text-xs sm:text-sm font-bold text-[#0066cc] hover:text-blue-700 flex items-center gap-1.5 transition-colors">
+                            <span>Conocer NyTEX y su red de partners</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: PREGUNTAS FRECUENTES -->
+            <div>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-[#0a192f] tracking-tight mb-4">
                     Preguntas frecuentes
                 </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col justify-start">
+                        <div class="flex items-start justify-between gap-3 mb-2.5">
+                            <h4 class="font-bold text-gray-900 text-sm leading-snug">¿Quién provee las aplicaciones?</h4>
+                            <i class="fas fa-chevron-down text-gray-400 text-xs shrink-0 mt-1"></i>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed font-normal">
+                            NyTEX desarrolla y es propietaria de la plataforma y sus aplicaciones.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col justify-start">
+                        <div class="flex items-start justify-between gap-3 mb-2.5">
+                            <h4 class="font-bold text-gray-900 text-sm leading-snug">¿Quién implementa y brinda soporte?</h4>
+                            <i class="fas fa-chevron-down text-gray-400 text-xs shrink-0 mt-1"></i>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed font-normal">
+                            Consultores NyT se encarga de la implementación, configuración, capacitación y soporte según el plan contratado.
+                        </p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col justify-start">
+                        <div class="flex items-start justify-between gap-3 mb-2.5">
+                            <h4 class="font-bold text-gray-900 text-sm leading-snug">¿Puedo contratar módulos individuales?</h4>
+                            <i class="fas fa-chevron-down text-gray-400 text-xs shrink-0 mt-1"></i>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed font-normal">
+                            Sí. Puede seleccionar uno o varios módulos según sus necesidades, en la modalidad <span class="font-bold text-gray-800">A su Medida</span>.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-semibold text-gray-800">
-                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
-                    <span>¿Qué incluye la implementación?</span>
-                    <span class="text-gray-400 font-bold text-base">+</span>
-                </div>
-                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
-                    <span>¿Puedo integrar mis sistemas actuales?</span>
-                    <span class="text-gray-400 font-bold text-base">+</span>
-                </div>
-                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
-                    <span>¿Cómo se define el alcance de mi plan?</span>
-                    <span class="text-gray-400 font-bold text-base">+</span>
-                </div>
-                <div class="bg-[#f8fafc] p-4 rounded-xl border border-gray-200 flex items-center justify-between cursor-pointer hover:border-gray-300">
-                    <span>¿Qué capacitación y soporte recibiré?</span>
-                    <span class="text-gray-400 font-bold text-base">+</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1688,6 +1796,39 @@
                         COMENZAR EVALUACIÓN <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE VIDEO NYTEX ERP RECORRIDO 3 MINUTOS -->
+    <div id="nytexVideoModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-[110] hidden flex items-center justify-center p-3 sm:p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#0b0f19] border border-gray-800 rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden transform scale-95 transition-transform duration-300 relative flex flex-col" id="nytexVideoModalContent">
+            <!-- Header con título y botón de cierre -->
+            <div class="flex items-center justify-between px-5 py-3.5 border-b border-gray-800/80 bg-gray-900/80">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#0284c7] animate-pulse"></span>
+                    <h3 class="text-white font-bold text-sm sm:text-base">NyTEX ERP &bull; Recorrido del Sistema en 3 Minutos</h3>
+                </div>
+                <button onclick="closeNytexVideoModal()" class="text-gray-400 hover:text-white p-1.5 rounded-lg hover:bg-gray-800 transition-colors" title="Cerrar (Esc)">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            <!-- Video Player -->
+            <div class="p-2 sm:p-4 bg-black flex justify-center items-center">
+                <video id="nytexVideoPlayer" class="w-full max-h-[70vh] rounded-lg shadow-lg" controls preload="metadata" playsinline>
+                    <source src="./videos/Capacitacion_NyTEX_Fase_1_Starter_2026-10-05T00-46-06.mp4" type="video/mp4">
+                    Su navegador no soporta reproducción de video HTML5.
+                </video>
+            </div>
+            <!-- Footer del modal -->
+            <div class="px-5 py-3 bg-[#0f172a] border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
+                <span class="flex items-center gap-1.5">
+                    <i class="fas fa-circle-info text-[#0284c7]"></i>
+                    Demostración interactiva guiada con audio y operación en tiempo real.
+                </span>
+                <a href="/diagnostico/" class="bg-[#d94828] hover:bg-[#c23e1f] text-white font-bold px-4 py-1.5 rounded-md text-xs shadow-sm transition-all whitespace-nowrap">
+                    Solicitar demo completa
+                </a>
             </div>
         </div>
     </div>
@@ -2144,6 +2285,55 @@
             setTimeout(() => {
                 modal.classList.add("hidden");
             }, 300);
+        }
+
+        // Modal de Video NyTEX ERP Recorrido 3 Minutos
+        const nytexVideoModal = document.getElementById("nytexVideoModal");
+        const nytexVideoModalContent = document.getElementById("nytexVideoModalContent");
+        const nytexVideoPlayer = document.getElementById("nytexVideoPlayer");
+
+        function openNytexVideoModal() {
+            if (!nytexVideoModal) return;
+            nytexVideoModal.classList.remove("hidden");
+            setTimeout(() => {
+                nytexVideoModal.classList.remove("opacity-0");
+                if (nytexVideoModalContent) nytexVideoModalContent.classList.remove("scale-95");
+            }, 10);
+            if (nytexVideoPlayer) {
+                nytexVideoPlayer.currentTime = 0;
+                nytexVideoPlayer.play().catch(() => {});
+            }
+        }
+
+        function closeNytexVideoModal() {
+            if (!nytexVideoModal) return;
+            nytexVideoModal.classList.add("opacity-0");
+            if (nytexVideoModalContent) nytexVideoModalContent.classList.add("scale-95");
+            if (nytexVideoPlayer) {
+                nytexVideoPlayer.pause();
+            }
+            setTimeout(() => {
+                nytexVideoModal.classList.add("hidden");
+            }, 300);
+        }
+
+        // Cerrar modal al presionar ESC o clic afuera
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                if (nytexVideoModal && !nytexVideoModal.classList.contains("hidden")) {
+                    closeNytexVideoModal();
+                }
+                if (modal && !modal.classList.contains("hidden")) {
+                    closeLeadModal();
+                }
+            }
+        });
+        if (nytexVideoModal) {
+            nytexVideoModal.addEventListener("click", (e) => {
+                if (e.target === nytexVideoModal) {
+                    closeNytexVideoModal();
+                }
+            });
         }
 
         document.querySelectorAll('a[href="/diagnostico/"]').forEach(link => {
