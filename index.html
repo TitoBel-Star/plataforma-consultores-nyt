@@ -112,121 +112,12 @@
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Mockup Interactivo NyTEX ERP -->
-                <div class="lg:col-span-6">
-                    <div class="bg-[#111827] rounded-2xl border border-gray-700/80 shadow-2xl p-4 sm:p-5 relative backdrop-blur">
-                        
-                        <!-- Top Bar Mockup -->
-                        <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-700/80 text-xs text-gray-400">
-                            <div class="flex items-center gap-2">
-                                <span class="font-extrabold text-white text-sm tracking-tight flex items-center gap-1.5">
-                                    <span class="w-2.5 h-2.5 rounded-sm bg-[#0284c7]"></span> NyTEX ERP
-                                </span>
-                            </div>
-                            <div class="hidden sm:flex items-center bg-[#1f2937] px-3 py-1 rounded-md text-[11px] w-52 text-gray-400 border border-gray-700">
-                                <i class="fas fa-search mr-2 text-gray-500"></i> Buscar módulo o dato...
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i class="fas fa-bell text-gray-400 hover:text-white cursor-pointer"></i>
-                                <div class="w-6 h-6 rounded-full bg-[#0284c7] text-white flex items-center justify-center font-bold text-[10px]">
-                                    JD
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Panel con Mini Sidebar + KPIs y Gráficos -->
-                        <div class="grid grid-cols-12 gap-3">
-                            <!-- Mini Sidebar -->
-                            <div class="col-span-3 hidden sm:block bg-[#1f2937]/70 rounded-xl p-2.5 border border-gray-800 text-[11px] space-y-1 text-gray-400">
-                                <div class="bg-[#0284c7] text-white font-bold px-2 py-1.5 rounded flex items-center gap-2">
-                                    <i class="fas fa-home text-[10px]"></i> Inicio
-                                </div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-shopping-cart text-[10px]"></i> Ventas</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-truck text-[10px]"></i> Compras</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-boxes text-[10px]"></i> Inventario</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-industry text-[10px]"></i> Producción</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-wallet text-[10px]"></i> Finanzas</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-users text-[10px]"></i> Talento Humano</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-chart-bar text-[10px]"></i> BI y Reportes</div>
-                                <div class="px-2 py-1.5 hover:bg-gray-800 rounded cursor-pointer transition-colors flex items-center gap-2"><i class="fas fa-sliders-h text-[10px]"></i> Configuración</div>
-                            </div>
-
-                            <!-- Área Principal del Dashboard -->
-                            <div class="col-span-12 sm:col-span-9 space-y-3">
-                                <!-- 4 KPI Cards -->
-                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
-                                        <p class="text-[10px] text-gray-400 font-medium">Ventas</p>
-                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">$125,430</p>
-                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-up"></i> +18%</span>
-                                    </div>
-                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
-                                        <p class="text-[10px] text-gray-400 font-medium">Costos</p>
-                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">$49,310</p>
-                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-down"></i> -3%</span>
-                                    </div>
-                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
-                                        <p class="text-[10px] text-gray-400 font-medium">Utilidad</p>
-                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">$51,820</p>
-                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-up"></i> +24%</span>
-                                    </div>
-                                    <div class="bg-[#1f2937]/90 p-2.5 rounded-xl border border-gray-700/60">
-                                        <p class="text-[10px] text-gray-400 font-medium">Órdenes</p>
-                                        <p class="text-sm sm:text-base font-extrabold text-white mt-0.5">1,284</p>
-                                        <span class="text-[9px] text-emerald-400 font-bold flex items-center gap-0.5 mt-0.5"><i class="fas fa-arrow-up"></i> +28%</span>
-                                    </div>
-                                </div>
-
-                                <!-- Gráfica 1: Ventas por Mes (Línea SVG) -->
-                                <div class="bg-[#1f2937]/80 p-3 rounded-xl border border-gray-700/60">
-                                    <div class="flex justify-between items-center mb-1">
-                                        <span class="text-[11px] font-bold text-gray-200">Ventas por mes</span>
-                                        <span class="text-[9px] text-gray-400">Año actual</span>
-                                    </div>
-                                    <svg viewBox="0 0 320 85" class="w-full h-20 overflow-visible">
-                                        <defs>
-                                            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stop-color="#0284c7" stop-opacity="0.4"/>
-                                                <stop offset="100%" stop-color="#0284c7" stop-opacity="0.0"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <path d="M 0 65 Q 40 50, 80 58 T 160 38 T 240 25 T 320 12 L 320 85 L 0 85 Z" fill="url(#areaGrad)"/>
-                                        <path d="M 0 65 Q 40 50, 80 58 T 160 38 T 240 25 T 320 12" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
-                                        <circle cx="320" cy="12" r="3.5" fill="#38bdf8" stroke="#111827" stroke-width="2"/>
-                                    </svg>
-                                    <div class="flex justify-between text-[8px] text-gray-500 mt-1">
-                                        <span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span>
-                                    </div>
-                                </div>
-
-                                <!-- Gráfica 2: Órdenes por Área (Donut Chart) -->
-                                <div class="bg-[#1f2937]/80 p-3 rounded-xl border border-gray-700/60 flex items-center justify-between">
-                                    <div>
-                                        <p class="text-[11px] font-bold text-gray-200 mb-1">Órdenes por área</p>
-                                        <div class="space-y-1 text-[9px] text-gray-400">
-                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0284c7]"></span> Ventas 35%</div>
-                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#38bdf8]"></span> Producción 25%</div>
-                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span> Logística 22%</div>
-                                            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#64748b]"></span> Otros 18%</div>
-                                        </div>
-                                    </div>
-                                    <div class="relative w-16 h-16 flex items-center justify-center">
-                                        <svg viewBox="0 0 36 36" class="w-16 h-16 transform -rotate-90">
-                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#1e293b" stroke-width="4.5"/>
-                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#0284c7" stroke-width="4.5" stroke-dasharray="35 65" stroke-dashoffset="0"/>
-                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#38bdf8" stroke-width="4.5" stroke-dasharray="25 75" stroke-dashoffset="-35"/>
-                                            <circle cx="18" cy="18" r="14" fill="transparent" stroke="#10b981" stroke-width="4.5" stroke-dasharray="22 78" stroke-dashoffset="-60"/>
-                                        </svg>
-                                        <span class="absolute text-[9px] font-extrabold text-white">100%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Footer ilustrativo -->
-                        <div class="text-right mt-2">
-                            <span class="text-[9px] text-gray-500 italic">Vista ilustrativa</span>
-                        </div>
+                <!-- Columna Derecha: Mockup Dispositivos NyTEX ERP -->
+                <div class="lg:col-span-6 flex justify-center items-center">
+                    <div class="relative w-full max-w-lg lg:max-w-none group">
+                        <!-- Glow de fondo -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#0284c7]/20 to-[#38bdf8]/10 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                        <img src="nytex-devices-mockup.png" alt="NyTEX ERP Plataforma Empresarial en Laptop y Smartphone" class="relative rounded-2xl shadow-2xl w-full object-contain border border-gray-800/80 transform hover:scale-[1.01] transition-transform duration-300">
                     </div>
                 </div>
 
@@ -1653,29 +1544,21 @@
                     Tecnología NyTEX. Acompañamiento de Consultores NyT.
                 </h3>
                 
-                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-gray-200 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-gray-200 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6 divide-y md:divide-y-0 md:divide-x divide-gray-200">
                     <!-- NyTEX -->
-                    <div class="flex items-center gap-4 w-full lg:w-auto pb-4 lg:pb-0 lg:pr-8">
+                    <div class="flex items-center gap-4 pb-4 md:pb-0 md:pr-8">
                         <span class="text-2xl sm:text-3xl font-black text-[#0066cc] tracking-tight">NyTEX</span>
                         <p class="text-xs text-gray-600 font-medium leading-relaxed">
-                            desarrolla y es propietaria<br class="hidden sm:inline"> de la plataforma.
+                            desarrolla y es propietaria de la plataforma.
                         </p>
                     </div>
 
                     <!-- Consultores NyT -->
-                    <div class="flex items-center gap-4 w-full lg:w-auto pt-4 lg:pt-0 lg:px-8">
+                    <div class="flex items-center gap-4 pt-4 md:pt-0 md:pl-8">
                         <span class="text-xl sm:text-2xl font-black text-[#0a192f] tracking-tight whitespace-nowrap">Consultores NyT</span>
                         <p class="text-xs text-gray-600 font-medium leading-relaxed">
-                            comercializa e implementa soluciones<br class="hidden sm:inline"> y servicios empresariales.
+                            comercializa e implementa soluciones y servicios empresariales.
                         </p>
-                    </div>
-
-                    <!-- Enlace Partners -->
-                    <div class="w-full lg:w-auto pt-4 lg:pt-0 lg:pl-8 flex justify-start lg:justify-end">
-                        <a href="/portal/" target="_blank" class="text-xs sm:text-sm font-bold text-[#0066cc] hover:text-blue-700 flex items-center gap-1.5 transition-colors">
-                            <span>Conocer NyTEX y su red de partners</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
                     </div>
                 </div>
             </div>
