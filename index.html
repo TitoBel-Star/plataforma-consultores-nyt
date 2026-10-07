@@ -621,7 +621,7 @@
         </text>
     </g>
 
-    <!-- 6. ÁREA 4: ADMINISTRACIÓN Y FINANZAS -->
+    <!-- 6. ÁREA 4: DIRECCIÓN DE FINANZAS &amp; ADMINISTRACIÓN -->
     <g id="subgraph-area4">
         <rect x="198" y="728" width="428" height="182" rx="2" fill="#180e05" stroke="#d97706" stroke-width="1.5" />
         <rect x="198" y="728" width="428" height="19" fill="#d97706" />
@@ -650,9 +650,9 @@
     <path d="M 674 494 L 674 530 L 759 530 L 759 605" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
     <g><rect x="636" y="522" width="98" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="685" y="531" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Programa de fábrica</text></g>
     <path d="M 260 792 L 260 840 L 306 840 L 306 866" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
-    <g><rect x="226" y="822" width="92" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="272" y="831" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Cobranza al banco</text></g>
+    <g><rect x="226" y="822" width="92" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="272" y="831" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Cobranza y Cierre</text></g>
     <path d="M 386 792 L 386 840 L 342 840 L 342 866" stroke="#38bdf8" stroke-width="1.4" fill="none" marker-end="url(#arrow-cyan)" />
-    <g><rect x="352" y="822" width="90" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="397" y="831" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Propuesta de pago</text></g>
+    <g><rect x="352" y="822" width="90" height="16" rx="3" fill="#0b1b36" stroke="#1e40af" stroke-width="1" /><text x="397" y="831" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="9.5">Dispersión y Pagos</text></g>
     <path d="M 936 79 L 936 106" stroke="#38bdf8" stroke-width="1.5" fill="none" marker-end="url(#arrow-cyan)" />
     <path d="M 640 230 L 640 262" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
     <path d="M 640 290 L 640 320" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-cyan)" />
@@ -790,9 +790,9 @@
         <text x="536" y="783" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="7.8">(Consolidación en Tiempo Real)</text>
     </g>
     <g class="node cursor-pointer transition-all duration-300" id="node-tesoreria">
-        <rect x="266" y="866" width="116" height="36" rx="4" fill="#78350f" stroke="#eab308" stroke-width="1.5" />
-        <text x="324" y="880" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Tesorería</text>
-        <text x="324" y="893" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="8.5">(Bancos y Cash Flow)</text>
+        <rect x="234" y="866" width="180" height="38" rx="4" fill="#78350f" stroke="#eab308" stroke-width="1.5" />
+        <text x="324" y="880" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" font-size="10.5" font-weight="bold">NyTEX Tesorería &amp; Cajas</text>
+        <text x="324" y="893" text-anchor="middle" dominant-baseline="middle" fill="#fde68a" font-size="7.5">(Arqueos, Conciliación y Cierres)</text>
     </g>
 </svg>
                     </div>
@@ -838,7 +838,7 @@
                             <div id="areaCard-4" onclick="toggleArea(4)" class="bg-[#0b2847]/80 hover:bg-[#0e355c] border border-blue-800/50 rounded-xl p-2.5 transition-all cursor-pointer flex items-center justify-between gap-2 select-none">
                                 <div class="flex items-center gap-2">
                                     <div class="w-5 h-5 rounded bg-amber-600 text-white font-black flex items-center justify-center text-[10px]">4</div>
-                                    <span class="text-xs text-white font-semibold">Administración y Finanzas</span>
+                                    <span class="text-xs text-white font-semibold">Dirección de Finanzas &amp; Administración</span>
                                 </div>
                                 <span id="areaBadge-4" class="text-[9px] font-bold text-amber-400 uppercase hidden">✓</span>
                             </div>
@@ -1156,7 +1156,7 @@
                         <div class="mb-4">
                             <span class="text-xs font-bold text-[#0284c7] block mb-1">7 módulos</span>
                             <p class="text-[11px] text-gray-600 leading-snug">
-                                Ventas, Inventario, Compras, Contabilidad, CxC, CxP y Tesorería
+                                Ventas, Inventario, Compras, Contabilidad, CxC, CxP y Tesorería &amp; Cajas
                             </p>
                         </div>
 
@@ -1753,7 +1753,7 @@
             { id: "contabilidad", name: "Contabilidad", area: 4, imp: 400, lic: 30 },
             { id: "cxc", name: "Cuentas por Cobrar (CxC)", area: 4, imp: 200, lic: 20 },
             { id: "cxp", name: "Cuentas por Pagar (CxP)", area: 4, imp: 200, lic: 20 },
-            { id: "tesoreria", name: "Tesorería", area: 4, imp: 200, lic: 20 },
+            { id: "tesoreria", name: "Tesorería & Cajas (Arqueos, Conciliación y Cierres)", area: 4, imp: 200, lic: 20 },
             { id: "rrhh", name: "Recursos Humanos (RRHH)", area: 5, imp: 1000, lic: 50 },
             { id: "nomina", name: "Nómina", area: 5, imp: 500, lic: 30 },
             { id: "dashboards", name: "Dashboards", area: 6, imp: 500, lic: 25 },
@@ -1808,7 +1808,7 @@
             1: { name: "Dirección Comercial", modules: ["crm", "ventas"] },
             2: { name: "Cadena de Suministro", modules: ["compras", "rop", "inventario", "wms", "logistica"] },
             3: { name: "Operaciones y Producción", modules: ["produccion"] },
-            4: { name: "Administración y Finanzas", modules: ["cxc", "cxp", "tesoreria", "contabilidad"] },
+            4: { name: "Dirección de Finanzas & Administración", modules: ["cxc", "cxp", "tesoreria", "contabilidad"] },
             5: { name: "Talento Humano", modules: ["rrhh", "nomina"] },
             6: { name: "Inteligencia y Analítica", modules: ["biyreportes", "bigdata", "dashboards", "mineriadatos", "predictivos", "ia", "planeacion"] },
             7: { name: "Gobernanza y TI", modules: ["businesspartners", "configuracion", "processsuite", "processmining"] }
