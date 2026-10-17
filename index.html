@@ -500,7 +500,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-3">
                 <button type="button" id="tabPhase-1" onclick="selectPhase(1)" class="phase-tab py-3 px-3 rounded-xl border border-blue-800/60 bg-[#072038] hover:bg-[#0c3156] text-center transition-all cursor-pointer">
                     <span class="block text-sm font-bold text-gray-200">Starter</span>
-                    <span class="block text-[11px] text-gray-400">7 módulos</span>
+                    <span class="block text-[11px] text-gray-400">6 módulos</span>
                 </button>
                 <button type="button" id="tabPhase-2" onclick="selectPhase(2)" class="phase-tab py-3 px-3 rounded-xl border border-blue-800/60 bg-[#072038] hover:bg-[#0c3156] text-center transition-all cursor-pointer">
                     <span class="block text-sm font-bold text-gray-200">Express</span>
@@ -1154,9 +1154,9 @@
                         <p class="text-xs text-gray-500 mb-3">Control transaccional</p>
                         
                         <div class="mb-4">
-                            <span class="text-xs font-bold text-[#0284c7] block mb-1">7 módulos</span>
+                            <span class="text-xs font-bold text-[#0284c7] block mb-1">6 módulos</span>
                             <p class="text-[11px] text-gray-600 leading-snug">
-                                Ventas, Inventario, Compras, Contabilidad, CxC, CxP y Tesorería &amp; Cajas
+                                Ventas, Inventario, Compras, Contabilidad, CxC y CxP
                             </p>
                         </div>
 
@@ -1188,7 +1188,7 @@
                         <div class="mb-4">
                             <span class="text-xs font-bold text-[#0284c7] block mb-1">14 módulos</span>
                             <p class="text-[11px] text-gray-600 leading-snug">
-                                Starter + CRM, ROP Inteligente, WMS, Logística, Producción, RRHH y Nómina
+                                Starter + Tesorería &amp; Cajas, CRM, ROP Inteligente, WMS, Logística, Producción, RRHH y Nómina
                             </p>
                         </div>
 
@@ -1773,9 +1773,9 @@
         const PHASE_CONFIG = {
             1: {
                 name: "Starter",
-                count: 7,
+                count: 6,
                 portalUrl: "https://nytex-erp-portal.onrender.com/portal?phase=1&checkout=true",
-                modules: ["ventas", "inventario", "compras", "contabilidad", "cxc", "cxp", "tesoreria"]
+                modules: ["ventas", "inventario", "compras", "contabilidad", "cxc", "cxp"]
             },
             2: {
                 name: "Express",
